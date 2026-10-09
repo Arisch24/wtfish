@@ -1,0 +1,9 @@
+{
+  "commonName": "Rainbow Trout",
+  "scientificName": "Oncorhynchus mykiss",
+  "family": "Salmonidae",
+  "category": "game",
+  "water": "freshwater",
+  "maxLengthCm": 120,
+  "summary": "Native to Pacific drainages of North America and stocked worldwide. Has a pink band along its side. Sea-run fish are called steelhead."
+}

@@ -1,0 +1,9 @@
+{
+  "commonName": "Bluegill",
+  "scientificName": "Lepomis macrochirus",
+  "family": "Centrarchidae",
+  "category": "game",
+  "water": "freshwater",
+  "maxLengthCm": 41,
+  "summary": "Common North American sunfish with a dark flap on the gill cover. Often the first fish people catch."
+}

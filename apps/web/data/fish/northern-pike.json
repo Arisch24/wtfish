@@ -1,0 +1,9 @@
+{
+  "commonName": "Northern Pike",
+  "scientificName": "Esox lucius",
+  "family": "Esocidae",
+  "category": "game",
+  "water": "freshwater",
+  "maxLengthCm": 150,
+  "summary": "Long, ambush predator of cool northern waters with a duck-bill snout full of sharp teeth. Found across North America, Europe and Asia."
+}

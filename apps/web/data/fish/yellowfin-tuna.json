@@ -1,0 +1,9 @@
+{
+  "commonName": "Yellowfin Tuna",
+  "scientificName": "Thunnus albacares",
+  "family": "Scombridae",
+  "category": "game",
+  "water": "saltwater",
+  "maxLengthCm": 239,
+  "summary": "Fast tuna of warm oceans worldwide, with long yellow fins in large adults. A major target for offshore anglers."
+}

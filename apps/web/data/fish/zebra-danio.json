@@ -1,0 +1,9 @@
+{
+  "commonName": "Zebra Danio",
+  "scientificName": "Danio rerio",
+  "family": "Danionidae",
+  "category": "aquarium",
+  "water": "freshwater",
+  "maxLengthCm": 5,
+  "summary": "Fast, striped schooling fish from South Asia. Very hardy, and also one of the most widely used fish in scientific research."
+}

@@ -1,0 +1,9 @@
+{
+  "commonName": "Common Carp",
+  "scientificName": "Cyprinus carpio",
+  "family": "Cyprinidae",
+  "category": "game",
+  "water": "freshwater",
+  "maxLengthCm": 120,
+  "summary": "Heavy-bodied fish with two pairs of barbels on its lip. A major sport fish in Europe; invasive in many other regions."
+}

@@ -1,0 +1,9 @@
+{
+  "commonName": "Atlantic Salmon",
+  "scientificName": "Salmo salar",
+  "family": "Salmonidae",
+  "category": "game",
+  "water": "migratory",
+  "maxLengthCm": 150,
+  "summary": "Hatches in rivers, grows at sea, then returns to fresh water to spawn. Prized by fly anglers on both sides of the North Atlantic."
+}

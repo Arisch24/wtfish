@@ -1,0 +1,9 @@
+{
+  "commonName": "Largemouth Bass",
+  "scientificName": "Micropterus salmoides",
+  "family": "Centrarchidae",
+  "category": "game",
+  "water": "freshwater",
+  "maxLengthCm": 97,
+  "summary": "North America's most popular freshwater game fish. Its upper jaw extends past the eye, which separates it from smallmouth and spotted bass."
+}

@@ -1,0 +1,9 @@
+{
+  "commonName": "Walleye",
+  "scientificName": "Sander vitreus",
+  "family": "Percidae",
+  "category": "game",
+  "water": "freshwater",
+  "maxLengthCm": 107,
+  "summary": "North American perch with large, reflective eyes that help it feed in low light. Prized both as a game fish and for eating."
+}

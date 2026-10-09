@@ -1,0 +1,9 @@
+{
+  "commonName": "Atlantic Tarpon",
+  "scientificName": "Megalops atlanticus",
+  "family": "Megalopidae",
+  "category": "game",
+  "water": "saltwater",
+  "maxLengthCm": 250,
+  "summary": "Huge silver fish famous for leaping when hooked. Can gulp air at the surface, so it survives in low-oxygen water. Mostly caught and released."
+}

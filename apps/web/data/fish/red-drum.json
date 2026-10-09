@@ -1,0 +1,9 @@
+{
+  "commonName": "Red Drum",
+  "scientificName": "Sciaenops ocellatus",
+  "family": "Sciaenidae",
+  "category": "game",
+  "water": "saltwater",
+  "maxLengthCm": 155,
+  "summary": "Coppery inshore fish of the US Atlantic and Gulf coasts with one or more black spots near the tail. Also called redfish."
+}

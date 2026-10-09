@@ -1,9 +1,9 @@
 import { defineCollection } from 'astro:content';
-import { file } from 'astro/loaders';
+import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
 const fish = defineCollection({
-	loader: file('data/fish.json'),
+	loader: glob({ pattern: '*.json', base: './data/fish' }),
 	schema: z.object({
 		commonName: z.string(),
 		scientificName: z.string(),

@@ -1,0 +1,9 @@
+{
+  "commonName": "Goldfish",
+  "scientificName": "Carassius auratus",
+  "family": "Cyprinidae",
+  "category": "aquarium",
+  "water": "freshwater",
+  "maxLengthCm": 40,
+  "summary": "Domesticated in China over a thousand years ago. Grows far larger than most people expect and does best in ponds or large tanks, not bowls."
+}
