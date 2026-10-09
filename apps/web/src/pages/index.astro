@@ -1,0 +1,121 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const fish = (await getCollection('fish')).sort((a, b) =>
+	a.data.commonName.localeCompare(b.data.commonName),
+);
+---
+
+<Base title="wtfish: fish directory">
+	<h1>Fish directory</h1>
+	<div class="controls">
+		<input id="search" type="search" placeholder="Search by name…" aria-label="Search fish" />
+		<select id="category" aria-label="Filter by category">
+			<option value="">All fish</option>
+			<option value="aquarium">Aquarium</option>
+			<option value="game">Game</option>
+		</select>
+	</div>
+	<p id="empty" hidden>No fish match your search.</p>
+	<ul class="grid">
+		{
+			fish.map(({ id, data }) => (
+				<li
+					data-name={`${data.commonName} ${data.scientificName}`.toLowerCase()}
+					data-category={data.category}
+				>
+					<a href={`/fish/${id}/`}>
+						<span class="name">{data.commonName}</span>
+						<span class="sci">{data.scientificName}</span>
+						<span class="tags">
+							{data.category} · {data.water}
+						</span>
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</Base>
+
+<script>
+	const search = document.querySelector<HTMLInputElement>('#search')!;
+	const category = document.querySelector<HTMLSelectElement>('#category')!;
+	const empty = document.querySelector<HTMLParagraphElement>('#empty')!;
+	const items = [...document.querySelectorAll<HTMLLIElement>('.grid li')];
+
+	function filter() {
+		const q = search.value.trim().toLowerCase();
+		const c = category.value;
+		let shown = 0;
+		for (const li of items) {
+			const match = li.dataset.name!.includes(q) && (!c || li.dataset.category === c);
+			li.hidden = !match;
+			if (match) shown++;
+		}
+		empty.hidden = shown > 0;
+	}
+
+	search.addEventListener('input', filter);
+	category.addEventListener('change', filter);
+</script>
+
+<style>
+	.controls {
+		display: flex;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+		margin-bottom: 1rem;
+	}
+	input,
+	select {
+		font: inherit;
+		padding: 0.5rem 0.75rem;
+		border: 1px solid var(--border);
+		border-radius: 0.5rem;
+		background: var(--surface);
+		color: var(--text);
+	}
+	input {
+		flex: 1 1 16rem;
+	}
+	.grid {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+		gap: 0.75rem;
+	}
+	.grid li[hidden] {
+		display: none;
+	}
+	.grid a {
+		display: flex;
+		flex-direction: column;
+		gap: 0.125rem;
+		height: 100%;
+		padding: 1rem;
+		background: var(--surface);
+		border: 1px solid var(--border);
+		border-radius: 0.75rem;
+		color: var(--text);
+		text-decoration: none;
+	}
+	.grid a:hover {
+		border-color: var(--accent);
+	}
+	.name {
+		font-weight: 600;
+	}
+	.sci {
+		font-style: italic;
+		color: var(--muted);
+	}
+	.tags {
+		margin-top: 0.5rem;
+		font-size: 0.85rem;
+		color: var(--muted);
+		text-transform: capitalize;
+	}
+</style>

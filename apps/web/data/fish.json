@@ -1,0 +1,272 @@
+[
+  {
+    "id": "clown-anemonefish",
+    "commonName": "Clown Anemonefish",
+    "scientificName": "Amphiprion ocellaris",
+    "family": "Pomacentridae",
+    "category": "aquarium",
+    "water": "saltwater",
+    "maxLengthCm": 11,
+    "summary": "Orange reef fish with three white bands, native to the Indo-Pacific. Lives among sea anemones, whose stinging tentacles it is protected from by a mucus coat."
+  },
+  {
+    "id": "neon-tetra",
+    "commonName": "Neon Tetra",
+    "scientificName": "Paracheirodon innesi",
+    "family": "Characidae",
+    "category": "aquarium",
+    "water": "freshwater",
+    "maxLengthCm": 3,
+    "summary": "Tiny schooling fish from the Amazon basin with an iridescent blue stripe and a red rear half. One of the most popular community aquarium fish."
+  },
+  {
+    "id": "cardinal-tetra",
+    "commonName": "Cardinal Tetra",
+    "scientificName": "Paracheirodon axelrodi",
+    "family": "Characidae",
+    "category": "aquarium",
+    "water": "freshwater",
+    "maxLengthCm": 5,
+    "summary": "Close relative of the neon tetra from the Orinoco and Negro rivers. Easy to tell apart: its red stripe runs the full length of the body."
+  },
+  {
+    "id": "betta",
+    "commonName": "Siamese Fighting Fish",
+    "scientificName": "Betta splendens",
+    "family": "Osphronemidae",
+    "category": "aquarium",
+    "water": "freshwater",
+    "maxLengthCm": 7,
+    "summary": "Native to Thailand's shallow, still waters. Breathes air at the surface using a labyrinth organ. Males are territorial and must be kept apart."
+  },
+  {
+    "id": "guppy",
+    "commonName": "Guppy",
+    "scientificName": "Poecilia reticulata",
+    "family": "Poeciliidae",
+    "category": "aquarium",
+    "water": "freshwater",
+    "maxLengthCm": 6,
+    "summary": "Hardy livebearer from northeastern South America. Males are small and brightly coloured; females are larger and plainer. Breeds readily in aquariums."
+  },
+  {
+    "id": "zebra-danio",
+    "commonName": "Zebra Danio",
+    "scientificName": "Danio rerio",
+    "family": "Danionidae",
+    "category": "aquarium",
+    "water": "freshwater",
+    "maxLengthCm": 5,
+    "summary": "Fast, striped schooling fish from South Asia. Very hardy, and also one of the most widely used fish in scientific research."
+  },
+  {
+    "id": "bronze-corydoras",
+    "commonName": "Bronze Corydoras",
+    "scientificName": "Corydoras aeneus",
+    "family": "Callichthyidae",
+    "category": "aquarium",
+    "water": "freshwater",
+    "maxLengthCm": 7,
+    "summary": "Peaceful armoured catfish from South America that sifts the bottom for food. Best kept in groups over soft sand."
+  },
+  {
+    "id": "freshwater-angelfish",
+    "commonName": "Freshwater Angelfish",
+    "scientificName": "Pterophyllum scalare",
+    "family": "Cichlidae",
+    "category": "aquarium",
+    "water": "freshwater",
+    "maxLengthCm": 15,
+    "summary": "Tall, disc-shaped cichlid from the Amazon with long trailing fins. Calm in general but may eat very small tankmates such as neon tetras."
+  },
+  {
+    "id": "discus",
+    "commonName": "Discus",
+    "scientificName": "Symphysodon aequifasciatus",
+    "family": "Cichlidae",
+    "category": "aquarium",
+    "water": "freshwater",
+    "maxLengthCm": 20,
+    "summary": "Round, colourful cichlid from the Amazon basin. Needs warm, soft, very clean water, so it is usually kept by experienced aquarists."
+  },
+  {
+    "id": "oscar",
+    "commonName": "Oscar",
+    "scientificName": "Astronotus ocellatus",
+    "family": "Cichlidae",
+    "category": "aquarium",
+    "water": "freshwater",
+    "maxLengthCm": 45,
+    "summary": "Large South American cichlid known for recognising its owners. Grows quickly and needs a big tank; it will eat any fish small enough to swallow."
+  },
+  {
+    "id": "goldfish",
+    "commonName": "Goldfish",
+    "scientificName": "Carassius auratus",
+    "family": "Cyprinidae",
+    "category": "aquarium",
+    "water": "freshwater",
+    "maxLengthCm": 40,
+    "summary": "Domesticated in China over a thousand years ago. Grows far larger than most people expect and does best in ponds or large tanks, not bowls."
+  },
+  {
+    "id": "palette-surgeonfish",
+    "commonName": "Palette Surgeonfish",
+    "scientificName": "Paracanthurus hepatus",
+    "family": "Acanthuridae",
+    "category": "aquarium",
+    "water": "saltwater",
+    "maxLengthCm": 31,
+    "summary": "Royal-blue Indo-Pacific reef fish with a black pattern and yellow tail. Has a sharp spine at the base of its tail, like all surgeonfish."
+  },
+  {
+    "id": "mandarinfish",
+    "commonName": "Mandarinfish",
+    "scientificName": "Synchiropus splendidus",
+    "family": "Callionymidae",
+    "category": "aquarium",
+    "water": "saltwater",
+    "maxLengthCm": 6,
+    "summary": "Small, vividly patterned reef fish from the western Pacific. Feeds almost only on tiny live crustaceans, which makes it hard to keep."
+  },
+  {
+    "id": "largemouth-bass",
+    "commonName": "Largemouth Bass",
+    "scientificName": "Micropterus salmoides",
+    "family": "Centrarchidae",
+    "category": "game",
+    "water": "freshwater",
+    "maxLengthCm": 97,
+    "summary": "North America's most popular freshwater game fish. Its upper jaw extends past the eye, which separates it from smallmouth and spotted bass."
+  },
+  {
+    "id": "bluegill",
+    "commonName": "Bluegill",
+    "scientificName": "Lepomis macrochirus",
+    "family": "Centrarchidae",
+    "category": "game",
+    "water": "freshwater",
+    "maxLengthCm": 41,
+    "summary": "Common North American sunfish with a dark flap on the gill cover. Often the first fish people catch."
+  },
+  {
+    "id": "rainbow-trout",
+    "commonName": "Rainbow Trout",
+    "scientificName": "Oncorhynchus mykiss",
+    "family": "Salmonidae",
+    "category": "game",
+    "water": "freshwater",
+    "maxLengthCm": 120,
+    "summary": "Native to Pacific drainages of North America and stocked worldwide. Has a pink band along its side. Sea-run fish are called steelhead."
+  },
+  {
+    "id": "atlantic-salmon",
+    "commonName": "Atlantic Salmon",
+    "scientificName": "Salmo salar",
+    "family": "Salmonidae",
+    "category": "game",
+    "water": "migratory",
+    "maxLengthCm": 150,
+    "summary": "Hatches in rivers, grows at sea, then returns to fresh water to spawn. Prized by fly anglers on both sides of the North Atlantic."
+  },
+  {
+    "id": "northern-pike",
+    "commonName": "Northern Pike",
+    "scientificName": "Esox lucius",
+    "family": "Esocidae",
+    "category": "game",
+    "water": "freshwater",
+    "maxLengthCm": 150,
+    "summary": "Long, ambush predator of cool northern waters with a duck-bill snout full of sharp teeth. Found across North America, Europe and Asia."
+  },
+  {
+    "id": "walleye",
+    "commonName": "Walleye",
+    "scientificName": "Sander vitreus",
+    "family": "Percidae",
+    "category": "game",
+    "water": "freshwater",
+    "maxLengthCm": 107,
+    "summary": "North American perch with large, reflective eyes that help it feed in low light. Prized both as a game fish and for eating."
+  },
+  {
+    "id": "common-carp",
+    "commonName": "Common Carp",
+    "scientificName": "Cyprinus carpio",
+    "family": "Cyprinidae",
+    "category": "game",
+    "water": "freshwater",
+    "maxLengthCm": 120,
+    "summary": "Heavy-bodied fish with two pairs of barbels on its lip. A major sport fish in Europe; invasive in many other regions."
+  },
+  {
+    "id": "barramundi",
+    "commonName": "Barramundi",
+    "scientificName": "Lates calcarifer",
+    "family": "Latidae",
+    "category": "game",
+    "water": "migratory",
+    "maxLengthCm": 200,
+    "summary": "Hard-fighting predator of the Indo-West Pacific that moves between rivers, estuaries and the sea. Most start life male and later become female."
+  },
+  {
+    "id": "red-drum",
+    "commonName": "Red Drum",
+    "scientificName": "Sciaenops ocellatus",
+    "family": "Sciaenidae",
+    "category": "game",
+    "water": "saltwater",
+    "maxLengthCm": 155,
+    "summary": "Coppery inshore fish of the US Atlantic and Gulf coasts with one or more black spots near the tail. Also called redfish."
+  },
+  {
+    "id": "tarpon",
+    "commonName": "Atlantic Tarpon",
+    "scientificName": "Megalops atlanticus",
+    "family": "Megalopidae",
+    "category": "game",
+    "water": "saltwater",
+    "maxLengthCm": 250,
+    "summary": "Huge silver fish famous for leaping when hooked. Can gulp air at the surface, so it survives in low-oxygen water. Mostly caught and released."
+  },
+  {
+    "id": "giant-trevally",
+    "commonName": "Giant Trevally",
+    "scientificName": "Caranx ignobilis",
+    "family": "Carangidae",
+    "category": "game",
+    "water": "saltwater",
+    "maxLengthCm": 170,
+    "summary": "Powerful Indo-Pacific reef predator and a top target for popper and fly anglers. Often called GT."
+  },
+  {
+    "id": "mahi-mahi",
+    "commonName": "Mahi-mahi",
+    "scientificName": "Coryphaena hippurus",
+    "family": "Coryphaenidae",
+    "category": "game",
+    "water": "saltwater",
+    "maxLengthCm": 210,
+    "summary": "Fast-growing open-ocean fish with brilliant green, blue and gold colours that fade after it is caught. Also called dorado or dolphinfish."
+  },
+  {
+    "id": "yellowfin-tuna",
+    "commonName": "Yellowfin Tuna",
+    "scientificName": "Thunnus albacares",
+    "family": "Scombridae",
+    "category": "game",
+    "water": "saltwater",
+    "maxLengthCm": 239,
+    "summary": "Fast tuna of warm oceans worldwide, with long yellow fins in large adults. A major target for offshore anglers."
+  },
+  {
+    "id": "blue-marlin",
+    "commonName": "Atlantic Blue Marlin",
+    "scientificName": "Makaira nigricans",
+    "family": "Istiophoridae",
+    "category": "game",
+    "water": "saltwater",
+    "maxLengthCm": 500,
+    "summary": "One of the largest bony fish in the ocean, with a long spear-like bill. A trophy species in big-game fishing."
+  }
+]

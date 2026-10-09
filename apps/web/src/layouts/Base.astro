@@ -1,0 +1,74 @@
+---
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = 'A directory of aquarium and game fish.' } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<header>
+			<a href="/" class="brand">wtfish</a>
+		</header>
+		<main>
+			<slot />
+		</main>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--bg: #f7f9fa;
+		--surface: #ffffff;
+		--text: #14232b;
+		--muted: #5b6b73;
+		--border: #dde4e8;
+		--accent: #0b7a8a;
+		color-scheme: light dark;
+	}
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--bg: #0d171c;
+			--surface: #15232a;
+			--text: #e6eef1;
+			--muted: #93a4ac;
+			--border: #24363f;
+			--accent: #4cc3d1;
+		}
+	}
+	* {
+		box-sizing: border-box;
+	}
+	body {
+		margin: 0;
+		background: var(--bg);
+		color: var(--text);
+		font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+		line-height: 1.5;
+	}
+	header,
+	main {
+		max-width: 64rem;
+		margin: 0 auto;
+		padding: 1rem;
+	}
+	a {
+		color: var(--accent);
+	}
+	.brand {
+		font-weight: 700;
+		font-size: 1.25rem;
+		text-decoration: none;
+	}
+</style>
