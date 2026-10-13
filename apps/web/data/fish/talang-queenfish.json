@@ -1,0 +1,116 @@
+{
+  "names": {
+    "english": "Talang queenfish",
+    "scientific": "Scomberoides commersonnianus",
+    "malay": "Talang",
+    "other": [
+      "Talang lima jari",
+      "Talang-talang",
+      "Seliat"
+    ]
+  },
+  "taxonomy": {
+    "family": "Carangidae",
+    "order": "Perciformes",
+    "gbifKey": 2390863,
+    "wikidata": "Q2163706"
+  },
+  "water": [
+    "marine"
+  ],
+  "uses": [
+    "sport",
+    "food"
+  ],
+  "summary": "A silvery, deep-sided predator with a row of large dark marks on its flanks. It occurs around reefs and offshore islands and sometimes enters estuaries.",
+  "nativeRange": "Tropical Indo-Pacific.",
+  "iucn": "LC",
+  "size": {
+    "maxCm": 120
+  },
+  "identify": {
+    "features": [
+      "Five to eight large dark marks along the side",
+      "Strongly flattened body",
+      "Large mouth reaching behind the eye"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "reef",
+      "coastal",
+      "estuary"
+    ],
+    "description": "Usually swims in small groups around reefs and islands; it avoids very fresh or turbid water.",
+    "diet": "Fish, squid and other pelagic prey."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Sabah",
+        "records": 8
+      },
+      {
+        "state": "Sarawak",
+        "records": 7
+      },
+      {
+        "state": "Kelantan",
+        "records": 5
+      },
+      {
+        "state": "Negeri Sembilan",
+        "records": 5
+      },
+      {
+        "state": "Johor",
+        "records": 2
+      },
+      {
+        "state": "Selangor",
+        "records": 2
+      },
+      {
+        "state": "Terengganu",
+        "records": 2
+      },
+      {
+        "state": "Kedah",
+        "records": 1
+      },
+      {
+        "state": "Perak",
+        "records": 1
+      }
+    ]
+  },
+  "photos": [
+    {
+      "file": "inat-252864430.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/252864430"
+    },
+    {
+      "file": "inat-581514348.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/581514348"
+    },
+    {
+      "file": "inat-167334993.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/167334993"
+    }
+  ],
+  "sources": [
+    "https://www.fao.org/4/x2400e/x2400e55.pdf",
+    "https://www.gbif.org/species/2390863",
+    "https://www.wikidata.org/wiki/Q2163706",
+    "https://repository.seafdec.org.my/bitstream/handle/20.500.12561/1010/Valid%20Local%20Name%20of%20Malaysia%20Marine%20Fishes_DOF_2.pdf?isAllowed=y&sequence=1",
+    "https://repository.seafdec.org.my/bitstream/handle/20.500.12561/319/Panduan_Mengenali_Spesies_Ikan_Marin_pdf.pdf?sequence=3"
+  ],
+  "lastReviewed": "2026-10-13"
+}

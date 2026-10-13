@@ -1,9 +1,69 @@
 {
-  "commonName": "Freshwater Angelfish",
-  "scientificName": "Pterophyllum scalare",
-  "family": "Cichlidae",
-  "category": "aquarium",
-  "water": "freshwater",
-  "maxLengthCm": 15,
-  "summary": "Tall, disc-shaped cichlid from the Amazon with long trailing fins. Calm in general but may eat very small tankmates such as neon tetras."
+  "names": {
+    "english": "Freshwater Angelfish",
+    "scientific": "Pterophyllum scalare"
+  },
+  "taxonomy": {
+    "family": "Cichlidae",
+    "order": "Perciformes",
+    "gbifKey": 5208518,
+    "wikidata": "Q827441"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "aquarium"
+  ],
+  "summary": "A tall-bodied South American cichlid commonly bred for aquariums. Wild fish are silver with dark vertical bars, while captive strains vary widely; adults can eat smaller tankmates and become territorial during spawning.",
+  "nativeRange": "Amazon basin and associated northern South American river systems, including the Ucayali, Oyapock and Essequibo.",
+  "identify": {
+    "features": [
+      "Deep body strongly flattened from side to side.",
+      "Wild-type silver fish have dark vertical bars; captive forms may be marbled, golden or dark.",
+      "The dorsal and anal fins extend into long triangular points."
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "lowland-river"
+    ],
+    "description": "Quiet water near dense vegetation and submerged or fallen trees.",
+    "diet": "Small fish and aquatic invertebrates, including worms and crustaceans."
+  },
+  "aquarium": {
+    "minTankLitres": 209,
+    "tempC": [
+      25.6,
+      28.9
+    ],
+    "ph": [
+      6.8,
+      7.8
+    ],
+    "temperament": "semi-aggressive"
+  },
+  "photos": [
+    {
+      "file": "inat-611829672.jpg",
+      "credit": "(c) 許文俊, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/611829672"
+    },
+    {
+      "file": "inat-611829689.jpg",
+      "credit": "(c) 許文俊, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/611829689"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Pterophyllum_scalare",
+    "https://www.aqueon.com/resources/care-guides/angelfish",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Pterophyllum&tbl=species",
+    "https://www.gbif.org/species/5208518",
+    "https://www.wikidata.org/wiki/Q827441"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
 }

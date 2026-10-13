@@ -1,9 +1,117 @@
 {
-  "commonName": "Barramundi",
-  "scientificName": "Lates calcarifer",
-  "family": "Latidae",
-  "category": "game",
-  "water": "migratory",
-  "maxLengthCm": 200,
-  "summary": "Hard-fighting predator of the Indo-West Pacific that moves between rivers, estuaries and the sea. Most start life male and later become female."
+  "names": {
+    "english": "Barramundi",
+    "scientific": "Lates calcarifer",
+    "malay": "Siakap",
+    "other": [
+      "Asian seabass",
+      "Giant seaperch",
+      "Siakap putih",
+      "Kakap putih"
+    ]
+  },
+  "taxonomy": {
+    "family": "Latidae",
+    "order": "Perciformes",
+    "gbifKey": 2393172,
+    "wikidata": "Q74411"
+  },
+  "water": [
+    "freshwater",
+    "brackish",
+    "marine"
+  ],
+  "uses": [
+    "sport",
+    "food"
+  ],
+  "summary": "An Indo-West Pacific predator that can live in fresh, brackish and marine water. It is also widely farmed in Southeast Asia, including Malaysia.",
+  "nativeRange": "Indo-West Pacific, from the Arabian Gulf to China, Papua New Guinea and northern Australia.",
+  "iucn": "LC",
+  "size": {
+    "maxCm": 200
+  },
+  "identify": {
+    "features": [
+      "Large mouth extending behind the eye",
+      "Rounded tail",
+      "Deep notch separating the spiny and soft parts of the dorsal fin"
+    ],
+    "lookAlikes": [
+      {
+        "id": "mangrove-jack",
+        "difference": "Mangrove jack has a snapper-shaped body and conspicuous canine teeth; barramundi has a rounded tail and tiny villiform teeth."
+      }
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "lowland-river",
+      "lake",
+      "mangrove",
+      "estuary",
+      "coastal"
+    ],
+    "description": "Rivers, estuaries and coastal waters; breeding takes place in estuarine or coastal habitats.",
+    "diet": "Mostly fish and crustaceans."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Kedah",
+        "records": 5
+      },
+      {
+        "state": "Sabah",
+        "records": 2
+      },
+      {
+        "state": "Sarawak",
+        "records": 2
+      },
+      {
+        "state": "Johor",
+        "records": 1
+      },
+      {
+        "state": "Pahang",
+        "records": 1
+      },
+      {
+        "state": "Terengganu",
+        "records": 1
+      }
+    ]
+  },
+  "eating": "Widely grown in cages and sold as a food fish in Southeast Asia.",
+  "photos": [
+    {
+      "file": "inat-167334705.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/167334705"
+    },
+    {
+      "file": "inat-250233684.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/250233684"
+    },
+    {
+      "file": "inat-250233706.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/250233706"
+    }
+  ],
+  "sources": [
+    "https://www.fao.org/fishery/docs/DOCUMENT/aquaculture/CulturedSpecies/file/en/en_barramundi.htm",
+    "https://www.fao.org/4/ac420e/AC420e03.htm",
+    "https://www.fao.org/4/r7066e/r7066e09.pdf",
+    "https://www.lkim.gov.my/wp-content/uploads/2023/01/Buku-Ikan-Ikan-Komersial-Di-Malaysia.pdf",
+    "https://www.gbif.org/species/2393172",
+    "https://www.wikidata.org/wiki/Q74411"
+  ],
+  "lastReviewed": "2026-10-13"
 }

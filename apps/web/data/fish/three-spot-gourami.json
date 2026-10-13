@@ -1,0 +1,84 @@
+{
+  "names": {
+    "english": "Three-spot gourami",
+    "scientific": "Trichopodus trichopterus",
+    "malay": "Sepat ronggeng",
+    "other": [
+      "Blue gourami",
+      "Trichogaster trichopterus"
+    ]
+  },
+  "taxonomy": {
+    "family": "Osphronemidae",
+    "order": "Perciformes",
+    "gbifKey": 5211169,
+    "wikidata": "Q10866107"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "aquarium"
+  ],
+  "summary": "A native Malaysian gourami also sold in several aquarium colour forms. Surveys have recorded it in rivers feeding Kenyir, and older references use the scientific name Trichogaster trichopterus.",
+  "nativeRange": "Southeast Asia; the precise historical range is obscured by long-standing introductions.",
+  "habitat": {
+    "environments": [
+      "lowland-river",
+      "rice-field",
+      "reservoir"
+    ],
+    "description": "Freshwater ponds and rice-field channels as well as rivers in the Kenyir catchment."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Sarawak",
+        "records": 9
+      },
+      {
+        "state": "Pulau Pinang",
+        "records": 6
+      },
+      {
+        "state": "Sabah",
+        "records": 5
+      },
+      {
+        "state": "Johor",
+        "records": 4
+      },
+      {
+        "state": "Pahang",
+        "records": 2
+      },
+      {
+        "state": "Melaka",
+        "records": 1
+      },
+      {
+        "state": "Selangor",
+        "records": 1
+      }
+    ]
+  },
+  "photos": [
+    {
+      "file": "inat-250548842.jpg",
+      "credit": "(c) Zakqary Roy, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/250548842"
+    }
+  ],
+  "sources": [
+    "https://doi.org/10.3897/BDJ.11.e100337",
+    "https://nas.er.usgs.gov/queries/factsheet.aspx?SpeciesID=332",
+    "https://lkcnhm.nus.edu.sg/wp-content/uploads/sites/10/2020/10/32bnm143-154.pdf",
+    "https://www.dof.gov.my/wp-content/uploads/2024/07/SPESIS-TEMPATAN-POSTER-A1.pdf",
+    "https://www.gbif.org/species/5211169",
+    "https://www.wikidata.org/wiki/Q10866107"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

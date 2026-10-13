@@ -1,0 +1,86 @@
+{
+  "names": {
+    "english": "Giant gourami",
+    "scientific": "Osphronemus goramy",
+    "malay": "Kaloi",
+    "other": [
+      "Kalui",
+      "Giant gouramy"
+    ]
+  },
+  "taxonomy": {
+    "family": "Osphronemidae",
+    "order": "Perciformes",
+    "gbifKey": 2394154,
+    "wikidata": "Q1771943"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "food",
+    "aquarium"
+  ],
+  "summary": "Kaloi is a large freshwater gourami used as a food and ornamental fish. The modern Kenyir checklist treats O. goramy as native and records specimens from the Saok River.",
+  "habitat": {
+    "environments": [
+      "forest-river",
+      "reservoir"
+    ],
+    "description": "Freshwater river and reservoir habitats; recorded in the Kenyir catchment."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Sarawak",
+        "records": 21
+      },
+      {
+        "state": "Sabah",
+        "records": 5
+      },
+      {
+        "state": "Perak",
+        "records": 4
+      },
+      {
+        "state": "Melaka",
+        "records": 2
+      },
+      {
+        "state": "Johor",
+        "records": 1
+      },
+      {
+        "state": "Negeri Sembilan",
+        "records": 1
+      },
+      {
+        "state": "Pahang",
+        "records": 1
+      },
+      {
+        "state": "Selangor",
+        "records": 1
+      }
+    ]
+  },
+  "photos": [
+    {
+      "file": "inat-251818239.jpg",
+      "credit": "(c) Zakqary Roy, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/251818239"
+    }
+  ],
+  "sources": [
+    "https://doi.org/10.3897/BDJ.11.e100337",
+    "https://www.fao.org/4/a1495e/a1495e.pdf",
+    "https://www.dof.gov.my/wp-content/uploads/2024/07/SPESIS-TEMPATAN-POSTER-A1.pdf",
+    "https://www.gbif.org/species/2394154",
+    "https://www.wikidata.org/wiki/Q1771943"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

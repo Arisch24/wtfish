@@ -10,6 +10,16 @@
 
 **Spec:** `docs/superpowers/specs/2026-10-13-malaysia-fish-profiles-design.md`
 
+## Execution record
+
+Implemented on the existing stacked feature branch. Verification was
+consolidated after all research batches: 364 tests, 70 pages, and a browser
+audit of all 69 profiles. See
+`docs/research/2026-10-13-implementation-verification.md` for evidence,
+source-backed taxonomy corrections, skipped imports and deliberately
+unfilled optional fields. The commits consolidate the work into a buildable
+feature rather than preserving intermediate batch states.
+
 ## Global Constraints
 
 - All paths are relative to `apps/web/` unless they start with `docs/` or say "repo root".

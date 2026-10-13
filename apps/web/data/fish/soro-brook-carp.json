@@ -1,0 +1,91 @@
+{
+  "names": {
+    "english": "Soro brook carp",
+    "scientific": "Neolissochilus soroides",
+    "malay": "Tengas",
+    "other": [
+      "Brook carp",
+      "Copper mahseer"
+    ]
+  },
+  "taxonomy": {
+    "family": "Cyprinidae",
+    "order": "Cypriniformes",
+    "gbifKey": 2362821,
+    "wikidata": "Q3761847"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "food"
+  ],
+  "summary": "Tengas is associated with clear, flowing forest streams in Peninsular Malaysia. Its mouth shape varies within the species, so the presence of a fleshy lip alone is an unreliable way to distinguish it from kelah.",
+  "identify": {
+    "features": [
+      "Brown to greenish upper body",
+      "Copper-brown sides above a pale underside",
+      "Mouth may be rounded, have a cutting edge, or show a thick lower-lip lobe"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "forest-river",
+      "reservoir"
+    ],
+    "description": "Clear fast streams, including montane reaches; tracking research also documents use of the newly flooded Tembat Reservoir."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Perak",
+        "records": 3
+      },
+      {
+        "state": "Pahang",
+        "records": 2
+      },
+      {
+        "state": "Negeri Sembilan",
+        "records": 1
+      },
+      {
+        "state": "Pulau Pinang",
+        "records": 1
+      }
+    ]
+  },
+  "eating": "A freshwater food fish in Malaysia. Wild fish are also of interest for aquaculture research.",
+  "photos": [
+    {
+      "file": "inat-622384417.jpg",
+      "credit": "(c) Schrodiskitten, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/622384417"
+    },
+    {
+      "file": "inat-178444929.jpg",
+      "credit": "(c) scaup, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/178444929"
+    },
+    {
+      "file": "inat-545245394.jpg",
+      "credit": "(c) Ian Dugdale, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/545245394"
+    }
+  ],
+  "sources": [
+    "https://www.researchgate.net/publication/280910873_Cyprinid_fishes_of_the_genus_Neolissochilus_in_Peninsular_Malaysia",
+    "https://doi.org/10.1111/jfb.14709",
+    "https://mysitasi.mohe.gov.my/journal-website/get-meta-article?artId=823f2e3f-60a7-11ef-a699-005056a6a970&formatted=true",
+    "https://www.dof.gov.my/wp-content/uploads/2024/07/SPESIS-TEMPATAN-POSTER-A1.pdf",
+    "https://repository.si.edu/bitstream/handle/10088/12212/stri_Tyson_Roberts_2008.pdf",
+    "https://www.gbif.org/species/2362821",
+    "https://www.wikidata.org/wiki/Q3761847"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

@@ -1,0 +1,70 @@
+{
+  "names": {
+    "english": "Sultan fish",
+    "scientific": "Leptobarbus hoevenii",
+    "malay": "Jelawat",
+    "other": [
+      "Hoven's carp",
+      "White sultan fish"
+    ]
+  },
+  "taxonomy": {
+    "family": "Cyprinidae",
+    "order": "Cypriniformes",
+    "gbifKey": 2365645,
+    "wikidata": "Q740446"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "food"
+  ],
+  "summary": "Jelawat is a valuable native river fish also bred in captivity in Malaysia. Wild stocks face pressures from fishing and changes to river ecosystems.",
+  "habitat": {
+    "environments": [
+      "lowland-river"
+    ],
+    "description": "Large freshwater rivers, including those in eastern Peninsular Malaysia.",
+    "diet": "Omnivorous; aquaculture diets use both animal and plant ingredients."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Sarawak",
+        "records": 4
+      }
+    ]
+  },
+  "eating": "Prized as a freshwater food fish in Malaysia.",
+  "photos": [
+    {
+      "file": "inat-253355663.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/253355663"
+    },
+    {
+      "file": "inat-615583593.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/615583593"
+    },
+    {
+      "file": "inat-252863714.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/252863714"
+    }
+  ],
+  "sources": [
+    "https://www.researchgate.net/profile/Farahiyah_Jamaludin/publication/322593053_Optimum_protein_requirement_for_the_growth_of_Jelawat_fish_Leptobabrbus_hoevenii/links/5a619f9f0f7e9b6b8fd3fd99/Optimum-protein-requirement-for-the-growth-of-Jelawat-fish-Leptobabrbus-hoevenii.pdf",
+    "https://doi.org/10.1016/0044-8486(84)90285-0",
+    "https://www.dof.gov.my/wp-content/uploads/2024/07/SPESIS-TEMPATAN-POSTER-A1.pdf",
+    "https://www.gbif.org/species/2365645",
+    "https://www.wikidata.org/wiki/Q740446"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

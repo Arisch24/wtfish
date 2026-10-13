@@ -1,9 +1,66 @@
 {
-  "commonName": "Bronze Corydoras",
-  "scientificName": "Corydoras aeneus",
-  "family": "Callichthyidae",
-  "category": "aquarium",
-  "water": "freshwater",
-  "maxLengthCm": 7,
-  "summary": "Peaceful armoured catfish from South America that sifts the bottom for food. Best kept in groups over soft sand."
+  "names": {
+    "english": "Bronze Corydoras",
+    "scientific": "Osteogaster aenea",
+    "other": [
+      "Corydoras aeneus",
+      "Bronze cory"
+    ]
+  },
+  "taxonomy": {
+    "family": "Callichthyidae"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "aquarium"
+  ],
+  "summary": "A small armoured catfish that searches the bottom for food and is best observed in a group. Traditionally sold as Corydoras aeneus, it is now placed in Osteogaster; albino aquarium strains are also common.",
+  "nativeRange": "Northern South America and Trinidad and Tobago; some older records farther south refer to related or introduced fish.",
+  "size": {
+    "maxCm": 7.5
+  },
+  "identify": {
+    "features": [
+      "Body protected by rows of bony plates.",
+      "Metallic bronze-green sides and barbels around the mouth; albino strains lack the normal dark pigment.",
+      "Small barbels surround the mouth for probing the substrate."
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "lowland-river"
+    ],
+    "description": "Shallow streams and pools, including soft-bottomed quiet waters.",
+    "diet": "Small invertebrates, worms, detritus and algae; provide sinking food rather than relying on leftovers."
+  },
+  "aquarium": {
+    "minTankLitres": 80,
+    "tempC": [
+      22,
+      27
+    ],
+    "ph": [
+      5.5,
+      7.5
+    ],
+    "temperament": "peaceful",
+    "groupSize": 6
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Bronze_corydoras",
+    "https://fluvalaquatics.com/us/wp-content/uploads/2022/02/Species-Spotlight_Bronze-Corydoras_EN.pdf",
+    "https://www.tfhmagazine.com/articles/freshwater/corydoras-aeneus",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=4810"
+  ],
+  "lastReviewed": "2026-10-13",
+  "photos": [
+    {
+      "file": "inat-347207428.jpg",
+      "credit": "(c) Douglas Lopes, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/347207428"
+    }
+  ]
 }

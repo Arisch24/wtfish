@@ -1,0 +1,111 @@
+{
+  "names": {
+    "english": "Fourfinger threadfin",
+    "scientific": "Eleutheronema tetradactylum",
+    "malay": "Senangin rambut empat",
+    "other": [
+      "Senangin",
+      "Kurau janggut",
+      "Kurau pipih",
+      "Four-finger threadfin",
+      "Blue threadfin"
+    ]
+  },
+  "taxonomy": {
+    "family": "Polynemidae",
+    "order": "Perciformes",
+    "gbifKey": 2393382,
+    "wikidata": "Q2002638"
+  },
+  "water": [
+    "brackish",
+    "marine"
+  ],
+  "uses": [
+    "food"
+  ],
+  "summary": "A coastal threadfin recognised by four separate filaments below each pectoral fin. The DOF guide calls it Senangin rambut empat and also lists regional kurau names, which can refer to different threadfins.",
+  "nativeRange": "The Indo-West Pacific.",
+  "identify": {
+    "features": [
+      "Four free threadlike filaments below each pectoral fin",
+      "Yellowish pectoral fins",
+      "Lower lip present mainly at the back of the lower jaw"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "coastal",
+      "estuary"
+    ],
+    "description": "Coastal muddy bottoms and brackish estuary waters.",
+    "diet": "Small fish, shrimps and other bottom-associated animals."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Sabah",
+        "records": 6
+      },
+      {
+        "state": "Kedah",
+        "records": 5
+      },
+      {
+        "state": "Sarawak",
+        "records": 4
+      },
+      {
+        "state": "Pahang",
+        "records": 3
+      },
+      {
+        "state": "Pulau Pinang",
+        "records": 2
+      },
+      {
+        "state": "Selangor",
+        "records": 2
+      },
+      {
+        "state": "Johor",
+        "records": 1
+      },
+      {
+        "state": "Negeri Sembilan",
+        "records": 1
+      }
+    ]
+  },
+  "eating": "Consumed in Malaysia; threadfins are also sold as salted fish in neighbouring coastal fisheries.",
+  "photos": [
+    {
+      "file": "inat-561257311.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/561257311"
+    },
+    {
+      "file": "inat-615585240.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/615585240"
+    },
+    {
+      "file": "inat-365045862.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/365045862"
+    }
+  ],
+  "sources": [
+    "https://repository.seafdec.org.my/bitstream/handle/20.500.12561/1010/Valid%20Local%20Name%20of%20Malaysia%20Marine%20Fishes_DOF_2.pdf?sequence=1",
+    "https://www.kahaku.go.jp/research/db/zoology/Fishes_of_Bitung/data/p106_03b.html",
+    "https://www4.fisheries.go.th/local/file_document/20250821101633_1_file.pdf",
+    "https://foodandnutritionresearch.net/index.php/fnr/article/download/992/3795?inline=1",
+    "https://www.gbif.org/species/2393382",
+    "https://www.wikidata.org/wiki/Q2002638"
+  ],
+  "lastReviewed": "2026-10-13"
+}

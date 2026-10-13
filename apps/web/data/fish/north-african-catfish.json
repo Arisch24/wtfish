@@ -1,0 +1,81 @@
+{
+  "names": {
+    "english": "North African catfish",
+    "scientific": "Clarias gariepinus",
+    "malay": "Keli Afrika",
+    "other": [
+      "African sharptooth catfish"
+    ]
+  },
+  "taxonomy": {
+    "family": "Clariidae",
+    "order": "Siluriformes",
+    "gbifKey": 5202793,
+    "wikidata": "Q387344"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "food"
+  ],
+  "summary": "An African catfish introduced for aquaculture and identified by Malaysia’s Department of Fisheries as an invasive threat. Its tolerance of difficult water conditions helps it persist outside farms.",
+  "nativeRange": "Africa.",
+  "identify": {
+    "features": [
+      "Long cylindrical body without scales",
+      "Dark upper body and paler underside",
+      "Long dorsal and anal fins",
+      "Strong spines on the pectoral fins"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "lowland-river",
+      "lake"
+    ],
+    "description": "Swamps, rivers, lakes and seasonally flooded habitats in its original range."
+  },
+  "malaysia": {
+    "status": "invasive",
+    "states": [
+      {
+        "state": "Sabah",
+        "records": 2
+      },
+      {
+        "state": "Kedah",
+        "records": 1
+      },
+      {
+        "state": "Melaka",
+        "records": 1
+      },
+      {
+        "state": "Pulau Pinang",
+        "records": 1
+      },
+      {
+        "state": "Selangor",
+        "records": 1
+      }
+    ]
+  },
+  "eating": "An important aquaculture food fish.",
+  "photos": [
+    {
+      "file": "inat-215132094.jpg",
+      "credit": "(c) Caleb Catto, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/215132094"
+    }
+  ],
+  "sources": [
+    "https://www.fao.org/4/AC379E/AC379E02.htm",
+    "https://www.dof.gov.my/program-kesedaran-spesies-ikan-asing-dan-pertandingan-moh-tangkap-baung-ekor-merah/",
+    "https://www.gbif.org/species/5202793",
+    "https://www.wikidata.org/wiki/Q387344"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

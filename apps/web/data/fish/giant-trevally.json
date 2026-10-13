@@ -1,9 +1,93 @@
 {
-  "commonName": "Giant Trevally",
-  "scientificName": "Caranx ignobilis",
-  "family": "Carangidae",
-  "category": "game",
-  "water": "saltwater",
-  "maxLengthCm": 170,
-  "summary": "Powerful Indo-Pacific reef predator and a top target for popper and fly anglers. Often called GT."
+  "names": {
+    "english": "Giant trevally",
+    "scientific": "Caranx ignobilis",
+    "malay": "Gerepuh",
+    "other": [
+      "Gerepoh",
+      "Belukok mamong",
+      "Mamung",
+      "Repuh",
+      "GT"
+    ]
+  },
+  "taxonomy": {
+    "family": "Carangidae",
+    "order": "Perciformes",
+    "gbifKey": 2390805,
+    "wikidata": "Q1994256"
+  },
+  "water": [
+    "marine"
+  ],
+  "uses": [
+    "sport"
+  ],
+  "summary": "A large predatory trevally of tropical Indo-Pacific reefs and coastal waters. Its steep forehead and heavy tail scutes help distinguish it from other jacks.",
+  "nativeRange": "Tropical Indo-Pacific.",
+  "iucn": "LC",
+  "size": {
+    "maxCm": 180,
+    "maxKg": 86.6
+  },
+  "identify": {
+    "features": [
+      "Steep, blunt forehead",
+      "Heavy scutes along the straight rear lateral line",
+      "No dark spot at the back of the gill cover"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "reef",
+      "coastal"
+    ],
+    "description": "Reef channels, drop-offs and inshore sand flats; young fish may school close to shore.",
+    "diet": "Fish, with crustaceans and cephalopods also taken."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Sabah",
+        "records": 12
+      },
+      {
+        "state": "Kedah",
+        "records": 4
+      },
+      {
+        "state": "Melaka",
+        "records": 1
+      }
+    ]
+  },
+  "photos": [
+    {
+      "file": "inat-512308175.jpg",
+      "credit": "(c) Ro Hill, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/512308175"
+    },
+    {
+      "file": "inat-481396625.jpg",
+      "credit": "(c) Ooi Qie, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/481396625"
+    },
+    {
+      "file": "inat-603843186.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/603843186"
+    }
+  ],
+  "sources": [
+    "https://fishesofaustralia.net.au/home/species/4268",
+    "https://sgp1.digitaloceanspaces.com/litnya/tourism-malaysia/Map_Guide_KL/2021/Sport%20Fishing%20Paradise%202017_-compressed.pdf",
+    "https://www.gbif.org/species/2390805",
+    "https://www.wikidata.org/wiki/Q1994256",
+    "https://www.lkim.gov.my/wp-content/uploads/2023/01/Buku-Ikan-Ikan-Komersial-Di-Malaysia.pdf"
+  ],
+  "lastReviewed": "2026-10-13"
 }

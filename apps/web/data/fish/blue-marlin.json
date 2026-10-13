@@ -1,9 +1,62 @@
 {
-  "commonName": "Atlantic Blue Marlin",
-  "scientificName": "Makaira nigricans",
-  "family": "Istiophoridae",
-  "category": "game",
-  "water": "saltwater",
-  "maxLengthCm": 500,
-  "summary": "One of the largest bony fish in the ocean, with a long spear-like bill. A trophy species in big-game fishing."
+  "names": {
+    "english": "Atlantic Blue Marlin",
+    "scientific": "Makaira nigricans"
+  },
+  "taxonomy": {
+    "family": "Istiophoridae",
+    "order": "Perciformes",
+    "gbifKey": 8098719,
+    "wikidata": "Q882668"
+  },
+  "water": [
+    "marine"
+  ],
+  "uses": [
+    "sport"
+  ],
+  "summary": "This profile covers the Atlantic blue marlin, Makaira nigricans, a large ocean predator with a spear-like bill. Taxonomic treatments differ: WoRMS separates Indo-Pacific blue marlin as Makaira mazara, while NOAA uses Makaira nigricans across oceans. A Malaysian blue-marlin sighting should therefore not be assigned to this Atlantic profile without checking the identification.",
+  "nativeRange": "Atlantic tropical and subtropical waters under the taxonomic treatment separating Makaira mazara.",
+  "identify": {
+    "features": [
+      "Long, spear-shaped upper jaw",
+      "Prominent dorsal fin",
+      "Cobalt-blue upper body and silvery-white underside"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "offshore"
+    ],
+    "description": "Warm surface water and the upper ocean water column.",
+    "diet": "Tuna and other open-water fish."
+  },
+  "photos": [
+    {
+      "file": "inat-349147818.jpg",
+      "credit": "(c) Robin Fokker, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/349147818"
+    },
+    {
+      "file": "inat-349147978.jpg",
+      "credit": "(c) Robin Fokker, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/349147978"
+    },
+    {
+      "file": "inat-349983340.jpg",
+      "credit": "(c) Robin Fokker, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/349983340"
+    }
+  ],
+  "sources": [
+    "https://www.marinespecies.org/aphia.php?p=taxlist&tName=Makaira",
+    "https://www.fisheries.noaa.gov/species/pacific-blue-marlin",
+    "https://www.gbif.org/species/8098719",
+    "https://www.wikidata.org/wiki/Q882668"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "VU"
 }

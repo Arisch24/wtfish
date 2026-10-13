@@ -1,9 +1,71 @@
 {
-  "commonName": "Neon Tetra",
-  "scientificName": "Paracheirodon innesi",
-  "family": "Characidae",
-  "category": "aquarium",
-  "water": "freshwater",
-  "maxLengthCm": 3,
-  "summary": "Tiny schooling fish from the Amazon basin with an iridescent blue stripe and a red rear half. One of the most popular community aquarium fish."
+  "names": {
+    "english": "Neon Tetra",
+    "scientific": "Paracheirodon innesi"
+  },
+  "taxonomy": {
+    "family": "Characidae",
+    "order": "Characiformes",
+    "gbifKey": 2353909,
+    "wikidata": "Q131431"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "aquarium"
+  ],
+  "summary": "A small shoaling fish of Amazonian blackwater and clearwater streams. Its blue stripe sits above a red band confined to the rear half of the body, unlike the longer red band of a cardinal tetra.",
+  "nativeRange": "Amazon basin in South America.",
+  "size": {
+    "maxCm": 4
+  },
+  "identify": {
+    "features": [
+      "Reflective blue stripe along the upper side.",
+      "Red lower stripe begins around the middle of the body and continues towards the tail.",
+      "Silver-white belly and mostly transparent fins."
+    ],
+    "lookAlikes": [
+      {
+        "id": "cardinal-tetra",
+        "difference": "The cardinal has a red stripe running along most of the lower body; the neon has red mainly on its rear half."
+      }
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "forest-river"
+    ],
+    "description": "Dark blackwater and clearwater forest streams.",
+    "diet": "An omnivore that accepts suitably small prepared foods and small invertebrates."
+  },
+  "aquarium": {
+    "minTankLitres": 38,
+    "tempC": [
+      22,
+      24
+    ],
+    "ph": [
+      6,
+      7
+    ],
+    "temperament": "peaceful",
+    "groupSize": 6
+  },
+  "photos": [
+    {
+      "file": "commons-neon-tetra.jpg",
+      "credit": "Leo D'lion / Wikimedia Commons",
+      "license": "CC BY-SA",
+      "url": "https://commons.wikimedia.org/wiki/File:Paracheirodon_innesi.jpg"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Neon_tetra",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Paracheirodon&tbl=species",
+    "https://www.gbif.org/species/2353909",
+    "https://www.wikidata.org/wiki/Q131431"
+  ],
+  "lastReviewed": "2026-10-13"
 }

@@ -1,0 +1,95 @@
+{
+  "names": {
+    "english": "Mangrove jack",
+    "scientific": "Lutjanus argentimaculatus",
+    "malay": "Siakap merah",
+    "other": [
+      "Mangrove red snapper",
+      "Kakap merah"
+    ]
+  },
+  "taxonomy": {
+    "family": "Lutjanidae",
+    "order": "Perciformes",
+    "gbifKey": 2385069,
+    "wikidata": "Q2004240"
+  },
+  "water": [
+    "freshwater",
+    "brackish",
+    "marine"
+  ],
+  "uses": [
+    "sport",
+    "food"
+  ],
+  "summary": "A predatory snapper that uses mangrove estuaries while young and moves to reefs as it grows. The name siakap merah refers to a snapper, whereas siakap usually refers to barramundi.",
+  "nativeRange": "The tropical Indo-West Pacific.",
+  "size": {
+    "maxCm": 150
+  },
+  "identify": {
+    "features": [
+      "Greenish-brown to reddish body with a pale belly",
+      "Strong canine teeth in the jaws",
+      "Tail nearly square or shallowly notched",
+      "Juveniles show pale vertical bars and blue cheek lines"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "mangrove",
+      "estuary",
+      "reef"
+    ],
+    "description": "Young fish inhabit mangroves and lower river reaches; older fish move onto coastal and deeper offshore reefs.",
+    "diet": "Fish, crustaceans and molluscs."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Sabah",
+        "records": 5
+      },
+      {
+        "state": "Terengganu",
+        "records": 4
+      },
+      {
+        "state": "Kedah",
+        "records": 1
+      }
+    ]
+  },
+  "eating": "A commercially important food snapper, commonly consumed in Malaysia.",
+  "photos": [
+    {
+      "file": "inat-282457702.jpg",
+      "credit": "(c) portioid, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/282457702"
+    },
+    {
+      "file": "inat-369571075.jpg",
+      "credit": "(c) Ditch Townsend, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/369571075"
+    },
+    {
+      "file": "inat-282457711.jpg",
+      "credit": "(c) portioid, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/282457711"
+    }
+  ],
+  "sources": [
+    "https://repository.seafdec.org.my/bitstream/handle/20.500.12561/1010/Valid%20Local%20Name%20of%20Malaysia%20Marine%20Fishes_DOF_2.pdf?sequence=1",
+    "https://fishesofaustralia.net.au/home/species/548",
+    "https://pubmed.ncbi.nlm.nih.gov/16883284/",
+    "https://www.gbif.org/species/2385069",
+    "https://www.wikidata.org/wiki/Q2004240"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

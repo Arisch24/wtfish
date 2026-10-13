@@ -1,0 +1,76 @@
+{
+  "names": {
+    "english": "Asian arowana",
+    "scientific": "Scleropages formosus",
+    "malay": "Kelisa",
+    "other": [
+      "Asian bonytongue",
+      "Dragonfish",
+      "Golden arowana"
+    ]
+  },
+  "taxonomy": {
+    "family": "Osteoglossidae",
+    "order": "Osteoglossiformes",
+    "gbifKey": 2402231,
+    "wikidata": "Q728584"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "aquarium"
+  ],
+  "summary": "Kelisa is a native freshwater arowana with high ornamental value. Wild populations face pressure from collection, and international trade is regulated under CITES.",
+  "habitat": {
+    "environments": [
+      "lowland-river",
+      "reservoir"
+    ],
+    "description": "Freshwater rivers and lake systems; historical records include the Kenyir catchment."
+  },
+  "malaysia": {
+    "status": "native",
+    "rules": "Scleropages formosus is listed in CITES Appendix I and Malaysia’s International Trade in Endangered Species Act 2008. Obtain the applicable documentation before buying or trading it. Rules change and differ by state — check with your state Fisheries Office. Checked 13 October 2026.",
+    "states": [
+      {
+        "state": "Sarawak",
+        "records": 2
+      },
+      {
+        "state": "Perak",
+        "records": 1
+      }
+    ]
+  },
+  "photos": [
+    {
+      "file": "inat-288012739.jpg",
+      "credit": "(c) desertnaturalist, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/288012739"
+    },
+    {
+      "file": "inat-288010505.jpg",
+      "credit": "(c) desertnaturalist, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/288010505"
+    },
+    {
+      "file": "inat-310628775.jpg",
+      "credit": "(c) Heidi Meudt, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/310628775"
+    }
+  ],
+  "sources": [
+    "https://doi.org/10.3897/BDJ.11.e100337",
+    "https://avs.nparks.gov.sg/businesses/breeders/ornamental-fish-business/",
+    "https://files.wildlife.gov.my/wildlife-wp-media/2026/02/24080430/Act-686_BI.pdf",
+    "https://www.dof.gov.my/wp-content/uploads/2024/07/SPESIS-TEMPATAN-POSTER-A1.pdf",
+    "https://www.gbif.org/species/2402231",
+    "https://www.wikidata.org/wiki/Q728584"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "EN"
+}

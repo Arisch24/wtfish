@@ -1,9 +1,65 @@
 {
-  "commonName": "Goldfish",
-  "scientificName": "Carassius auratus",
-  "family": "Cyprinidae",
-  "category": "aquarium",
-  "water": "freshwater",
-  "maxLengthCm": 40,
-  "summary": "Domesticated in China over a thousand years ago. Grows far larger than most people expect and does best in ponds or large tanks, not bowls."
+  "names": {
+    "english": "Goldfish",
+    "scientific": "Carassius auratus"
+  },
+  "taxonomy": {
+    "family": "Cyprinidae",
+    "order": "Cypriniformes",
+    "gbifKey": 4286942,
+    "wikidata": "Q123141"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "aquarium"
+  ],
+  "summary": "A domesticated freshwater carp developed in China through centuries of selective breeding. Body shapes, fins and colours differ greatly between varieties; adult fish need substantial space and filtration rather than a small bowl.",
+  "nativeRange": "China; ornamental strains have been introduced widely.",
+  "iucn": "LC",
+  "size": {
+    "maxCm": 48
+  },
+  "identify": {
+    "features": [
+      "Colour and body shape vary among domesticated breeds.",
+      "More pointed snout than a crucian carp; young goldfish lack the crucian carp's dark tail-base spot.",
+      "Domestic colours include white, yellow, orange, red, brown and black."
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "lake",
+      "lowland-river"
+    ],
+    "diet": "Omnivorous; prepared foods can be supplemented with plant material and small invertebrates."
+  },
+  "aquarium": {
+    "minTankLitres": 100,
+    "tempC": [
+      4,
+      25
+    ],
+    "ph": [
+      6,
+      8
+    ],
+    "temperament": "peaceful"
+  },
+  "photos": [
+    {
+      "file": "commons-goldfish.jpg",
+      "credit": "Kateryna Martyniuk / Wikimedia Commons (CC BY 4.0)",
+      "license": "CC BY",
+      "url": "https://commons.wikimedia.org/wiki/File:Carassiusauratus.jpg"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Goldfish",
+    "https://ornamentalfish.org/wp-content/uploads/Goldfish-in-aquaria.pdf",
+    "https://www.gbif.org/species/4286942",
+    "https://www.wikidata.org/wiki/Q123141"
+  ],
+  "lastReviewed": "2026-10-13"
 }

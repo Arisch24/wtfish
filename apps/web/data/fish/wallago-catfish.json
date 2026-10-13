@@ -1,0 +1,59 @@
+{
+  "names": {
+    "english": "Wallago catfish",
+    "scientific": "Wallagonia leerii",
+    "malay": "Tapah",
+    "other": [
+      "Wallago",
+      "Wallago leerii",
+      "Wallago leeri"
+    ]
+  },
+  "taxonomy": {
+    "family": "Siluridae"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "food"
+  ],
+  "summary": "Tapah is a large native Southeast Asian catfish. Its accepted scientific name is Wallagonia leerii; the older forms Wallago leerii and Wallago leeri still occur in fisheries literature.",
+  "nativeRange": "The Malay Peninsula, Sumatra and Borneo, with mainland Southeast Asian records.",
+  "habitat": {
+    "environments": [
+      "lowland-river",
+      "reservoir"
+    ],
+    "description": "Freshwater river systems; historical records include Kenyir, although recent confirmation of its population there is needed."
+  },
+  "malaysia": {
+    "status": "native"
+  },
+  "sources": [
+    "https://doi.org/10.3897/BDJ.11.e100337",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=5957",
+    "https://repository.si.edu/bitstream/handle/10088/22667/stri_Roberts_Tyson_R._2014.pdf"
+  ],
+  "lastReviewed": "2026-10-13",
+  "photos": [
+    {
+      "file": "inat-260079253.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/260079253"
+    },
+    {
+      "file": "inat-250688436.jpg",
+      "credit": "(c) Zakqary Roy, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/250688436"
+    },
+    {
+      "file": "inat-263838486.jpg",
+      "credit": "(c) Abu Hamas, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/263838486"
+    }
+  ]
+}

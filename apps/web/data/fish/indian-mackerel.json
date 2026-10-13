@@ -1,0 +1,103 @@
+{
+  "names": {
+    "english": "Indian mackerel",
+    "scientific": "Rastrelliger kanagurta",
+    "malay": "Kembung",
+    "other": [
+      "Kembung borek",
+      "Temenung",
+      "Rumahan"
+    ]
+  },
+  "taxonomy": {
+    "family": "Scombridae",
+    "order": "Perciformes",
+    "gbifKey": 2374317,
+    "wikidata": "Q1071686"
+  },
+  "water": [
+    "marine"
+  ],
+  "uses": [
+    "food"
+  ],
+  "summary": "A schooling coastal mackerel and an important food fish in Malaysia. It feeds on plankton and is often sold fresh or preserved.",
+  "nativeRange": "Tropical Indo-Pacific.",
+  "iucn": "LC",
+  "size": {
+    "maxCm": 35
+  },
+  "identify": {
+    "features": [
+      "Streamlined silver body",
+      "Small finlets behind the dorsal and anal fins",
+      "Long gill rakers visible when the mouth is opened"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "coastal"
+    ],
+    "description": "Coastal pelagic waters, often in large schools near the surface.",
+    "diet": "Plankton, including small crustaceans."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Sabah",
+        "records": 11
+      },
+      {
+        "state": "Terengganu",
+        "records": 6
+      },
+      {
+        "state": "Pahang",
+        "records": 4
+      },
+      {
+        "state": "Selangor",
+        "records": 4
+      },
+      {
+        "state": "Johor",
+        "records": 1
+      },
+      {
+        "state": "Perak",
+        "records": 1
+      }
+    ]
+  },
+  "eating": "Sold fresh, frozen, dried, salted and smoked; it is also used in processed fish products.",
+  "photos": [
+    {
+      "file": "inat-481395715.jpg",
+      "credit": "(c) Ooi Qie, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/481395715"
+    },
+    {
+      "file": "inat-561257473.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/561257473"
+    },
+    {
+      "file": "inat-561256619.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/561256619"
+    }
+  ],
+  "sources": [
+    "https://www.fao.org/4/e9163e/e9163e4c.pdf",
+    "https://www.gbif.org/species/2374317",
+    "https://www.wikidata.org/wiki/Q1071686",
+    "https://www.lkim.gov.my/wp-content/uploads/2023/01/Buku-Ikan-Ikan-Komersial-Di-Malaysia.pdf",
+    "https://www.lkim.gov.my/wp-content/uploads/2024/02/Poster_Ikan.2023-1.pdf",
+    "https://www.mycc.gov.my/sites/default/files/pdf/newsroom/MyCC%20Report%20Market%20Review%20on%20Food%20Sector_eBook.pdf"
+  ],
+  "lastReviewed": "2026-10-13"
+}

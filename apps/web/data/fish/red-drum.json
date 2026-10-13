@@ -1,9 +1,60 @@
 {
-  "commonName": "Red Drum",
-  "scientificName": "Sciaenops ocellatus",
-  "family": "Sciaenidae",
-  "category": "game",
-  "water": "saltwater",
-  "maxLengthCm": 155,
-  "summary": "Coppery inshore fish of the US Atlantic and Gulf coasts with one or more black spots near the tail. Also called redfish."
+  "names": {
+    "english": "Red Drum",
+    "scientific": "Sciaenops ocellatus"
+  },
+  "taxonomy": {
+    "family": "Sciaenidae",
+    "order": "Perciformes",
+    "gbifKey": 2400222,
+    "wikidata": "Q2168496"
+  },
+  "water": [
+    "brackish",
+    "marine"
+  ],
+  "uses": [
+    "sport"
+  ],
+  "summary": "Red drum, or redfish, is a copper-coloured coastal fish best recognised by dark spots near the tail. Young fish use inshore waters before joining nearshore populations as they grow. Spawning adults make drumming sounds using muscles associated with their swim bladder.",
+  "size": {
+    "maxCm": 154.9
+  },
+  "identify": {
+    "features": [
+      "Copper to bronze sides and a paler belly",
+      "Usually one or more dark spots at the tail base",
+      "No chin barbels"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "coastal",
+      "estuary"
+    ],
+    "description": "Inshore and nearshore water, including seagrass, sand or mud bottoms and oyster bars.",
+    "diet": "Fish and invertebrates."
+  },
+  "eating": "Florida wildlife authorities describe red drum as a valued table fish.",
+  "photos": [
+    {
+      "file": "inat-459981708.jpg",
+      "credit": "(c) Quinn, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/459981708"
+    },
+    {
+      "file": "inat-54973582.jpg",
+      "credit": "(c) Mary Spilman, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/54973582"
+    }
+  ],
+  "sources": [
+    "https://myfwc.com/wildlifehabitats/profiles/saltwater/drums/red-drum/",
+    "https://www.gbif.org/species/2400222",
+    "https://www.wikidata.org/wiki/Q2168496"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
 }

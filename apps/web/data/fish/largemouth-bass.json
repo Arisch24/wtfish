@@ -1,9 +1,63 @@
 {
-  "commonName": "Largemouth Bass",
-  "scientificName": "Micropterus salmoides",
-  "family": "Centrarchidae",
-  "category": "game",
-  "water": "freshwater",
-  "maxLengthCm": 97,
-  "summary": "North America's most popular freshwater game fish. Its upper jaw extends past the eye, which separates it from smallmouth and spotted bass."
+  "names": {
+    "english": "Largemouth Bass",
+    "scientific": "Micropterus nigricans"
+  },
+  "taxonomy": {
+    "family": "Centrarchidae"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "sport"
+  ],
+  "summary": "A freshwater ambush predator from North America, largemouth bass waits near submerged plants and timber for passing prey. Its upper jaw reaches behind the eye. Modern taxonomy uses Micropterus nigricans for largemouth bass; some older guides use Micropterus salmoides, now applied to Florida bass.",
+  "nativeRange": "Eastern and central North American river basins, extending from southern Canada to northern Mexico.",
+  "size": {
+    "maxCm": 97
+  },
+  "identify": {
+    "features": [
+      "Upper jaw extends behind the eye in adults",
+      "Dark band or blotches along the side",
+      "Deep notch between the two dorsal-fin sections"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "lake",
+      "reservoir",
+      "lowland-river"
+    ],
+    "description": "Vegetated lakes and slow river backwaters provide cover for adults and shelter for young fish.",
+    "diet": "Adults eat fish, crayfish and frogs; juveniles also take insects and small crustaceans."
+  },
+  "sources": [
+    "https://nas.er.usgs.gov/queries/FactSheet.aspx?SpeciesID=401",
+    "https://www.fws.gov/species/largemouth-bass-micropterus-salmoides",
+    "https://myfwc.com/news/all-news/bass-name-724/",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=19779"
+  ],
+  "lastReviewed": "2026-10-13",
+  "photos": [
+    {
+      "file": "inat-113795988.jpg",
+      "credit": "(c) Dan Johnson, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/113795988"
+    },
+    {
+      "file": "inat-17819306.jpg",
+      "credit": "no rights reserved",
+      "license": "CC0",
+      "url": "https://www.inaturalist.org/photos/17819306"
+    },
+    {
+      "file": "inat-17819302.jpg",
+      "credit": "no rights reserved",
+      "license": "CC0",
+      "url": "https://www.inaturalist.org/photos/17819302"
+    }
+  ]
 }

@@ -1,0 +1,129 @@
+{
+  "names": {
+    "english": "Striped snakehead",
+    "scientific": "Channa striata",
+    "malay": "Haruan",
+    "other": [
+      "Common snakehead",
+      "Banded snakehead"
+    ]
+  },
+  "taxonomy": {
+    "family": "Channidae",
+    "order": "Perciformes",
+    "gbifKey": 2391463,
+    "wikidata": "Q686439"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "sport",
+    "food"
+  ],
+  "summary": "Haruan is an adaptable freshwater predator that can live in low-oxygen water. It waits near vegetation or submerged cover and takes smaller aquatic animals.",
+  "nativeRange": "South and Southeast Asia.",
+  "identify": {
+    "features": [
+      "Elongated body and flattened head",
+      "Dark back above a pale belly",
+      "Dark angled bands along the sides",
+      "A long dorsal fin extending along the back"
+    ],
+    "lookAlikes": [
+      {
+        "id": "giant-snakehead",
+        "difference": "Adult toman is bulkier and has a broad horizontal stripe rather than the angled bands of haruan."
+      }
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "lowland-river",
+      "reservoir",
+      "rice-field"
+    ],
+    "description": "Slow or still water, swamps and vegetated channels; it also tolerates disturbed waterways.",
+    "diet": "Small fish, frogs, insects and crustaceans."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Sarawak",
+        "records": 16
+      },
+      {
+        "state": "Sabah",
+        "records": 9
+      },
+      {
+        "state": "Johor",
+        "records": 8
+      },
+      {
+        "state": "Pahang",
+        "records": 8
+      },
+      {
+        "state": "Pulau Pinang",
+        "records": 8
+      },
+      {
+        "state": "Selangor",
+        "records": 7
+      },
+      {
+        "state": "Negeri Sembilan",
+        "records": 5
+      },
+      {
+        "state": "Perak",
+        "records": 5
+      },
+      {
+        "state": "Kedah",
+        "records": 4
+      },
+      {
+        "state": "Terengganu",
+        "records": 4
+      },
+      {
+        "state": "Kuala Lumpur",
+        "records": 1
+      }
+    ]
+  },
+  "eating": "An established food fish with aquaculture production in Malaysia.",
+  "photos": [
+    {
+      "file": "inat-440944441.jpg",
+      "credit": "(c) John Witton, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/440944441"
+    },
+    {
+      "file": "inat-440944481.jpg",
+      "credit": "(c) John Witton, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/440944481"
+    },
+    {
+      "file": "inat-472316681.jpg",
+      "credit": "(c) Vsevolod Rudyi, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/472316681"
+    }
+  ],
+  "sources": [
+    "https://doi.org/10.3897/BDJ.11.e100337",
+    "https://biodiversitysg.nparks.gov.sg/our-biodiversity/freshwater-fishes-and-invertebrates/common-snakehead/",
+    "https://nas.er.usgs.gov/taxgroup/fish/docs/SnakeheadRiskAssessment.pdf",
+    "https://www.dof.gov.my/wp-content/uploads/2024/07/SPESIS-TEMPATAN-POSTER-A1.pdf",
+    "https://www.gbif.org/species/2391463",
+    "https://www.wikidata.org/wiki/Q686439"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

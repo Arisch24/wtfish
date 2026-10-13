@@ -1,0 +1,114 @@
+asian-arowana — Scleropages formosus
+  Wikidata Malay label: "Ikan Kelisa Emas Malaysia" (not applied — check against DOF names)
+atlantic-salmon — Salmo salar
+  Wikidata Malay label: "Salmon Atlantik" (not applied — check against DOF names)
+barramundi — Lates calcarifer
+  Wikidata Malay label: "siakap putih" (not applied — check against DOF names)
+betta-persephone — Betta persephone
+betta — Betta splendens
+  Wikidata Malay label: "Ikan Pelaga" (not applied — check against DOF names)
+  GBIF has Malaysian records (Negeri Sembilan, Melaka, Pulau Pinang) but no malaysia section — add one only with evidence.
+black-pomfret — Parastromateus niger
+  Wikidata Malay label: "Ikan Bawal Hitam" (not applied — check against DOF names)
+blue-marlin — Makaira nigricans
+bluegill — Lepomis macrochirus
+bronze-corydoras — Osteogaster aenea
+  ! GBIF has no accepted exact match for "Osteogaster aenea" (matchType NONE, status undefined, species undefined). Nothing written.
+brown-marbled-grouper — Epinephelus fuscoguttatus
+butterfly-peacock-bass — Cichla ocellaris
+cardinal-tetra — Paracheirodon axelrodi
+chocolate-gourami — Sphaerichthys osphromenoides
+climbing-perch — Anabas testudineus
+  Wikidata Malay label: "Ikan Puyu" (not applied — check against DOF names)
+clown-anemonefish — Amphiprion ocellaris
+  Wikidata Malay label: "Amphiprion ocellaris" (not applied — check against DOF names)
+  GBIF has Malaysian records (Sabah, Terengganu, Johor, Kedah) but no malaysia section — add one only with evidence.
+cobia — Rachycentron canadum
+common-carp — Cyprinus carpio
+  Wikidata Malay label: "Ikan Lee Koh" (not applied — check against DOF names)
+  GBIF has Malaysian records (Pahang, Sarawak) but no malaysia section — add one only with evidence.
+discus — Symphysodon aequifasciatus
+dwarf-rasbora — Boraras maculatus
+fourfinger-threadfin — Eleutheronema tetradactylum
+  Wikidata Malay label: "senangin rambu empat" (not applied — check against DOF names)
+freshwater-angelfish — Pterophyllum scalare
+  Wikidata Malay label: "layang hias" (not applied — check against DOF names)
+giant-featherback — Chitala lopis
+giant-gourami — Osphronemus goramy
+  Wikidata Malay label: "Ikan Kalui Sabah" (not applied — check against DOF names)
+giant-grouper — Epinephelus lanceolatus
+  Wikidata Malay label: "kerapu pertang" (not applied — check against DOF names)
+giant-snakehead — Channa micropeltes
+  Wikidata Malay label: "Ikan Toman" (not applied — check against DOF names)
+giant-trevally — Caranx ignobilis
+  Wikidata Malay label: "bagat mamung" (not applied — check against DOF names)
+goldfish — Carassius auratus
+  Wikidata Malay label: "Ikan emas" (not applied — check against DOF names)
+  GBIF has Malaysian records (Negeri Sembilan, Pulau Pinang, Perak, Sarawak) but no malaysia section — add one only with evidence.
+guppy — Poecilia reticulata
+  Wikidata Malay label: "Ikan Gupi" (not applied — check against DOF names)
+  GBIF has Malaysian records (Pulau Pinang, Pahang, Sabah, Selangor, Kuala Lumpur, Sarawak) but no malaysia section — add one only with evidence.
+hampala-barb — Hampala macrolepidota
+  Wikidata Malay label: "sebarau satu belang" (not applied — check against DOF names)
+harlequin-rasbora — Trigonostigma heteromorpha
+  Wikidata Malay label: "Ikan Seluang Bada" (not applied — check against DOF names)
+hemibagrus-wyckioides — Hemibagrus wyckioides
+hound-needlefish — Tylosurus crocodilus
+humphead-wrasse — Cheilinus undulatus
+indian-mackerel — Rastrelliger kanagurta
+  Wikidata Malay label: "kembung borek" (not applied — check against DOF names)
+indo-pacific-sailfish — Istiophorus platypterus
+  Wikidata Malay label: "Layaran Pasifik" (not applied — check against DOF names)
+iridescent-shark — Pangasianodon hypophthalmus
+  Wikidata Malay label: "patin siam" (not applied — check against DOF names)
+johns-snapper — Lutjanus johnii
+  Wikidata Malay label: "Ikan Jenahak Tanda" (not applied — check against DOF names)
+julliens-golden-carp — Probarbus jullieni
+  Wikidata Malay label: "Ikan Temoleh" (not applied — check against DOF names)
+kawakawa — Euthynnus affinis
+largemouth-bass — Micropterus nigricans
+  ! GBIF has no accepted exact match for "Micropterus nigricans" (matchType NONE, status undefined, species undefined). Nothing written.
+mahi-mahi — Coryphaena hippurus
+  Wikidata Malay label: "belitung lumba" (not applied — check against DOF names)
+malayan-river-catfish — Hemibagrus capitulum
+  ! GBIF treats "Hemibagrus capitulum" as a synonym of "Hemibagrus fortis". Check Catalog of Fishes. Nothing written.
+malaysian-mahseer — Tor tambroides
+  Wikidata Malay label: "kelah merah" (not applied — check against DOF names)
+mandarinfish — Synchiropus splendidus
+mangrove-jack — Lutjanus argentimaculatus
+  Wikidata Malay label: "Ikan Merah" (not applied — check against DOF names)
+narrow-barred-spanish-mackerel — Scomberomorus commerson
+neon-tetra — Paracheirodon innesi
+nile-tilapia — Oreochromis niloticus
+north-african-catfish — Clarias gariepinus
+  Wikidata Malay label: "Ikan Keli Eksotika" (not applied — check against DOF names)
+northern-pike — Esox lucius
+  Wikidata Malay label: "Esox lucius" (not applied — check against DOF names)
+oscar — Astronotus ocellatus
+palette-surgeonfish — Paracanthurus hepatus
+  Wikidata Malay label: "debam ekor kuning" (not applied — check against DOF names)
+pangasius-nasutus — Pangasius nasutus
+penang-betta — Betta pugnax
+pirapitinga — Piaractus brachypomus
+  Wikidata Malay label: "Pacu Perut Merah" (not applied — check against DOF names)
+rainbow-trout — Oncorhynchus mykiss
+red-drum — Sciaenops ocellatus
+soro-brook-carp — Neolissochilus soroides
+striped-snakehead — Channa striata
+  Wikidata Malay label: "haruan hitam" (not applied — check against DOF names)
+sultan-fish — Leptobarbus hoevenii
+  Wikidata Malay label: "jelawat sultan" (not applied — check against DOF names)
+talang-queenfish — Scomberoides commersonnianus
+tarpon — Megalops atlanticus
+three-spot-gourami — Trichopodus trichopterus
+  Wikidata Malay label: "Ikan Sepat Padi" (not applied — check against DOF names)
+tinfoil-barb — Barbonymus schwanenfeldii
+  ! No Wikidata item with taxon name "Barbonymus schwanenfeldii".
+wallago-catfish — Wallagonia leerii
+  ! GBIF treats "Wallagonia leerii" as a synonym of "Wallago leerii". Check Catalog of Fishes. Nothing written.
+walleye — Sander vitreus
+yellowfin-tuna — Thunnus albacares
+  Wikidata Malay label: "Aya sirip kuning" (not applied — check against DOF names)
+yellowstripe-scad — Selaroides leptolepis
+zebra-danio — Danio rerio
+  Wikidata Malay label: "Danio rerio" (not applied — check against DOF names)

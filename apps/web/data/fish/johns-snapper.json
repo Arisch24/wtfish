@@ -1,0 +1,109 @@
+{
+  "names": {
+    "english": "John's snapper",
+    "scientific": "Lutjanus johnii",
+    "malay": "Jenahak tanda",
+    "other": [
+      "Jenahak",
+      "Golden snapper",
+      "Fingermark bream",
+      "Tetanda",
+      "Barah-barahan"
+    ]
+  },
+  "taxonomy": {
+    "family": "Lutjanidae",
+    "order": "Perciformes",
+    "gbifKey": 2384936,
+    "wikidata": "Q2304783"
+  },
+  "water": [
+    "brackish",
+    "marine"
+  ],
+  "uses": [
+    "sport",
+    "food"
+  ],
+  "summary": "Jenahak is a commercially important Malaysian snapper with a golden or bronze sheen. The DOF naming guide uses Jenahak tanda for this species, although market names can overlap with other snappers.",
+  "nativeRange": "The tropical Indo-West Pacific.",
+  "size": {
+    "maxCm": 97
+  },
+  "identify": {
+    "features": [
+      "Yellowish to bronze body fading to a pale belly",
+      "Large dark blotch above the lateral line beneath the soft dorsal fin",
+      "Reddish-brown marks on scales form fine horizontal lines"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "mangrove",
+      "estuary",
+      "reef",
+      "coastal"
+    ],
+    "description": "Silty coastal and estuarine reefs, with juveniles using mangrove shelter.",
+    "diet": "Fish and bottom-dwelling invertebrates, including shrimps, crabs and squid."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Sabah",
+        "records": 3
+      },
+      {
+        "state": "Kedah",
+        "records": 2
+      },
+      {
+        "state": "Selangor",
+        "records": 2
+      },
+      {
+        "state": "Negeri Sembilan",
+        "records": 1
+      },
+      {
+        "state": "Pulau Pinang",
+        "records": 1
+      },
+      {
+        "state": "Terengganu",
+        "records": 1
+      }
+    ]
+  },
+  "eating": "An important snapper sold in Malaysian landing sites and markets.",
+  "photos": [
+    {
+      "file": "inat-561256731.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/561256731"
+    },
+    {
+      "file": "inat-167334776.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/167334776"
+    },
+    {
+      "file": "inat-561257325.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/561257325"
+    }
+  ],
+  "sources": [
+    "https://repository.seafdec.org.my/bitstream/handle/20.500.12561/1010/Valid%20Local%20Name%20of%20Malaysia%20Marine%20Fishes_DOF_2.pdf?sequence=1",
+    "https://fishesofaustralia.net.au/home/species/558",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6124743/",
+    "https://www.gbif.org/species/2384936",
+    "https://www.wikidata.org/wiki/Q2304783"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

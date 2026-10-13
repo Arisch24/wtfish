@@ -1,34 +1,303 @@
 ---
 import { getCollection, type CollectionEntry } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import { formatDate, formatRange, formatSize, listOf } from '../../lib/format';
+import {
+	DIFFICULTY_LABEL,
+	ENVIRONMENT_LABEL,
+	IUCN_LABEL,
+	METHOD_LABEL,
+	STATUS_LABEL,
+	TEMPERAMENT_LABEL,
+	USE_LABEL,
+	WATER_LABEL,
+} from '../../lib/labels';
 
 export async function getStaticPaths() {
 	const fish = await getCollection('fish');
-	return fish.map((entry) => ({ params: { id: entry.id }, props: { entry } }));
+	const nameById = Object.fromEntries(fish.map((f) => [f.id, f.data.names.english]));
+	return fish.map((entry) => ({ params: { id: entry.id }, props: { entry, nameById } }));
 }
 
 interface Props {
 	entry: CollectionEntry<'fish'>;
+	nameById: Record<string, string>;
 }
 
-const { data } = Astro.props.entry;
+const { entry, nameById } = Astro.props;
+const f = entry.data;
+const photoSrc = (file: string) => `/photos/${entry.id}/${file}`;
+// The stored category does not identify a BY/BY-SA version; link the overview,
+// while the credited source retains the photo's exact licence details.
+const licenseInfoUrl = (license: string) => license === 'CC0'
+	? 'https://creativecommons.org/publicdomain/zero/1.0/'
+	: 'https://creativecommons.org/share-your-work/cclicenses/';
+const [hero, ...morePhotos] = f.photos ?? [];
+
+const facts: [string, string][] = [
+	['Water', listOf(f.water.map((w) => WATER_LABEL[w]))],
+	['Uses', listOf(f.uses.map((u) => USE_LABEL[u]))],
+];
+if (f.malaysia) facts.push(['In Malaysia', STATUS_LABEL[f.malaysia.status]]);
+if (f.iucn) facts.push(['IUCN Red List', IUCN_LABEL[f.iucn]]);
+if (f.size) facts.push(['Size', formatSize(f.size)]);
+facts.push(['Family', f.taxonomy.order ? `${f.taxonomy.family} (order ${f.taxonomy.order})` : f.taxonomy.family]);
+
+const states = f.malaysia?.states ?? [];
+const spots = f.malaysia?.spots ?? [];
+const gbifRecords = states.reduce((sum, s) => sum + s.records, 0);
+const fishing = f.fishing;
+const hasFishing = Boolean(
+	fishing && (fishing.season || fishing.methods?.length || fishing.baits?.length || fishing.difficulty),
+);
 ---
 
-<Base title={`${data.commonName} (${data.scientificName}) | wtfish`} description={data.summary}>
+<Base title={`${f.names.english} (${f.names.scientific}) | wtfish`} description={f.summary}>
 	<p><a href="/">← All fish</a></p>
-	<h1>{data.commonName}</h1>
-	<p class="sci">{data.scientificName}</p>
-	<p>{data.summary}</p>
-	<dl>
-		<dt>Family</dt>
-		<dd>{data.family}</dd>
-		<dt>Category</dt>
-		<dd class="cap">{data.category}</dd>
-		<dt>Water</dt>
-		<dd class="cap">{data.water}</dd>
-		<dt>Max length</dt>
-		<dd>~{data.maxLengthCm} cm</dd>
+
+	<header class="intro">
+		<h1>{f.names.english}</h1>
+		<p class="sci">{f.names.scientific}</p>
+		{f.names.malay && <p class="malay">Malay: <strong>{f.names.malay}</strong></p>}
+		{f.names.other?.length ? <p class="aka">Also called {listOf(f.names.other)}</p> : null}
+		{!f.lastReviewed && <p class="badge">Not yet fact-checked</p>}
+	</header>
+
+	{
+		hero && (
+			<figure class="hero">
+				<img src={photoSrc(hero.file)} alt={`${f.names.english} (${f.names.scientific})`} />
+				<figcaption>
+					<a href={hero.url}>{hero.credit}</a> · <a href={licenseInfoUrl(hero.license)}>{hero.license}</a>
+				</figcaption>
+			</figure>
+		)
+	}
+
+	<p class="summary">{f.summary}</p>
+
+	<dl class="pairs card">
+		{
+			facts.map(([label, value]) => (
+				<>
+					<dt>{label}</dt>
+					<dd>{value}</dd>
+				</>
+			))
+		}
 	</dl>
+	{
+		f.iucn && (
+			<p class="note">
+				Category from{' '}
+				{f.taxonomy.wikidata ? (
+					<a href={`https://www.wikidata.org/wiki/${f.taxonomy.wikidata}`}>Wikidata</a>
+				) : 'Wikidata'}
+				; it may lag the latest Red List assessment.
+			</p>
+		)
+	}
+
+	{
+		f.identify && (
+			<section>
+				<h2>How to identify</h2>
+				<ul>
+					{f.identify.features.map((feature) => (
+						<li>{feature}</li>
+					))}
+				</ul>
+				{f.identify.lookAlikes?.length ? (
+					<>
+						<h3>Look-alikes</h3>
+						<ul>
+							{f.identify.lookAlikes.map((l) => (
+								<li>
+									<a href={`/fish/${l.id}/`}>{nameById[l.id]}</a>: {l.difference}
+								</li>
+							))}
+						</ul>
+					</>
+				) : null}
+			</section>
+		)
+	}
+
+	{
+		(f.habitat || f.nativeRange) && (
+			<section>
+				<h2>Habitat</h2>
+				{f.habitat && (
+					<p class="chips">
+						{f.habitat.environments.map((e) => (
+							<span>{ENVIRONMENT_LABEL[e]}</span>
+						))}
+					</p>
+				)}
+				{f.habitat?.description && <p>{f.habitat.description}</p>}
+				{f.nativeRange && (
+					<p>
+						<strong>Native range:</strong> {f.nativeRange}
+					</p>
+				)}
+				{f.habitat?.diet && (
+					<p>
+						<strong>Diet:</strong> {f.habitat.diet}
+					</p>
+				)}
+			</section>
+		)
+	}
+
+	{
+		(states.length > 0 || spots.length > 0) && (
+			<section>
+				<h2>Where in Malaysia</h2>
+				{states.length > 0 && (
+					<>
+						<p>Recorded in {listOf(states.map((s) => s.state))}.</p>
+						<p class="note">
+							Based on {gbifRecords} open-licence records on{' '}
+							{f.taxonomy.gbifKey ? (
+								<a href={`https://www.gbif.org/species/${f.taxonomy.gbifKey}`}>GBIF</a>
+							) : (
+								'GBIF'
+							)}
+							. Few records can mean few surveys, not few fish.
+						</p>
+					</>
+				)}
+				{spots.length > 0 && (
+					<>
+						<h3>Well-known spots</h3>
+						<ul>
+							{spots.map((spot) => (
+								<li>{spot}</li>
+							))}
+						</ul>
+					</>
+				)}
+			</section>
+		)
+	}
+
+	{
+		hasFishing && fishing && (
+			<section>
+				<h2>Catching it</h2>
+				<dl class="pairs">
+					{fishing.season && (
+						<>
+							<dt>Season</dt>
+							<dd>{fishing.season}</dd>
+						</>
+					)}
+					{fishing.methods?.length ? (
+						<>
+							<dt>Methods</dt>
+							<dd>{listOf(fishing.methods.map((m) => METHOD_LABEL[m]))}</dd>
+						</>
+					) : null}
+					{fishing.baits?.length ? (
+						<>
+							<dt>Baits and lures</dt>
+							<dd>{listOf(fishing.baits)}</dd>
+						</>
+					) : null}
+					{fishing.difficulty && (
+						<>
+							<dt>Difficulty</dt>
+							<dd>{DIFFICULTY_LABEL[fishing.difficulty]}</dd>
+						</>
+					)}
+				</dl>
+			</section>
+		)
+	}
+
+	{
+		f.malaysia?.rules && (
+			<section class="rules">
+				<h2>Rules and conservation</h2>
+				<p>{f.malaysia.rules}</p>
+				<p class="note">
+					Rules change and differ by state. Check with your state Fisheries Office before you fish.
+					{f.lastReviewed && ` Last checked ${formatDate(f.lastReviewed)}.`}
+				</p>
+			</section>
+		)
+	}
+
+	{
+		f.eating && (
+			<section>
+				<h2>Eating</h2>
+				<p>{f.eating}</p>
+			</section>
+		)
+	}
+
+	{
+		f.aquarium && (
+			<section>
+				<h2>Aquarium care</h2>
+				<dl class="pairs">
+					<dt>Minimum tank</dt>
+					<dd>{f.aquarium.minTankLitres} litres</dd>
+					<dt>Temperature</dt>
+					<dd>{formatRange(f.aquarium.tempC, '°C')}</dd>
+					<dt>pH</dt>
+					<dd>{formatRange(f.aquarium.ph, '')}</dd>
+					<dt>Temperament</dt>
+					<dd>{TEMPERAMENT_LABEL[f.aquarium.temperament]}</dd>
+					{f.aquarium.groupSize && (
+						<>
+							<dt>Keep in groups of</dt>
+							<dd>{f.aquarium.groupSize} or more</dd>
+						</>
+					)}
+				</dl>
+			</section>
+		)
+	}
+
+	{
+		morePhotos.length > 0 && (
+			<section>
+				<h2>More photos</h2>
+				<div class="gallery">
+					{morePhotos.map((photo) => (
+						<figure>
+							<img src={photoSrc(photo.file)} alt={`${f.names.english} (${f.names.scientific})`} loading="lazy" />
+							<figcaption>
+								<a href={photo.url}>{photo.credit}</a> · <a href={licenseInfoUrl(photo.license)}>{photo.license}</a>
+							</figcaption>
+						</figure>
+					))}
+				</div>
+			</section>
+		)
+	}
+
+	<footer class="sources">
+		{
+			f.sources?.length ? (
+				<>
+					<h2>Sources</h2>
+					<ul>
+						{f.sources.map((source) => (
+							<li>
+								<a href={source}>{source}</a>
+							</li>
+						))}
+					</ul>
+				</>
+			) : null
+		}
+		<p class="note">
+			{f.lastReviewed ? `Last reviewed ${formatDate(f.lastReviewed)}.` : 'This profile has not been fact-checked yet.'}
+		</p>
+	</footer>
 </Base>
 
 <style>
@@ -40,15 +309,48 @@ const { data } = Astro.props.entry;
 		font-style: italic;
 		color: var(--muted);
 	}
-	dl {
-		display: grid;
-		grid-template-columns: max-content 1fr;
-		gap: 0.5rem 1.5rem;
-		max-width: 28rem;
+	.malay,
+	.aka {
+		margin: 0.25rem 0;
+	}
+	.badge {
+		display: inline-block;
+		padding: 0.125rem 0.5rem;
+		border: 1px solid var(--border);
+		border-radius: 999px;
+		font-size: 0.85rem;
+		color: var(--muted);
+	}
+	.hero {
+		margin: 1rem 0;
+	}
+	.hero img,
+	.gallery img {
+		width: 100%;
+		aspect-ratio: 3 / 2;
+		object-fit: cover;
+		border-radius: 0.75rem;
+		background: var(--border);
+	}
+	figcaption,
+	.note {
+		font-size: 0.85rem;
+		color: var(--muted);
+	}
+	.summary {
+		font-size: 1.1rem;
+	}
+	.card {
 		padding: 1rem;
 		background: var(--surface);
 		border: 1px solid var(--border);
 		border-radius: 0.75rem;
+	}
+	.pairs {
+		display: grid;
+		grid-template-columns: max-content 1fr;
+		gap: 0.5rem 1.5rem;
+		max-width: 40rem;
 	}
 	dt {
 		color: var(--muted);
@@ -56,7 +358,43 @@ const { data } = Astro.props.entry;
 	dd {
 		margin: 0;
 	}
-	.cap {
-		text-transform: capitalize;
+	section {
+		margin-top: 2rem;
+	}
+	.chips {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.375rem;
+	}
+	.chips span {
+		padding: 0.125rem 0.625rem;
+		border: 1px solid var(--border);
+		border-radius: 999px;
+		font-size: 0.9rem;
+	}
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+		gap: 0.75rem;
+	}
+	.gallery figure {
+		margin: 0;
+	}
+	.sources {
+		margin-top: 2.5rem;
+		padding-top: 1rem;
+		border-top: 1px solid var(--border);
+	}
+	.sources a {
+		overflow-wrap: anywhere;
+	}
+	@media (max-width: 30rem) {
+		.pairs {
+			grid-template-columns: 1fr;
+			gap: 0.125rem;
+		}
+		dd {
+			margin-bottom: 0.5rem;
+		}
 	}
 </style>

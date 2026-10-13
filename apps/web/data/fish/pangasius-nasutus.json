@@ -1,0 +1,68 @@
+{
+  "names": {
+    "english": "Pangasius nasutus",
+    "scientific": "Pangasius nasutus",
+    "malay": "Patin buah",
+    "other": [
+      "River catfish"
+    ]
+  },
+  "taxonomy": {
+    "family": "Pangasiidae",
+    "order": "Siluriformes",
+    "gbifKey": 5202450,
+    "wikidata": "Q147657"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "food"
+  ],
+  "summary": "Patin buah is a native Malaysian pangasiid catfish valued in river fisheries. It is distinct from the introduced striped catfish widely farmed as patin sangkar, and aquaculture fish can be difficult to identify from appearance alone.",
+  "habitat": {
+    "environments": [
+      "lowland-river",
+      "reservoir"
+    ],
+    "description": "Large rivers including the Pahang River; it was introduced locally into Kenyir for cage culture."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Sarawak",
+        "records": 3
+      },
+      {
+        "state": "Perak",
+        "records": 1
+      },
+      {
+        "state": "Sabah",
+        "records": 1
+      }
+    ]
+  },
+  "eating": "A commercially valuable freshwater fish in the Pahang River fishery.",
+  "sources": [
+    "https://www.mdpi.com/2673-9917/2/2/28",
+    "https://www.fao.org/fileadmin/templates/abdc/documents/cryofish.pdf",
+    "https://agris.fao.org/search/en/providers/122328/records/685178f553e52c13fc770604",
+    "https://doi.org/10.3897/BDJ.11.e100337",
+    "https://www.dof.gov.my/wp-content/uploads/2024/07/SPESIS-TEMPATAN-POSTER-A1.pdf",
+    "https://psasir.upm.edu.my/id/eprint/5487/1/FP_2006_17.pdf",
+    "https://www.gbif.org/species/5202450",
+    "https://www.wikidata.org/wiki/Q147657"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC",
+  "photos": [
+    {
+      "file": "commons-pangasius-nasutus.jpg",
+      "credit": "Lord Mountbatten / Wikimedia Commons (CC BY-SA 3.0)",
+      "license": "CC BY-SA",
+      "url": "https://commons.wikimedia.org/wiki/File:Pangasius_nasutus.JPG"
+    }
+  ]
+}

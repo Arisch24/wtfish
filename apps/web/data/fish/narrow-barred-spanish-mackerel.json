@@ -1,0 +1,88 @@
+{
+  "names": {
+    "english": "Narrow-barred Spanish mackerel",
+    "scientific": "Scomberomorus commerson",
+    "malay": "Tenggiri batang"
+  },
+  "taxonomy": {
+    "family": "Scombridae",
+    "order": "Perciformes",
+    "gbifKey": 2374255,
+    "wikidata": "Q1521298"
+  },
+  "water": [
+    "marine"
+  ],
+  "uses": [
+    "sport",
+    "food"
+  ],
+  "summary": "A fast coastal mackerel recognised by many thin, wavy bars down its silver sides. It is taken by both commercial and recreational fisheries.",
+  "nativeRange": "Tropical Indo-Pacific.",
+  "iucn": "NT",
+  "size": {
+    "maxCm": 240
+  },
+  "identify": {
+    "features": [
+      "Numerous narrow vertical bars on the sides",
+      "Long, laterally compressed body",
+      "Lateral line turns sharply down beneath the second dorsal fin"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "coastal",
+      "offshore"
+    ],
+    "description": "Pelagic waters near islands and rocky headlands, sometimes in small schools.",
+    "diet": "Mainly small fish; also squid and crustaceans."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Sabah",
+        "records": 6
+      },
+      {
+        "state": "Pahang",
+        "records": 2
+      },
+      {
+        "state": "Perak",
+        "records": 1
+      },
+      {
+        "state": "Pulau Pinang",
+        "records": 1
+      },
+      {
+        "state": "Terengganu",
+        "records": 1
+      }
+    ]
+  },
+  "photos": [
+    {
+      "file": "inat-449637330.jpg",
+      "credit": "(c) Rob Foster, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/449637330"
+    },
+    {
+      "file": "inat-605261093.jpg",
+      "credit": "(c) Debra Baker, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/605261093"
+    }
+  ],
+  "sources": [
+    "https://fishesofaustralia.net.au/home/species/728",
+    "https://www.lkim.gov.my/wp-content/uploads/2023/01/Buku-Ikan-Ikan-Komersial-Di-Malaysia.pdf",
+    "https://www.gbif.org/species/2374255",
+    "https://www.wikidata.org/wiki/Q1521298",
+    "https://repository.seafdec.org.my/bitstream/handle/20.500.12561/1010/Valid%20Local%20Name%20of%20Malaysia%20Marine%20Fishes_DOF_2.pdf?isAllowed=y&sequence=1"
+  ],
+  "lastReviewed": "2026-10-13"
+}

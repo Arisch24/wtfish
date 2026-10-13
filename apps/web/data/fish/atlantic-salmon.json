@@ -1,9 +1,67 @@
 {
-  "commonName": "Atlantic Salmon",
-  "scientificName": "Salmo salar",
-  "family": "Salmonidae",
-  "category": "game",
-  "water": "migratory",
-  "maxLengthCm": 150,
-  "summary": "Hatches in rivers, grows at sea, then returns to fresh water to spawn. Prized by fly anglers on both sides of the North Atlantic."
+  "names": {
+    "english": "Atlantic Salmon",
+    "scientific": "Salmo salar"
+  },
+  "taxonomy": {
+    "family": "Salmonidae",
+    "order": "Salmoniformes",
+    "gbifKey": 7595433,
+    "wikidata": "Q188879"
+  },
+  "water": [
+    "freshwater",
+    "brackish",
+    "marine"
+  ],
+  "uses": [
+    "sport",
+    "food"
+  ],
+  "summary": "Atlantic salmon hatches in freshwater, grows at sea and returns to rivers to reproduce. Some adults survive spawning and make another migration. Wild populations have declined substantially in parts of their range; the remaining U.S. populations are protected, and U.S. seafood markets sell farmed Atlantic salmon.",
+  "nativeRange": "The North Atlantic and associated rivers in North America, Greenland, Iceland, Europe and Russia.",
+  "identify": {
+    "features": [
+      "Streamlined body, broadest near the middle",
+      "Juveniles have dark vertical bars and red and black spots",
+      "Sea-going fish have silvery sides, dark backs and pale bellies"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "estuary",
+      "coastal",
+      "offshore"
+    ],
+    "description": "Cold freshwater streams support young fish and spawning adults; marine adults feed in coastal and oceanic waters.",
+    "diet": "Young fish eat insects and other invertebrates; large marine adults mainly eat smaller fish."
+  },
+  "eating": "Farmed Atlantic salmon has rich, fatty flesh that is pink to orange. NOAA notes that only farmed Atlantic salmon is available in U.S. seafood markets.",
+  "photos": [
+    {
+      "file": "inat-608737746.jpg",
+      "credit": "no rights reserved",
+      "license": "CC0",
+      "url": "https://www.inaturalist.org/photos/608737746"
+    },
+    {
+      "file": "inat-221451741.jpg",
+      "credit": "(c) Ben Rushbrooke, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/221451741"
+    },
+    {
+      "file": "inat-333670900.jpg",
+      "credit": "(c) Nicola Crockford, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/333670900"
+    }
+  ],
+  "sources": [
+    "https://www.fisheries.noaa.gov/species/atlantic-salmon",
+    "https://www.gbif.org/species/7595433",
+    "https://www.wikidata.org/wiki/Q188879"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "NT"
 }

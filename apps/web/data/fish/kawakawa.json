@@ -1,0 +1,91 @@
+{
+  "names": {
+    "english": "Kawakawa",
+    "scientific": "Euthynnus affinis",
+    "malay": "Aya kurik",
+    "other": [
+      "Eastern little tuna"
+    ]
+  },
+  "taxonomy": {
+    "family": "Scombridae",
+    "order": "Perciformes",
+    "gbifKey": 5208561,
+    "wikidata": "Q9125703"
+  },
+  "water": [
+    "marine"
+  ],
+  "uses": [
+    "food"
+  ],
+  "summary": "A neritic tuna recorded in Malaysian waters. Department of Fisheries lists it as aya kurik, distinct from skipjack (aya jalur) and longtail tuna (aya hitam).",
+  "nativeRange": "Warm Indo-West Pacific waters, including coastal islands and archipelagos.",
+  "iucn": "LC",
+  "size": {
+    "maxCm": 100,
+    "commonCm": 60
+  },
+  "identify": {
+    "features": [
+      "Broken oblique dark stripes on the back",
+      "Dark spots between the pectoral and pelvic fins, sometimes faint",
+      "Two dorsal fins separated by a narrow gap"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "coastal",
+      "offshore"
+    ],
+    "description": "Upper coastal waters and waters around offshore islands; often schools with other mackerels and tunas.",
+    "diet": "Small fish, squid, crustaceans and zooplankton."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Sabah",
+        "records": 6
+      },
+      {
+        "state": "Terengganu",
+        "records": 2
+      },
+      {
+        "state": "Pahang",
+        "records": 1
+      }
+    ]
+  },
+  "eating": "Marketed fresh, frozen, canned, dried, salted and smoked.",
+  "photos": [
+    {
+      "file": "inat-166957106.jpg",
+      "credit": "(c) Navaneeth Sini George, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/166957106"
+    },
+    {
+      "file": "inat-167410667.jpg",
+      "credit": "(c) R K, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/167410667"
+    },
+    {
+      "file": "inat-167410723.jpg",
+      "credit": "(c) R K, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/167410723"
+    }
+  ],
+  "sources": [
+    "https://www.dof.gov.my/en/services/captured-fisheries/tuna-licensing/",
+    "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=172403",
+    "https://www.gbif.org/species/5208561",
+    "https://www.wikidata.org/wiki/Q9125703",
+    "https://www.fao.org/4/y0870e/y0870e36.pdf",
+    "https://www.lkim.gov.my/wp-content/uploads/2024/02/Poster_Ikan.2023-1.pdf"
+  ],
+  "lastReviewed": "2026-10-13"
+}

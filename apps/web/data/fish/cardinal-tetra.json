@@ -1,9 +1,72 @@
 {
-  "commonName": "Cardinal Tetra",
-  "scientificName": "Paracheirodon axelrodi",
-  "family": "Characidae",
-  "category": "aquarium",
-  "water": "freshwater",
-  "maxLengthCm": 5,
-  "summary": "Close relative of the neon tetra from the Orinoco and Negro rivers. Easy to tell apart: its red stripe runs the full length of the body."
+  "names": {
+    "english": "Cardinal Tetra",
+    "scientific": "Paracheirodon axelrodi"
+  },
+  "taxonomy": {
+    "family": "Characidae",
+    "order": "Characiformes",
+    "gbifKey": 2353911,
+    "wikidata": "Q590731"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "aquarium"
+  ],
+  "summary": "A blue-and-red shoaling fish native to the upper Orinoco and Negro river systems. The red lower flank extends much farther forward than in a neon tetra; it is kept in planted and blackwater aquariums.",
+  "nativeRange": "Upper Orinoco and Negro river basins in South America.",
+  "size": {
+    "maxCm": 5
+  },
+  "identify": {
+    "features": [
+      "Bright blue stripe across the side.",
+      "Vivid red covers the lower flank almost from head to tail.",
+      "Small body, reaching about 5 cm in the cited aquarium guide."
+    ],
+    "lookAlikes": [
+      {
+        "id": "neon-tetra",
+        "difference": "The neon tetra has a shorter red band limited mostly to its rear half."
+      }
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "forest-river"
+    ],
+    "description": "Blackwater rivers and tributaries.",
+    "diet": "Small worms and crustaceans; aquarium fish take varied small prepared and frozen foods."
+  },
+  "aquarium": {
+    "minTankLitres": 60,
+    "tempC": [
+      24,
+      28
+    ],
+    "ph": [
+      5.5,
+      7.5
+    ],
+    "temperament": "peaceful",
+    "groupSize": 6
+  },
+  "photos": [
+    {
+      "file": "commons-cardinal-tetra.jpg",
+      "credit": "Lerdsuwa / Wikimedia Commons",
+      "license": "CC BY-SA",
+      "url": "https://commons.wikimedia.org/wiki/File:Cardinal_tetra.jpg"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Cardinal_tetra",
+    "https://fluvalaquatics.com/us/wp-content/uploads/2022/02/Species-Spotlight_Cardinal-Tetra_EN.pdf",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Paracheirodon&tbl=species",
+    "https://www.gbif.org/species/2353911",
+    "https://www.wikidata.org/wiki/Q590731"
+  ],
+  "lastReviewed": "2026-10-13"
 }

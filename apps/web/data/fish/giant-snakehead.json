@@ -1,0 +1,81 @@
+{
+  "names": {
+    "english": "Giant snakehead",
+    "scientific": "Channa micropeltes",
+    "malay": "Toman"
+  },
+  "taxonomy": {
+    "family": "Channidae",
+    "order": "Perciformes",
+    "gbifKey": 2391455,
+    "wikidata": "Q628790"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "sport",
+    "food"
+  ],
+  "summary": "Toman is a large predatory snakehead native to Malaysian freshwaters. Its bright red striped juveniles change dramatically as they become darker, bulkier adults.",
+  "nativeRange": "Southeast Asia, including the Malay Peninsula, Sumatra, Java and Borneo.",
+  "identify": {
+    "features": [
+      "Long body with a large mouth",
+      "Adults have a dark purplish upper body and a broad stripe along the side",
+      "Juveniles are orange-red with black horizontal stripes"
+    ],
+    "lookAlikes": [
+      {
+        "id": "striped-snakehead",
+        "difference": "Haruan has dark chevron markings; juvenile toman instead has red-orange colouring with black lengthwise stripes."
+      }
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "lake",
+      "reservoir",
+      "lowland-river"
+    ],
+    "description": "Deep still water and slow channels in rivers, lakes and reservoirs.",
+    "diet": "Predatory; eats fish and other animals such as frogs."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Perak",
+        "records": 2
+      },
+      {
+        "state": "Negeri Sembilan",
+        "records": 1
+      },
+      {
+        "state": "Selangor",
+        "records": 1
+      }
+    ]
+  },
+  "eating": "Cultured for food in Malaysia and several neighbouring countries.",
+  "photos": [
+    {
+      "file": "inat-518152652.jpg",
+      "credit": "(c) Schrodiskitten, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/518152652"
+    }
+  ],
+  "sources": [
+    "https://doi.org/10.3897/BDJ.11.e100337",
+    "https://biodiversitysg.nparks.gov.sg/our-biodiversity/freshwater-fishes-and-invertebrates/common-snakehead/",
+    "https://nas.er.usgs.gov/queries/factsheet.aspx?speciesid=414",
+    "https://nas.er.usgs.gov/taxgroup/fish/docs/SnakeheadRiskAssessment.pdf",
+    "https://www.dof.gov.my/wp-content/uploads/2024/07/SPESIS-TEMPATAN-POSTER-A1.pdf",
+    "https://www.gbif.org/species/2391455",
+    "https://www.wikidata.org/wiki/Q628790"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

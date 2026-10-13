@@ -1,0 +1,74 @@
+{
+  "names": {
+    "english": "Jullien's golden carp",
+    "scientific": "Probarbus jullieni",
+    "malay": "Temoleh",
+    "other": [
+      "Temelian",
+      "Esok",
+      "Seven-striped barb"
+    ]
+  },
+  "taxonomy": {
+    "family": "Cyprinidae",
+    "order": "Cypriniformes",
+    "gbifKey": 2363810,
+    "wikidata": "Q135514"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "food"
+  ],
+  "summary": "Temoleh is a large river carp native to Peninsular Malaysia. Habitat change and heavy harvest have reduced wild populations; Malaysian programmes also breed and release it for conservation and fisheries.",
+  "nativeRange": "Southeast Asia, including river basins in Malaysia, Thailand, Laos, Cambodia and Vietnam.",
+  "identify": {
+    "features": [
+      "Long golden body",
+      "Several dark lengthwise stripes on the flanks",
+      "Small mouth and pale belly"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "lowland-river",
+      "reservoir"
+    ],
+    "description": "Large lowland river basins, including the Pahang and Perak systems; Kenyir populations were stocked.",
+    "diet": "Mixed diet including aquatic plants, invertebrates and fruit."
+  },
+  "malaysia": {
+    "status": "native",
+    "rules": "Listed in CITES Appendix I. International trade is tightly controlled; this does not by itself establish local fishing permission. Rules change and differ by state — check with your state Fisheries Office. Checked 13 October 2026.",
+    "states": [
+      {
+        "state": "Pahang",
+        "records": 2
+      },
+      {
+        "state": "Perak",
+        "records": 1
+      }
+    ]
+  },
+  "eating": "A valuable freshwater food fish; wild populations require conservation.",
+  "photos": [
+    {
+      "file": "inat-28663326.jpg",
+      "credit": "(c) Dr. Nasser Halaweh, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/28663326"
+    }
+  ],
+  "sources": [
+    "https://cites.org/sites/default/files/eng/com/AC/16/16-8-1.pdf",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=3338",
+    "https://doi.org/10.3897/BDJ.11.e100337",
+    "https://www.dof.gov.my/wp-content/uploads/2024/07/SPESIS-TEMPATAN-POSTER-A1.pdf",
+    "https://www.gbif.org/species/2363810",
+    "https://www.wikidata.org/wiki/Q135514"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "CR"
+}

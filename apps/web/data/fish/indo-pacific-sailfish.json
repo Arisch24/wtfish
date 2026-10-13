@@ -1,0 +1,104 @@
+{
+  "names": {
+    "english": "Indo-Pacific sailfish",
+    "scientific": "Istiophorus platypterus",
+    "malay": "Layaran",
+    "other": [
+      "Layaran Pasifik",
+      "Pacific sailfish"
+    ]
+  },
+  "taxonomy": {
+    "family": "Istiophoridae",
+    "order": "Perciformes",
+    "gbifKey": 5211984,
+    "wikidata": "Q694527"
+  },
+  "water": [
+    "marine"
+  ],
+  "uses": [
+    "sport"
+  ],
+  "summary": "A billfish with a towering sail-shaped dorsal fin and a slender bill. It feeds on schooling fish and squid and is a major sport-fishing attraction off Kuala Rompin, Pahang.",
+  "nativeRange": "Tropical and subtropical oceans; this profile focuses on Indo-Pacific populations.",
+  "size": {
+    "maxCm": 350,
+    "maxKg": 100
+  },
+  "identify": {
+    "features": [
+      "Very tall sail-shaped first dorsal fin",
+      "Long slender bill",
+      "Vertical bands made of blue spots on the sides",
+      "Deeply forked tail"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "offshore",
+      "coastal",
+      "reef"
+    ],
+    "description": "Upper ocean waters, also approaching continental coasts, islands and reefs.",
+    "diet": "Schooling fish, squid and other small animal prey."
+  },
+  "malaysia": {
+    "status": "native",
+    "spots": [
+      "Kuala Rompin, Pahang"
+    ],
+    "rules": "Many Rompin charter operators practise catch-and-release for billfish. This is an operator practice, not a claim of a nationwide legal requirement; confirm the applicable rules with the Department of Fisheries.",
+    "states": [
+      {
+        "state": "Sabah",
+        "records": 1
+      }
+    ]
+  },
+  "fishing": {
+    "season": "Rompin operators commonly fish March–October, with some extending into early November; quoted season dates vary. August–October is commonly reported as the peak. The November–February northeast monsoon can bring rough seas and suspend trips.",
+    "methods": [
+      "trolling",
+      "fly",
+      "casting",
+      "float"
+    ],
+    "baits": [
+      "Live baitfish"
+    ]
+  },
+  "photos": [
+    {
+      "file": "inat-218996387.jpg",
+      "credit": "(c) harrier, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/218996387"
+    },
+    {
+      "file": "inat-594567617.jpg",
+      "credit": "(c) Jiro Iguchi, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/594567617"
+    },
+    {
+      "file": "inat-18597514.jpg",
+      "credit": "(c) cstobie, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/18597514"
+    }
+  ],
+  "sources": [
+    "https://fishesofaustralia.net.au/home/species/713",
+    "https://australian.museum/learn/animals/fishes/sailfish-istiophorus-platypterus/",
+    "https://sportfishin.asia/kuala-rompin-sailfish-fishing/",
+    "https://www.rompin-sailfish.com/rompin-fishing.php",
+    "https://www.malaysiasailfish.com/",
+    "https://repository.seafdec.org.my/bitstream/handle/20.500.12561/1010/Valid%20Local%20Name%20of%20Malaysia%20Marine%20Fishes_DOF_2.pdf?isAllowed=y&sequence=1",
+    "https://sgp1.digitaloceanspaces.com/litnya/tourism-malaysia/Map_Guide_KL/2021/Sport%20Fishing%20Paradise%202017_-compressed.pdf",
+    "https://www.gbif.org/species/5211984",
+    "https://www.wikidata.org/wiki/Q694527"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "VU"
+}

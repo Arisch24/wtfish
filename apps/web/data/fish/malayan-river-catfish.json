@@ -1,0 +1,62 @@
+{
+  "names": {
+    "english": "Malayan river catfish",
+    "scientific": "Hemibagrus capitulum",
+    "malay": "Baung",
+    "other": [
+      "Baung sungai"
+    ]
+  },
+  "taxonomy": {
+    "family": "Bagridae"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "food"
+  ],
+  "summary": "This native Malaysian baung was frequently called Hemibagrus nemurus in older literature. Modern revisions separate H. capitulum of Malaysia and neighbouring islands from the Java species H. nemurus.",
+  "nativeRange": "The Malay Peninsula, Sumatra and Borneo.",
+  "identify": {
+    "features": [
+      "Forked tail with rounded lobes",
+      "Rounded anal fin",
+      "Dorsal fin reaches the adipose-fin origin when laid flat against the body"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "forest-river",
+      "lowland-river"
+    ],
+    "description": "River channels and covered stream margins, with verified records in tributaries of Kenyir and in Ulu Paip, Kedah."
+  },
+  "malaysia": {
+    "status": "native"
+  },
+  "eating": "A commercially valuable freshwater food fish in Malaysia.",
+  "sources": [
+    "https://doi.org/10.3897/BDJ.11.e100337",
+    "https://jms.mabjournal.com/index.php/mab/article/download/11/5/18",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=54621",
+    "https://jwp.wildlife.gov.my/index.php/jwp/article/download/1/1",
+    "https://www.dof.gov.my/wp-content/uploads/2024/07/SPESIS-TEMPATAN-POSTER-A1.pdf",
+    "https://ptsldigital.ukm.my/handle/123456789/462658"
+  ],
+  "lastReviewed": "2026-10-13",
+  "photos": [
+    {
+      "file": "inat-250688311.jpg",
+      "credit": "(c) Zakqary Roy, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/250688311"
+    },
+    {
+      "file": "inat-250556708.jpg",
+      "credit": "(c) Zakqary Roy, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/250556708"
+    }
+  ]
+}

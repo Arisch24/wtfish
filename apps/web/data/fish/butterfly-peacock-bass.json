@@ -1,0 +1,77 @@
+{
+  "names": {
+    "english": "Butterfly peacock bass",
+    "scientific": "Cichla ocellaris",
+    "malay": "Ikan raja",
+    "other": [
+      "Peacock bass",
+      "Butterfly peacock",
+      "Tucunaré"
+    ]
+  },
+  "taxonomy": {
+    "family": "Cichlidae",
+    "order": "Perciformes",
+    "gbifKey": 5208153,
+    "wikidata": "Q4889552"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "sport"
+  ],
+  "summary": "An introduced South American cichlid included among the invasive peacock bass reported from Malaysia. Several Cichla species occur locally, so a fish labelled peacock bass should not automatically be identified as C. ocellaris.",
+  "nativeRange": "The Guianas in northern South America.",
+  "size": {
+    "maxCm": 70
+  },
+  "habitat": {
+    "environments": [
+      "lake",
+      "reservoir"
+    ],
+    "description": "Freshwater lakes and reservoirs after introduction."
+  },
+  "malaysia": {
+    "status": "invasive",
+    "states": [
+      {
+        "state": "Negeri Sembilan",
+        "records": 1
+      },
+      {
+        "state": "Selangor",
+        "records": 1
+      }
+    ]
+  },
+  "photos": [
+    {
+      "file": "inat-207016181.jpg",
+      "credit": "(c) Caleb Catto, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/207016181"
+    },
+    {
+      "file": "inat-207016198.jpg",
+      "credit": "(c) Caleb Catto, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/207016198"
+    },
+    {
+      "file": "inat-207016214.jpg",
+      "credit": "(c) Caleb Catto, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/207016214"
+    }
+  ],
+  "sources": [
+    "https://reference-global.com/article/10.2478/cjf-2021-0004",
+    "https://nas.er.usgs.gov/queries/factsheet.aspx?speciesid=437",
+    "https://www.gbif.org/species/5208153",
+    "https://www.wikidata.org/wiki/Q4889552"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

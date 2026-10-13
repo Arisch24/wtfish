@@ -1,9 +1,62 @@
 {
-  "commonName": "Atlantic Tarpon",
-  "scientificName": "Megalops atlanticus",
-  "family": "Megalopidae",
-  "category": "game",
-  "water": "saltwater",
-  "maxLengthCm": 250,
-  "summary": "Huge silver fish famous for leaping when hooked. Can gulp air at the surface, so it survives in low-oxygen water. Mostly caught and released."
+  "names": {
+    "english": "Atlantic Tarpon",
+    "scientific": "Megalops atlanticus"
+  },
+  "taxonomy": {
+    "family": "Megalopidae",
+    "order": "Elopiformes",
+    "gbifKey": 5203123,
+    "wikidata": "Q756975"
+  },
+  "water": [
+    "freshwater",
+    "brackish",
+    "marine"
+  ],
+  "uses": [
+    "sport"
+  ],
+  "summary": "Atlantic tarpon is a large, silvery coastal fish known for powerful leaps when hooked. It tolerates a wide range of salinities, and juveniles may enter freshwater. Tarpon can gulp air at the surface; Florida manages it principally as a catch-and-release sport fish.",
+  "size": {
+    "maxCm": 243.8,
+    "maxKg": 136.1
+  },
+  "identify": {
+    "features": [
+      "Very large, bright silver scales",
+      "Large upward-facing mouth",
+      "Last dorsal-fin ray forms a long trailing filament"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "coastal",
+      "estuary"
+    ],
+    "description": "Adults mainly use inshore coastal water and spawn offshore; juveniles also enter freshwater.",
+    "diet": "Fish and large crustaceans."
+  },
+  "eating": "Tarpon has little food value and is mainly pursued for catch-and-release fishing in Florida.",
+  "photos": [
+    {
+      "file": "inat-151904401.jpg",
+      "credit": "(c) Jay Brasher, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/151904401"
+    },
+    {
+      "file": "inat-197824466.jpg",
+      "credit": "(c) Shawn Taylor, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/197824466"
+    }
+  ],
+  "sources": [
+    "https://myfwc.com/wildlifehabitats/profiles/saltwater/tarpon/tarpon/",
+    "https://www.gbif.org/species/5203123",
+    "https://www.wikidata.org/wiki/Q756975"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "VU"
 }

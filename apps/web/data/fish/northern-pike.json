@@ -1,9 +1,64 @@
 {
-  "commonName": "Northern Pike",
-  "scientificName": "Esox lucius",
-  "family": "Esocidae",
-  "category": "game",
-  "water": "freshwater",
-  "maxLengthCm": 150,
-  "summary": "Long, ambush predator of cool northern waters with a duck-bill snout full of sharp teeth. Found across North America, Europe and Asia."
+  "names": {
+    "english": "Northern Pike",
+    "scientific": "Esox lucius"
+  },
+  "taxonomy": {
+    "family": "Esocidae",
+    "order": "Esociformes",
+    "gbifKey": 2346633,
+    "wikidata": "Q165278"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "sport"
+  ],
+  "summary": "Northern pike is a large predatory freshwater fish native to northern parts of the Northern Hemisphere. It has been stocked widely for sport fishing. Introduced populations can strongly affect native fish communities.",
+  "nativeRange": "Northern freshwater regions of Europe, Asia and North America.",
+  "identify": {
+    "features": [
+      "Light spots on a darker body",
+      "A single dorsal fin",
+      "Cheeks fully scaled, with scales on the upper half of the gill cover"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "lake",
+      "lowland-river"
+    ],
+    "description": "Often stays near submerged vegetation, fallen trees and other cover.",
+    "diet": "Mostly smaller fish, with frogs, crayfish and other small animals taken when available."
+  },
+  "eating": "Its flesh is eaten, but fish should be thoroughly cooked: the U.S. Fish and Wildlife Service notes that pike can carry a tapeworm transmissible through undercooked fish.",
+  "photos": [
+    {
+      "file": "inat-229037769.jpg",
+      "credit": "(c) Rob Foster, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/229037769"
+    },
+    {
+      "file": "inat-229037777.jpg",
+      "credit": "(c) Rob Foster, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/229037777"
+    },
+    {
+      "file": "inat-229037789.jpg",
+      "credit": "(c) Rob Foster, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/229037789"
+    }
+  ],
+  "sources": [
+    "https://www.fws.gov/media/ecological-risk-screening-summary-northern-pike-esox-lucius-high-risk",
+    "https://www.michigan.gov/dnr/education/michigan-species/fish-species/pike",
+    "https://www.gbif.org/species/2346633",
+    "https://www.wikidata.org/wiki/Q165278"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
 }
