@@ -14,13 +14,27 @@
 	--color-salt: #1559a0;
 	--color-alert: #b00d28;
 
+	/* Soft fills: our colours mixed with white. Solid, so the tile pattern never shows through a chip. */
+	--color-salt-soft: color-mix(in srgb, var(--color-salt) 10%, white);
+	--color-salt-ring: color-mix(in srgb, var(--color-salt) 40%, white);
+	--color-fresh-soft: color-mix(in srgb, var(--color-fresh) 10%, white);
+	--color-brackish-soft: color-mix(in srgb, var(--color-brackish) 10%, white);
+	--color-threat-soft: color-mix(in srgb, var(--color-sign-yellow) 55%, white);
+	--color-notice: color-mix(in srgb, var(--color-sign-yellow) 15%, white);
+	--color-notice-line: color-mix(in srgb, var(--color-sign-yellow) 70%, white);
+	/* Edges of form controls: 3.5:1 on white, above the 3:1 WCAG asks of a control's boundary. */
+	--color-control: color-mix(in srgb, var(--color-muted) 70%, white);
+	--color-hover-line: color-mix(in srgb, var(--color-muted) 40%, white);
+
 	/* Astro's <Font> defines the --astro-font-* variables. */
-	--font-sans: var(--astro-font-bricolage), ui-sans-serif, system-ui, sans-serif;
+	--font-sans: var(--astro-font-inter), ui-sans-serif, system-ui, sans-serif;
+	--font-display: var(--astro-font-bricolage), ui-sans-serif, system-ui, sans-serif;
 	--font-marker: var(--astro-font-marker), cursive;
 
 	--shadow-hard: 5px 5px 0 var(--color-ink);
 	--shadow-hard-sm: 3px 3px 0 var(--color-ink);
-	--shadow-board: 2px 3px 0 rgb(0 0 0 / 0.2);
+	--shadow-menu: 0 8px 24px rgb(26 26 26 / 0.08);
+	--shadow-paper: 1px 2px 0 rgb(0 0 0 / 0.12);
 
 	--animate-sway: sway 3.2s ease-in-out infinite alternate;
 	--animate-rise: rise 5s ease-in infinite;
@@ -29,10 +43,10 @@
 
 	@keyframes sway {
 		from {
-			transform: rotate(-4deg);
+			transform: rotate(-2deg);
 		}
 		to {
-			transform: rotate(3deg);
+			transform: rotate(2deg);
 		}
 	}
 	@keyframes rise {
@@ -58,17 +72,17 @@
 	}
 	@keyframes bob {
 		from {
-			transform: translateY(-4px);
+			transform: translateY(-3px);
 		}
 		to {
-			transform: translateY(4px);
+			transform: translateY(3px);
 		}
 	}
 }
 
 @layer base {
 	body {
-		@apply tile-surface;
+		background-color: #fff;
 		color: var(--color-ink);
 	}
 
@@ -82,14 +96,12 @@
 	}
 
 	input {
-		caret-color: var(--color-sign-red);
+		caret-color: var(--color-salt);
 	}
 
-	/* A yellow ring inside an ink ring. */
 	:focus-visible {
-		outline: 3px solid var(--color-ink);
+		outline: 2px solid var(--color-salt);
 		outline-offset: 2px;
-		box-shadow: 0 0 0 2px var(--color-sign-yellow);
 	}
 
 	@media (prefers-reduced-motion: reduce) {
@@ -108,11 +120,17 @@
 	border-radius: 10px;
 }
 
+@utility panel {
+	background-color: #fff;
+	border: 1px solid var(--color-grout);
+	border-radius: 12px;
+}
+
 @utility cardboard {
 	background-color: var(--color-cardboard);
 	color: var(--color-ink);
 	font-family: var(--font-marker);
-	box-shadow: var(--shadow-board);
+	box-shadow: var(--shadow-paper);
 }
 
 @utility tile-surface {

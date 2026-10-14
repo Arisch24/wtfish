@@ -23,11 +23,12 @@ const {
 		<meta name="generator" content={Astro.generator} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<Font cssVariable="--astro-font-inter" preload />
 		<Font cssVariable="--astro-font-bricolage" preload />
 		<Font cssVariable="--astro-font-marker" />
 		<title>{title}</title>
 	</head>
-	<body class="flex min-h-dvh flex-col font-sans leading-normal">
+	<body class="flex min-h-dvh flex-col bg-white font-sans text-sm leading-normal text-ink">
 		<SiteHeader />
 		<slot name="top" />
 		<main class="w-full flex-1">
