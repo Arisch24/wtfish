@@ -5,10 +5,9 @@ import Tape from './Tape.astro';
 
 interface Props {
 	maxCm: number;
-	maxKg?: number;
 }
 
-const { maxCm, maxKg } = Astro.props;
+const { maxCm } = Astro.props;
 const comparison = sizeComparison(maxCm);
 const width = (cm: number) => `width: ${(cm / comparison.scaleMaxCm) * 100}%`;
 const reference =
@@ -18,12 +17,20 @@ const reference =
 ---
 
 <figure data-size-reference={comparison.reference}>
-	<div class="space-y-2" aria-hidden="true">
-		<Icon name="fish" class="block h-auto text-salt" style={width(maxCm)} />
-		<Icon name={comparison.reference} class="block h-auto text-ink" style={width(comparison.referenceCm)} />
+	<div class="relative pt-2" aria-hidden="true">
+		{
+			comparison.ticks.map((tick) => (
+				<span
+					class="absolute inset-y-0 border-l border-dashed border-grout"
+					style={`left: calc(${tick.position * 100}% - ${tick.position}px)`}
+				/>
+			))
+		}
+		<div class="relative space-y-2">
+			<Icon name="fish" class="block h-auto text-salt" style={width(maxCm)} />
+			<Icon name={comparison.reference} class="block h-auto text-ink" style={width(comparison.referenceCm)} />
+		</div>
 	</div>
 	<Tape ticks={comparison.ticks} class="mt-2" />
-	<figcaption class="mt-2 text-sm text-muted">
-		Up to {maxCm} cm{maxKg ? ` and ${maxKg} kg` : ''}. {reference}
-	</figcaption>
+	<figcaption class="mt-1 text-xs text-muted">{reference}</figcaption>
 </figure>

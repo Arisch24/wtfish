@@ -142,8 +142,14 @@ const second = 'border-t border-grout lg:border-l lg:border-t-0 lg:pl-10';
 						const side = i === 1 ? second : '';
 						if (id === 'how-big' && f.size)
 							return (
-								<Section title="How big?" id="how-big" note={sizeNote} class={side}>
-									<SizeCompare maxCm={f.size.maxCm} maxKg={f.size.maxKg} />
+								<Section
+									title="How big?"
+									id="how-big"
+									note={sizeNote}
+									description={`Up to ${f.size.maxCm} cm${f.size.maxKg ? ` and ${f.size.maxKg} kg` : ''}.`}
+									class={side}
+								>
+									<SizeCompare maxCm={f.size.maxCm} />
 								</Section>
 							);
 						if (id === 'where')

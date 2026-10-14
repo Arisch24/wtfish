@@ -5,6 +5,19 @@ import { formatDate } from '../../src/lib/format';
 const page = (id: string) => builtPage(`fish/${id}/index.html`);
 
 describe('fish pages', () => {
+	it('draws fish pages in the quiet style', () => {
+		for (const id of ['indo-pacific-sailfish', 'striped-snakehead', 'giant-featherback', 'dwarf-rasbora']) {
+			expect(page(id), id).not.toMatch(/ink-card|border-ink|shadow-hard|font-extrabold/);
+		}
+	});
+
+	it('gives the size once above the chart and names the reference in its caption', () => {
+		const text = visibleText(page('indo-pacific-sailfish'));
+		expect(text).toContain('Up to 350 cm and 100 kg.');
+		expect(text).toContain('The person is 170 cm tall.');
+		expect(text.split('Up to 350 cm').length - 1).toBe(1);
+	});
+
 	it('pairs "How big?" with "Where in Malaysia" in one row', () => {
 		expect(page('indo-pacific-sailfish')).toContain('data-row="how-big where"');
 	});
