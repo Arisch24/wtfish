@@ -15,8 +15,15 @@ describe('fish pages', () => {
 
 	it('gives the family its own row of quick stats', () => {
 		const html = page('indo-pacific-sailfish');
-		expect(html).toMatch(/data-wide[^>]*>\s*<dt[^>]*>family/);
+		expect(html).toMatch(/data-wide[^>]*>\s*<dt[^>]*>Family/);
 		expect(html.match(/data-wide/g)).toHaveLength(1);
+	});
+
+	it('shows each stat as a label, a value and a note', () => {
+		const text = visibleText(page('indo-pacific-sailfish'));
+		expect(text).toContain('Max length 350 cm');
+		expect(text).toContain('IUCN VU Vulnerable');
+		expect(text).toContain('Family Istiophoridae order Perciformes');
 	});
 
 	it('builds a page for every fish', () => {

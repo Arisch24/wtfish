@@ -11,9 +11,9 @@ const base: Fish = {
 };
 
 describe('quickStats', () => {
-	it('gives only the family tile a row of its own', () => {
+	it('gives only the family a row of its own', () => {
 		const tiles = quickStats({ ...base, iucn: 'VU', size: { maxCm: 350, maxKg: 100 }, malaysia: { status: 'native' } });
-		expect(tiles.filter((tile) => tile.wide).map((tile) => tile.label)).toEqual(['family']);
+		expect(tiles.filter((tile) => tile.wide).map((tile) => tile.label)).toEqual(['Family']);
 	});
 
 	it('lists length, weight, IUCN, status and family in that order', () => {
@@ -25,28 +25,29 @@ describe('quickStats', () => {
 			malaysia: { status: 'native' },
 		};
 		expect(quickStats(sailfish)).toEqual([
-			{ value: '350 cm', label: 'max length' },
-			{ value: '100 kg', label: 'max weight' },
-			{ value: 'VU', label: 'Vulnerable', alert: true },
-			{ value: 'Native', label: 'in Malaysia' },
-			{ value: 'Istiophoridae', label: 'family · order Perciformes', wide: true },
+			{ label: 'Max length', value: '350 cm' },
+			{ label: 'Max weight', value: '100 kg' },
+			{ label: 'IUCN', value: 'VU', note: 'Vulnerable', alert: true },
+			{ label: 'In Malaysia', value: 'Native' },
+			{ label: 'Family', value: 'Istiophoridae', note: 'order Perciformes', wide: true },
 		]);
 	});
 
-	it('adds the usual length to the length label', () => {
+	it('notes the usual length under the maximum', () => {
 		expect(quickStats({ ...base, size: { maxCm: 100, commonCm: 60 } })[0]).toEqual({
+			label: 'Max length',
 			value: '100 cm',
-			label: 'max length · usually 60 cm',
+			note: 'usually 60 cm',
 		});
 	});
 
 	it('only marks threatened categories', () => {
 		const tiles = quickStats({ ...base, iucn: 'LC' });
-		expect(tiles[0]).toEqual({ value: 'LC', label: 'Least Concern' });
+		expect(tiles[0]).toEqual({ label: 'IUCN', value: 'LC', note: 'Least Concern' });
 	});
 
 	it('shows just the family for a minimal fish', () => {
-		expect(quickStats(base)).toEqual([{ value: 'Istiophoridae', label: 'family', wide: true }]);
+		expect(quickStats(base)).toEqual([{ label: 'Family', value: 'Istiophoridae', wide: true }]);
 	});
 });
 
@@ -55,11 +56,11 @@ describe('aquariumStats', () => {
 		expect(
 			aquariumStats({ minTankLitres: 60, tempC: [24, 28], ph: [6, 7.5], temperament: 'peaceful', groupSize: 6 }),
 		).toEqual([
-			{ value: '60 L', label: 'minimum tank' },
-			{ value: '24–28°C', label: 'temperature' },
-			{ value: '6–7.5', label: 'pH' },
-			{ value: 'Peaceful', label: 'temperament' },
-			{ value: '6+', label: 'group size' },
+			{ label: 'Minimum tank', value: '60 L' },
+			{ label: 'Temperature', value: '24–28°C' },
+			{ label: 'pH', value: '6–7.5' },
+			{ label: 'Temperament', value: 'Peaceful' },
+			{ label: 'Group size', value: '6+' },
 		]);
 	});
 

@@ -1,0 +1,30 @@
+---
+import type { StatTile } from '../lib/fish-page';
+
+interface Props {
+	tiles: StatTile[];
+}
+
+const { tiles } = Astro.props;
+---
+
+<!--
+	Two items per row below 1024px, one row from 1024px. A wide item takes a row of its own below 1024px.
+	An item is never narrower than its longest word, so values never break mid-word.
+-->
+<dl class="flex flex-wrap gap-x-6 gap-y-4" data-stat-tiles>
+	{
+		tiles.map((tile) => (
+			<div
+				class:list={['grow', tile.wide ? 'basis-full lg:basis-0' : 'basis-[calc(50%-0.75rem)] lg:basis-0']}
+				data-wide={tile.wide ? '' : undefined}
+			>
+				<dt class="text-[11px] font-medium uppercase tracking-[0.05em] text-muted">{tile.label}</dt>
+				<dd class:list={['break-words text-[19px] font-semibold leading-snug tabular-nums', tile.alert && 'text-alert']}>
+					{tile.value}
+				</dd>
+				{tile.note && <dd class="text-xs text-muted">{tile.note}</dd>}
+			</div>
+		))
+	}
+</dl>

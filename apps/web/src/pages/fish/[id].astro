@@ -6,7 +6,7 @@ import Notice from '../../components/Notice.astro';
 import Photo from '../../components/Photo.astro';
 import Section from '../../components/Section.astro';
 import SizeCompare from '../../components/SizeCompare.astro';
-import StatTiles from '../../components/StatTiles.astro';
+import StatStrip from '../../components/StatStrip.astro';
 import StateTileMap from '../../components/StateTileMap.astro';
 import UseTag from '../../components/UseTag.astro';
 import WaterLabel from '../../components/WaterLabel.astro';
@@ -89,7 +89,7 @@ const term = 'font-extrabold';
 
 		<p class="text-[19px] leading-normal">{f.summary}</p>
 
-		<StatTiles tiles={quickStats(f)} />
+		<StatStrip tiles={quickStats(f)} />
 		{
 			f.iucn && (
 				<p class="-mt-2 text-sm text-muted">
@@ -251,7 +251,7 @@ const term = 'font-extrabold';
 		{
 			f.aquarium && (
 				<Section title="Aquarium care" id="aquarium">
-					<StatTiles tiles={aquariumStats(f.aquarium)} />
+					<StatStrip tiles={aquariumStats(f.aquarium)} />
 				</Section>
 			)
 		}
