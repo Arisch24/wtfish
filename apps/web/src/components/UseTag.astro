@@ -1,0 +1,22 @@
+---
+import type { Use } from '../lib/fish-schema';
+import { useTagText } from '../lib/labels';
+
+interface Props {
+	uses: readonly Use[];
+	size?: 'card' | 'page';
+	class?: string;
+}
+
+const { uses, size = 'card', class: className } = Astro.props;
+---
+
+<span
+	class:list={[
+		'cardboard inline-block -rotate-[4deg] px-3.5 py-0.5 transition-transform duration-[400ms] ease-[cubic-bezier(.3,1.6,.5,1)]',
+		size === 'card' ? 'text-xl' : 'text-[26px]',
+		className,
+	]}
+>
+	{useTagText(uses)}
+</span>

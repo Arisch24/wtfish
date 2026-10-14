@@ -1,0 +1,16 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+	text: string;
+	class?: string;
+}
+
+const { text, class: className } = Astro.props;
+---
+
+<div class:list={['flex w-fit origin-top animate-sway flex-col items-center', className]}>
+	<span class="h-14 w-[1.5px] bg-ink" aria-hidden="true"></span>
+	<Icon name="hook" class="-mt-0.5 h-[22px] w-3.5 text-[#4a4a4a]" />
+	<p class="cardboard -mt-1.5 px-3.5 py-0.5 text-2xl">{text}</p>
+</div>

@@ -1,189 +1,41 @@
 ---
-import { getCollection, type CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+import Bubbles from '../components/Bubbles.astro';
+import ConfusedFish from '../components/ConfusedFish.astro';
+import FishCard from '../components/FishCard.astro';
+import HangingSign from '../components/HangingSign.astro';
+import SwimmingFish from '../components/SwimmingFish.astro';
 import Base from '../layouts/Base.astro';
-import { searchText, type FilterItem } from '../lib/filter';
-import { STATES } from '../lib/fish-schema';
-import { USE_LABEL, WATER_LABEL } from '../lib/labels';
 
-const fish = (await getCollection('fish')).sort((a, b) =>
-	a.data.names.english.localeCompare(b.data.names.english),
-);
-
-const recordedStates = STATES.filter((state) =>
-	fish.some((f) => f.data.malaysia?.states?.some((s) => s.state === state)),
-);
-
-function filterItem(data: CollectionEntry<'fish'>['data']): FilterItem {
-	return {
-		search: searchText(data.names),
-		water: data.water,
-		uses: data.uses,
-		states: data.malaysia?.states?.map((s) => s.state) ?? [],
-		status: data.malaysia?.status ?? '',
-		iucn: data.iucn ?? '',
-	};
-}
+const fish = (await getCollection('fish')).sort((a, b) => a.data.names.english.localeCompare(b.data.names.english));
 ---
 
-<Base title="wtfish: fish directory">
-	<h1>Fish directory</h1>
-	<form id="filters" class="filters">
-		<input
-			name="q"
-			type="search"
-			placeholder="Search English, Malay or scientific name…"
-			aria-label="Search fish"
-		/>
-		<select name="water" aria-label="Water">
-			<option value="">Any water</option>
-			{Object.entries(WATER_LABEL).map(([value, label]) => <option value={value}>{label}</option>)}
-		</select>
-		<select name="use" aria-label="Use">
-			<option value="">Any use</option>
-			{Object.entries(USE_LABEL).map(([value, label]) => <option value={value}>{label}</option>)}
-		</select>
-		<select name="status" aria-label="Status in Malaysia">
-			<option value="">Anywhere</option>
-			<option value="any">Found in Malaysia</option>
-			<option value="native">Native to Malaysia</option>
-			<option value="endemic">Only in Malaysia (endemic)</option>
-			<option value="introduced">Introduced to Malaysia</option>
-			<option value="invasive">Invasive in Malaysia</option>
-		</select>
-		{
-			recordedStates.length > 0 && (
-				<select name="state" aria-label="Malaysian state">
-					<option value="">Any state</option>
-					{recordedStates.map((state) => (
-						<option value={state}>{state}</option>
-					))}
-				</select>
-			)
-		}
-		<label class="check"><input type="checkbox" name="threatened" /> Threatened only</label>
-	</form>
-	<p id="count" class="count" aria-live="polite">{fish.length} fish</p>
-	<p id="empty" hidden>No fish match your search.</p>
-	<ul class="grid">
-		{
-			fish.map(({ id, data }) => (
-				<li data-filter={JSON.stringify(filterItem(data))}>
-					<a href={`/fish/${id}/`}>
-						<span class="name">{data.names.english}</span>
-						{data.names.malay && <span class="malay">{data.names.malay}</span>}
-						<span class="sci">{data.names.scientific}</span>
-						<span class="tags">{data.water.map((w) => WATER_LABEL[w]).join(' · ')}</span>
-					</a>
-				</li>
-			))
-		}
-	</ul>
+<Base title="wtfish: what the fish is that?">
+	<SwimmingFish slot="top" />
+	<div class="mx-auto max-w-6xl px-4 sm:px-6">
+		<section class="grid gap-6 pb-8 pt-4 lg:grid-cols-[1fr_minmax(0,34rem)]">
+			<div class="relative self-start">
+				<Bubbles />
+				<h1 class="relative text-[44px] font-extrabold leading-[0.95] tracking-[-0.045em] sm:text-[52px]">
+					What the fish<br />is that?
+				</h1>
+			</div>
+			<div class="grid gap-4">
+				<!-- The line reaches up to the header on wide screens: 36px fish strip + 16px padding. -->
+				<HangingSign text={`${fish.length} fish & counting`} class="justify-self-end lg:-mt-[52px]" />
+				<div id="filters"></div>
+			</div>
+		</section>
+		<ul id="fish-grid" class="grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-4">
+			{fish.map((entry) => <FishCard fish={entry} />)}
+		</ul>
+		<div id="empty" hidden class="flex flex-col items-center gap-3 py-16 text-center">
+			<ConfusedFish class="w-28" />
+			<p class="text-xl font-extrabold tracking-[-0.02em]">No fish match that.</p>
+			<p class="text-muted">Even the fish is confused. Try fewer filters.</p>
+			<button id="clear-filters" type="button" class="ink-card mt-2 px-4 py-2 font-bold shadow-hard-sm">
+				Clear filters
+			</button>
+		</div>
+	</div>
 </Base>
-
-<script>
-	import { matches, type FilterItem, type FilterQuery } from '../lib/filter';
-
-	const form = document.querySelector<HTMLFormElement>('#filters')!;
-	const count = document.querySelector<HTMLParagraphElement>('#count')!;
-	const empty = document.querySelector<HTMLParagraphElement>('#empty')!;
-	const cards = [...document.querySelectorAll<HTMLLIElement>('.grid li')].map((li) => ({
-		li,
-		item: JSON.parse(li.dataset.filter!) as FilterItem,
-	}));
-
-	function apply() {
-		const data = new FormData(form);
-		const value = (name: string) => String(data.get(name) ?? '');
-		const query: FilterQuery = {
-			text: value('q'),
-			water: value('water'),
-			use: value('use'),
-			state: value('state'),
-			status: value('status'),
-			threatened: data.get('threatened') === 'on',
-		};
-		let shown = 0;
-		for (const { li, item } of cards) {
-			const ok = matches(item, query);
-			li.hidden = !ok;
-			if (ok) shown++;
-		}
-		count.textContent = `${shown} fish`;
-		empty.hidden = shown > 0;
-	}
-
-	form.addEventListener('input', apply);
-	form.addEventListener('submit', (event) => event.preventDefault());
-	apply();
-</script>
-
-<style>
-	.filters {
-		display: flex;
-		gap: 0.5rem;
-		flex-wrap: wrap;
-		align-items: center;
-	}
-	input[type='search'],
-	select {
-		font: inherit;
-		padding: 0.5rem 0.75rem;
-		border: 1px solid var(--border);
-		border-radius: 0.5rem;
-		background: var(--surface);
-		color: var(--text);
-	}
-	input[type='search'] {
-		flex: 1 1 100%;
-	}
-	.check {
-		display: flex;
-		gap: 0.375rem;
-		align-items: center;
-	}
-	.count {
-		color: var(--muted);
-		margin: 0.75rem 0;
-	}
-	.grid {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
-		gap: 0.75rem;
-	}
-	.grid li[hidden] {
-		display: none;
-	}
-	.grid a {
-		display: flex;
-		flex-direction: column;
-		gap: 0.125rem;
-		height: 100%;
-		padding: 1rem;
-		background: var(--surface);
-		border: 1px solid var(--border);
-		border-radius: 0.75rem;
-		color: var(--text);
-		text-decoration: none;
-	}
-	.grid a:hover {
-		border-color: var(--accent);
-	}
-	.name {
-		font-weight: 600;
-	}
-	.malay {
-		color: var(--accent);
-	}
-	.sci {
-		font-style: italic;
-		color: var(--muted);
-	}
-	.tags {
-		margin-top: 0.5rem;
-		font-size: 0.85rem;
-		color: var(--muted);
-	}
-</style>

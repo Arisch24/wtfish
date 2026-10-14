@@ -1,0 +1,72 @@
+---
+import { Picture } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import { searchText, type FilterItem } from '../lib/filter';
+import { photoFor } from '../lib/photos';
+import CardTape from './CardTape.astro';
+import Icon from './Icon.astro';
+import UseTag from './UseTag.astro';
+import WaterLabel from './WaterLabel.astro';
+
+interface Props {
+	fish: CollectionEntry<'fish'>;
+}
+
+const { id, data } = Astro.props.fish;
+const photo = data.photos?.[0];
+const stateCount = data.malaysia?.states?.length ?? 0;
+const filter: FilterItem = {
+	search: searchText(data.names),
+	water: data.water,
+	uses: data.uses,
+	states: data.malaysia?.states?.map((s) => s.state) ?? [],
+	status: data.malaysia?.status ?? '',
+	iucn: data.iucn ?? '',
+};
+---
+
+<li data-fish-card data-filter={JSON.stringify(filter)} class="h-full">
+	<a
+		href={`/fish/${id}/`}
+		class="group ink-card flex h-full flex-col transition-[translate,box-shadow] duration-200 hover:-translate-y-[3px] hover:shadow-[0_6px_0_var(--color-ink)]"
+	>
+		<div class="relative">
+			{
+				photo ? (
+					<Picture
+						src={photoFor(id, photo.file)}
+						alt=""
+						widths={[320, 480, 640]}
+						sizes="(min-width: 1152px) 280px, (min-width: 640px) 45vw, 92vw"
+						formats={['avif', 'webp']}
+						class="aspect-[4/3] w-full rounded-t-[8px] object-cover"
+					/>
+				) : (
+					<div
+						class="flex aspect-[4/3] w-full flex-col items-center justify-center gap-2 rounded-t-[8px] border-b-2 border-ink text-muted"
+						data-no-photo
+					>
+						<Icon name="fish" class="w-24 text-grout" />
+						<span class="text-sm font-semibold">No photo yet</span>
+					</div>
+				)
+			}
+			<UseTag uses={data.uses} class="absolute -left-1.5 top-3 origin-left group-hover:rotate-[3deg]" />
+		</div>
+		<div class="flex flex-1 flex-col px-3 pb-3 pt-2.5">
+			<h2 class="break-words text-[21px] font-extrabold leading-[1.05] tracking-[-0.02em]">{data.names.english}</h2>
+			<p class="text-sm italic text-muted">{data.names.scientific}</p>
+			{data.size && <CardTape maxCm={data.size.maxCm} />}
+			<div class="mt-auto flex flex-wrap items-center justify-between gap-2 pt-3">
+				<span class="flex flex-wrap gap-1.5">{data.water.map((water) => <WaterLabel water={water} />)}</span>
+				{
+					stateCount > 0 && (
+						<span class="text-[13px] font-bold text-alert">
+							{stateCount} {stateCount === 1 ? 'state' : 'states'}
+						</span>
+					)
+				}
+			</div>
+		</div>
+	</a>
+</li>

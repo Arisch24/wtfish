@@ -49,3 +49,13 @@ const dataDir = new URL('../../data/fish/', import.meta.url);
 export const fishFiles: { id: string; raw: Fish }[] = readdirSync(dataDir)
 	.filter((file) => file.endsWith('.json'))
 	.map((file) => ({ id: file.slice(0, -'.json'.length), raw: JSON.parse(readFileSync(new URL(file, dataDir), 'utf8')) }));
+
+/** Each fish card's HTML on the home page, keyed by fish id, in page order. */
+export function cardsById(html: string): Map<string, string> {
+	const cards = new Map<string, string>();
+	for (const chunk of html.split('<li data-fish-card').slice(1)) {
+		const id = chunk.match(/href="\/fish\/([a-z0-9-]+)\/"/)?.[1];
+		if (id) cards.set(id, chunk.slice(0, chunk.indexOf('</li>')));
+	}
+	return cards;
+}
