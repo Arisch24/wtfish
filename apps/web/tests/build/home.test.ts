@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { formatDate } from '../../src/lib/format';
 import { builtPage, cardsById, fishFiles, visibleText } from './helpers';
 
 const html = builtPage('index.html');
@@ -31,6 +32,16 @@ describe('home page', () => {
 
 	it('counts the fish on the hanging sign', () => {
 		expect(visibleText(html)).toContain(`${fishFiles.length} fish & counting`);
+	});
+
+	it('shows when the data was last updated', () => {
+		const dates = fishFiles.map((fish) => fish.raw.lastReviewed).filter((date): date is string => Boolean(date));
+		const newest = dates.sort().at(-1)!;
+		expect(visibleText(html)).toContain(`Last updated ${formatDate(newest)}`);
+	});
+
+	it('puts the swimming strip inside the page, in the tiled top band', () => {
+		expect(html.indexOf('data-swim-strip')).toBeGreaterThan(html.indexOf('<main'));
 	});
 
 	it('shows "No photo yet" for a fish without photos', () => {

@@ -8,38 +8,55 @@ import HangingSign from '../components/HangingSign.astro';
 import SwimmingFish from '../components/SwimmingFish.astro';
 import Base from '../layouts/Base.astro';
 import { STATES } from '../lib/fish-schema';
+import { formatDate, lastUpdated } from '../lib/format';
 
 const fish = (await getCollection('fish')).sort((a, b) => a.data.names.english.localeCompare(b.data.names.english));
 const recordedStates = STATES.filter((state) => fish.some((f) => f.data.malaysia?.states?.some((s) => s.state === state)));
+const updated = lastUpdated(fish.map((entry) => entry.data));
 ---
 
 <Base title="wtfish: what the fish is that?">
-	<SwimmingFish slot="top" />
-	<div class="mx-auto max-w-6xl px-4 sm:px-6">
-		<section class="grid gap-x-6 gap-y-5 pb-8 pt-4 md:grid-cols-[1fr_auto]">
-			<div class="relative row-start-2 self-end md:col-start-1 md:row-start-1">
-				<Bubbles />
-				<h1 class="relative text-[44px] font-extrabold leading-[0.95] tracking-[-0.04em] sm:text-[52px]">
-					What the fish<br />is that?
-				</h1>
-			</div>
-			<!-- The line reaches up to the header: 36px fish strip + 16px padding. On phones the sign hangs above the headline. -->
-			<HangingSign
-				text={`${fish.length} fish & counting`}
-				class="row-start-1 -mt-[52px] justify-self-end md:col-start-2"
-			/>
-			<div id="filters" class="row-start-3 md:col-span-2 md:row-start-2">
-				<FilterBar client:load states={recordedStates} total={fish.length} />
-			</div>
-		</section>
+	<div class="tile-surface">
+		<SwimmingFish />
+		<div class="mx-auto max-w-6xl px-4 sm:px-6">
+			<section class="grid gap-x-6 gap-y-4 pb-8 pt-4 md:grid-cols-[1fr_auto]">
+				<div class="relative row-start-2 self-end md:col-start-1 md:row-start-1">
+					<Bubbles />
+					<p class="relative text-xs font-semibold uppercase tracking-[0.06em] text-salt">Fish directory · Malaysia first</p>
+					<h1 class="relative mt-1.5 font-display text-[26px] font-bold leading-[1.15] tracking-[-0.035em] sm:text-[30px]">
+						What the fish is that?
+					</h1>
+					<p class="relative mt-2 max-w-xl text-[15px] text-muted">
+						Names, sizes, habitat and where each fish lives in Malaysia. Every fact links to its source.
+					</p>
+					{updated && <p class="relative mt-2.5 text-xs text-muted">Last updated {formatDate(updated)}</p>}
+				</div>
+				<!-- The line reaches up to the header: 36px fish strip + 16px padding. On phones the sign hangs above the headline. -->
+				<HangingSign
+					text={`${fish.length} fish & counting`}
+					class="row-start-1 -mt-[52px] justify-self-end md:col-start-2"
+				/>
+			</section>
+		</div>
+	</div>
+	<div id="filters" class="border-y border-grout bg-white">
+		<div class="mx-auto max-w-6xl px-4 py-3 sm:px-6">
+			<FilterBar client:load states={recordedStates} total={fish.length} />
+		</div>
+	</div>
+	<div class="mx-auto max-w-6xl px-4 pt-6 sm:px-6">
 		<ul id="fish-grid" class="grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-4">
 			{fish.map((entry) => <FishCard fish={entry} />)}
 		</ul>
-		<div id="empty" hidden class="flex flex-col items-center gap-3 py-16 text-center">
-			<ConfusedFish class="w-28" />
-			<p class="text-xl font-extrabold tracking-[-0.02em]">No fish match that.</p>
+		<div id="empty" hidden class="flex flex-col items-center gap-2 py-16 text-center">
+			<ConfusedFish class="w-24" />
+			<p class="font-display text-lg font-bold tracking-[-0.02em]">No fish match that.</p>
 			<p class="text-muted">Even the fish is confused. Try fewer filters.</p>
-			<button id="clear-filters" type="button" class="ink-card mt-2 px-4 py-2 font-bold shadow-hard-sm">
+			<button
+				id="clear-filters"
+				type="button"
+				class="mt-2 rounded-md border border-control bg-white px-3.5 py-1.5 text-[13px] font-medium hover:bg-tile"
+			>
 				Clear filters
 			</button>
 		</div>

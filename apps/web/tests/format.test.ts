@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { formatDate, formatRange, formatSize, licenseUrl, listOf } from '../src/lib/format';
+import { formatDate, formatRange, formatSize, lastUpdated, licenseUrl, listOf } from '../src/lib/format';
 
 describe('listOf', () => {
 	it('returns a single item unchanged', () => {
@@ -42,6 +42,23 @@ describe('formatRange', () => {
 describe('formatDate', () => {
 	it('formats an ISO date in British style', () => {
 		expect(formatDate('2026-10-13')).toBe('13 October 2026');
+	});
+});
+
+describe('lastUpdated', () => {
+	it('returns the newest review date', () => {
+		expect(
+			lastUpdated([{ lastReviewed: '2026-10-01' }, { lastReviewed: '2026-10-13' }, { lastReviewed: '2026-09-30' }]),
+		).toBe('2026-10-13');
+	});
+
+	it('ignores fish that have not been reviewed', () => {
+		expect(lastUpdated([{}, { lastReviewed: '2026-10-02' }, {}])).toBe('2026-10-02');
+	});
+
+	it('returns undefined when no fish has been reviewed', () => {
+		expect(lastUpdated([{}, {}])).toBeUndefined();
+		expect(lastUpdated([])).toBeUndefined();
 	});
 });
 

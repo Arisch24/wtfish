@@ -1,9 +1,9 @@
 ---
 const bubbles = [
-	{ left: '40%', size: 8, delay: '2.3s' },
-	{ left: '62%', size: 11, delay: '0s' },
-	{ left: '72%', size: 7, delay: '1.7s' },
-	{ left: '80%', size: 9, delay: '3.1s' },
+	{ left: '40%', size: 7, delay: '2.3s' },
+	{ left: '62%', size: 9, delay: '0s' },
+	{ left: '72%', size: 6, delay: '1.7s' },
+	{ left: '80%', size: 8, delay: '3.1s' },
 ];
 ---
 
@@ -11,7 +11,7 @@ const bubbles = [
 	{
 		bubbles.map((bubble) => (
 			<span
-				class="absolute -bottom-3.5 animate-rise rounded-full border-2 border-salt/50"
+				class="absolute -bottom-3.5 animate-rise rounded-full border-[1.5px] border-salt/30"
 				style={`left: ${bubble.left}; width: ${bubble.size}px; height: ${bubble.size}px; animation-delay: ${bubble.delay}`}
 			/>
 		))

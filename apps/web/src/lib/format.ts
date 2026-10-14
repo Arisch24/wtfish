@@ -1,4 +1,4 @@
-import type { PhotoLicense } from './fish-schema';
+import type { Fish, PhotoLicense } from './fish-schema';
 
 const list = new Intl.ListFormat('en', { style: 'long', type: 'conjunction' });
 const date = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
@@ -18,6 +18,16 @@ export function formatRange([low, high]: [number, number], unit: string): string
 
 export function formatDate(iso: string): string {
 	return date.format(new Date(`${iso}T00:00:00Z`));
+}
+
+/** The newest `lastReviewed` date among the fish, or undefined if none has been reviewed. */
+export function lastUpdated(fish: Pick<Fish, 'lastReviewed'>[]): string | undefined {
+	let newest: string | undefined;
+	for (const { lastReviewed } of fish) {
+		// ISO dates (YYYY-MM-DD) sort correctly as plain strings.
+		if (lastReviewed && (!newest || lastReviewed > newest)) newest = lastReviewed;
+	}
+	return newest;
 }
 
 /**

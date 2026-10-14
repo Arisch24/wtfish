@@ -10,7 +10,7 @@ const { text, class: className } = Astro.props;
 ---
 
 <div class:list={['flex w-fit origin-top animate-sway flex-col items-center', className]} data-hanging-sign>
-	<span class="h-14 w-[1.5px] bg-ink" aria-hidden="true"></span>
-	<Icon name="hook" class="-mt-0.5 h-[22px] w-3.5 text-[#4a4a4a]" />
-	<p class="cardboard -mt-1.5 px-3.5 py-0.5 text-2xl">{text}</p>
+	<span class="h-14 w-px bg-muted" aria-hidden="true"></span>
+	<Icon name="hook" class="-mt-0.5 h-4 w-2.5 text-muted" />
+	<p class="cardboard -mt-1 px-3 py-0.5 text-base">{text}</p>
 </div>
