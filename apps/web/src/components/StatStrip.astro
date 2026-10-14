@@ -19,7 +19,9 @@ const { tiles } = Astro.props;
 				class:list={['grow', tile.wide ? 'basis-full lg:basis-0' : 'basis-[calc(50%-0.75rem)] lg:basis-0']}
 				data-wide={tile.wide ? '' : undefined}
 			>
-				<dt class="text-[11px] font-medium uppercase tracking-[0.05em] text-muted">{tile.label}</dt>
+				<dt class:list={['text-[11px] font-medium tracking-[0.05em] text-muted', !tile.keepCase && 'uppercase']}>
+					{tile.label}
+				</dt>
 				<dd class:list={['break-words text-[19px] font-semibold leading-snug tabular-nums', tile.alert && 'text-alert']}>
 					{tile.value}
 				</dd>

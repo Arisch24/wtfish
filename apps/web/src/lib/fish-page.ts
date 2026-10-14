@@ -13,6 +13,8 @@ export interface StatTile {
 	alert?: true;
 	/** Takes a row of its own below 1024px, so a long value such as a family name never breaks mid-word. */
 	wide?: true;
+	/** Shows the label as written instead of in capitals, for a label such as "pH" whose case carries meaning. */
+	keepCase?: true;
 }
 
 /** The stats strip under a fish's header, in page order. */
@@ -48,7 +50,7 @@ export function aquariumStats(aquarium: NonNullable<Fish['aquarium']>): StatTile
 	const tiles: StatTile[] = [
 		{ label: 'Minimum tank', value: `${aquarium.minTankLitres} L` },
 		{ label: 'Temperature', value: formatRange(aquarium.tempC, '°C') },
-		{ label: 'pH', value: formatRange(aquarium.ph, '') },
+		{ label: 'pH', value: formatRange(aquarium.ph, ''), keepCase: true },
 		{ label: 'Temperament', value: TEMPERAMENT_LABEL[aquarium.temperament] },
 	];
 	if (aquarium.groupSize) tiles.push({ label: 'Group size', value: `${aquarium.groupSize}+` });

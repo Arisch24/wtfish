@@ -122,6 +122,13 @@ describe('fish pages', () => {
 		}
 	});
 
+	it('writes the pH label as "pH", not in capitals', () => {
+		const html = page('cardinal-tetra');
+		expect(html).toMatch(/<dt class="(?![^"]*uppercase)[^"]*">\s*pH\s*<\/dt>/);
+		// The other stat labels stay in capitals.
+		expect(html).toMatch(/<dt class="[^"]*uppercase[^"]*">\s*Temperature\s*<\/dt>/);
+	});
+
 	it('lists sources by host, with a PDF label', () => {
 		const text = visibleText(page('indo-pacific-sailfish'));
 		expect(text).toContain('gbif.org');

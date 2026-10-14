@@ -88,7 +88,7 @@ are served from the site itself.
   | Body and UI | Inter | 14 px | |
   | Small text | Inter | 13 px | |
   | Labels, meta, credits | Inter | 12 px | |
-  | Stat label | Inter | 11 px, 500, uppercase | letter-spacing 0.05em |
+  | Stat label | Inter | 11 px, 500, uppercase, except a label whose case carries meaning, such as "pH" | letter-spacing 0.05em |
   | Stat value | Inter | 19 px, 600 | tabular numbers |
 
 - **Minimum size.** No functional text is smaller than 11 px.

@@ -171,7 +171,7 @@ The colours are wtfish's own. The spec for this design is `docs/superpowers/spec
 - 14 px body and controls;
 - 13 px small text;
 - 12 px labels and credits;
-- 11 px uppercase stat labels.
+- 11 px uppercase stat labels, except "pH", which keeps its case.
 
 Stat values are 19 px and weight 600, with evenly spaced digits.
 

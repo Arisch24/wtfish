@@ -58,7 +58,7 @@ describe('aquariumStats', () => {
 		).toEqual([
 			{ label: 'Minimum tank', value: '60 L' },
 			{ label: 'Temperature', value: '24–28°C' },
-			{ label: 'pH', value: '6–7.5' },
+			{ label: 'pH', value: '6–7.5', keepCase: true },
 			{ label: 'Temperament', value: 'Peaceful' },
 			{ label: 'Group size', value: '6+' },
 		]);
