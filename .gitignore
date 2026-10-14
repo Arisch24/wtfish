@@ -26,3 +26,6 @@ build/
 
 # Brainstorm mockups
 .superpowers/
+
+# Implementation plans (kept locally, not committed)
+docs/superpowers/plans/
