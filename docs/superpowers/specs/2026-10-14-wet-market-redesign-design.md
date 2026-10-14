@@ -166,7 +166,11 @@ Top to bottom:
    - A cardboard sign hangs from the header on a fishing line with a small hook,
      reading "**{count} fish & counting**". The count is the number of fish in
      the collection.
-   - On phones, the headline, sign and search stack.
+   - From 768 px, the headline and the sign share the top row, and the search
+     and filters run full width beneath them. Below 768 px, the sign hangs
+     above the headline. The headline stays first in the HTML.
+   - The sign's line always starts at the header's bottom edge. Under reduced
+     motion the swimming fish is hidden but its strip keeps its height.
 3. **Search and filters.** These are one React island, `FilterBar.tsx`, loaded
    with `client:load` and built from Base UI.
    - **Search field.** Placeholder: "Search by name or scientific name…"
@@ -180,6 +184,8 @@ Top to bottom:
    - **Threatened only.** A checkbox for VU, EN and CR.
    - **Live count.** For example "12 fish", announced with `aria-live="polite"`.
    - **Phones.** The pill rows scroll sideways.
+   - **From 768 px.** When there is room, the Water and Use groups sit side by
+     side, and the selects and checkbox follow on the next row.
 
    The island receives the recorded states and the total count as props. It
    does not render the cards. On every change, it builds a `FilterQuery` and
@@ -242,9 +248,12 @@ appears only when its data exists.
    - family, plus order if known.
 
    When IUCN is shown, a note follows: the category comes from Wikidata and may
-   lag the latest Red List assessment.
+   lag the latest Red List assessment. If the fish has an `iucnNote`, it is
+   added to that note.
 
-   Phones show two tiles per row.
+   Phones show two tiles per row; from 640 px the tiles share one row. The
+   family tile always takes a row of its own, so a long family name never
+   breaks mid-word.
 5. **How big?**
    - A fish silhouette drawn to scale next to a reference figure, with a linear
      measuring tape underneath.
@@ -410,6 +419,12 @@ summary.
 - **Guard test.** No prose field may contain any fish's `names.malay` or
   `malayOther` as a whole word, case-insensitive. An allowlist covers names that
   are also English words: `tilapia` and `pacu`.
+- **Name case.** English names use sentence case: the first word and proper
+  nouns only ("Atlantic blue marlin", "Indo-Pacific sailfish"). A data test
+  enforces it.
+- **IUCN note.** An optional, hand-written `iucnNote` explains a category that
+  seems to clash with the page, such as the giant featherback: extinct on the
+  Red List, but rediscovered since. It needs `iucn`.
 
 ## Code layout
 

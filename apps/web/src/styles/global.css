@@ -76,7 +76,6 @@
 		display: none !important;
 	}
 
-	/* A yellow ring inside an ink ring. */
 	::selection {
 		background: var(--color-sign-yellow);
 		color: var(--color-ink);
@@ -86,6 +85,7 @@
 		caret-color: var(--color-sign-red);
 	}
 
+	/* A yellow ring inside an ink ring. */
 	:focus-visible {
 		outline: 3px solid var(--color-ink);
 		outline-offset: 2px;

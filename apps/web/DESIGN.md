@@ -136,11 +136,11 @@ The home display grows from the frontmatter phone size to 52px at 640px. Profile
 
 ## Layout
 
-The directory is an Operate surface: finding a fish through search, single-choice water/use filters, Malaysia/status selectors and a threatened checkbox. Its container is 1152px maximum with 16px phone and 24px larger gutters. The headline and filters stack below 1024px; above that they occupy two columns, the filter column capped at 34rem. Filter pill rows scroll horizontally on phones. Cards use `repeat(auto-fill, minmax(16rem, 1fr))` and 16px gaps, ordered A–Z by English name.
+The directory is an Operate surface: finding a fish through search, single-choice water/use filters, Malaysia/status selectors and a threatened checkbox. Its container is 1152px maximum with 16px phone and 24px larger gutters. From 768px the headline and the hanging sign share the top row and the filters run full width beneath them, with the water and use pill groups side by side when there is room; below 768px the sign hangs above the headline. The sign's line always starts at the header's bottom edge. Filter pill rows scroll horizontally on phones. Cards use `repeat(auto-fill, minmax(16rem, 1fr))` and 16px gaps, ordered A–Z by English name.
 
 Profiles are Read surfaces: a single stacked poster with a 760px maximum container, 16px phone and 20px larger gutters, and 16px vertical gaps. Sections appear only when data exists. The full-width hero is 4:3 on phones and 21:8 from 640px; the name card overlaps by 32px and 70px respectively. **Keep the hero credit chip 40px above the photo bottom on phones and 80px at 640px and above**, so the overlapping name card does not cover its links. A profile without a photo starts its name card with 24px top margin.
 
-Stats use two columns on phones and auto-fitting columns of at least 8.5rem above 640px. More-photos galleries retain two columns. Long names wrap within their cards. The shop navigation stays on one line at the reviewed 390px width. Shared sections use 20px horizontal/bottom padding and 16px top padding.
+Stats flow two per row on phones and in one row from 640px; the family tile always takes a full row so long family names never break mid-word. More-photos galleries retain two columns. Long names wrap within their cards. The shop navigation stays on one line at the reviewed 390px width. Shared sections use 20px horizontal/bottom padding and 16px top padding.
 
 ## Elevation & Depth
 
@@ -163,7 +163,7 @@ Panels have rounded 10px corners and 2px ink borders; image tops use 8px corners
 - **Safety and status:** the yellow “Before you fish” board uses marker lettering and hard depth. Threatened badges use yellow; EW/EX use ink with white text. Profiles without review dates carry the alert-red stamp.
 - **Icons and states:** inline SVG hook, wave, droplet, brackish droplet, fish, person, hand and confused-fish forms. Decorative SVGs are hidden from assistive technology. Identify, About and 404 use the confused mascot and concise copy.
 
-Motion is CSS-only: sign sway (3.2s), bubbles (5s), swimming fish on home (16s), swimming-fish bob (1.6s), card lift and tag swing. Reduced-motion preferences disable every animation and transition. Keyboard focus uses a 3px ink outline at 2px offset plus a 2px yellow ring. Yellow selection and red input carets complete the shared interaction treatment.
+Motion is CSS-only: sign sway (3.2s), bubbles (5s), swimming fish on home (16s), swimming-fish bob (1.6s), card lift and tag swing. Reduced-motion preferences disable every animation and transition; the swimming fish disappears but its strip keeps its height, so the hanging sign still meets the header. Keyboard focus uses a 3px ink outline at 2px offset plus a 2px yellow ring. Yellow selection and red input carets complete the shared interaction treatment.
 
 ## Do's and Don'ts
 
