@@ -40,8 +40,12 @@ const STATUS_OPTIONS: Option[] = [
 ];
 
 const pill =
-	'inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md border-2 border-ink bg-white px-3 py-1 text-sm font-bold data-pressed:bg-ink data-pressed:text-sign-yellow';
-const groupLabel = 'text-xs font-bold text-muted';
+	'inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full px-2.5 py-1 text-[13px] font-medium text-muted hover:text-ink data-pressed:bg-salt-soft data-pressed:font-semibold data-pressed:text-salt data-pressed:ring-1 data-pressed:ring-inset data-pressed:ring-salt-ring';
+const groupLabel = 'shrink-0 text-xs text-muted';
+// min-w-0 lets a group shrink below its pills' width, so its row scrolls instead of the page.
+const group = 'flex min-w-0 max-w-full items-center gap-1';
+// p-1 keeps the 2px focus outline (2px offset) inside the scrolling row.
+const pillRow = 'flex min-w-0 gap-0.5 overflow-x-auto p-1';
 
 function Icon({ name, className }: { name: IconName; className?: string }) {
 	const icon = ICONS[name];
@@ -58,8 +62,24 @@ function Icon({ name, className }: { name: IconName; className?: string }) {
 
 function CheckMark() {
 	return (
-		<svg viewBox="0 0 16 16" className="size-4" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2.2">
+		<svg viewBox="0 0 16 16" className="size-3.5" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2.2">
 			<path d="m2.5 8.5 4 4 7-9" />
+		</svg>
+	);
+}
+
+function SearchIcon() {
+	return (
+		<svg
+			viewBox="0 0 16 16"
+			className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted"
+			aria-hidden="true"
+			fill="none"
+			stroke="currentColor"
+			strokeWidth="1.6"
+		>
+			<circle cx="7" cy="7" r="5" />
+			<path d="m11 11 3.5 3.5" />
 		</svg>
 	);
 }
@@ -81,12 +101,12 @@ function FilterSelect({
 			value={value === '' ? null : value}
 			onValueChange={(next) => onChange(typeof next === 'string' ? next : '')}
 		>
-			<div className="flex flex-col gap-1">
+			<div className="flex items-center gap-2">
 				<Select.Label className={groupLabel}>{label}</Select.Label>
-				<Select.Trigger className="inline-flex min-w-44 items-center justify-between gap-2 rounded-md border-2 border-ink bg-white px-3 py-1.5 text-sm font-bold">
+				<Select.Trigger className="inline-flex min-w-36 items-center justify-between gap-2 rounded-md border border-control bg-white px-2.5 py-1 text-[13px] font-medium hover:bg-tile">
 					<Select.Value />
 					<Select.Icon aria-hidden="true">
-						<svg viewBox="0 0 16 16" className="size-4" fill="none" stroke="currentColor" strokeWidth="2">
+						<svg viewBox="0 0 16 16" className="size-3.5 text-muted" fill="none" stroke="currentColor" strokeWidth="2">
 							<path d="m4 6 4 4 4-4" />
 						</svg>
 					</Select.Icon>
@@ -94,13 +114,13 @@ function FilterSelect({
 			</div>
 			<Select.Portal>
 				<Select.Positioner sideOffset={4} className="z-20 outline-none">
-					<Select.Popup className="ink-card max-h-[var(--available-height)] min-w-[var(--anchor-width)] overflow-y-auto py-1 shadow-hard-sm outline-none">
+					<Select.Popup className="panel max-h-[var(--available-height)] min-w-[var(--anchor-width)] overflow-y-auto py-1 shadow-menu outline-none">
 						<Select.List>
 							{options.map((option) => (
 								<Select.Item
 									key={option.label}
 									value={option.value}
-									className="grid cursor-default grid-cols-[1rem_1fr] items-center gap-2 px-3 py-1.5 text-sm outline-none select-none data-highlighted:bg-ink data-highlighted:text-sign-yellow"
+									className="grid cursor-default grid-cols-[1rem_1fr] items-center gap-2 px-3 py-1.5 text-[13px] outline-none select-none data-highlighted:bg-salt-soft data-highlighted:text-salt"
 								>
 									<Select.ItemIndicator className="col-start-1">
 										<CheckMark />
@@ -145,18 +165,21 @@ export default function FilterBar({ states, total }: Props) {
 	const stateOptions: Option[] = [{ value: null, label: 'Any state' }, ...states.map((state) => ({ value: state, label: state }))];
 
 	return (
-		<div className="grid gap-3" data-filter-bar>
-			<Input
-				type="search"
-				value={query.text}
-				onValueChange={(text) => set('text', text)}
-				placeholder="Search by name or scientific name…"
-				aria-label="Search fish"
-				className="w-full rounded-lg border-[3px] border-ink bg-white px-3.5 py-2.5 text-[15px] placeholder:text-muted"
-			/>
-			{/* Stacked on phones; from 768px the groups wrap side by side. */}
-			<div className="grid gap-3 md:flex md:flex-wrap md:items-end md:gap-x-6">
-				<div className="grid gap-1">
+		<div className="grid min-w-0 grid-cols-1 gap-2" data-filter-bar>
+			<div className="relative">
+				<SearchIcon />
+				<Input
+					type="search"
+					value={query.text}
+					onValueChange={(text) => set('text', text)}
+					placeholder="Search by name or scientific name…"
+					aria-label="Search fish"
+					className="w-full rounded-lg border border-control bg-white py-2 pl-9 pr-3 text-sm placeholder:text-muted"
+				/>
+			</div>
+			{/* One wrapping row. On phones each group takes its own line and its pills scroll sideways. */}
+			<div className="flex flex-wrap items-center gap-x-5 gap-y-1">
+				<div className={group}>
 					<span className={groupLabel} aria-hidden="true">
 						Water
 					</span>
@@ -164,20 +187,20 @@ export default function FilterBar({ states, total }: Props) {
 						aria-label="Water"
 						value={[query.water || ALL]}
 						onValueChange={(next) => set('water', next[0] && next[0] !== ALL ? next[0] : '')}
-						className="flex gap-1.5 overflow-x-auto pb-1"
+						className={pillRow}
 					>
 						<Toggle value={ALL} className={pill}>
 							All
 						</Toggle>
 						{WATERS.map((water) => (
 							<Toggle key={water} value={water} className={pill}>
-								<Icon name={WATER_ICON[water]} className="size-4" />
+								<Icon name={WATER_ICON[water]} className="size-3.5" />
 								{WATER_LABEL[water]}
 							</Toggle>
 						))}
 					</ToggleGroup>
 				</div>
-				<div className="grid gap-1">
+				<div className={group}>
 					<span className={groupLabel} aria-hidden="true">
 						Use
 					</span>
@@ -185,7 +208,7 @@ export default function FilterBar({ states, total }: Props) {
 						aria-label="Use"
 						value={[query.use || ALL]}
 						onValueChange={(next) => set('use', next[0] && next[0] !== ALL ? next[0] : '')}
-						className="flex gap-1.5 overflow-x-auto pb-1"
+						className={pillRow}
 					>
 						<Toggle value={ALL} className={pill}>
 							All
@@ -197,26 +220,24 @@ export default function FilterBar({ states, total }: Props) {
 						))}
 					</ToggleGroup>
 				</div>
-				<div className="flex flex-wrap items-end gap-3">
-					<FilterSelect label="In Malaysia" options={STATUS_OPTIONS} value={query.status} onChange={(v) => set('status', v)} />
-					{states.length > 0 && (
-						<FilterSelect label="State" options={stateOptions} value={query.state} onChange={(v) => set('state', v)} />
-					)}
-					<label className="flex min-h-9 items-center gap-2 text-sm font-bold">
-						<Checkbox.Root
-							checked={query.threatened}
-							onCheckedChange={(checked) => set('threatened', checked)}
-							className="flex size-5 items-center justify-center rounded border-2 border-ink bg-white data-checked:bg-ink data-checked:text-sign-yellow"
-						>
-							<Checkbox.Indicator className="flex data-unchecked:hidden">
-								<CheckMark />
-							</Checkbox.Indicator>
-						</Checkbox.Root>
-						Threatened only
-					</label>
-				</div>
+				<FilterSelect label="In Malaysia" options={STATUS_OPTIONS} value={query.status} onChange={(v) => set('status', v)} />
+				{states.length > 0 && (
+					<FilterSelect label="State" options={stateOptions} value={query.state} onChange={(v) => set('state', v)} />
+				)}
+				<label className="flex min-h-8 items-center gap-2 text-[13px]">
+					<Checkbox.Root
+						checked={query.threatened}
+						onCheckedChange={(checked) => set('threatened', checked)}
+						className="flex size-4 items-center justify-center rounded border border-control bg-white data-checked:border-salt data-checked:bg-salt data-checked:text-white"
+					>
+						<Checkbox.Indicator className="flex data-unchecked:hidden">
+							<CheckMark />
+						</Checkbox.Indicator>
+					</Checkbox.Root>
+					Threatened only
+				</label>
+				<p aria-live="polite" className="ml-auto text-[13px] font-medium text-muted">{`${shown} fish`}</p>
 			</div>
-			<p aria-live="polite" className="text-sm font-bold text-muted">{`${shown} fish`}</p>
 		</div>
 	);
 }
