@@ -1,0 +1,111 @@
+@import 'tailwindcss';
+
+/* `static` emits every variable, including ones only used in style attributes. */
+@theme static {
+	--color-ink: #1a1a1a;
+	--color-muted: #555555;
+	--color-sign-red: #c8102e;
+	--color-sign-yellow: #ffd23f;
+	--color-cardboard: #e2c391;
+	--color-tile: #f6f8f8;
+	--color-grout: #dde5e8;
+	--color-fresh: #1d7a4a;
+	--color-brackish: #0e6b6b;
+	--color-salt: #1559a0;
+	--color-alert: #b00d28;
+
+	/* Astro's <Font> defines the --astro-font-* variables. */
+	--font-sans: var(--astro-font-bricolage), ui-sans-serif, system-ui, sans-serif;
+	--font-marker: var(--astro-font-marker), cursive;
+
+	--shadow-hard: 5px 5px 0 var(--color-ink);
+	--shadow-hard-sm: 3px 3px 0 var(--color-ink);
+	--shadow-board: 2px 3px 0 rgb(0 0 0 / 0.2);
+
+	--animate-sway: sway 3.2s ease-in-out infinite alternate;
+	--animate-rise: rise 5s ease-in infinite;
+	--animate-swim: swim 16s linear infinite;
+	--animate-bob: bob 1.6s ease-in-out infinite alternate;
+
+	@keyframes sway {
+		from {
+			transform: rotate(-4deg);
+		}
+		to {
+			transform: rotate(3deg);
+		}
+	}
+	@keyframes rise {
+		0% {
+			transform: translate(0, 0);
+			opacity: 0;
+		}
+		15% {
+			opacity: 1;
+		}
+		100% {
+			transform: translate(8px, -190px);
+			opacity: 0;
+		}
+	}
+	@keyframes swim {
+		from {
+			left: -80px;
+		}
+		to {
+			left: 100%;
+		}
+	}
+	@keyframes bob {
+		from {
+			transform: translateY(-4px);
+		}
+		to {
+			transform: translateY(4px);
+		}
+	}
+}
+
+@layer base {
+	body {
+		background-color: var(--color-tile);
+		background-image:
+			linear-gradient(var(--color-grout) 1px, transparent 1px),
+			linear-gradient(90deg, var(--color-grout) 1px, transparent 1px);
+		background-size: 30px 30px;
+		color: var(--color-ink);
+	}
+
+	[hidden] {
+		display: none !important;
+	}
+
+	/* A yellow ring inside an ink ring. */
+	:focus-visible {
+		outline: 3px solid var(--color-ink);
+		outline-offset: 2px;
+		box-shadow: 0 0 0 2px var(--color-sign-yellow);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		*,
+		*::before,
+		*::after {
+			animation: none !important;
+			transition: none !important;
+		}
+	}
+}
+
+@utility ink-card {
+	background-color: #fff;
+	border: 2px solid var(--color-ink);
+	border-radius: 10px;
+}
+
+@utility cardboard {
+	background-color: var(--color-cardboard);
+	color: var(--color-ink);
+	font-family: var(--font-marker);
+	box-shadow: var(--shadow-board);
+}

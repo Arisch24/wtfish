@@ -1,4 +1,7 @@
 ---
+import { Font } from 'astro:assets';
+import '../styles/global.css';
+
 interface Props {
 	title: string;
 	description?: string;
@@ -15,6 +18,9 @@ const { title, description = 'A directory of aquarium and game fish.' } = Astro.
 		<meta name="viewport" content="width=device-width" />
 		<meta name="description" content={description} />
 		<meta name="generator" content={Astro.generator} />
+		<Font cssVariable="--astro-font-bricolage" preload />
+		<Font cssVariable="--astro-font-marker" />
+
 		<title>{title}</title>
 	</head>
 	<body>
