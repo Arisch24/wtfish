@@ -45,6 +45,14 @@ function errorPaths(data: unknown): string[] {
 }
 
 describe('fishSchema', () => {
+	it('accepts Malay variants in names.malayOther', () => {
+		expect(errorPaths({ ...minimal, names: { ...minimal.names, malayOther: ['Toman'] } })).toEqual([]);
+	});
+
+	it('rejects blank Malay variants', () => {
+		expect(errorPaths({ ...minimal, names: { ...minimal.names, malayOther: [' '] } })).toContain('names.malayOther.0');
+	});
+
 	it('accepts a fish with only the required fields', () => {
 		expect(errorPaths(minimal)).toEqual([]);
 	});

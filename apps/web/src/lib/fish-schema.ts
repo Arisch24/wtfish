@@ -64,6 +64,8 @@ export const fishSchema = z
 			scientific: text,
 			malay: text.optional(),
 			other: z.array(text).optional(),
+			/** Malay and regional variants. Kept for a future multilingual site; never shown or searched. */
+			malayOther: z.array(text).optional(),
 		}),
 		taxonomy: z.strictObject({
 			family: text,

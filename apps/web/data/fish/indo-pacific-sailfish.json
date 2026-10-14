@@ -4,8 +4,10 @@
     "scientific": "Istiophorus platypterus",
     "malay": "Layaran",
     "other": [
-      "Layaran Pasifik",
       "Pacific sailfish"
+    ],
+    "malayOther": [
+      "Layaran Pasifik"
     ]
   },
   "taxonomy": {

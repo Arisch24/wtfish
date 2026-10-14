@@ -3,7 +3,7 @@
     "english": "Malayan river catfish",
     "scientific": "Hemibagrus capitulum",
     "malay": "Baung",
-    "other": [
+    "malayOther": [
       "Baung sungai"
     ]
   },
@@ -16,7 +16,7 @@
   "uses": [
     "food"
   ],
-  "summary": "This native Malaysian baung was frequently called Hemibagrus nemurus in older literature. Modern revisions separate H. capitulum of Malaysia and neighbouring islands from the Java species H. nemurus.",
+  "summary": "This native Malaysian catfish was frequently called Hemibagrus nemurus in older literature. Modern revisions separate H. capitulum of Malaysia and neighbouring islands from the Java species H. nemurus.",
   "nativeRange": "The Malay Peninsula, Sumatra and Borneo.",
   "identify": {
     "features": [

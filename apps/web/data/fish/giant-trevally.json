@@ -4,11 +4,13 @@
     "scientific": "Caranx ignobilis",
     "malay": "Gerepuh",
     "other": [
+      "GT"
+    ],
+    "malayOther": [
       "Gerepoh",
       "Belukok mamong",
       "Mamung",
-      "Repuh",
-      "GT"
+      "Repuh"
     ]
   },
   "taxonomy": {

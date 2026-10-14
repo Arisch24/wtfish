@@ -17,7 +17,7 @@
     "sport",
     "food"
   ],
-  "summary": "Toman is a large predatory snakehead native to Malaysian freshwaters. Its bright red striped juveniles change dramatically as they become darker, bulkier adults.",
+  "summary": "The giant snakehead is a large predator native to Malaysian freshwaters. Its bright red striped juveniles change dramatically as they become darker, bulkier adults.",
   "nativeRange": "Southeast Asia, including the Malay Peninsula, Sumatra, Java and Borneo.",
   "identify": {
     "features": [
@@ -28,7 +28,7 @@
     "lookAlikes": [
       {
         "id": "striped-snakehead",
-        "difference": "Haruan has dark chevron markings; juvenile toman instead has red-orange colouring with black lengthwise stripes."
+        "difference": "The striped snakehead has dark chevron markings; a juvenile giant snakehead instead has red-orange colouring with black lengthwise stripes."
       }
     ]
   },

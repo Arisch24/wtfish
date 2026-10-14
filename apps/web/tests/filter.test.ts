@@ -1,13 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import { matches, searchText, type FilterItem, type FilterQuery } from '../src/lib/filter';
 
+const tomanNames = { english: 'Giant snakehead', scientific: 'Channa micropeltes', malay: 'Toman', other: ['Red snakehead'] };
+
 const toman: FilterItem = {
-	search: searchText({
-		english: 'Giant snakehead',
-		scientific: 'Channa micropeltes',
-		malay: 'Toman',
-		other: ['Red snakehead'],
-	}),
+	search: searchText(tomanNames),
 	water: ['freshwater'],
 	uses: ['sport', 'food'],
 	states: ['Perak', 'Negeri Sembilan'],
@@ -16,7 +13,7 @@ const toman: FilterItem = {
 };
 
 const temoleh: FilterItem = {
-	search: searchText({ english: "Jullien's golden carp", scientific: 'Probarbus jullieni', malay: 'Temoleh' }),
+	search: searchText({ english: "Jullien's golden carp", scientific: 'Probarbus jullieni' }),
 	water: ['freshwater'],
 	uses: ['food'],
 	states: ['Pahang'],
@@ -40,9 +37,19 @@ describe('matches', () => {
 		expect([toman, temoleh, goldfish].every((fish) => matches(fish, any))).toBe(true);
 	});
 
-	it('finds a fish by its Malay name in any case', () => {
-		expect(matches(toman, { ...any, text: 'TOMAN' })).toBe(true);
-		expect(matches(goldfish, { ...any, text: 'TOMAN' })).toBe(false);
+	it('finds a fish by its English name in any case', () => {
+		expect(matches(toman, { ...any, text: 'GIANT SNAKE' })).toBe(true);
+		expect(matches(goldfish, { ...any, text: 'GIANT SNAKE' })).toBe(false);
+	});
+
+	it('does not search Malay names, because the site is English-only', () => {
+		expect(matches(toman, { ...any, text: 'toman' })).toBe(false);
+	});
+
+	it('ignores apostrophes in names and searches', () => {
+		expect(matches(temoleh, { ...any, text: 'julliens' })).toBe(true);
+		expect(matches(temoleh, { ...any, text: "jullien's golden" })).toBe(true);
+		expect(matches(temoleh, { ...any, text: 'jullien’s' })).toBe(true);
 	});
 
 	it('finds a fish by other names', () => {
@@ -54,7 +61,7 @@ describe('matches', () => {
 	});
 
 	it('requires every word to match', () => {
-		expect(matches(toman, { ...any, text: 'toman goldfish' })).toBe(false);
+		expect(matches(toman, { ...any, text: 'giant goldfish' })).toBe(false);
 	});
 
 	it('filters by use', () => {

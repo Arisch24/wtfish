@@ -4,11 +4,13 @@
     "scientific": "Eleutheronema tetradactylum",
     "malay": "Senangin rambut empat",
     "other": [
-      "Senangin",
-      "Kurau janggut",
-      "Kurau pipih",
       "Four-finger threadfin",
       "Blue threadfin"
+    ],
+    "malayOther": [
+      "Senangin",
+      "Kurau janggut",
+      "Kurau pipih"
     ]
   },
   "taxonomy": {
@@ -24,7 +26,7 @@
   "uses": [
     "food"
   ],
-  "summary": "A coastal threadfin recognised by four separate filaments below each pectoral fin. The DOF guide calls it Senangin rambut empat and also lists regional kurau names, which can refer to different threadfins.",
+  "summary": "A coastal threadfin recognised by four separate filaments below each pectoral fin. Its regional market names can also refer to other threadfins.",
   "nativeRange": "The Indo-West Pacific.",
   "identify": {
     "features": [

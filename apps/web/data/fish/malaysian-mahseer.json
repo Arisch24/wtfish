@@ -4,9 +4,11 @@
     "scientific": "Tor tambroides",
     "malay": "Kelah",
     "other": [
-      "Kelah merah",
-      "Empurau",
       "Malayan mahseer"
+    ],
+    "malayOther": [
+      "Kelah merah",
+      "Empurau"
     ]
   },
   "taxonomy": {
@@ -22,7 +24,7 @@
     "sport",
     "food"
   ],
-  "summary": "A mahseer associated with clear forest rivers, known as kelah in Peninsular Malaysia and empurau in Sarawak. Malaysian Tor identification remains under study, so a local name or lip shape alone does not settle the species.",
+  "summary": "A mahseer associated with clear forest rivers, with different local names in Peninsular Malaysia and Sarawak. Malaysian Tor identification remains under study, so a local name or lip shape alone does not settle the species.",
   "nativeRange": "Southeast Asia, including Malaysia and Indonesia.",
   "habitat": {
     "environments": [
@@ -60,7 +62,7 @@
       }
     ]
   },
-  "eating": "Valued as a freshwater food fish, including the empurau sold in Sarawak.",
+  "eating": "Valued as a freshwater food fish, including in Sarawak, where it is sold.",
   "photos": [
     {
       "file": "inat-103002889.jpg",

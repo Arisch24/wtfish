@@ -4,7 +4,9 @@
     "scientific": "Lutjanus argentimaculatus",
     "malay": "Siakap merah",
     "other": [
-      "Mangrove red snapper",
+      "Mangrove red snapper"
+    ],
+    "malayOther": [
       "Kakap merah"
     ]
   },
@@ -23,7 +25,7 @@
     "sport",
     "food"
   ],
-  "summary": "A predatory snapper that uses mangrove estuaries while young and moves to reefs as it grows. The name siakap merah refers to a snapper, whereas siakap usually refers to barramundi.",
+  "summary": "A predatory snapper that uses mangrove estuaries while young and moves to reefs as it grows.",
   "nativeRange": "The tropical Indo-West Pacific.",
   "size": {
     "maxCm": 150

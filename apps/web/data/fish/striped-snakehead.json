@@ -21,7 +21,7 @@
     "sport",
     "food"
   ],
-  "summary": "Haruan is an adaptable freshwater predator that can live in low-oxygen water. It waits near vegetation or submerged cover and takes smaller aquatic animals.",
+  "summary": "The striped snakehead is an adaptable freshwater predator that can live in low-oxygen water. It waits near vegetation or submerged cover and takes smaller aquatic animals.",
   "nativeRange": "South and Southeast Asia.",
   "identify": {
     "features": [
@@ -33,7 +33,7 @@
     "lookAlikes": [
       {
         "id": "giant-snakehead",
-        "difference": "Adult toman is bulkier and has a broad horizontal stripe rather than the angled bands of haruan."
+        "difference": "An adult giant snakehead is bulkier and has a broad horizontal stripe rather than the angled bands of the striped snakehead."
       }
     ]
   },

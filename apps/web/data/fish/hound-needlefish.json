@@ -4,8 +4,10 @@
     "scientific": "Tylosurus crocodilus",
     "malay": "Todak buaya",
     "other": [
-      "Todak",
       "Houndfish"
+    ],
+    "malayOther": [
+      "Todak"
     ]
   },
   "taxonomy": {

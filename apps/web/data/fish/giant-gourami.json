@@ -4,8 +4,10 @@
     "scientific": "Osphronemus goramy",
     "malay": "Kaloi",
     "other": [
-      "Kalui",
       "Giant gouramy"
+    ],
+    "malayOther": [
+      "Kalui"
     ]
   },
   "taxonomy": {
@@ -21,7 +23,7 @@
     "food",
     "aquarium"
   ],
-  "summary": "Kaloi is a large freshwater gourami used as a food and ornamental fish. The modern Kenyir checklist treats O. goramy as native and records specimens from the Saok River.",
+  "summary": "The giant gourami is a large freshwater fish used for food and as an ornamental fish. The modern Kenyir checklist treats O. goramy as native and records specimens from the Saok River.",
   "habitat": {
     "environments": [
       "forest-river",

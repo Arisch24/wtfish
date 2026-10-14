@@ -21,15 +21,21 @@ export interface FilterQuery {
 
 export const THREATENED: readonly string[] = ['VU', 'EN', 'CR'];
 
-export function searchText(names: { english: string; scientific: string; malay?: string; other?: string[] }): string {
-	return [names.english, names.scientific, names.malay, ...(names.other ?? [])]
-		.filter(Boolean)
-		.join(' ')
-		.toLowerCase();
+/** Lower-case and drop apostrophes, so "John's", "john’s" and "johns" all match. */
+function normalise(text: string): string {
+	return text.toLowerCase().replace(/['’]/g, '');
+}
+
+/**
+ * Text to search for one fish. The site is English-only, so Malay names
+ * (`names.malay`, `names.malayOther`) are deliberately left out.
+ */
+export function searchText(names: { english: string; scientific: string; other?: string[] }): string {
+	return normalise([names.english, names.scientific, ...(names.other ?? [])].join(' '));
 }
 
 export function matches(item: FilterItem, query: FilterQuery): boolean {
-	const words = query.text.toLowerCase().split(/\s+/).filter(Boolean);
+	const words = normalise(query.text).split(/\s+/).filter(Boolean);
 	const statusOk = query.status === 'any' ? item.status !== '' : !query.status || item.status === query.status;
 	return (
 		words.every((word) => item.search.includes(word)) &&

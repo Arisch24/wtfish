@@ -2,6 +2,7 @@ import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { z } from 'astro/zod';
 import { describe, expect, it } from 'vitest';
 import { fishSchema } from '../src/lib/fish-schema';
+import { findMalayNames, type NameSet } from './helpers/malay-names';
 
 const dataDir = new URL('../data/fish/', import.meta.url);
 const fish = readdirSync(dataDir)
@@ -11,8 +12,32 @@ const fish = readdirSync(dataDir)
 		raw: JSON.parse(readFileSync(new URL(file, dataDir), 'utf8')),
 	}));
 const ids = new Set(fish.map((f) => f.id));
+const allNames: NameSet[] = fish.map((f) => f.raw.names);
+
+/** Every free-text field a visitor can read. Place names in `malaysia.spots` are left out. */
+function prose(raw: any): string[] {
+	return [
+		raw.summary,
+		raw.nativeRange,
+		raw.eating,
+		raw.habitat?.description,
+		raw.habitat?.diet,
+		raw.malaysia?.rules,
+		raw.fishing?.season,
+		...(raw.fishing?.baits ?? []),
+		...(raw.identify?.features ?? []),
+		...(raw.identify?.lookAlikes ?? []).map((lookAlike: { difference: string }) => lookAlike.difference),
+	].filter(Boolean);
+}
+
 
 describe('fish data files', () => {
+	it.each(fish)('$id text uses English names only', ({ raw }) => {
+		for (const text of prose(raw)) {
+			expect(findMalayNames(text, allNames), text).toEqual([]);
+		}
+	});
+
 	it('contains fish', () => {
 		expect(fish.length).toBeGreaterThan(0);
 	});

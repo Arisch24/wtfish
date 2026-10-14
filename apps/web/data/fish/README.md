@@ -28,9 +28,13 @@ One file per fish. The filename is the fish's id and URL:
 2. Write in our own words. Never paste text from a source.
 3. Never copy from FishBase (non-commercial licence) or the IUCN Red List
    website or API. Use them only to double-check.
-4. Malay names: prefer Department of Fisheries (DOF) and DBP lists over
-   Wikidata. Put regional names in `names.other` with the region in
-   brackets, e.g. `"Empurau (Sarawak)"`.
+4. The site is English-only. `names.malay` and `names.malayOther` are kept
+   for a future multilingual version but are never shown or searched.
+   `names.other` holds English (or English-language trade) names only; put
+   Malay and regional names in `names.malayOther`. Never use a Malay fish
+   name in prose fields; write the English name ("the striped snakehead",
+   not "haruan"). `pnpm test` fails if one slips in. Prefer Department of
+   Fisheries (DOF) and DBP lists over Wikidata for Malay names.
 5. Check the scientific name against Catalog of Fishes. If `import-data`
    warns about a synonym, investigate before changing `names.scientific`.
    When a current source disagrees with the GBIF backbone, retain the sourced

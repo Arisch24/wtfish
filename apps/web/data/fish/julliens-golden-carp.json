@@ -4,9 +4,11 @@
     "scientific": "Probarbus jullieni",
     "malay": "Temoleh",
     "other": [
-      "Temelian",
-      "Esok",
       "Seven-striped barb"
+    ],
+    "malayOther": [
+      "Temelian",
+      "Esok"
     ]
   },
   "taxonomy": {
@@ -21,7 +23,7 @@
   "uses": [
     "food"
   ],
-  "summary": "Temoleh is a large river carp native to Peninsular Malaysia. Habitat change and heavy harvest have reduced wild populations; Malaysian programmes also breed and release it for conservation and fisheries.",
+  "summary": "Jullien's golden carp is a large river carp native to Peninsular Malaysia. Habitat change and heavy harvest have reduced wild populations; Malaysian programmes also breed and release it for conservation and fisheries.",
   "nativeRange": "Southeast Asia, including river basins in Malaysia, Thailand, Laos, Cambodia and Vietnam.",
   "identify": {
     "features": [

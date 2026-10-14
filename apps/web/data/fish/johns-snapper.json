@@ -4,9 +4,11 @@
     "scientific": "Lutjanus johnii",
     "malay": "Jenahak tanda",
     "other": [
-      "Jenahak",
       "Golden snapper",
-      "Fingermark bream",
+      "Fingermark bream"
+    ],
+    "malayOther": [
+      "Jenahak",
       "Tetanda",
       "Barah-barahan"
     ]
@@ -25,7 +27,7 @@
     "sport",
     "food"
   ],
-  "summary": "Jenahak is a commercially important Malaysian snapper with a golden or bronze sheen. The DOF naming guide uses Jenahak tanda for this species, although market names can overlap with other snappers.",
+  "summary": "John's snapper is a commercially important Malaysian snapper with a golden or bronze sheen. Market names can overlap with other snappers.",
   "nativeRange": "The tropical Indo-West Pacific.",
   "size": {
     "maxCm": 97

@@ -16,7 +16,7 @@
   "uses": [
     "food"
   ],
-  "summary": "This introduced catfish is distinct from native Malaysian baung. Its red-orange tail is a useful field clue, and Malaysian research and fisheries authorities identify it as an invasive concern.",
+  "summary": "This introduced catfish is distinct from Malaysia's native bagrid catfishes. Its red-orange tail is a useful field clue, and Malaysian research and fisheries authorities identify it as an invasive concern.",
   "nativeRange": "The Mekong and Lancang river systems in mainland Southeast Asia.",
   "identify": {
     "features": [
@@ -32,7 +32,7 @@
   },
   "malaysia": {
     "status": "invasive",
-    "rules": "The Department of Fisheries identifies baung ekor merah as an invasive concern. Its published import-risk page describes controls for Hemibagrus wyckioides; do not assume that advice for Amazon redtail catfish covers this species. Rules change and differ by state — check with your state Fisheries Office before acquiring or moving it. Checked 13 October 2026."
+    "rules": "The Department of Fisheries identifies this catfish as an invasive concern. Its published import-risk page describes controls for Hemibagrus wyckioides; do not assume that advice for Amazon redtail catfish covers this species. Rules change and differ by state — check with your state Fisheries Office before acquiring or moving it. Checked 13 October 2026."
   },
   "photos": [
     {
