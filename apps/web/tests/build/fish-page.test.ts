@@ -4,6 +4,12 @@ import { builtPage, fishFiles, visibleText } from './helpers';
 const page = (id: string) => builtPage(`fish/${id}/index.html`);
 
 describe('fish pages', () => {
+	it('gives the family its own row of quick stats', () => {
+		const html = page('indo-pacific-sailfish');
+		expect(html).toMatch(/data-wide[^>]*>\s*<dt[^>]*>family/);
+		expect(html.match(/data-wide/g)).toHaveLength(1);
+	});
+
 	it('builds a page for every fish', () => {
 		for (const { id } of fishFiles) expect(() => page(id), id).not.toThrow();
 	});

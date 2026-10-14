@@ -8,10 +8,17 @@ interface Props {
 const { tiles } = Astro.props;
 ---
 
-<dl class="grid grid-cols-2 gap-2 sm:grid-cols-[repeat(auto-fit,minmax(8.5rem,1fr))]" data-stat-tiles>
+<!-- Two tiles per row on phones, one row from 640px. A wide tile takes a row of its own. -->
+<dl class="flex flex-wrap gap-2" data-stat-tiles>
 	{
 		tiles.map((tile) => (
-			<div class="flex flex-col-reverse rounded-lg border-2 border-ink bg-white px-2.5 py-2">
+			<div
+				class:list={[
+					'flex grow flex-col-reverse rounded-lg border-2 border-ink bg-white px-2.5 py-2',
+					tile.wide ? 'basis-full' : 'basis-[calc(50%-0.25rem)] sm:basis-0',
+				]}
+				data-wide={tile.wide ? '' : undefined}
+			>
 				<dt class="text-[13px] text-muted">{tile.label}</dt>
 				<dd class:list={['break-words text-[22px] font-extrabold leading-tight tracking-[-0.02em]', tile.alert && 'text-alert']}>
 					{tile.value}

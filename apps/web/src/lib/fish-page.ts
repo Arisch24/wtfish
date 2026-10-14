@@ -8,6 +8,8 @@ export interface StatTile {
 	label: string;
 	/** Shown in the alert colour, e.g. a threatened IUCN category. */
 	alert?: true;
+	/** Takes a row of its own, so a long value such as a family name never breaks mid-word. */
+	wide?: true;
 }
 
 /** The quick-stats row under a fish's summary, in page order. */
@@ -27,7 +29,7 @@ export function quickStats(fish: Fish): StatTile[] {
 	}
 	if (fish.malaysia) tiles.push({ value: STATUS_SHORT_LABEL[fish.malaysia.status], label: 'in Malaysia' });
 	const order = fish.taxonomy.order ? ` · order ${fish.taxonomy.order}` : '';
-	tiles.push({ value: fish.taxonomy.family, label: `family${order}` });
+	tiles.push({ value: fish.taxonomy.family, label: `family${order}`, wide: true });
 	return tiles;
 }
 

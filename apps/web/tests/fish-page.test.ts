@@ -11,6 +11,11 @@ const base: Fish = {
 };
 
 describe('quickStats', () => {
+	it('gives only the family tile a row of its own', () => {
+		const tiles = quickStats({ ...base, iucn: 'VU', size: { maxCm: 350, maxKg: 100 }, malaysia: { status: 'native' } });
+		expect(tiles.filter((tile) => tile.wide).map((tile) => tile.label)).toEqual(['family']);
+	});
+
 	it('lists length, weight, IUCN, status and family in that order', () => {
 		const sailfish: Fish = {
 			...base,
@@ -24,7 +29,7 @@ describe('quickStats', () => {
 			{ value: '100 kg', label: 'max weight' },
 			{ value: 'VU', label: 'Vulnerable', alert: true },
 			{ value: 'Native', label: 'in Malaysia' },
-			{ value: 'Istiophoridae', label: 'family · order Perciformes' },
+			{ value: 'Istiophoridae', label: 'family · order Perciformes', wide: true },
 		]);
 	});
 
@@ -41,7 +46,7 @@ describe('quickStats', () => {
 	});
 
 	it('shows just the family for a minimal fish', () => {
-		expect(quickStats(base)).toEqual([{ value: 'Istiophoridae', label: 'family' }]);
+		expect(quickStats(base)).toEqual([{ value: 'Istiophoridae', label: 'family', wide: true }]);
 	});
 });
 
