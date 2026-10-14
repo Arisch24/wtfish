@@ -26,8 +26,8 @@ export const ICONS: Record<IconName, { viewBox: string; body: string }> = {
 		body: '<path d="M8 1.5 C8 1.5 3 7.5 3 10.5 a5 5 0 0 0 10 0 C13 7.5 8 1.5 8 1.5 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M4.6 10.6 q1.7 -1.6 3.4 0 t3.4 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>',
 	},
 	fish: {
-		viewBox: '0 0 96 24',
-		body: '<path d="M2 12 C14 3 50 1 74 10 L92 2 L88 12 L92 22 L74 14 C50 23 14 21 2 12 Z" fill="currentColor"/><circle cx="11" cy="10.5" r="1.6" fill="#fff"/>',
+		viewBox: '0 0 96 18',
+		body: '<path d="M2 9 C14 2.5 50 1.5 74 7.5 L92 1.5 L88 9 L92 16.5 L74 10.5 C50 16.5 14 15.5 2 9 Z" fill="currentColor"/><circle cx="11" cy="8" r="1.5" fill="#fff"/>',
 	},
 	person: {
 		viewBox: '0 0 100 22',
