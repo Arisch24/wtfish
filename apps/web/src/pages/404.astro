@@ -4,7 +4,9 @@ import Base from '../layouts/Base.astro';
 ---
 
 <Base title="Page not found | wtfish">
-	<ConfusedMessage heading="This page swam off." text="We couldn't find that page.">
-		<a href="/" class="ink-card px-4 py-2 font-bold shadow-hard-sm">See all fish</a>
+	<ConfusedMessage label="Not found" heading="This page swam off." text="We couldn't find that page.">
+		<a href="/" class="rounded-md border border-control bg-white px-3.5 py-1.5 text-[13px] font-medium hover:bg-tile">
+			See all fish
+		</a>
 	</ConfusedMessage>
 </Base>

@@ -42,4 +42,13 @@ describe('site shell', () => {
 		expect(visibleText(builtPage('404.html'))).toContain('This page swam off.');
 		expect(builtPage('404.html')).toContain('href="/"');
 	});
+
+	it('labels the coming-soon and not-found pages in the quiet style', () => {
+		expect(visibleText(builtPage('identify/index.html'))).toContain('Coming soon');
+		expect(visibleText(builtPage('about/index.html'))).toContain('Coming soon');
+		expect(visibleText(builtPage('404.html'))).toContain('Not found');
+		for (const path of ['identify/index.html', 'about/index.html', '404.html']) {
+			expect(builtPage(path), path).not.toMatch(/ink-card|border-ink|shadow-hard|font-extrabold/);
+		}
+	});
 });
