@@ -31,8 +31,6 @@
 	--font-display: var(--astro-font-bricolage), ui-sans-serif, system-ui, sans-serif;
 	--font-marker: var(--astro-font-marker), cursive;
 
-	--shadow-hard: 5px 5px 0 var(--color-ink);
-	--shadow-hard-sm: 3px 3px 0 var(--color-ink);
 	--shadow-menu: 0 8px 24px rgb(26 26 26 / 0.08);
 	--shadow-paper: 1px 2px 0 rgb(0 0 0 / 0.12);
 
@@ -112,12 +110,6 @@
 			transition: none !important;
 		}
 	}
-}
-
-@utility ink-card {
-	background-color: #fff;
-	border: 2px solid var(--color-ink);
-	border-radius: 10px;
 }
 
 @utility panel {

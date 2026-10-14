@@ -1,7 +1,14 @@
 import { describe, expect, it } from 'vitest';
-import { builtCss, builtPage } from './helpers';
+import { allBuiltPages, builtCss, builtPage } from './helpers';
 
 describe('foundation', () => {
+	it('leaves none of the bold styles behind', () => {
+		for (const path of allBuiltPages()) {
+			expect(builtPage(path), path).not.toMatch(/ink-card|border-ink|shadow-hard|font-extrabold/);
+		}
+		expect(builtCss()).not.toMatch(/--shadow-hard|\.ink-card/);
+	});
+
 	it('serves all three fonts from this site, not from Google', () => {
 		const html = builtPage('index.html');
 		expect(html).toContain('--astro-font-inter');
