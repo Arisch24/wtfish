@@ -9,10 +9,10 @@ interface Props {
 const { maxCm } = Astro.props;
 ---
 
-<div class="mt-2.5" data-card-tape>
-	<p class="flex justify-between text-xs font-bold">
+<div class="mt-2" data-card-tape>
+	<p class="flex justify-between text-xs">
 		<span class="text-muted">Size</span>
-		<span class="text-alert">up to {maxCm} cm</span>
+		<span class="font-semibold">up to {maxCm} cm</span>
 	</p>
 	<Tape ticks={CARD_TAPE_TICKS} fill={cardTapePosition(maxCm)} class="mt-1" />
 </div>

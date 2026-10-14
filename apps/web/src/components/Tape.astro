@@ -1,10 +1,9 @@
 ---
 import type { TapeTick } from '../lib/size';
-import Icon from './Icon.astro';
 
 interface Props {
 	ticks: TapeTick[];
-	/** 0–1: fill the tape this far, with a fish at the end. Omit for a plain yellow tape. */
+	/** 0–1: fill the tape this far. Omit for a fully yellow tape. */
 	fill?: number;
 	class?: string;
 }
@@ -14,32 +13,23 @@ const last = ticks.length - 1;
 ---
 
 <div class:list={['select-none', className]} aria-hidden="true">
-	<div class:list={['relative h-5 rounded border-2 border-ink', fill === undefined ? 'bg-sign-yellow' : 'bg-white']}>
-		{
-			fill !== undefined && (
-				<>
-					<span
-						class="absolute inset-y-0 left-0 bg-sign-yellow/80 shadow-[2px_0_0_var(--color-ink)]"
-						style={`width: ${fill * 100}%`}
-					/>
-					<Icon
-						name="fish"
-						class="absolute top-1/2 h-2.5 w-8 -translate-y-1/2 -scale-x-100 text-ink"
-						style={`left: max(0px, calc(${fill * 100}% - 2.25rem))`}
-					/>
-				</>
-			)
-		}
+	<div
+		class:list={[
+			'relative h-1.5 rounded-full',
+			fill === undefined ? 'bg-sign-yellow' : 'bg-tile ring-1 ring-inset ring-grout',
+		]}
+	>
+		{fill !== undefined && <span class="absolute inset-y-0 left-0 rounded-full bg-sign-yellow" style={`width: ${fill * 100}%`} />}
 		{
 			ticks.map((tick, i) => (
 				<span
-					class:list={['absolute top-0 h-2 w-[1.5px] bg-ink', i === last && '-translate-x-full']}
+					class:list={['absolute top-full mt-0.5 h-1 w-px bg-muted', i === last && '-translate-x-full']}
 					style={`left: ${tick.position * 100}%`}
 				/>
 			))
 		}
 	</div>
-	<div class="relative mt-0.5 h-4 text-xs text-muted">
+	<div class="relative mt-2 h-4 text-xs text-muted">
 		{
 			ticks.map((tick, i) => (
 				<span

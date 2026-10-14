@@ -28,7 +28,7 @@ const filter: FilterItem = {
 <li data-fish-card data-filter={JSON.stringify(filter)} class="h-full">
 	<a
 		href={`/fish/${id}/`}
-		class="group ink-card flex h-full flex-col transition-[translate,box-shadow] duration-200 hover:-translate-y-[3px] hover:shadow-[0_6px_0_var(--color-ink)]"
+		class="group panel flex h-full flex-col overflow-hidden transition-[translate,border-color] duration-200 hover:-translate-y-0.5 hover:border-hover-line"
 	>
 		<div class="relative">
 			{
@@ -39,29 +39,31 @@ const filter: FilterItem = {
 						widths={[320, 480, 640]}
 						sizes="(min-width: 1152px) 280px, (min-width: 640px) 45vw, 92vw"
 						formats={['avif', 'webp']}
-						class="aspect-[4/3] w-full rounded-t-[8px] object-cover"
+						class="aspect-[16/10] w-full object-cover"
 					/>
 				) : (
 					<div
-						class="tile-surface flex aspect-[4/3] w-full flex-col items-center justify-center gap-2 rounded-t-[8px] border-b-2 border-ink text-muted"
+						class="tile-surface flex aspect-[16/10] w-full flex-col items-center justify-center gap-2 text-muted"
 						data-no-photo
 					>
-						<Icon name="fish" class="w-24 text-grout" />
-						<span class="text-sm font-semibold">No photo yet</span>
+						<Icon name="fish" class="w-20 text-grout" />
+						<span class="text-[13px] font-medium">No photo yet</span>
 					</div>
 				)
 			}
-			<UseTag uses={data.uses} class="absolute -left-1.5 top-3 origin-left group-hover:rotate-[3deg]" />
+			<UseTag uses={data.uses} class="absolute left-2 top-2 origin-left group-hover:rotate-[2deg]" />
 		</div>
 		<div class="flex flex-1 flex-col px-3 pb-3 pt-2.5">
-			<h2 class="break-words text-[21px] font-extrabold leading-[1.05] tracking-[-0.02em]">{data.names.english}</h2>
-			<p class="text-sm italic text-muted">{data.names.scientific}</p>
+			<h2 class="break-words font-display text-base font-semibold leading-tight tracking-[-0.01em]">
+				{data.names.english}
+			</h2>
+			<p class="text-[13px] italic text-muted">{data.names.scientific}</p>
 			{data.size && <CardTape maxCm={data.size.maxCm} />}
 			<div class="mt-auto flex flex-wrap items-center justify-between gap-2 pt-3">
-				<span class="flex flex-wrap gap-1.5">{data.water.map((water) => <WaterLabel water={water} />)}</span>
+				<span class="flex flex-wrap gap-1">{data.water.map((water) => <WaterLabel water={water} />)}</span>
 				{
 					stateCount > 0 && (
-						<span class="text-[13px] font-bold text-alert">
+						<span class="text-xs text-muted">
 							{stateCount} {stateCount === 1 ? 'state' : 'states'}
 						</span>
 					)

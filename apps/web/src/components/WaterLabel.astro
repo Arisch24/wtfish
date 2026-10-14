@@ -10,21 +10,21 @@ interface Props {
 }
 
 const { water, size = 'sm' } = Astro.props;
-const look: Record<Water, { background: string; icon: IconName }> = {
-	freshwater: { background: 'bg-fresh', icon: 'drop' },
-	brackish: { background: 'bg-brackish', icon: 'brackish' },
-	marine: { background: 'bg-salt', icon: 'wave' },
+const look: Record<Water, { colours: string; icon: IconName }> = {
+	freshwater: { colours: 'bg-fresh-soft text-fresh', icon: 'drop' },
+	brackish: { colours: 'bg-brackish-soft text-brackish', icon: 'brackish' },
+	marine: { colours: 'bg-salt-soft text-salt', icon: 'wave' },
 };
-const { background, icon } = look[water];
+const { colours, icon } = look[water];
 ---
 
 <span
 	class:list={[
-		'inline-flex items-center gap-1.5 rounded border-2 border-ink font-bold text-white',
-		background,
-		size === 'sm' ? 'px-2 py-0.5 text-xs' : 'px-2.5 py-1 text-[13px]',
+		'inline-flex items-center gap-1 rounded-full font-medium',
+		colours,
+		size === 'sm' ? 'px-2 py-0.5 text-xs' : 'px-2.5 py-0.5 text-[13px]',
 	]}
 	data-water={water}
 >
-	<Icon name={icon} class="size-4" />{WATER_LABEL[water]}
+	<Icon name={icon} class="size-3" />{WATER_LABEL[water]}
 </span>

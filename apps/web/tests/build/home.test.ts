@@ -50,6 +50,12 @@ describe('home page', () => {
 		expect(visibleText(card)).toContain('No photo yet');
 	});
 
+	it('draws the cards in the quiet style', () => {
+		for (const [id, card] of cards) {
+			expect(card, id).not.toMatch(/ink-card|border-ink|shadow-hard|font-extrabold/);
+		}
+	});
+
 	it('shows a measuring tape only for fish with a known size', () => {
 		for (const { id, raw } of fishFiles) {
 			expect(cards.get(id)!.includes('data-card-tape'), id).toBe(Boolean(raw.size));
