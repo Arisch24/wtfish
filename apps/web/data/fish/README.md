@@ -11,6 +11,10 @@ One file per fish. The filename is the fish's id and URL:
   or an invalid value.
 - Required: `names.english`, `names.scientific`, `taxonomy.family`, `water`,
   `uses`, `summary`. Everything else is optional; empty sections are hidden.
+- English names use sentence case: capitalise the first word and proper nouns
+  only ("Atlantic blue marlin", "Indo-Pacific sailfish"). `pnpm test` fails on
+  a title-case name. If a proper noun after the first word is flagged, add it to
+  `PROPER_NAME_WORDS` in `tests/data.test.ts`.
 
 ## Filled by scripts — don't edit by hand
 

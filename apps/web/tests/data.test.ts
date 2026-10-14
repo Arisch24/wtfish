@@ -31,7 +31,18 @@ function prose(raw: any): string[] {
 }
 
 
+/** Words that keep their capital after the first word of an English name, as in "Indo-Pacific sailfish". */
+const PROPER_NAME_WORDS = new Set(['African', 'Pacific', 'Spanish']);
+
 describe('fish data files', () => {
+	it.each(fish)('$id English names use sentence case', ({ raw }) => {
+		for (const name of [raw.names.english, ...(raw.names.other ?? [])]) {
+			const later = name.split(/[\s-]+/).slice(1);
+			const capitalised = later.filter((word: string) => /^\p{Lu}/u.test(word) && !PROPER_NAME_WORDS.has(word));
+			expect(capitalised, `"${name}": capitalise only the first word and proper nouns (add proper nouns to PROPER_NAME_WORDS)`).toEqual([]);
+		}
+	});
+
 	it.each(fish)('$id text uses English names only', ({ raw }) => {
 		for (const text of prose(raw)) {
 			expect(findMalayNames(text, allNames), text).toEqual([]);
