@@ -1,0 +1,34 @@
+import { describe, expect, it } from 'vitest';
+import { builtPage, visibleText } from './helpers';
+
+const pages = ['index.html', 'identify/index.html', 'about/index.html', '404.html'];
+
+describe('site shell', () => {
+	it.each(pages)('%s has the header, links and footer', (path) => {
+		const html = builtPage(path);
+		expect(html).toContain('aria-label="wtfish home"');
+		expect(html).toContain('href="/identify/"');
+		expect(html).toContain('href="/about/"');
+		expect(visibleText(html)).toContain('Every fact links to its source.');
+	});
+
+	it('marks the current page in the header', () => {
+		expect(builtPage('identify/index.html')).toMatch(/<a href="\/identify\/"[^>]*aria-current="page"/);
+		expect(builtPage('about/index.html')).toMatch(/<a href="\/about\/"[^>]*aria-current="page"/);
+		expect(builtPage('index.html')).toMatch(/<a href="\/"[^>]*aria-current="page"/);
+	});
+
+	it('uses the hook favicon and no .ico', () => {
+		const html = builtPage('index.html');
+		expect(html).toContain('<link rel="icon" type="image/svg+xml" href="/favicon.svg">');
+		expect(html).toContain('href="/apple-touch-icon.png"');
+		expect(html).not.toContain('favicon.ico');
+	});
+
+	it('shows the coming-soon and not-found messages', () => {
+		expect(visibleText(builtPage('identify/index.html'))).toContain('Identify is coming soon');
+		expect(visibleText(builtPage('about/index.html'))).toContain('About is coming soon');
+		expect(visibleText(builtPage('404.html'))).toContain('This page swam off.');
+		expect(builtPage('404.html')).toContain('href="/"');
+	});
+});

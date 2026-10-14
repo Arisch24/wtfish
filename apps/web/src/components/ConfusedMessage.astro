@@ -1,0 +1,17 @@
+---
+import ConfusedFish from './ConfusedFish.astro';
+
+interface Props {
+	heading: string;
+	text: string;
+}
+
+const { heading, text } = Astro.props;
+---
+
+<section class="mx-auto flex max-w-xl flex-col items-center gap-4 px-4 py-20 text-center">
+	<ConfusedFish class="w-32" />
+	<h1 class="text-4xl font-extrabold tracking-[-0.04em]">{heading}</h1>
+	<p class="text-lg text-muted">{text}</p>
+	<slot />
+</section>

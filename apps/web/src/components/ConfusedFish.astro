@@ -1,0 +1,19 @@
+---
+interface Props {
+	class?: string;
+}
+
+const { class: className = 'w-24' } = Astro.props;
+---
+
+<svg viewBox="0 0 96 64" class={className} aria-hidden="true" focusable="false">
+	<path d="M72 32 L92 18 L88 32 L92 46 Z" fill="#ffd23f" stroke="#1a1a1a" stroke-width="3" stroke-linejoin="round"></path>
+	<ellipse cx="42" cy="34" rx="34" ry="22" fill="#ffd23f" stroke="#1a1a1a" stroke-width="3"></ellipse>
+	<path d="M44 34 q9 3 5 13" fill="none" stroke="#1a1a1a" stroke-width="2.6" stroke-linecap="round"></path>
+	<circle cx="25" cy="28" r="9" fill="#fff" stroke="#1a1a1a" stroke-width="2.6"></circle>
+	<circle cx="27.5" cy="24.5" r="3.6" fill="#1a1a1a"></circle>
+	<path d="M14 13 Q22 6 33 12" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"></path>
+	<circle cx="11" cy="41" r="3" fill="none" stroke="#1a1a1a" stroke-width="2.4"></circle>
+	<circle cx="4" cy="30" r="2.6" fill="none" stroke="#1a1a1a" stroke-width="1.8"></circle>
+	<circle cx="6" cy="20" r="1.8" fill="none" stroke="#1a1a1a" stroke-width="1.6"></circle>
+</svg>
