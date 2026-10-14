@@ -461,7 +461,9 @@ change:
     - no row is ever empty.
   - **`lastUpdated`:** the newest date of several, `undefined` for none, and
     unreviewed fish are ignored.
-  - **`quickStats`:** unchanged, including `wide` on the family.
+  - **`quickStats` and `aquariumStats`:** each item now has a short `label`
+    ("Max length"), a `value` and an optional `note` ("usually 60 cm",
+    "Vulnerable", "order Perciformes"). The family keeps `wide`.
   - **Contrast (`tests/contrast.test.ts`).** The test resolves each
     `color-mix(…, white)` token from `global.css`, then adds these pairs:
     - ink on `threat-soft`;
