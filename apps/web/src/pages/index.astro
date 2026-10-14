@@ -3,11 +3,14 @@ import { getCollection } from 'astro:content';
 import Bubbles from '../components/Bubbles.astro';
 import ConfusedFish from '../components/ConfusedFish.astro';
 import FishCard from '../components/FishCard.astro';
+import FilterBar from '../components/FilterBar.tsx';
 import HangingSign from '../components/HangingSign.astro';
 import SwimmingFish from '../components/SwimmingFish.astro';
 import Base from '../layouts/Base.astro';
+import { STATES } from '../lib/fish-schema';
 
 const fish = (await getCollection('fish')).sort((a, b) => a.data.names.english.localeCompare(b.data.names.english));
+const recordedStates = STATES.filter((state) => fish.some((f) => f.data.malaysia?.states?.some((s) => s.state === state)));
 ---
 
 <Base title="wtfish: what the fish is that?">
@@ -23,7 +26,7 @@ const fish = (await getCollection('fish')).sort((a, b) => a.data.names.english.l
 			<div class="grid gap-4">
 				<!-- The line reaches up to the header on wide screens: 36px fish strip + 16px padding. -->
 				<HangingSign text={`${fish.length} fish & counting`} class="justify-self-end lg:-mt-[52px]" />
-				<div id="filters"></div>
+				<div id="filters"><FilterBar client:load states={recordedStates} total={fish.length} /></div>
 			</div>
 		</section>
 		<ul id="fish-grid" class="grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-4">
