@@ -1,0 +1,63 @@
+---
+import { Picture } from 'astro:assets';
+import type { Fish } from '../lib/fish-schema';
+import { licenseUrl } from '../lib/format';
+import { photoFor } from '../lib/photos';
+
+type FishPhoto = NonNullable<Fish['photos']>[number];
+
+interface Props {
+	fishId: string;
+	photo: FishPhoto;
+	alt: string;
+	variant: 'hero' | 'gallery';
+}
+
+const { fishId, photo, alt, variant } = Astro.props;
+const image = photoFor(fishId, photo.file);
+---
+
+{
+	variant === 'hero' ? (
+		<figure class="relative" data-hero>
+			<Picture
+				src={image}
+				alt={alt}
+				widths={[640, 960, 1280, 1600]}
+				sizes="100vw"
+				formats={['avif', 'webp']}
+				priority
+				class="aspect-[4/3] w-full border-b-2 border-ink object-cover sm:aspect-[21/8]"
+			/>
+			<figcaption class="absolute bottom-2 right-2 max-w-[90%] rounded bg-white/90 px-2 py-0.5 text-xs">
+				<a href={photo.url} class="underline">
+					{photo.credit}
+				</a>{' '}
+				·{' '}
+				<a href={licenseUrl(photo.license)} class="underline">
+					{photo.license}
+				</a>
+			</figcaption>
+		</figure>
+	) : (
+		<figure data-gallery-photo>
+			<Picture
+				src={image}
+				alt={alt}
+				widths={[400, 800]}
+				sizes="(min-width: 760px) 370px, 46vw"
+				formats={['avif', 'webp']}
+				class="aspect-[4/3] w-full rounded-md border-2 border-ink object-cover"
+			/>
+			<figcaption class="mt-1 text-[13px] text-muted">
+				<a href={photo.url} class="underline">
+					{photo.credit}
+				</a>{' '}
+				·{' '}
+				<a href={licenseUrl(photo.license)} class="underline">
+					{photo.license}
+				</a>
+			</figcaption>
+		</figure>
+	)
+}

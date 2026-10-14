@@ -1,0 +1,29 @@
+---
+import { sizeComparison } from '../lib/size';
+import Icon from './Icon.astro';
+import Tape from './Tape.astro';
+
+interface Props {
+	maxCm: number;
+	maxKg?: number;
+}
+
+const { maxCm, maxKg } = Astro.props;
+const comparison = sizeComparison(maxCm);
+const width = (cm: number) => `width: ${(cm / comparison.scaleMaxCm) * 100}%`;
+const reference =
+	comparison.reference === 'person'
+		? `The person is ${comparison.referenceCm} cm tall.`
+		: `The hand is ${comparison.referenceCm} cm long.`;
+---
+
+<figure data-size-reference={comparison.reference}>
+	<div class="space-y-2" aria-hidden="true">
+		<Icon name="fish" class="block h-auto text-salt" style={width(maxCm)} />
+		<Icon name={comparison.reference} class="block h-auto text-ink" style={width(comparison.referenceCm)} />
+	</div>
+	<Tape ticks={comparison.ticks} class="mt-2" />
+	<figcaption class="mt-2 text-sm text-muted">
+		Up to {maxCm} cm{maxKg ? ` and ${maxKg} kg` : ''}. {reference}
+	</figcaption>
+</figure>

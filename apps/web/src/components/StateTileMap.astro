@@ -1,0 +1,78 @@
+---
+import type { State } from '../lib/fish-schema';
+import { STATE_TILES, stateOfSpot } from '../lib/state-tiles';
+
+interface Props {
+	recorded: State[];
+	spots: string[];
+}
+
+const { recorded, spots } = Astro.props;
+const pins = new Map<State, number>();
+spots.forEach((spot, i) => {
+	const state = stateOfSpot(spot);
+	if (state && !pins.has(state)) pins.set(state, i + 1);
+});
+---
+
+<div class="flex flex-wrap items-start gap-x-6 gap-y-3">
+	<div class="grid grid-cols-[repeat(8,minmax(0,2.75rem))] grid-rows-[repeat(5,2.5rem)] gap-1" data-tile-map>
+		{
+			STATE_TILES.map((tile) => {
+				const isRecorded = recorded.includes(tile.state);
+				const pin = pins.get(tile.state);
+				return (
+					<span
+						role="img"
+						title={tile.state}
+						aria-label={`${tile.state}${isRecorded ? ', recorded' : ''}${pin ? `, spot ${pin}` : ''}`}
+						data-state={tile.state}
+						data-recorded={isRecorded ? '' : undefined}
+						class:list={[
+							'relative flex items-center justify-center rounded-md text-xs font-bold',
+							isRecorded ? 'border-2 border-ink bg-salt text-white' : 'border-[1.5px] border-[#c8d4d9] bg-white text-muted',
+						]}
+						style={`grid-column: ${tile.col} / span ${tile.colSpan ?? 1}; grid-row: ${tile.row} / span ${tile.rowSpan ?? 1}`}
+					>
+						{tile.code}
+						{pin && (
+							<span class="absolute -right-2 -top-2 flex size-5 items-center justify-center rounded-full border-2 border-ink bg-sign-yellow text-xs text-ink">
+								{pin}
+							</span>
+						)}
+					</span>
+				);
+			})
+		}
+	</div>
+	<div class="text-sm">
+		<ul class="space-y-1.5">
+			<li>
+				<span class="mr-1.5 inline-block size-3.5 rounded-sm border-2 border-ink bg-salt align-[-2px]"></span>Recorded (open
+				records)
+			</li>
+			{
+				spots.length > 0 && (
+					<li>
+						<span class="mr-1.5 inline-block size-3.5 rounded-full border-2 border-ink bg-sign-yellow align-[-2px]" />
+						Well-known fishing spot
+					</li>
+				)
+			}
+		</ul>
+		{
+			spots.length > 0 && (
+				<ol class="mt-2 space-y-1 font-bold" data-spots>
+					{spots.map((spot, i) => (
+						<li class="flex items-center gap-1.5">
+							<span class="flex size-5 items-center justify-center rounded-full border-2 border-ink bg-sign-yellow text-xs">
+								{i + 1}
+							</span>
+							{spot}
+						</li>
+					))}
+				</ol>
+			)
+		}
+	</div>
+</div>

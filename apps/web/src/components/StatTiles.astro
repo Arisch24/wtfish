@@ -1,0 +1,22 @@
+---
+import type { StatTile } from '../lib/fish-page';
+
+interface Props {
+	tiles: StatTile[];
+}
+
+const { tiles } = Astro.props;
+---
+
+<dl class="grid grid-cols-2 gap-2 sm:grid-cols-[repeat(auto-fit,minmax(8.5rem,1fr))]" data-stat-tiles>
+	{
+		tiles.map((tile) => (
+			<div class="flex flex-col-reverse rounded-lg border-2 border-ink bg-white px-2.5 py-2">
+				<dt class="text-[13px] text-muted">{tile.label}</dt>
+				<dd class:list={['break-words text-[22px] font-extrabold leading-tight tracking-[-0.02em]', tile.alert && 'text-alert']}>
+					{tile.value}
+				</dd>
+			</div>
+		))
+	}
+</dl>
