@@ -66,3 +66,28 @@ export const TEMPERAMENT_LABEL: Record<Temperament, string> = {
 	'semi-aggressive': 'Semi-aggressive',
 	aggressive: 'Aggressive',
 };
+
+export const USE_SHORT_LABEL: Record<Use, string> = {
+	sport: 'Sport',
+	food: 'Food',
+	aquarium: 'Aquarium',
+};
+
+/** Text for a fish's cardboard tag, e.g. "Sport · Food". */
+export function useTagText(uses: readonly Use[]): string {
+	return uses.map((use) => USE_SHORT_LABEL[use]).join(' · ');
+}
+
+export const STATUS_BADGE: Record<MalaysiaStatus, string> = {
+	native: 'Native to Malaysia',
+	endemic: 'Endemic to Malaysia',
+	introduced: 'Introduced to Malaysia',
+	invasive: 'Invasive in Malaysia',
+};
+
+export const STATUS_SHORT_LABEL: Record<MalaysiaStatus, string> = {
+	native: 'Native',
+	endemic: 'Endemic',
+	introduced: 'Introduced',
+	invasive: 'Invasive',
+};

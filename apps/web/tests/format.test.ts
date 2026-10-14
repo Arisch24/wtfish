@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { formatDate, formatRange, formatSize, listOf } from '../src/lib/format';
+import { formatDate, formatRange, formatSize, licenseUrl, listOf } from '../src/lib/format';
 
 describe('listOf', () => {
 	it('returns a single item unchanged', () => {
@@ -42,5 +42,16 @@ describe('formatRange', () => {
 describe('formatDate', () => {
 	it('formats an ISO date in British style', () => {
 		expect(formatDate('2026-10-13')).toBe('13 October 2026');
+	});
+});
+
+describe('licenseUrl', () => {
+	it('links CC0 to the public-domain dedication', () => {
+		expect(licenseUrl('CC0')).toBe('https://creativecommons.org/publicdomain/zero/1.0/');
+	});
+
+	it('links BY and BY-SA to the licence overview, since no version is stored', () => {
+		expect(licenseUrl('CC BY')).toBe('https://creativecommons.org/share-your-work/cclicenses/');
+		expect(licenseUrl('CC BY-SA')).toBe('https://creativecommons.org/share-your-work/cclicenses/');
 	});
 });
