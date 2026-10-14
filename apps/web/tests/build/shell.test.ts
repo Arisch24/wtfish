@@ -18,6 +18,17 @@ describe('site shell', () => {
 		expect(builtPage('index.html')).toMatch(/<a href="\/"[^>]*aria-current="page"/);
 	});
 
+	it('keeps the header and footer quiet, with red only in the logo', () => {
+		const html = builtPage('index.html');
+		const header = html.match(/<header[\s\S]*?<\/header>/)![0];
+		const footer = html.match(/<footer[\s\S]*?<\/footer>/)![0];
+		for (const part of [header, footer]) {
+			expect(part).not.toContain('bg-sign-red');
+			expect(part).not.toContain('border-ink');
+			expect(part).toContain('text-sign-red');
+		}
+	});
+
 	it('uses the hook favicon and no .ico', () => {
 		const html = builtPage('index.html');
 		expect(html).toContain('<link rel="icon" type="image/svg+xml" href="/favicon.svg">');

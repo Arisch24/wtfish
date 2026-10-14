@@ -10,18 +10,18 @@ const trim = (path: string) => path.replace(/\/+$/, '') || '/';
 const here = trim(Astro.url.pathname);
 ---
 
-<header class="border-b-[5px] border-sign-yellow bg-sign-red">
-	<div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+<header class="border-b border-grout bg-white">
+	<div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-2.5 sm:px-6">
 		<a href="/" aria-label="wtfish home" class="rounded-sm"><Logo /></a>
 		<nav aria-label="Main">
-			<ul class="flex gap-4 text-[15px] font-semibold text-white sm:gap-5">
+			<ul class="flex gap-1 text-sm font-medium">
 				{
 					links.map(({ href, label }) => (
 						<li>
 							<a
 								href={href}
 								aria-current={trim(href) === here ? 'page' : undefined}
-								class="underline-offset-4 hover:underline aria-[current=page]:underline aria-[current=page]:decoration-sign-yellow aria-[current=page]:decoration-2"
+								class="block rounded-md px-2.5 py-1.5 text-ink hover:bg-tile aria-[current=page]:bg-salt-soft aria-[current=page]:text-salt"
 							>
 								{label}
 							</a>
