@@ -1,4 +1,6 @@
 ---
+import { Picture } from 'astro:assets';
+import { photoFor } from '../../lib/photos';
 import { getCollection, type CollectionEntry } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { formatDate, formatRange, formatSize, listOf } from '../../lib/format';
@@ -26,7 +28,6 @@ interface Props {
 
 const { entry, nameById } = Astro.props;
 const f = entry.data;
-const photoSrc = (file: string) => `/photos/${entry.id}/${file}`;
 // The stored category does not identify a BY/BY-SA version; link the overview,
 // while the credited source retains the photo's exact licence details.
 const licenseInfoUrl = (license: string) => license === 'CC0'
@@ -66,7 +67,15 @@ const hasFishing = Boolean(
 	{
 		hero && (
 			<figure class="hero">
-				<img src={photoSrc(hero.file)} alt={`${f.names.english} (${f.names.scientific})`} />
+				<Picture
+	src={photoFor(entry.id, hero.file)}
+	alt={`${f.names.english} (${f.names.scientific})`}
+	widths={[640, 960, 1280, 1600]}
+	sizes="100vw"
+	formats={['avif', 'webp']}
+	priority
+/>
+
 				<figcaption>
 					<a href={hero.url}>{hero.credit}</a> · <a href={licenseInfoUrl(hero.license)}>{hero.license}</a>
 				</figcaption>
@@ -268,7 +277,14 @@ const hasFishing = Boolean(
 				<div class="gallery">
 					{morePhotos.map((photo) => (
 						<figure>
-							<img src={photoSrc(photo.file)} alt={`${f.names.english} (${f.names.scientific})`} loading="lazy" />
+							<Picture
+	src={photoFor(entry.id, photo.file)}
+	alt={`${f.names.english} (${f.names.scientific})`}
+	widths={[400, 800]}
+	sizes="(min-width: 760px) 370px, 46vw"
+	formats={['avif', 'webp']}
+/>
+
 							<figcaption>
 								<a href={photo.url}>{photo.credit}</a> · <a href={licenseInfoUrl(photo.license)}>{photo.license}</a>
 							</figcaption>

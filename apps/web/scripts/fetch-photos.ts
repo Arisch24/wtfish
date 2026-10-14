@@ -18,7 +18,7 @@ if (photos.length >= total) {
 	const candidates = await searchPhotos(fish.names.scientific);
 	const picked = pickNew(candidates, photos.map((photo) => photo.file), total - photos.length);
 	if (!picked.length) console.log(`${id}: no new openly-licensed iNaturalist photos. Try Wikimedia Commons — see data/fish/README.md.`);
-	const dir = new URL(`../public/photos/${id}/`, import.meta.url);
+	const dir = new URL(`../data/photos/${id}/`, import.meta.url);
 	if (picked.length) await mkdir(dir, { recursive: true });
 	for (const photo of picked) {
 		try {

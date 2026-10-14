@@ -60,8 +60,8 @@ describe('fish data files', () => {
 
 	it.each(fish)('$id photos exist on disk', ({ id, raw }) => {
 		for (const photo of raw.photos ?? []) {
-			const path = new URL(`../public/photos/${id}/${photo.file}`, import.meta.url);
-			expect(existsSync(path), `missing public/photos/${id}/${photo.file}`).toBe(true);
+			const path = new URL(`../data/photos/${id}/${photo.file}`, import.meta.url);
+			expect(existsSync(path), `missing data/photos/${id}/${photo.file}`).toBe(true);
 		}
 	});
 

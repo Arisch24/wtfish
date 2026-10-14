@@ -19,7 +19,7 @@ One file per fish. The filename is the fish's id and URL:
   Adds provenance links to `sources`, preserving existing researched links.
   Requires Node 22.23 or newer for direct TypeScript execution.
 - `pnpm fetch-photos <id> [count]` — `photos` and the files in
-  `public/photos/<id>/`.
+  `data/photos/<id>/`.
 
 ## Research rules
 
@@ -52,7 +52,7 @@ One file per fish. The filename is the fish's id and URL:
 - Run `pnpm fetch-photos <id> 3` first (iNaturalist, research-grade,
   CC0 / CC BY / CC BY-SA only, Malaysian observations first).
 - If it finds none, search Wikimedia Commons. Use only CC0, CC BY or
-  CC BY-SA files. Save to `public/photos/<id>/commons-<short-name>.jpg` and
+  CC BY-SA files. Save to `data/photos/<id>/commons-<short-name>.jpg` and
   add `{ "file", "credit": "<author> / Wikimedia Commons", "license",
   "url": "<Commons file page>" }`.
 - Open every photo and confirm it shows the right species. If not, delete the
