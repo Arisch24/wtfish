@@ -16,17 +16,20 @@ const recordedStates = STATES.filter((state) => fish.some((f) => f.data.malaysia
 <Base title="wtfish: what the fish is that?">
 	<SwimmingFish slot="top" />
 	<div class="mx-auto max-w-6xl px-4 sm:px-6">
-		<section class="grid gap-6 pb-8 pt-4 lg:grid-cols-[1fr_minmax(0,34rem)]">
-			<div class="relative self-start">
+		<section class="grid gap-x-6 gap-y-5 pb-8 pt-4 md:grid-cols-[1fr_auto]">
+			<div class="relative row-start-2 self-end md:col-start-1 md:row-start-1">
 				<Bubbles />
 				<h1 class="relative text-[44px] font-extrabold leading-[0.95] tracking-[-0.04em] sm:text-[52px]">
 					What the fish<br />is that?
 				</h1>
 			</div>
-			<div class="grid gap-4">
-				<!-- The line reaches up to the header on wide screens: 36px fish strip + 16px padding. -->
-				<HangingSign text={`${fish.length} fish & counting`} class="justify-self-end lg:-mt-[52px]" />
-				<div id="filters"><FilterBar client:load states={recordedStates} total={fish.length} /></div>
+			<!-- The line reaches up to the header: 36px fish strip + 16px padding. On phones the sign hangs above the headline. -->
+			<HangingSign
+				text={`${fish.length} fish & counting`}
+				class="row-start-1 -mt-[52px] justify-self-end md:col-start-2"
+			/>
+			<div id="filters" class="row-start-3 md:col-span-2 md:row-start-2">
+				<FilterBar client:load states={recordedStates} total={fish.length} />
 			</div>
 		</section>
 		<ul id="fish-grid" class="grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-4">

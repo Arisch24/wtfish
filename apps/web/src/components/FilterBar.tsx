@@ -154,64 +154,67 @@ export default function FilterBar({ states, total }: Props) {
 				aria-label="Search fish"
 				className="w-full rounded-lg border-[3px] border-ink bg-white px-3.5 py-2.5 text-[15px] placeholder:text-muted"
 			/>
-			<div className="grid gap-1">
-				<span className={groupLabel} aria-hidden="true">
-					Water
-				</span>
-				<ToggleGroup
-					aria-label="Water"
-					value={[query.water || ALL]}
-					onValueChange={(next) => set('water', next[0] && next[0] !== ALL ? next[0] : '')}
-					className="flex gap-1.5 overflow-x-auto pb-1"
-				>
-					<Toggle value={ALL} className={pill}>
-						All
-					</Toggle>
-					{WATERS.map((water) => (
-						<Toggle key={water} value={water} className={pill}>
-							<Icon name={WATER_ICON[water]} className="size-4" />
-							{WATER_LABEL[water]}
-						</Toggle>
-					))}
-				</ToggleGroup>
-			</div>
-			<div className="grid gap-1">
-				<span className={groupLabel} aria-hidden="true">
-					Use
-				</span>
-				<ToggleGroup
-					aria-label="Use"
-					value={[query.use || ALL]}
-					onValueChange={(next) => set('use', next[0] && next[0] !== ALL ? next[0] : '')}
-					className="flex gap-1.5 overflow-x-auto pb-1"
-				>
-					<Toggle value={ALL} className={pill}>
-						All
-					</Toggle>
-					{USE_OPTIONS.map((use) => (
-						<Toggle key={use} value={use} className={pill}>
-							{USE_SHORT_LABEL[use]}
-						</Toggle>
-					))}
-				</ToggleGroup>
-			</div>
-			<div className="flex flex-wrap items-end gap-3">
-				<FilterSelect label="In Malaysia" options={STATUS_OPTIONS} value={query.status} onChange={(v) => set('status', v)} />
-				{states.length > 0 && (
-					<FilterSelect label="State" options={stateOptions} value={query.state} onChange={(v) => set('state', v)} />
-				)}
-				<label className="flex min-h-9 items-center gap-2 text-sm font-bold">
-					<Checkbox.Root
-						checked={query.threatened}
-						onCheckedChange={(checked) => set('threatened', checked)}
-						className="flex size-5 items-center justify-center rounded border-2 border-ink bg-white data-checked:bg-ink data-checked:text-sign-yellow"
+			{/* Stacked on phones; from 768px the groups wrap side by side. */}
+			<div className="grid gap-3 md:flex md:flex-wrap md:items-end md:gap-x-6">
+				<div className="grid gap-1">
+					<span className={groupLabel} aria-hidden="true">
+						Water
+					</span>
+					<ToggleGroup
+						aria-label="Water"
+						value={[query.water || ALL]}
+						onValueChange={(next) => set('water', next[0] && next[0] !== ALL ? next[0] : '')}
+						className="flex gap-1.5 overflow-x-auto pb-1"
 					>
-						<Checkbox.Indicator className="flex data-unchecked:hidden">
-							<CheckMark />
-						</Checkbox.Indicator>
-					</Checkbox.Root>
-					Threatened only
-				</label>
+						<Toggle value={ALL} className={pill}>
+							All
+						</Toggle>
+						{WATERS.map((water) => (
+							<Toggle key={water} value={water} className={pill}>
+								<Icon name={WATER_ICON[water]} className="size-4" />
+								{WATER_LABEL[water]}
+							</Toggle>
+						))}
+					</ToggleGroup>
+				</div>
+				<div className="grid gap-1">
+					<span className={groupLabel} aria-hidden="true">
+						Use
+					</span>
+					<ToggleGroup
+						aria-label="Use"
+						value={[query.use || ALL]}
+						onValueChange={(next) => set('use', next[0] && next[0] !== ALL ? next[0] : '')}
+						className="flex gap-1.5 overflow-x-auto pb-1"
+					>
+						<Toggle value={ALL} className={pill}>
+							All
+						</Toggle>
+						{USE_OPTIONS.map((use) => (
+							<Toggle key={use} value={use} className={pill}>
+								{USE_SHORT_LABEL[use]}
+							</Toggle>
+						))}
+					</ToggleGroup>
+				</div>
+				<div className="flex flex-wrap items-end gap-3">
+					<FilterSelect label="In Malaysia" options={STATUS_OPTIONS} value={query.status} onChange={(v) => set('status', v)} />
+					{states.length > 0 && (
+						<FilterSelect label="State" options={stateOptions} value={query.state} onChange={(v) => set('state', v)} />
+					)}
+					<label className="flex min-h-9 items-center gap-2 text-sm font-bold">
+						<Checkbox.Root
+							checked={query.threatened}
+							onCheckedChange={(checked) => set('threatened', checked)}
+							className="flex size-5 items-center justify-center rounded border-2 border-ink bg-white data-checked:bg-ink data-checked:text-sign-yellow"
+						>
+							<Checkbox.Indicator className="flex data-unchecked:hidden">
+								<CheckMark />
+							</Checkbox.Indicator>
+						</Checkbox.Root>
+						Threatened only
+					</label>
+				</div>
 			</div>
 			<p aria-live="polite" className="text-sm font-bold text-muted">{`${shown} fish`}</p>
 		</div>

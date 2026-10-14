@@ -5,6 +5,23 @@ const html = builtPage('index.html');
 const cards = cardsById(html);
 
 describe('home page', () => {
+	it('reads the headline before the hanging sign and the filters', () => {
+		const headline = html.indexOf('<h1');
+		const sign = html.indexOf('data-hanging-sign');
+		expect(headline).toBeGreaterThan(-1);
+		expect(sign).toBeGreaterThan(headline);
+		expect(html.indexOf('id="filters"')).toBeGreaterThan(sign);
+	});
+
+	it("keeps the swimming strip's height when motion is reduced", () => {
+		// The sign's line is pulled up through the strip to reach the header. If the
+		// strip vanished, the line would poke into the header.
+		const strip = html.match(/<div[^>]*data-swim-strip[^>]*>/)?.[0];
+		expect(strip).toBeDefined();
+		expect(strip).not.toContain('motion-reduce:hidden');
+		expect(html).toMatch(/data-swim-strip[^>]*>\s*<div[^>]*motion-reduce:hidden/);
+	});
+
 	it('shows one card per fish, A–Z by English name', () => {
 		const expected = [...fishFiles]
 			.sort((a, b) => a.raw.names.english.localeCompare(b.raw.names.english))
