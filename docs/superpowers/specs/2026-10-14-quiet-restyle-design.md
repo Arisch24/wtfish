@@ -44,8 +44,8 @@ under "Still valid" below stay in force unchanged.
   container, never full width.
 - **Our colours only.** Soft fills are light tints of our own colours. No
   colours are borrowed from OpenDOSM.
-- **Branch.** The work happens on a new branch, `feat/quiet-restyle`, stacked on
-  `feat/wet-market-redesign`.
+- **Branch.** The work continues on `feat/wet-market-redesign`. It's a restyle
+  of that branch's unmerged work, so it needs no branch of its own.
 
 ## Still valid from the wet-market spec
 
