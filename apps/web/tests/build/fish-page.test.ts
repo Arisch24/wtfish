@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { builtPage, fishFiles, visibleText } from './helpers';
+import { formatDate } from '../../src/lib/format';
 
 const page = (id: string) => builtPage(`fish/${id}/index.html`);
 
@@ -38,6 +39,23 @@ describe('fish pages', () => {
 		expect(page('indo-pacific-sailfish')).toMatch(/data-hero[\s\S]*?fetchpriority="high"/);
 		expect(page('giant-featherback')).not.toContain('data-hero');
 		expect(page('giant-featherback')).toContain('data-name-card');
+	});
+
+	it('reads the name before the photo', () => {
+		const html = page('indo-pacific-sailfish');
+		expect(html.indexOf('data-name-card')).toBeGreaterThan(-1);
+		expect(html.indexOf('data-name-card')).toBeLessThan(html.indexOf('data-hero'));
+	});
+
+	it('shows when the profile was last reviewed and how many sources it has', () => {
+		const sailfish = fishFiles.find((fish) => fish.id === 'indo-pacific-sailfish')!.raw;
+		expect(visibleText(page('indo-pacific-sailfish'))).toContain(
+			`Last reviewed ${formatDate(sailfish.lastReviewed!)} · ${sailfish.sources!.length} sources`,
+		);
+	});
+
+	it('labels the profile with its family', () => {
+		expect(visibleText(page('indo-pacific-sailfish'))).toContain('Fish profile · Istiophoridae');
 	});
 
 	it('shows "Before you fish" only when there are rules', () => {

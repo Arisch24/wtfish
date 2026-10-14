@@ -39,73 +39,94 @@ const hasFishing = Boolean(
 const iucnTone = !f.iucn
 	? ''
 	: THREATENED.includes(f.iucn)
-		? 'bg-sign-yellow'
+		? 'bg-threat-soft text-ink'
 		: f.iucn === 'EW' || f.iucn === 'EX'
 			? 'bg-ink text-white'
-			: 'bg-white';
+			: 'bg-tile text-ink ring-1 ring-inset ring-grout';
+const badge = 'inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium';
+const sourceCount = f.sources?.length ?? 0;
 const chip = 'rounded-full border-[1.5px] border-[#c8d4d9] bg-[#eef3f5] px-2.5 py-0.5 text-sm font-bold';
 const term = 'font-extrabold';
 ---
 
 <Base title={`${f.names.english} (${f.names.scientific}) | wtfish`} description={f.summary}>
-	{hero && <Photo fishId={entry.id} photo={hero} alt={`Photo of ${f.names.english}`} variant="hero" />}
-	<div class="mx-auto grid max-w-[760px] gap-4 px-4 sm:px-5">
-		<header
-			class:list={['ink-card relative px-5 pb-5 pt-4 shadow-hard', hero ? '-mt-8 sm:-mt-[70px]' : 'mt-6']}
-			data-name-card
+	<div class="tile-surface border-b border-grout">
+		<div
+			class:list={[
+				'mx-auto grid max-w-6xl gap-6 px-4 py-6 sm:px-6 md:items-start md:gap-8',
+				hero && 'md:grid-cols-[7fr_5fr]',
+			]}
 		>
-			<a href="/" class="inline-block border-b-2 border-ink text-[15px] font-bold">← All fish</a>
-			<h1 class="mt-2.5 break-words text-[38px] font-extrabold leading-[0.98] tracking-[-0.04em] sm:text-[46px]">
-				{f.names.english}
-			</h1>
-			<p class="mt-1 text-[19px] italic text-muted">{f.names.scientific}</p>
-			<UseTag uses={f.uses} size="page" class="mt-2.5" />
-			{f.names.other?.length ? <p class="mt-1.5 text-[15px] text-muted">Also called {listOf(f.names.other)}</p> : null}
-			<div class="mt-3 flex flex-wrap gap-1.5">
-				{f.water.map((water) => <WaterLabel water={water} size="md" />)}
+			<div class:list={['min-w-0', hero && 'row-start-2 md:row-start-1']} data-name-card>
+				<a href="/" class="text-[13px] font-medium text-salt hover:underline">← All fish</a>
+				<p class="mt-3 text-xs font-semibold uppercase tracking-[0.06em] text-salt">
+					Fish profile · {f.taxonomy.family}
+				</p>
+				<h1 class="mt-1 break-words font-display text-[26px] font-bold leading-[1.15] tracking-[-0.035em] sm:text-[30px]">
+					{f.names.english}
+				</h1>
+				<p class="text-[15px] italic text-muted">{f.names.scientific}</p>
+				<div class="mt-3 flex flex-wrap items-center gap-1.5">
+					<UseTag uses={f.uses} size="page" class="mr-1" />
+					{f.water.map((water) => <WaterLabel water={water} />)}
+					{
+						f.malaysia && (
+							<span class:list={[badge, 'bg-tile text-ink ring-1 ring-inset ring-grout']}>
+								{STATUS_BADGE[f.malaysia.status]}
+							</span>
+						)
+					}
+					{f.iucn && <span class:list={[badge, iucnTone]}>{IUCN_LABEL[f.iucn]} (IUCN)</span>}
+				</div>
+				{f.names.other?.length ? <p class="mt-2 text-[13px] text-muted">Also called {listOf(f.names.other)}</p> : null}
+				<p class="mt-3 max-w-[40rem] text-[15px]">{f.summary}</p>
 				{
-					f.malaysia && (
-						<span class="rounded border-2 border-ink bg-white px-2.5 py-1 text-[13px] font-bold">
-							{STATUS_BADGE[f.malaysia.status]}
-						</span>
-					)
-				}
-				{
-					f.iucn && (
-						<span class:list={['rounded border-2 border-ink px-2.5 py-1 text-[13px] font-bold', iucnTone]}>
-							{IUCN_LABEL[f.iucn]} (IUCN)
-						</span>
+					f.lastReviewed ? (
+						<p class="mt-3 text-xs text-muted">
+							Last reviewed {formatDate(f.lastReviewed)} · {sourceCount} {sourceCount === 1 ? 'source' : 'sources'}
+						</p>
+					) : (
+						<p class="mt-3 inline-block rounded-full px-2.5 py-0.5 text-xs font-semibold text-alert ring-1 ring-inset ring-alert">
+							Not yet fact-checked
+						</p>
 					)
 				}
 			</div>
 			{
-				!f.lastReviewed && (
-					<p class="mt-3 inline-block -rotate-2 rounded border-2 border-alert px-2 py-0.5 text-sm font-extrabold uppercase tracking-wide text-alert">
-						Not yet fact-checked
+				hero && (
+					<Photo
+						fishId={entry.id}
+						photo={hero}
+						alt={`Photo of ${f.names.english}`}
+						variant="header"
+						class="row-start-1 md:col-start-2"
+					/>
+				)
+			}
+		</div>
+	</div>
+	<div class="border-b border-grout">
+		<div class="mx-auto max-w-6xl px-4 py-4 sm:px-6">
+			<StatStrip tiles={quickStats(f)} />
+			{
+				f.iucn && (
+					<p class="mt-3 text-xs text-muted">
+						IUCN category from{' '}
+						{f.taxonomy.wikidata ? (
+							<a class="underline" href={`https://www.wikidata.org/wiki/${f.taxonomy.wikidata}`}>
+								Wikidata
+							</a>
+						) : (
+							'Wikidata'
+						)}
+						; it may lag the latest Red List assessment.
+						{f.iucnNote && ` ${f.iucnNote}`}
 					</p>
 				)
 			}
-		</header>
-
-		<p class="text-[19px] leading-normal">{f.summary}</p>
-
-		<StatStrip tiles={quickStats(f)} />
-		{
-			f.iucn && (
-				<p class="-mt-2 text-sm text-muted">
-					IUCN category from{' '}
-					{f.taxonomy.wikidata ? (
-						<a class="underline" href={`https://www.wikidata.org/wiki/${f.taxonomy.wikidata}`}>
-							Wikidata
-						</a>
-					) : (
-						'Wikidata'
-					)}
-					; it may lag the latest Red List assessment.
-					{f.iucnNote && ` ${f.iucnNote}`}
-				</p>
-			)
-		}
+		</div>
+	</div>
+	<div class="mx-auto grid max-w-[760px] gap-4 px-4 pt-6 sm:px-5">
 
 		{
 			f.size && (

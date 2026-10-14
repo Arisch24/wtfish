@@ -10,54 +10,35 @@ interface Props {
 	fishId: string;
 	photo: FishPhoto;
 	alt: string;
-	variant: 'hero' | 'gallery';
+	/** `header` sits beside the name and loads first; `gallery` is one of the "More photos". */
+	variant: 'header' | 'gallery';
+	class?: string;
 }
 
-const { fishId, photo, alt, variant } = Astro.props;
+const { fishId, photo, alt, variant, class: className } = Astro.props;
 const image = photoFor(fishId, photo.file);
+const header = variant === 'header';
 ---
 
-{
-	variant === 'hero' ? (
-		<figure class="relative" data-hero>
-			<Picture
-				src={image}
-				alt={alt}
-				widths={[640, 960, 1280, 1600]}
-				sizes="100vw"
-				formats={['avif', 'webp']}
-				priority
-				class="aspect-[4/3] w-full border-b-2 border-ink object-cover sm:aspect-[21/8]"
-			/>
-			<figcaption class="absolute bottom-10 right-2 sm:bottom-20 max-w-[90%] rounded bg-white/90 px-2 py-0.5 text-xs">
-				<a href={photo.url} class="underline">
-					{photo.credit}
-				</a>{' '}
-				·{' '}
-				<a href={licenseUrl(photo.license)} class="underline">
-					{photo.license}
-				</a>
-			</figcaption>
-		</figure>
-	) : (
-		<figure data-gallery-photo>
-			<Picture
-				src={image}
-				alt={alt}
-				widths={[400, 800]}
-				sizes="(min-width: 760px) 370px, 46vw"
-				formats={['avif', 'webp']}
-				class="aspect-[4/3] w-full rounded-md border-2 border-ink object-cover"
-			/>
-			<figcaption class="mt-1 text-[13px] text-muted">
-				<a href={photo.url} class="underline">
-					{photo.credit}
-				</a>{' '}
-				·{' '}
-				<a href={licenseUrl(photo.license)} class="underline">
-					{photo.license}
-				</a>
-			</figcaption>
-		</figure>
-	)
-}
+<figure class={className} data-hero={header ? '' : undefined} data-gallery-photo={header ? undefined : ''}>
+	<Picture
+		src={image}
+		alt={alt}
+		widths={header ? [480, 720, 960] : [400, 800]}
+		sizes={header
+			? '(min-width: 1152px) 460px, (min-width: 768px) 40vw, 92vw'
+			: '(min-width: 1152px) 370px, (min-width: 640px) 31vw, 46vw'}
+		formats={['avif', 'webp']}
+		priority={header}
+		class="aspect-[4/3] w-full rounded-xl border border-grout object-cover"
+	/>
+	<figcaption class:list={['mt-1.5 text-xs text-muted', header && 'text-right']}>
+		<a href={photo.url} class="underline">
+			{photo.credit}
+		</a>{' '}
+		·{' '}
+		<a href={licenseUrl(photo.license)} class="underline">
+			{photo.license}
+		</a>
+	</figcaption>
+</figure>
