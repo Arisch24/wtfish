@@ -5,6 +5,17 @@ import { formatDate } from '../../src/lib/format';
 const page = (id: string) => builtPage(`fish/${id}/index.html`);
 
 describe('fish pages', () => {
+	it('pairs "How big?" with "Where in Malaysia" in one row', () => {
+		expect(page('indo-pacific-sailfish')).toContain('data-row="how-big where"');
+	});
+
+	it('lets a section without its partner take the whole row', () => {
+		// The giant featherback has a map but no size, and a habitat but nothing to identify it by.
+		const html = page('giant-featherback');
+		expect(html).toContain('data-row="where"');
+		expect(html).toContain('data-row="habitat"');
+	});
+
 	it('explains an IUCN category that seems to clash with the page', () => {
 		expect(visibleText(page('giant-featherback'))).toContain(
 			'it may lag the latest Red List assessment. IUCN lists this fish as extinct, but it has since been rediscovered in Indonesia.',
@@ -93,7 +104,7 @@ describe('fish pages', () => {
 		const text = visibleText(page('indo-pacific-sailfish'));
 		expect(text).toContain('gbif.org');
 		expect(text).toContain('repository.seafdec.org.my PDF');
-		expect(text).toContain('Last reviewed 13 October 2026.');
+		expect(text).toContain('Last reviewed 13 October 2026');
 	});
 
 	it('shows the remaining photos in the gallery with credits', () => {

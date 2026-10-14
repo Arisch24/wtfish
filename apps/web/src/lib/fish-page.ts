@@ -54,3 +54,60 @@ export function aquariumStats(aquarium: NonNullable<Fish['aquarium']>): StatTile
 	if (aquarium.groupSize) tiles.push({ label: 'Group size', value: `${aquarium.groupSize}+` });
 	return tiles;
 }
+
+export type SectionId =
+	| 'how-big'
+	| 'where'
+	| 'identify'
+	| 'habitat'
+	| 'before-you-fish'
+	| 'catching'
+	| 'eating'
+	| 'aquarium'
+	| 'photos'
+	| 'sources';
+
+/** The fish page's sections, in order, grouped into rows of one or two. */
+const ROWS: SectionId[][] = [
+	['how-big', 'where'],
+	['identify', 'habitat'],
+	['before-you-fish'],
+	['catching', 'eating'],
+	['aquarium'],
+	['photos'],
+	['sources'],
+];
+
+function hasSection(fish: Fish, id: SectionId): boolean {
+	switch (id) {
+		case 'how-big':
+			return Boolean(fish.size);
+		case 'where':
+			return Boolean(fish.malaysia?.states?.length || fish.malaysia?.spots?.length);
+		case 'identify':
+			return Boolean(fish.identify);
+		case 'habitat':
+			return Boolean(fish.habitat || fish.nativeRange);
+		case 'before-you-fish':
+			return Boolean(fish.malaysia?.rules);
+		case 'catching': {
+			const fishing = fish.fishing;
+			return Boolean(fishing && (fishing.season || fishing.methods?.length || fishing.baits?.length || fishing.difficulty));
+		}
+		case 'eating':
+			return Boolean(fish.eating);
+		case 'aquarium':
+			return Boolean(fish.aquarium);
+		case 'photos':
+			// The first photo is in the header, so "More photos" needs a second one.
+			return (fish.photos?.length ?? 0) > 1;
+		case 'sources':
+			// Always shown: it says so when a profile has not been fact-checked.
+			return true;
+	}
+}
+
+/** The fish page's sections in rows of one or two, leaving out sections without data. */
+export function sectionRows(fish: Fish): SectionId[][] {
+	return ROWS.map((row) => row.filter((id) => hasSection(fish, id))).filter((row) => row.length > 0);
+}
