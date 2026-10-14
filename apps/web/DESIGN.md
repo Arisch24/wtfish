@@ -229,7 +229,7 @@ Flat. Cards, panels and the header have no shadow.
 - **Stats strip.** A small uppercase label, a value and an optional note, with no boxes. Used for the quick stats and for aquarium care.
 - **Sections.** A Bricolage heading, an optional note on the right and an optional one-line description, with no box.
 - **Measurement and map.**
-  - "How big?" draws the slim fish and a person (170 cm) or hand (18 cm) to scale, over faint dashed tick lines, with a thin yellow tape.
+  - "How big?" draws the slim fish and a person (170 cm) or hand (18 cm) to scale, over faint dashed tick lines, with a thin yellow tape. The chart is never wider than 532 px, its width in a pair, so it doesn't grow when it has a row to itself.
   - The map has 16 tiles. Recorded states are filled salt, and pins are yellow.
 - **Notice.** "Before you fish" is a pale-yellow panel with a marker heading.
 - **Icons and states.** Inline SVG icons: hook, wave, droplet, brackish droplet, slim fish, person, hand and the confused fish. Decorative pieces are `aria-hidden`. Identify, About and 404 use the tiled band and the confused fish.

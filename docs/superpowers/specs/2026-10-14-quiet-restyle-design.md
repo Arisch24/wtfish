@@ -327,6 +327,9 @@ exists.
      - Faint dashed grout lines at each tick.
      - A 6 px sign-yellow linear tape with 12 px tick labels.
      - The description is "Up to {maxCm} cm (and {maxKg} kg)."
+     - The chart is never wider than 532 px, one column of a pair on a
+       full-width page. A chart alone in its row, or below 1024 px, stays that
+       size instead of filling the row.
    - **Where in Malaysia.**
      - The tile map in the same positions. Recorded states have a `salt` fill
        and white text. Other states are white, with a grout border and muted

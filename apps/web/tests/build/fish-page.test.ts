@@ -95,6 +95,15 @@ describe('fish pages', () => {
 		expect(visibleText(page('dwarf-rasbora'))).toContain('The hand is 18 cm long.');
 	});
 
+	it('keeps the size chart at its paired width, even alone in its row', () => {
+		// 532px is one column of a pair: the 1104px content width minus the 40px gap, halved.
+		// The neon tetra has no Malaysian records, so "How big?" has its row to itself.
+		expect(page('neon-tetra')).toContain('data-row="how-big"');
+		for (const id of ['neon-tetra', 'indo-pacific-sailfish']) {
+			expect(page(id), id).toMatch(/<figure class="max-w-\[532px\]" data-size-reference=/);
+		}
+	});
+
 	it('maps all 16 states and marks recorded ones and spots', () => {
 		const html = page('indo-pacific-sailfish');
 		expect(html.match(/data-state="/g)).toHaveLength(16);
