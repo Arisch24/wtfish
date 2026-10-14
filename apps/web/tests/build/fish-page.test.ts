@@ -4,6 +4,15 @@ import { builtPage, fishFiles, visibleText } from './helpers';
 const page = (id: string) => builtPage(`fish/${id}/index.html`);
 
 describe('fish pages', () => {
+	it('explains an IUCN category that seems to clash with the page', () => {
+		expect(visibleText(page('giant-featherback'))).toContain(
+			'it may lag the latest Red List assessment. IUCN lists this fish as extinct, but it has since been rediscovered in Indonesia.',
+		);
+		const sailfish = visibleText(page('indo-pacific-sailfish'));
+		expect(sailfish).toContain('it may lag the latest Red List assessment.');
+		expect(sailfish).not.toContain('IUCN lists this fish');
+	});
+
 	it('gives the family its own row of quick stats', () => {
 		const html = page('indo-pacific-sailfish');
 		expect(html).toMatch(/data-wide[^>]*>\s*<dt[^>]*>family/);

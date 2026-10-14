@@ -45,6 +45,14 @@ function errorPaths(data: unknown): string[] {
 }
 
 describe('fishSchema', () => {
+	it('accepts an IUCN note next to a category', () => {
+		expect(errorPaths({ ...minimal, iucn: 'EX', iucnNote: 'It has since been rediscovered.' })).toEqual([]);
+	});
+
+	it('rejects an IUCN note without a category', () => {
+		expect(errorPaths({ ...minimal, iucnNote: 'It has since been rediscovered.' })).toContain('iucnNote');
+	});
+
 	it('accepts Malay variants in names.malayOther', () => {
 		expect(errorPaths({ ...minimal, names: { ...minimal.names, malayOther: ['Toman'] } })).toEqual([]);
 	});

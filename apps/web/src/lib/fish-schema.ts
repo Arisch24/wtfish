@@ -78,6 +78,8 @@ export const fishSchema = z
 		summary: text,
 		nativeRange: text.optional(),
 		iucn: z.enum(IUCN).optional(),
+		/** Hand-written; explains an IUCN category that seems to clash with the rest of the page. */
+		iucnNote: text.optional(),
 		size: z
 			.strictObject({
 				maxCm: z.number().positive(),
@@ -142,6 +144,10 @@ export const fishSchema = z
 	.refine((fish) => !fish.lastReviewed || (fish.sources?.length ?? 0) > 0, {
 		message: 'a reviewed fish (lastReviewed set) must list at least one source',
 		path: ['sources'],
+	})
+	.refine((fish) => !fish.iucnNote || fish.iucn, {
+		message: 'iucnNote explains the IUCN category, so it needs iucn',
+		path: ['iucnNote'],
 	});
 
 export type Fish = z.infer<typeof fishSchema>;

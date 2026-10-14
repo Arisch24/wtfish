@@ -51,6 +51,11 @@ One file per fish. The filename is the fish's id and URL:
 9. `identify.lookAlikes` may only point at fish that already have a file.
 10. When done, set `lastReviewed` to today's date (`YYYY-MM-DD`).
 
+11. `iucnNote` is optional and hand-written. Use it only when the IUCN category
+    seems to clash with the rest of the page, such as an extinct fish with
+    recent records, and source it like any other fact. If `pnpm import-data`
+    changes `iucn`, recheck the note or delete it.
+
 ## Photos
 
 - Run `pnpm fetch-photos <id> 3` first (iNaturalist, research-grade,

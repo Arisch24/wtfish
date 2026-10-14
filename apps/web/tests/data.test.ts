@@ -18,6 +18,7 @@ const allNames: NameSet[] = fish.map((f) => f.raw.names);
 function prose(raw: any): string[] {
 	return [
 		raw.summary,
+		raw.iucnNote,
 		raw.nativeRange,
 		raw.eating,
 		raw.habitat?.description,
