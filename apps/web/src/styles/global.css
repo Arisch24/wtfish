@@ -68,11 +68,7 @@
 
 @layer base {
 	body {
-		background-color: var(--color-tile);
-		background-image:
-			linear-gradient(var(--color-grout) 1px, transparent 1px),
-			linear-gradient(90deg, var(--color-grout) 1px, transparent 1px);
-		background-size: 30px 30px;
+		@apply tile-surface;
 		color: var(--color-ink);
 	}
 
@@ -81,6 +77,15 @@
 	}
 
 	/* A yellow ring inside an ink ring. */
+	::selection {
+		background: var(--color-sign-yellow);
+		color: var(--color-ink);
+	}
+
+	input {
+		caret-color: var(--color-sign-red);
+	}
+
 	:focus-visible {
 		outline: 3px solid var(--color-ink);
 		outline-offset: 2px;
@@ -108,4 +113,12 @@
 	color: var(--color-ink);
 	font-family: var(--font-marker);
 	box-shadow: var(--shadow-board);
+}
+
+@utility tile-surface {
+	background-color: var(--color-tile);
+	background-image:
+		linear-gradient(var(--color-grout) 1px, transparent 1px),
+		linear-gradient(90deg, var(--color-grout) 1px, transparent 1px);
+	background-size: 30px 30px;
 }

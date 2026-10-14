@@ -85,7 +85,11 @@ function FilterSelect({
 				<Select.Label className={groupLabel}>{label}</Select.Label>
 				<Select.Trigger className="inline-flex min-w-44 items-center justify-between gap-2 rounded-md border-2 border-ink bg-white px-3 py-1.5 text-sm font-bold">
 					<Select.Value />
-					<Select.Icon aria-hidden="true">▾</Select.Icon>
+					<Select.Icon aria-hidden="true">
+						<svg viewBox="0 0 16 16" className="size-4" fill="none" stroke="currentColor" strokeWidth="2">
+							<path d="m4 6 4 4 4-4" />
+						</svg>
+					</Select.Icon>
 				</Select.Trigger>
 			</div>
 			<Select.Portal>
