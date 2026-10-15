@@ -25,6 +25,12 @@ describe('category pages', () => {
 		expect(visibleText(html)).toContain(category.description);
 	});
 
+	it.each(pages)('$path links its group label to its section on the Browse page', (category) => {
+		expect(page(category.path)).toMatch(
+			new RegExp(`data-group-label[^>]*>\\s*<a href="/browse/#${category.group}"[^>]*>\\s*${GROUPS[category.group].label}\\s*</a>`),
+		);
+	});
+
 	it.each(pages)('$path shows its fish A–Z, with the count', (category) => {
 		const html = page(category.path);
 		const expected = fishIn(category, entries).map((entry) => entry.id);

@@ -197,7 +197,7 @@ Scientific names use Inter's true italic. No functional text is smaller than 11 
   - **Stats strip:** one row from 1024 px. Below that, two per row, with the family on its own row.
   - **Sections:** fixed rows separated by thin lines. From 1024 px, "How big?" sits beside "Where in Malaysia", and "How to identify" beside "Habitat". A section whose partner has no data takes the full row.
 - **Category page.** One template draws every page such as "Mangrove fish" or "Fish in Sabah":
-  - a tiled top band with the group label, the title, a short description, a GBIF note on state pages, and the count;
+  - a tiled top band with the group label (a link to its section on the Browse page), the title, a short description, a GBIF note on state pages, and the count;
   - the home page's cards, A–Z, with no filters;
   - under a thin line, the group's heading and a row of chips linking to the other pages in the group.
 
@@ -218,6 +218,7 @@ Flat. Cards, panels and the header have no shadow.
 
 ## Components
 
+- **Header.** White, with a thin line underneath. The logo sits on the left and four menu links on the right: Fish, Browse, Identify and About. The current page's link is salt on salt-soft. Below 640 px the links have 6 px side padding and no gap, so they fit beside the logo from 360 px. Narrower, the menu wraps under the logo.
 - **Fish card.** White panel with a 16:10 photo or tiled "No photo yet" placeholder and a marker use tag inside the photo's corner. Below that:
   - the name and the italic scientific name;
   - a thin log-scale tape with "up to … cm";

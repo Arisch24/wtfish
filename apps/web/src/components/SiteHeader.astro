@@ -3,6 +3,7 @@ import Logo from './Logo.astro';
 
 const links = [
 	{ href: '/', label: 'Fish' },
+	{ href: '/browse/', label: 'Browse' },
 	{ href: '/identify/', label: 'Identify' },
 	{ href: '/about/', label: 'About' },
 ];
@@ -11,17 +12,20 @@ const here = trim(Astro.url.pathname);
 ---
 
 <header class="border-b border-grout bg-white">
-	<div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-2.5 sm:px-6">
+	<!-- Below 640px the links are tighter, so all four fit beside the logo from 360px. Narrower, the menu wraps under it. -->
+	<div
+		class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-2 gap-y-1 px-4 py-2.5 sm:gap-x-4 sm:px-6"
+	>
 		<a href="/" aria-label="wtfish home" class="rounded-sm"><Logo /></a>
 		<nav aria-label="Main">
-			<ul class="flex gap-1 text-sm font-medium">
+			<ul class="flex text-sm font-medium sm:gap-1">
 				{
 					links.map(({ href, label }) => (
 						<li>
 							<a
 								href={href}
 								aria-current={trim(href) === here ? 'page' : undefined}
-								class="block rounded-md px-2.5 py-1.5 text-ink hover:bg-tile aria-[current=page]:bg-salt-soft aria-[current=page]:text-salt"
+								class="block rounded-md px-1.5 py-1.5 text-ink hover:bg-tile sm:px-2.5 aria-[current=page]:bg-salt-soft aria-[current=page]:text-salt"
 							>
 								{label}
 							</a>

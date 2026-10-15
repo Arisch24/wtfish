@@ -17,6 +17,7 @@ describe('site shell', () => {
 		const html = builtPage(path);
 		expect(html).toContain('aria-label="wtfish home"');
 		expect(html).toContain('href="/identify/"');
+		expect(html).toContain('href="/browse/"');
 		expect(html).toContain('href="/about/"');
 		expect(visibleText(html)).toContain('Every fact links to its source.');
 	});
@@ -24,7 +25,14 @@ describe('site shell', () => {
 	it('marks the current page in the header', () => {
 		expect(builtPage('identify/index.html')).toMatch(/<a href="\/identify\/"[^>]*aria-current="page"/);
 		expect(builtPage('about/index.html')).toMatch(/<a href="\/about\/"[^>]*aria-current="page"/);
+		expect(builtPage('browse/index.html')).toMatch(/<a href="\/browse\/"[^>]*aria-current="page"/);
+		expect(builtPage('index.html')).not.toMatch(/<a href="\/browse\/"[^>]*aria-current="page"/);
 		expect(builtPage('index.html')).toMatch(/<a href="\/"[^>]*aria-current="page"/);
+	});
+
+	it('lists Fish, Browse, Identify and About in the menu', () => {
+		const nav = builtPage('index.html').match(/<nav aria-label="Main">[\s\S]*?<\/nav>/)![0];
+		expect(visibleText(nav)).toBe('Fish Browse Identify About');
 	});
 
 	it('keeps the header and footer quiet, with red only in the logo', () => {
