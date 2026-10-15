@@ -89,6 +89,14 @@ describe('fish pages', () => {
 		}
 	});
 
+	it('reminds readers once to check with the Fisheries Office, with one date', () => {
+		for (const id of ['asian-arowana', 'hemibagrus-wyckioides', 'julliens-golden-carp']) {
+			const text = visibleText(page(id));
+			expect(text.match(/Fisheries Office/g), id).toHaveLength(1);
+			expect(text.match(/checked \d/gi), id).toHaveLength(1);
+		}
+	});
+
 	it('compares big fish with a person and small fish with a hand', () => {
 		expect(page('indo-pacific-sailfish')).toContain('data-size-reference="person"');
 		expect(page('dwarf-rasbora')).toContain('data-size-reference="hand"');

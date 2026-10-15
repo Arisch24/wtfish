@@ -44,7 +44,9 @@ One file per fish. The filename is the fish's id and URL:
    When a current source disagrees with the GBIF backbone, retain the sourced
    name and document the skipped import instead of forcing a match.
 6. `malaysia.rules` must name the law or authority and come from a
-   government page, or a news report quoting one.
+   government page, or a news report quoting one. Don't end it with "rules
+   change… check with your state Fisheries Office" or a checked date: the
+   page adds both, using `lastReviewed`. `pnpm test` fails if one slips in.
 7. Add a `malaysia` section only when the fish lives in Malaysian waters
    (native, endemic, introduced or invasive).
 8. If a fact can't be sourced, leave the field out.

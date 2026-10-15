@@ -53,9 +53,10 @@ Sections in page order. A section is hidden when the fish has no data for it
    methods, common baits/lures, difficulty.
 9. **Rules and conservation** — Malaysian protection (sanctuaries, state
    inland-fisheries rules, catch-and-release zones, CITES for arowana),
-   banned/invasive status (e.g. *baung ekor merah* banned from 1 July 2024),
-   always with "rules change and differ by state — check with your state
-   Fisheries Office" and the date last checked.
+   banned/invasive status (e.g. *baung ekor merah* banned from 1 July 2024).
+   The page always adds "Rules change and differ by state. Check with your
+   state Fisheries Office before you fish." and the date last checked, so the
+   rules text itself doesn't repeat them.
 10. **Eating** — food value and how it is commonly cooked or sold.
 11. **Aquarium care** — tank size, temperature, pH, temperament, group size.
 12. **More photos**, then **Sources** and "Last reviewed <date>" (or "not
@@ -233,8 +234,9 @@ dwarf-rasbora · *Boraras maculatus*
   prefer DOF lists over Wikidata.
 - **Taxonomy is moving** — every ⚠ fish is checked against Catalog of Fishes;
   the import script refuses to write taxonomy for GBIF synonyms.
-- **Rules change** — rules text is dated and always tells readers to check
-  with the state Fisheries Office.
+- **Rules change** — the "Before you fish" box always tells readers to check
+  with the state Fisheries Office and shows the date the profile was last
+  reviewed. The rules text itself repeats neither.
 - **No made-up specifics** — unsourced facts stay out; empty sections are
   hidden.
 

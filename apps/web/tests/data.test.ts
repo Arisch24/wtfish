@@ -50,6 +50,14 @@ describe('fish data files', () => {
 		}
 	});
 
+	it.each(fish)('$id rules text leaves the Fisheries Office reminder and date to the page', ({ raw }) => {
+		// "Before you fish" already adds: "Rules change and differ by state. Check with your state
+		// Fisheries Office before you fish. Last checked {lastReviewed}."
+		expect(raw.malaysia?.rules ?? '').not.toMatch(
+			/rules change and differ by state|check with your state Fisheries Office|\bchecked \d/i,
+		);
+	});
+
 	it('contains fish', () => {
 		expect(fish.length).toBeGreaterThan(0);
 	});
