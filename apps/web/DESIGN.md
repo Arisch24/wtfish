@@ -196,6 +196,10 @@ Scientific names use Inter's true italic. No functional text is smaller than 11 
   - **Header band:** a tiled band with the text on the left and a 4:3 photo on the right from 768 px. On phones the photo comes first, but the name comes first in the HTML.
   - **Stats strip:** one row from 1024 px. Below that, two per row, with the family on its own row.
   - **Sections:** fixed rows separated by thin lines. From 1024 px, "How big?" sits beside "Where in Malaysia", and "How to identify" beside "Habitat". A section whose partner has no data takes the full row.
+- **Category page.** One template draws every page such as "Mangrove fish" or "Fish in Sabah":
+  - a tiled top band with the group label, the title, a short description, a GBIF note on state pages, and the count;
+  - the home page's cards, A–Z, with no filters;
+  - under a thin line, the group's heading and a row of chips linking to the other pages in the group.
 
 ## Elevation & Depth
 
@@ -228,6 +232,7 @@ Flat. Cards, panels and the header have no shadow.
   Without JavaScript every card stays visible.
 - **Stats strip.** A small uppercase label, a value and an optional note, with no boxes. Used for the quick stats and for aquarium care.
 - **Sections.** A Bricolage heading, an optional note on the right and an optional one-line description, with no box.
+- **Category chips.** Rounded tile chips with a grout ring that darkens on hover, each with a page's name and count, such as "Reefs · 12". The current page's chip is salt on salt-soft and isn't a link.
 - **Measurement and map.**
   - "How big?" draws the slim fish and a person (170 cm) or hand (18 cm) to scale, over faint dashed tick lines, with a thin yellow tape. The chart is never wider than 532 px, its width in a pair, so it doesn't grow when it has a row to itself.
   - The map has 16 tiles. Recorded states are filled salt, and pins are yellow.

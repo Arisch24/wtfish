@@ -1,7 +1,15 @@
 import { describe, expect, it } from 'vitest';
 import { builtPage, visibleText } from './helpers';
 
-const pages = ['index.html', 'identify/index.html', 'about/index.html', '404.html'];
+const pages = [
+	'index.html',
+	'identify/index.html',
+	'about/index.html',
+	'404.html',
+	'habitat/mangroves/index.html',
+	'malaysia/sabah/index.html',
+	'threatened/index.html',
+];
 
 describe('site shell', () => {
 	it.each(pages)('%s has the header, links and footer', (path) => {

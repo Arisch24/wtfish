@@ -31,6 +31,11 @@ export function allBuiltPages(): string[] {
 	return pages;
 }
 
+/** Whether a site address, such as "/habitat/reefs/" or "/favicon.svg", was built. */
+export function isBuilt(href: string): boolean {
+	return existsSync(new URL(`.${href.endsWith('/') ? `${href}index.html` : href}`, dist));
+}
+
 /** Text a visitor can read: no tags, attributes, scripts or styles. */
 export function visibleText(html: string): string {
 	return html
