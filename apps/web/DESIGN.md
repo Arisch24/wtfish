@@ -218,6 +218,7 @@ Flat. Cards, panels and the header have no shadow.
 
 ## Components
 
+- **Page band.** The tiled band at the top of the category, Browse, Identify, About and 404 pages: a small salt label (a link on category pages), the page heading and a line of text, with any extras, such as a fish count, underneath.
 - **Header.** White, with a thin line underneath. The logo sits on the left and four menu links on the right: Fish, Browse, Identify and About. The current page's link is salt on salt-soft. Below 640 px the links have 6 px side padding and no gap, so they fit beside the logo from 360 px. Narrower, the menu wraps under the logo.
 - **Fish card.** White panel with a 16:10 photo or tiled "No photo yet" placeholder and a marker use tag inside the photo's corner. Below that:
   - the name and the italic scientific name;
@@ -236,7 +237,7 @@ Flat. Cards, panels and the header have no shadow.
 - **Stats strip.** A small uppercase label, a value and an optional note, with no boxes. Used for the quick stats and for aquarium care.
 - **Sections.** A Bricolage heading, an optional note on the right and an optional one-line description, with no box.
 - **Category chips.** Rounded tile chips with a grout ring that darkens on hover, each with a page's name and count, such as "Reefs · 12". The current page's chip is salt on salt-soft and isn't a link.
-- **Tag links.** On fish pages, the water, use and habitat tags, the state names under the map, and the introduced/invasive and threatened badges link to their category pages. They look the same, and underline on hover or keyboard focus. Tags with no page, such as "Native to Malaysia", stay plain text. Tags inside cards never link, since the card is already one link.
+- **Tag links.** On fish pages, the water, use and habitat tags and the introduced/invasive and threatened badges link to their category pages. They look the same, and underline on hover or keyboard focus (the `tag-link` style). The state names in the sentence under the map link to their state pages and are always underlined, like the GBIF link beside them, because a link inside a sentence needs an underline to be noticed. Tags with no page, such as "Native to Malaysia", stay plain text. Tags inside cards never link, since the card is already one link.
 - **Measurement and map.**
   - "How big?" draws the slim fish and a person (170 cm) or hand (18 cm) to scale, over faint dashed tick lines, with a thin yellow tape. The chart is never wider than 532 px, its width in a pair, so it doesn't grow when it has a row to itself.
   - The map has 16 tiles. Recorded states are filled salt, and pins are yellow.

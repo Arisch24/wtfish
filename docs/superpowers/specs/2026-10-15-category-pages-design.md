@@ -155,6 +155,9 @@ The browser tab reads "{title} | wtfish", and the description is the page's
 
 - **The tags look the same.** A linked tag underlines on hover and on
   keyboard focus, and gets the site's usual focus outline.
+  (Changed after review, 2026-10-16: the state names in the sentence under
+  the map are always underlined, like the GBIF link beside them, because a
+  link inside a sentence needs an underline to be noticed.)
 - **Tags with no page stay plain text:** "Native to Malaysia", "Endemic to
   Malaysia", the other IUCN categories, and the fishing methods and baits.
 - **The state map stays a picture.** The sentence under it has the links.
