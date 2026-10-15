@@ -1,0 +1,120 @@
+{
+  "names": {
+    "english": "Black pomfret",
+    "scientific": "Parastromateus niger",
+    "malay": "Bawal hitam"
+  },
+  "taxonomy": {
+    "family": "Carangidae",
+    "order": "Perciformes",
+    "gbifKey": 2391217,
+    "wikidata": "Q953133"
+  },
+  "water": [
+    "marine"
+  ],
+  "uses": [
+    "food"
+  ],
+  "summary": "A deep-bodied food fish belonging to the jack family rather than the true pomfrets. Adults are dark above and silver-grey below; juveniles have strong bands and pelvic fins that adults lack.",
+  "nativeRange": "Tropical Indo-Pacific.",
+  "iucn": "LC",
+  "size": {
+    "maxCm": 75
+  },
+  "identify": {
+    "features": [
+      "Deep, flattened body",
+      "Adult pelvic fins absent",
+      "Juveniles marked with dark bands"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "coastal"
+    ],
+    "description": "Tropical Indo-West Pacific waters over muddy bottoms; juveniles may accompany jellyfish."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Sabah",
+        "records": 18
+      },
+      {
+        "state": "Sarawak",
+        "records": 16
+      },
+      {
+        "state": "Terengganu",
+        "records": 11
+      },
+      {
+        "state": "Pahang",
+        "records": 7
+      },
+      {
+        "state": "Kelantan",
+        "records": 5
+      },
+      {
+        "state": "Perlis",
+        "records": 5
+      },
+      {
+        "state": "Negeri Sembilan",
+        "records": 3
+      },
+      {
+        "state": "Selangor",
+        "records": 3
+      },
+      {
+        "state": "Perak",
+        "records": 2
+      },
+      {
+        "state": "Johor",
+        "records": 1
+      },
+      {
+        "state": "Kedah",
+        "records": 1
+      },
+      {
+        "state": "Melaka",
+        "records": 1
+      }
+    ]
+  },
+  "eating": "A food fish listed in the Malaysian Ministry of Health food-composition database.",
+  "photos": [
+    {
+      "file": "inat-561257352.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/561257352"
+    },
+    {
+      "file": "inat-250233736.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/250233736"
+    },
+    {
+      "file": "inat-252847360.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/252847360"
+    }
+  ],
+  "sources": [
+    "https://fishesofaustralia.net.au/home/species/4278",
+    "https://australian.museum/learn/animals/fishes/black-pomfret-parastromateus-niger/",
+    "https://myfcd.moh.gov.my/myfcd97/index.php/site/detail_product/110062/0/10/-1/0/0/",
+    "https://www.gbif.org/species/2391217",
+    "https://www.wikidata.org/wiki/Q953133"
+  ],
+  "lastReviewed": "2026-10-13"
+}

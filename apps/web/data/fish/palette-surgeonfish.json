@@ -1,0 +1,71 @@
+{
+  "names": {
+    "english": "Palette surgeonfish",
+    "scientific": "Paracanthurus hepatus"
+  },
+  "taxonomy": {
+    "family": "Acanthuridae",
+    "order": "Perciformes",
+    "gbifKey": 2379534,
+    "wikidata": "Q278307"
+  },
+  "water": [
+    "marine"
+  ],
+  "uses": [
+    "aquarium"
+  ],
+  "summary": "An Indo-Pacific reef surgeonfish with a blue body, black palette-shaped marking and yellow tail. It is an active marine aquarium fish that needs ample swimming space; its tail-base spines can injure handlers.",
+  "nativeRange": "Indo-Pacific reefs.",
+  "size": {
+    "maxCm": 30.5
+  },
+  "identify": {
+    "features": [
+      "Blue sides with a black marking shaped like a painter's palette.",
+      "Yellow tail edged with black and a defensive spine at each side of its base.",
+      "Oval body is strongly flattened from side to side."
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "reef"
+    ],
+    "description": "Coral reefs, with rock and coral shelter.",
+    "diet": "Provide marine algae and seaweed along with a varied aquarium diet."
+  },
+  "aquarium": {
+    "minTankLitres": 682,
+    "tempC": [
+      22.2,
+      25.6
+    ],
+    "ph": [
+      8.1,
+      8.4
+    ],
+    "temperament": "semi-aggressive"
+  },
+  "photos": [
+    {
+      "file": "inat-259398810.jpg",
+      "credit": "(c) Emanuele Santarelli, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/259398810"
+    },
+    {
+      "file": "inat-108619048.jpg",
+      "credit": "(c) João D'Andretta, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/108619048"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Paracanthurus",
+    "https://www.liveaquaria.com/products/blue-tang-1",
+    "https://www.gbif.org/species/2379534",
+    "https://www.wikidata.org/wiki/Q278307"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

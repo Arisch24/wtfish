@@ -1,18 +1,10 @@
 import { defineCollection } from 'astro:content';
-import { file } from 'astro/loaders';
-import { z } from 'astro/zod';
+import { glob } from 'astro/loaders';
+import { fishSchema } from './lib/fish-schema';
 
 const fish = defineCollection({
-	loader: file('data/fish.json'),
-	schema: z.object({
-		commonName: z.string(),
-		scientificName: z.string(),
-		family: z.string(),
-		category: z.enum(['aquarium', 'game']),
-		water: z.enum(['freshwater', 'saltwater', 'brackish', 'migratory']),
-		maxLengthCm: z.number().positive(),
-		summary: z.string(),
-	}),
+	loader: glob({ pattern: '*.json', base: './data/fish' }),
+	schema: fishSchema,
 });
 
 export const collections = { fish };

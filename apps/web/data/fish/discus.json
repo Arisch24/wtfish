@@ -1,0 +1,69 @@
+{
+  "names": {
+    "english": "Discus",
+    "scientific": "Symphysodon aequifasciatus"
+  },
+  "taxonomy": {
+    "family": "Cichlidae",
+    "order": "Perciformes",
+    "gbifKey": 5208133,
+    "wikidata": "Q3091839"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "aquarium"
+  ],
+  "summary": "A disc-shaped cichlid from central and eastern Amazonian waters. It favours quiet floodplain and flooded-forest habitats; captive strains are popular, but their warm-water and water-quality needs require careful husbandry.",
+  "nativeRange": "Central and eastern Amazon basin below the Purus Arch.",
+  "size": {
+    "maxCm": 23
+  },
+  "identify": {
+    "features": [
+      "Deep, rounded body flattened from side to side.",
+      "Blue and brown wild forms; aquarium strains show many additional colours and patterns.",
+      "The fins do not extend into the long points seen on freshwater angelfish."
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "lake",
+      "lowland-river"
+    ],
+    "description": "Floodplain lakes and flooded forests, often sheltering around fallen trees.",
+    "diet": "Plant matter and detritus as well as worms and small crustaceans."
+  },
+  "aquarium": {
+    "minTankLitres": 284,
+    "tempC": [
+      27.8,
+      30
+    ],
+    "ph": [
+      6,
+      7
+    ],
+    "temperament": "semi-aggressive",
+    "groupSize": 6
+  },
+  "photos": [
+    {
+      "file": "commons-leopard-snakeskin.jpg",
+      "credit": "Discus (Dutch Wikipedia) / Wikimedia Commons",
+      "license": "CC BY-SA",
+      "url": "https://commons.wikimedia.org/wiki/File:Symphysodon_aequifasciatus.jpg"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Symphysodon_aequifasciatus",
+    "https://www.aqueon.com/resources/care-guides/discus",
+    "https://fluvalaquatics.com/us/blog/discus-care-101",
+    "https://en.wikipedia.org/wiki/Discus_(fish)",
+    "https://www.gbif.org/species/5208133",
+    "https://www.wikidata.org/wiki/Q3091839"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

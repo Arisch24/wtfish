@@ -1,0 +1,84 @@
+{
+  "names": {
+    "english": "Nile tilapia",
+    "scientific": "Oreochromis niloticus",
+    "malay": "Tilapia"
+  },
+  "taxonomy": {
+    "family": "Cichlidae",
+    "order": "Perciformes",
+    "gbifKey": 4285694,
+    "wikidata": "Q311170"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "food"
+  ],
+  "summary": "Nile tilapia is an introduced freshwater cichlid raised widely for food. Females carry developing eggs and young in their mouths; fast breeding can create dense populations in ponds.",
+  "nativeRange": "Africa and parts of the Levant.",
+  "identify": {
+    "features": [
+      "Deep, laterally flattened body",
+      "A long dorsal fin with connected spiny and soft portions",
+      "Numerous dark vertical bars on a relatively square tail"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "lowland-river",
+      "lake",
+      "reservoir"
+    ],
+    "description": "Warm shallow freshwater and fish-culture ponds.",
+    "diet": "Grazes algae, aquatic plants and detritus, and also eats small invertebrates."
+  },
+  "malaysia": {
+    "status": "introduced",
+    "states": [
+      {
+        "state": "Selangor",
+        "records": 5
+      },
+      {
+        "state": "Pahang",
+        "records": 2
+      },
+      {
+        "state": "Pulau Pinang",
+        "records": 2
+      },
+      {
+        "state": "Sabah",
+        "records": 2
+      },
+      {
+        "state": "Melaka",
+        "records": 1
+      },
+      {
+        "state": "Negeri Sembilan",
+        "records": 1
+      }
+    ]
+  },
+  "eating": "A major farmed food fish, marketed whole and as fillets.",
+  "photos": [
+    {
+      "file": "inat-41411974.jpg",
+      "credit": "(c) anukma, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/41411974"
+    }
+  ],
+  "sources": [
+    "https://www.fao.org/fishery/docs/DOCUMENT/aquaculture/CulturedSpecies/file/en/en_niletilapia.htm",
+    "https://agrovoc.fao.org/browse/agrovoc/en/page/c_34687",
+    "https://doi.org/10.3897/BDJ.11.e100337",
+    "https://www.gbif.org/species/4285694",
+    "https://www.wikidata.org/wiki/Q311170"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

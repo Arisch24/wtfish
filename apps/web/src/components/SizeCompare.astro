@@ -1,0 +1,37 @@
+---
+import { sizeComparison } from '../lib/size';
+import Icon from './Icon.astro';
+import Tape from './Tape.astro';
+
+interface Props {
+	maxCm: number;
+}
+
+const { maxCm } = Astro.props;
+const comparison = sizeComparison(maxCm);
+const width = (cm: number) => `width: ${(cm / comparison.scaleMaxCm) * 100}%`;
+const reference =
+	comparison.reference === 'person'
+		? `The person is ${comparison.referenceCm} cm tall.`
+		: `The hand is ${comparison.referenceCm} cm long.`;
+---
+
+<!-- Never wider than one column of a pair, so a chart alone in its row doesn't grow to fill it. -->
+<figure class="max-w-[532px]" data-size-reference={comparison.reference}>
+	<div class="relative pt-2" aria-hidden="true">
+		{
+			comparison.ticks.map((tick) => (
+				<span
+					class="absolute inset-y-0 border-l border-dashed border-grout"
+					style={`left: calc(${tick.position * 100}% - ${tick.position}px)`}
+				/>
+			))
+		}
+		<div class="relative space-y-2">
+			<Icon name="fish" class="block h-auto text-salt" style={width(maxCm)} />
+			<Icon name={comparison.reference} class="block h-auto text-ink" style={width(comparison.referenceCm)} />
+		</div>
+	</div>
+	<Tape ticks={comparison.ticks} class="mt-2" />
+	<figcaption class="mt-1 text-xs text-muted">{reference}</figcaption>
+</figure>

@@ -1,6 +1,22 @@
 ---
 import { getCollection, type CollectionEntry } from 'astro:content';
+import Icon from '../../components/Icon.astro';
+import LookAlikeCard from '../../components/LookAlikeCard.astro';
+import Notice from '../../components/Notice.astro';
+import Photo from '../../components/Photo.astro';
+import Section from '../../components/Section.astro';
+import SizeCompare from '../../components/SizeCompare.astro';
+import StatStrip from '../../components/StatStrip.astro';
+import StateTileMap from '../../components/StateTileMap.astro';
+import UseTag from '../../components/UseTag.astro';
+import WaterLabel from '../../components/WaterLabel.astro';
 import Base from '../../layouts/Base.astro';
+import { THREATENED } from '../../lib/filter';
+import { aquariumStats, quickStats, sectionRows } from '../../lib/fish-page';
+import { formatDate, listOf } from '../../lib/format';
+import { DIFFICULTY_LABEL, ENVIRONMENT_LABEL, IUCN_LABEL, METHOD_LABEL, STATUS_BADGE } from '../../lib/labels';
+import { sizeComparison } from '../../lib/size';
+import { sourceLabel } from '../../lib/sources';
 
 export async function getStaticPaths() {
 	const fish = await getCollection('fish');
@@ -11,52 +27,312 @@ interface Props {
 	entry: CollectionEntry<'fish'>;
 }
 
-const { data } = Astro.props.entry;
+const { entry } = Astro.props;
+const f = entry.data;
+const [hero, ...morePhotos] = f.photos ?? [];
+const states = f.malaysia?.states ?? [];
+const spots = f.malaysia?.spots ?? [];
+const gbifRecords = states.reduce((sum, s) => sum + s.records, 0);
+const fishing = f.fishing;
+const iucnTone = !f.iucn
+	? ''
+	: THREATENED.includes(f.iucn)
+		? 'bg-threat-soft text-ink'
+		: f.iucn === 'EW' || f.iucn === 'EX'
+			? 'bg-ink text-white'
+			: 'bg-tile text-ink ring-1 ring-inset ring-grout';
+const badge = 'inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium';
+const softChip = `${badge} bg-tile text-ink ring-1 ring-inset ring-grout`;
+const term = 'text-xs text-muted';
+const sourceCount = f.sources?.length ?? 0;
+const rows = sectionRows(f);
+const comparison = f.size && sizeComparison(f.size.maxCm);
+const sizeNote = comparison && `Linear scale · ${comparison.reference} ${comparison.referenceCm} cm`;
+const recordNote =
+	states.length > 0 ? `${gbifRecords} open-licence ${gbifRecords === 1 ? 'record' : 'records'} · GBIF` : undefined;
+/** The second section of a pair: a line above it when stacked, a line beside it from 1024px. */
+const second = 'border-t border-grout lg:border-l lg:border-t-0 lg:pl-10';
 ---
 
-<Base title={`${data.commonName} (${data.scientificName}) | wtfish`} description={data.summary}>
-	<p><a href="/">← All fish</a></p>
-	<h1>{data.commonName}</h1>
-	<p class="sci">{data.scientificName}</p>
-	<p>{data.summary}</p>
-	<dl>
-		<dt>Family</dt>
-		<dd>{data.family}</dd>
-		<dt>Category</dt>
-		<dd class="cap">{data.category}</dd>
-		<dt>Water</dt>
-		<dd class="cap">{data.water}</dd>
-		<dt>Max length</dt>
-		<dd>~{data.maxLengthCm} cm</dd>
-	</dl>
+<Base title={`${f.names.english} (${f.names.scientific}) | wtfish`} description={f.summary}>
+	<div class="tile-surface border-b border-grout">
+		<div
+			class:list={[
+				'mx-auto grid max-w-6xl gap-6 px-4 py-6 sm:px-6 md:items-start md:gap-8',
+				hero && 'md:grid-cols-[7fr_5fr]',
+			]}
+		>
+			<div class:list={['min-w-0', hero && 'row-start-2 md:row-start-1']} data-name-card>
+				<a href="/" class="text-[13px] font-medium text-salt hover:underline">← All fish</a>
+				<p class="mt-3 text-xs font-semibold uppercase tracking-[0.06em] text-salt">
+					Fish profile · {f.taxonomy.family}
+				</p>
+				<h1 class="mt-1 break-words font-display text-[26px] font-bold leading-[1.15] tracking-[-0.035em] sm:text-[30px]">
+					{f.names.english}
+				</h1>
+				<p class="text-[15px] italic text-muted">{f.names.scientific}</p>
+				<div class="mt-3 flex flex-wrap items-center gap-1.5">
+					<UseTag uses={f.uses} size="page" class="mr-1" />
+					{f.water.map((water) => <WaterLabel water={water} />)}
+					{
+						f.malaysia && (
+							<span class:list={[badge, 'bg-tile text-ink ring-1 ring-inset ring-grout']}>
+								{STATUS_BADGE[f.malaysia.status]}
+							</span>
+						)
+					}
+					{f.iucn && <span class:list={[badge, iucnTone]}>{IUCN_LABEL[f.iucn]} (IUCN)</span>}
+				</div>
+				{f.names.other?.length ? <p class="mt-2 text-[13px] text-muted">Also called {listOf(f.names.other)}</p> : null}
+				<p class="mt-3 max-w-[40rem] text-[15px]">{f.summary}</p>
+				{
+					f.lastReviewed ? (
+						<p class="mt-3 text-xs text-muted">
+							Last reviewed {formatDate(f.lastReviewed)} · {sourceCount} {sourceCount === 1 ? 'source' : 'sources'}
+						</p>
+					) : (
+						<p class="mt-3 inline-block rounded-full px-2.5 py-0.5 text-xs font-semibold text-alert ring-1 ring-inset ring-alert">
+							Not yet fact-checked
+						</p>
+					)
+				}
+			</div>
+			{
+				hero && (
+					<Photo
+						fishId={entry.id}
+						photo={hero}
+						alt={`Photo of ${f.names.english}`}
+						variant="header"
+						class="row-start-1 md:col-start-2"
+					/>
+				)
+			}
+		</div>
+	</div>
+	<div class="border-b border-grout">
+		<div class="mx-auto max-w-6xl px-4 py-4 sm:px-6">
+			<StatStrip tiles={quickStats(f)} />
+			{
+				f.iucn && (
+					<p class="mt-3 text-xs text-muted">
+						IUCN category from{' '}
+						{f.taxonomy.wikidata ? (
+							<a class="underline" href={`https://www.wikidata.org/wiki/${f.taxonomy.wikidata}`}>
+								Wikidata
+							</a>
+						) : (
+							'Wikidata'
+						)}
+						; it may lag the latest Red List assessment.
+						{f.iucnNote && ` ${f.iucnNote}`}
+					</p>
+				)
+			}
+		</div>
+	</div>
+	<div class="mx-auto max-w-6xl px-4 sm:px-6">
+		{
+			rows.map((row) => (
+				<div
+					class:list={['grid border-b border-grout last:border-b-0', row.length === 2 && 'lg:grid-cols-2 lg:gap-x-10']}
+					data-row={row.join(' ')}
+				>
+					{row.map((id, i) => {
+						const side = i === 1 ? second : '';
+						if (id === 'how-big' && f.size)
+							return (
+								<Section
+									title="How big?"
+									id="how-big"
+									note={sizeNote}
+									description={`Up to ${f.size.maxCm} cm${f.size.maxKg ? ` and ${f.size.maxKg} kg` : ''}.`}
+									class={side}
+								>
+									<SizeCompare maxCm={f.size.maxCm} />
+								</Section>
+							);
+						if (id === 'where')
+							return (
+								<Section title="Where in Malaysia" id="where" note={recordNote} class={side}>
+									<StateTileMap recorded={states.map((s) => s.state)} spots={spots} />
+									{states.length > 0 && (
+										<p class="mt-3 text-[13px] text-muted">
+											Recorded in {listOf(states.map((s) => s.state))}. Based on {gbifRecords} open-licence{' '}
+											{gbifRecords === 1 ? 'record' : 'records'} on{' '}
+											{f.taxonomy.gbifKey ? (
+												<a class="underline" href={`https://www.gbif.org/species/${f.taxonomy.gbifKey}`}>
+													GBIF
+												</a>
+											) : (
+												'GBIF'
+											)}
+											. Few records can mean few surveys, not few fish.
+										</p>
+									)}
+								</Section>
+							);
+						if (id === 'identify' && f.identify)
+							return (
+								<Section title="How to identify" id="identify" class={side}>
+									<ul class="grid gap-1.5">
+										{f.identify.features.map((feature) => (
+											<li class="flex items-start gap-2.5">
+												<Icon name="hook" class="mt-1 h-4 w-2.5 shrink-0 text-salt" />
+												{feature}
+											</li>
+										))}
+									</ul>
+									{f.identify.lookAlikes?.length ? (
+										<>
+											<h3 class="mt-5 text-[11px] font-medium uppercase tracking-[0.05em] text-muted">Look-alikes</h3>
+											<ul class="mt-1 divide-y divide-grout">
+												{f.identify.lookAlikes.map((lookAlike) => (
+													<LookAlikeCard id={lookAlike.id} difference={lookAlike.difference} />
+												))}
+											</ul>
+										</>
+									) : null}
+								</Section>
+							);
+						if (id === 'habitat')
+							return (
+								<Section title="Habitat" id="habitat" class={side}>
+									{f.habitat && (
+										<p class="flex flex-wrap gap-1.5">
+											{f.habitat.environments.map((environment) => (
+												<span class={softChip}>{ENVIRONMENT_LABEL[environment]}</span>
+											))}
+										</p>
+									)}
+									{f.habitat?.description && <p class="mt-3">{f.habitat.description}</p>}
+									{(f.habitat?.diet || f.nativeRange) && (
+										<dl class="mt-3 grid gap-2.5">
+											{f.habitat?.diet && (
+												<div>
+													<dt class={term}>Diet</dt>
+													<dd>{f.habitat.diet}</dd>
+												</div>
+											)}
+											{f.nativeRange && (
+												<div>
+													<dt class={term}>Native range</dt>
+													<dd>{f.nativeRange}</dd>
+												</div>
+											)}
+										</dl>
+									)}
+								</Section>
+							);
+						if (id === 'before-you-fish' && f.malaysia?.rules)
+							return (
+								<div class="py-6">
+									<Notice title="Before you fish">
+										<p>{f.malaysia.rules}</p>
+										<p class="mt-1.5 text-[13px]">
+											Rules change and differ by state. Check with your state Fisheries Office before you fish.
+											{f.lastReviewed && ` Last checked ${formatDate(f.lastReviewed)}.`}
+										</p>
+									</Notice>
+								</div>
+							);
+						if (id === 'catching' && fishing)
+							return (
+								<Section title="Catching it" id="catching" class={side}>
+									<dl class="grid gap-x-6 gap-y-2.5 sm:grid-cols-[max-content_1fr]">
+										{fishing.season && (
+											<>
+												<dt class={term}>Season</dt>
+												<dd>{fishing.season}</dd>
+											</>
+										)}
+										{fishing.methods?.length ? (
+											<>
+												<dt class={term}>Methods</dt>
+												<dd class="flex flex-wrap gap-1.5">
+													{fishing.methods.map((method) => (
+														<span class={softChip}>{METHOD_LABEL[method]}</span>
+													))}
+												</dd>
+											</>
+										) : null}
+										{fishing.baits?.length ? (
+											<>
+												<dt class={term}>Baits and lures</dt>
+												<dd class="flex flex-wrap gap-1.5">
+													{fishing.baits.map((bait) => (
+														<span class={softChip}>{bait}</span>
+													))}
+												</dd>
+											</>
+										) : null}
+										{fishing.difficulty && (
+											<>
+												<dt class={term}>Difficulty</dt>
+												<dd>{DIFFICULTY_LABEL[fishing.difficulty]}</dd>
+											</>
+										)}
+									</dl>
+								</Section>
+							);
+						if (id === 'eating' && f.eating)
+							return (
+								<Section title="Eating" id="eating" class={side}>
+									<p>{f.eating}</p>
+								</Section>
+							);
+						if (id === 'aquarium' && f.aquarium)
+							return (
+								<Section title="Aquarium care" id="aquarium" class={side}>
+									<StatStrip tiles={aquariumStats(f.aquarium)} />
+								</Section>
+							);
+						if (id === 'photos')
+							return (
+								<Section title="More photos" id="photos" class={side}>
+									<div class="grid grid-cols-2 gap-3 sm:grid-cols-3">
+										{morePhotos.map((photo, i) => (
+											<Photo
+												fishId={entry.id}
+												photo={photo}
+												alt={`${f.names.english}, photo ${i + 2}`}
+												variant="gallery"
+											/>
+										))}
+									</div>
+								</Section>
+							);
+						if (id === 'sources')
+							return (
+								<Section
+									title="Sources"
+									id="sources"
+									note={f.lastReviewed ? `Last reviewed ${formatDate(f.lastReviewed)}` : undefined}
+									class={side}
+								>
+									{f.sources?.length ? (
+										<ol class="list-decimal space-y-1 pl-5 md:columns-2 md:gap-10">
+											{f.sources.map((url) => {
+												const { host, pdf } = sourceLabel(url);
+												return (
+													<li class="break-inside-avoid">
+														<a href={url} title={url} class="font-medium text-salt underline underline-offset-2">
+															{host}
+														</a>
+														{pdf && <span class="ml-1.5 text-xs text-muted">PDF</span>}
+													</li>
+												);
+											})}
+										</ol>
+									) : (
+										<p class="text-muted">This profile has not been fact-checked yet.</p>
+									)}
+								</Section>
+							);
+						return null;
+					})}
+				</div>
+			))
+		}
+	</div>
 </Base>
-
-<style>
-	h1 {
-		margin-bottom: 0;
-	}
-	.sci {
-		margin-top: 0.25rem;
-		font-style: italic;
-		color: var(--muted);
-	}
-	dl {
-		display: grid;
-		grid-template-columns: max-content 1fr;
-		gap: 0.5rem 1.5rem;
-		max-width: 28rem;
-		padding: 1rem;
-		background: var(--surface);
-		border: 1px solid var(--border);
-		border-radius: 0.75rem;
-	}
-	dt {
-		color: var(--muted);
-	}
-	dd {
-		margin: 0;
-	}
-	.cap {
-		text-transform: capitalize;
-	}
-</style>

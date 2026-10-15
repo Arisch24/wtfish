@@ -1,0 +1,56 @@
+{
+  "names": {
+    "english": "Asian redtail catfish",
+    "scientific": "Hemibagrus wyckioides",
+    "malay": "Baung ekor merah"
+  },
+  "taxonomy": {
+    "family": "Bagridae",
+    "order": "Siluriformes",
+    "gbifKey": 2338196,
+    "wikidata": "Q3752870"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "food"
+  ],
+  "summary": "This introduced catfish is distinct from Malaysia's native bagrid catfishes. Its red-orange tail is a useful field clue, and Malaysian research and fisheries authorities identify it as an invasive concern.",
+  "nativeRange": "The Mekong and Lancang river systems in mainland Southeast Asia.",
+  "identify": {
+    "features": [
+      "Catfish body with barbels around the mouth",
+      "Distinctive reddish-orange tail in larger fish"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "lowland-river"
+    ],
+    "description": "Freshwater rivers after introduction into Malaysian catchments."
+  },
+  "malaysia": {
+    "status": "invasive",
+    "rules": "The Department of Fisheries identifies this catfish as an invasive concern. Its published import-risk page describes controls for Hemibagrus wyckioides; do not assume that advice for Amazon redtail catfish covers this species. Check the rules before acquiring or moving it."
+  },
+  "photos": [
+    {
+      "file": "commons-redtail-catfish.jpg",
+      "credit": "FloUdon / Wikimedia Commons",
+      "license": "CC BY-SA",
+      "url": "https://commons.wikimedia.org/wiki/File:Redtail-Catfish.jpg"
+    }
+  ],
+  "sources": [
+    "https://jms.mabjournal.com/index.php/mab/article/download/11/5/18",
+    "https://www.dof.gov.my/program-kesedaran-spesies-ikan-asing-dan-pertandingan-moh-tangkap-baung-ekor-merah/",
+    "https://www.dof.gov.my/perkhidmatan/import-eksport/permohonan-ira-bagi-spesis-ikan-alien/",
+    "https://www.nagaofoundation.or.jp/publication/documents/mizube_3.pdf",
+    "https://doi.org/10.1016/j.aqrep.2025.102646",
+    "https://www.gbif.org/species/2338196",
+    "https://www.wikidata.org/wiki/Q3752870"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

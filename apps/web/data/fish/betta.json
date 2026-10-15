@@ -1,0 +1,76 @@
+{
+  "names": {
+    "english": "Siamese fighting fish",
+    "scientific": "Betta splendens"
+  },
+  "taxonomy": {
+    "family": "Osphronemidae",
+    "order": "Perciformes",
+    "gbifKey": 2393998,
+    "wikidata": "Q549"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "aquarium"
+  ],
+  "summary": "The Siamese fighting fish is an air-breathing labyrinth fish kept in many selectively bred colours and fin shapes. Males defend territories and should be housed separately; the species naturally occupies shallow, vegetated waters in Southeast Asia.",
+  "nativeRange": "Southeast Asia; captive ornamental strains are widely bred.",
+  "identify": {
+    "features": [
+      "Upturned mouth, suited to taking food at the surface.",
+      "Ornamental males often have bright colours and extended fins; wild fish are less showy.",
+      "An extended anal fin runs along the underside of the body."
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "rice-field",
+      "lowland-river"
+    ],
+    "description": "Shallow rice paddies, ponds and slow streams with dense vegetation.",
+    "diet": "Small insects and larvae, supplemented in captivity with suitable prepared and frozen foods."
+  },
+  "aquarium": {
+    "minTankLitres": 20,
+    "tempC": [
+      25,
+      27
+    ],
+    "ph": [
+      6.5,
+      7
+    ],
+    "temperament": "aggressive"
+  },
+  "photos": [
+    {
+      "file": "inat-732172305.jpg",
+      "credit": "(c) Marcello Mastroianni Albuquerque Araújo, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/732172305"
+    },
+    {
+      "file": "inat-732172355.jpg",
+      "credit": "(c) Marcello Mastroianni Albuquerque Araújo, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/732172355"
+    },
+    {
+      "file": "inat-732172398.jpg",
+      "credit": "(c) Marcello Mastroianni Albuquerque Araújo, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/732172398"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Siamese_fighting_fish",
+    "https://fluvalaquatics.com/careguides/Fluval_Betta_Care_Guide.pdf",
+    "https://ornamentalfish.org/what-we-do/advice-information/care-sheets/caresheets-tropical-freshwater-fish/how-to-look-after-siamese-fighting-fish-bettas/",
+    "https://www.gbif.org/species/2393998",
+    "https://www.wikidata.org/wiki/Q549"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "VU"
+}

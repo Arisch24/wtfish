@@ -1,0 +1,80 @@
+{
+  "names": {
+    "english": "Zebra danio",
+    "scientific": "Danio rerio"
+  },
+  "taxonomy": {
+    "family": "Cyprinidae",
+    "order": "Cypriniformes",
+    "gbifKey": 9797255,
+    "wikidata": "Q169444"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "aquarium"
+  ],
+  "summary": "An active schooling fish from South Asia with horizontal blue stripes extending onto the tail. It is widely bred for aquariums and is also an important laboratory model for studying vertebrate development.",
+  "nativeRange": "South Asia, particularly India and Bangladesh.",
+  "size": {
+    "maxCm": 5
+  },
+  "identify": {
+    "features": [
+      "Five horizontal blue stripes running along the sides and onto the tail.",
+      "Slender body and upward-facing mouth.",
+      "Males have gold between the blue stripes; females have a fuller, whitish belly."
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "rice-field",
+      "lowland-river",
+      "lake"
+    ],
+    "description": "Shallow streams, canals, ponds and rice paddies, often with vegetation.",
+    "diet": "Small aquatic crustaceans and other invertebrates; aquarium fish accept varied small foods."
+  },
+  "aquarium": {
+    "minTankLitres": 40,
+    "tempC": [
+      18,
+      25
+    ],
+    "ph": [
+      6,
+      8
+    ],
+    "temperament": "peaceful",
+    "groupSize": 8
+  },
+  "photos": [
+    {
+      "file": "inat-54765392.jpg",
+      "credit": "(c) Soumya Patra, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/54765392"
+    },
+    {
+      "file": "inat-196904084.jpg",
+      "credit": "(c) Sandipan Das, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/196904084"
+    },
+    {
+      "file": "inat-196904105.jpg",
+      "credit": "(c) Sandipan Das, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/196904105"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Zebrafish",
+    "https://fluvalaquatics.com/us/wp-content/uploads/2022/02/Species-Spotlight_Zebra-Danio_EN.pdf",
+    "https://www.gbif.org/species/9797255",
+    "https://www.wikidata.org/wiki/Q169444"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

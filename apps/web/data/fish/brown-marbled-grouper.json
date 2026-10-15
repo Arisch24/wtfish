@@ -1,0 +1,82 @@
+{
+  "names": {
+    "english": "Brown-marbled grouper",
+    "scientific": "Epinephelus fuscoguttatus",
+    "malay": "Kerapu harimau"
+  },
+  "taxonomy": {
+    "family": "Serranidae",
+    "order": "Perciformes",
+    "gbifKey": 2388440,
+    "wikidata": "Q1239958"
+  },
+  "water": [
+    "marine"
+  ],
+  "uses": [
+    "sport",
+    "food"
+  ],
+  "summary": "A large reef grouper with small brown spots and irregular darker patches. A dark saddle at the top of the tail base is a useful identification mark.",
+  "nativeRange": "Tropical Indo-Pacific.",
+  "iucn": "VU",
+  "size": {
+    "maxCm": 120
+  },
+  "identify": {
+    "features": [
+      "Dense small brown spots",
+      "Irregular larger dark blotches",
+      "Small dark saddle on the upper tail base"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "reef"
+    ],
+    "description": "Reef-associated tropical Indo-Pacific waters.",
+    "diet": "Fish and other animal prey."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Sabah",
+        "records": 2
+      },
+      {
+        "state": "Terengganu",
+        "records": 1
+      }
+    ]
+  },
+  "eating": "Sold in the live reef-fish trade and also produced through aquaculture.",
+  "photos": [
+    {
+      "file": "inat-425063601.jpg",
+      "credit": "(c) TonyT, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/425063601"
+    },
+    {
+      "file": "inat-250233873.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/250233873"
+    },
+    {
+      "file": "inat-513997503.jpg",
+      "credit": "(c) Ro Hill, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/513997503"
+    }
+  ],
+  "sources": [
+    "https://fishesofaustralia.net.au/home/species/4670",
+    "https://www.gbif.org/species/2388440",
+    "https://www.wikidata.org/wiki/Q1239958",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC4519877/",
+    "https://eprints.ums.edu.my/id/eprint/37633/1/24%20PAGES.pdf"
+  ],
+  "lastReviewed": "2026-10-13"
+}

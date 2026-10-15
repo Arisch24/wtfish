@@ -1,0 +1,64 @@
+{
+  "names": {
+    "english": "Guppy",
+    "scientific": "Poecilia reticulata"
+  },
+  "taxonomy": {
+    "family": "Poeciliidae",
+    "order": "Cyprinodontiformes",
+    "gbifKey": 2350050,
+    "wikidata": "Q178202"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "aquarium"
+  ],
+  "summary": "A livebearing fish native to northeastern South America and the Caribbean. Aquarium strains come in many colours and tail shapes; males are generally smaller and more colourful than females, and mixed groups reproduce readily.",
+  "nativeRange": "Northeastern South America and the Caribbean.",
+  "size": {
+    "maxCm": 5
+  },
+  "identify": {
+    "features": [
+      "Males have colourful dorsal and tail fins.",
+      "Females are larger and usually less colourful.",
+      "The male anal fin is narrow and rod-shaped rather than fan-shaped."
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "lowland-river"
+    ],
+    "diet": "Algae and small aquatic insects in the wild; aquarium fish accept varied small foods."
+  },
+  "aquarium": {
+    "minTankLitres": 20,
+    "tempC": [
+      23,
+      27
+    ],
+    "ph": [
+      7,
+      8
+    ],
+    "temperament": "peaceful"
+  },
+  "photos": [
+    {
+      "file": "inat-125779661.jpg",
+      "credit": "(c) syuhada, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/125779661"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Guppy",
+    "https://fluvalaquatics.com/uk/wp-content/uploads/2022/02/Species-Spotlight_Guppy_EN.pdf",
+    "https://www.gbif.org/species/2350050",
+    "https://www.wikidata.org/wiki/Q178202"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

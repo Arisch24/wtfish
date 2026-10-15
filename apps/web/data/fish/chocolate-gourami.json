@@ -1,0 +1,83 @@
+{
+  "names": {
+    "english": "Chocolate gourami",
+    "scientific": "Sphaerichthys osphromenoides"
+  },
+  "taxonomy": {
+    "family": "Osphronemidae",
+    "order": "Perciformes",
+    "gbifKey": 2394132,
+    "wikidata": "Q1536867"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "aquarium"
+  ],
+  "summary": "Chocolate gourami is a small brown labyrinth fish with pale bands across its sides. It inhabits peat waters and incubates its young in the mouth rather than using a bubble nest. In aquariums it is sensitive to water quality and needs soft, acidic conditions.",
+  "nativeRange": "The Malay Peninsula, Sumatra and Borneo.",
+  "size": {
+    "maxCm": 6
+  },
+  "identify": {
+    "features": [
+      "Chocolate-brown oval body with a pointed snout",
+      "Narrow pale bands across the sides",
+      "Oval body with a pointed snout"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "peat-swamp"
+    ],
+    "description": "Peat-associated blackwater habitats."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Johor",
+        "records": 5
+      },
+      {
+        "state": "Pahang",
+        "records": 1
+      },
+      {
+        "state": "Selangor",
+        "records": 1
+      }
+    ]
+  },
+  "aquarium": {
+    "minTankLitres": 38,
+    "tempC": [
+      25.6,
+      29.4
+    ],
+    "ph": [
+      4,
+      6.5
+    ],
+    "temperament": "peaceful",
+    "groupSize": 5
+  },
+  "photos": [
+    {
+      "file": "inat-250688473.jpg",
+      "credit": "(c) Zakqary Roy, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/250688473"
+    }
+  ],
+  "sources": [
+    "https://www.mybis.gov.my/sp/24550",
+    "https://en.wikipedia.org/wiki/Chocolate_gourami",
+    "https://www.theaquariumwiki.com/wiki/Sphaerichthys_osphromenoides",
+    "https://www.gbif.org/species/2394132",
+    "https://www.wikidata.org/wiki/Q1536867"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "DD"
+}

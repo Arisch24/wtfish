@@ -1,0 +1,97 @@
+{
+  "names": {
+    "english": "Hampala barb",
+    "scientific": "Hampala macrolepidota",
+    "malay": "Sebarau",
+    "other": [
+      "Jungle perch"
+    ]
+  },
+  "taxonomy": {
+    "family": "Cyprinidae",
+    "order": "Cypriniformes",
+    "gbifKey": 2367430,
+    "wikidata": "Q150480"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "sport",
+    "food"
+  ],
+  "summary": "The hampala barb is a Southeast Asian river and lake fish recognised by a dark mark below its dorsal fin. Surveys record it in several streams feeding Kenyir Reservoir, where it is native.",
+  "nativeRange": "Mainland Southeast Asia, the Malay Peninsula, Sumatra, Java and Borneo.",
+  "identify": {
+    "features": [
+      "Dark vertical band or blotch below the front of the dorsal fin",
+      "A clear black stripe along the outer margin of each tail lobe",
+      "Barbels at the corners of the mouth"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "forest-river",
+      "lake",
+      "reservoir"
+    ],
+    "description": "Streams and lakes, including tributaries of Kenyir Reservoir."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Sarawak",
+        "records": 52
+      },
+      {
+        "state": "Sabah",
+        "records": 9
+      },
+      {
+        "state": "Perak",
+        "records": 8
+      },
+      {
+        "state": "Pahang",
+        "records": 6
+      },
+      {
+        "state": "Johor",
+        "records": 4
+      },
+      {
+        "state": "Kelantan",
+        "records": 3
+      },
+      {
+        "state": "Melaka",
+        "records": 2
+      }
+    ]
+  },
+  "photos": [
+    {
+      "file": "inat-251680991.jpg",
+      "credit": "(c) Zakqary Roy, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/251680991"
+    },
+    {
+      "file": "inat-453417722.jpg",
+      "credit": "(c) Seno Nur Rohman, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/453417722"
+    }
+  ],
+  "sources": [
+    "https://doi.org/10.3897/BDJ.11.e100337",
+    "https://repository.si.edu/bitstream/handle/10088/10206/USNMB_1881945_unit.pdf",
+    "https://igfa.org/wp-content/uploads/2023/10/OctNovIA2023_IARecentRecords.pdf",
+    "https://www.dof.gov.my/wp-content/uploads/2024/07/SPESIS-TEMPATAN-POSTER-A1.pdf",
+    "https://www.gbif.org/species/2367430",
+    "https://www.wikidata.org/wiki/Q150480"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

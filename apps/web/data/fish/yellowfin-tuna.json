@@ -1,0 +1,58 @@
+{
+  "names": {
+    "english": "Yellowfin tuna",
+    "scientific": "Thunnus albacares",
+    "malay": "Tuna sirip kuning"
+  },
+  "taxonomy": {
+    "family": "Scombridae",
+    "order": "Perciformes",
+    "gbifKey": 2374013,
+    "wikidata": "Q269781"
+  },
+  "water": [
+    "marine"
+  ],
+  "uses": [
+    "sport"
+  ],
+  "summary": "Yellowfin tuna is a migratory ocean predator with bright yellow fins and a streamlined body. It travels through tropical and subtropical seas, sometimes schooling with other tunas. Malaysian fisheries authorities list it among oceanic tuna caught by the country’s vessels.",
+  "nativeRange": "Tropical and subtropical oceans worldwide.",
+  "identify": {
+    "features": [
+      "Streamlined body with a dark metallic-blue back",
+      "Bright yellow dorsal and anal fins and finlets",
+      "Long yellow fins in larger fish and a yellow band along the side"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "offshore"
+    ],
+    "description": "Highly migratory fish using near-surface oceanic water.",
+    "diet": "Fish, squid and crustaceans."
+  },
+  "eating": "Firm, relatively lean flesh has a mild, meaty flavour; the red raw flesh becomes brownish when cooked.",
+  "photos": [
+    {
+      "file": "inat-62043094.jpg",
+      "credit": "(c) Michel Frisch, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/62043094"
+    },
+    {
+      "file": "inat-312596346.jpg",
+      "credit": "(c) luluchouette, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/312596346"
+    }
+  ],
+  "sources": [
+    "https://www.fisheries.noaa.gov/species/atlantic-yellowfin-tuna",
+    "https://www.dof.gov.my/en/services/captured-fisheries/tuna-licensing/",
+    "https://www.gbif.org/species/2374013",
+    "https://www.wikidata.org/wiki/Q269781"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

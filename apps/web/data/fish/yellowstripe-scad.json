@@ -1,0 +1,106 @@
+{
+  "names": {
+    "english": "Yellowstripe scad",
+    "scientific": "Selaroides leptolepis",
+    "malay": "Selar kuning",
+    "malayOther": [
+      "Pelata kuning",
+      "Temanong"
+    ]
+  },
+  "taxonomy": {
+    "family": "Carangidae",
+    "order": "Perciformes",
+    "gbifKey": 2391226,
+    "wikidata": "Q2571175"
+  },
+  "water": [
+    "marine",
+    "brackish"
+  ],
+  "uses": [
+    "food"
+  ],
+  "summary": "A small coastal scad with a bright yellow stripe running along the body. It forms large schools over sandy or muddy ground and also enters estuaries.",
+  "nativeRange": "Tropical Indo-Pacific.",
+  "iucn": "LC",
+  "size": {
+    "maxCm": 22
+  },
+  "identify": {
+    "features": [
+      "Bright yellow stripe from behind the eye to the tail base",
+      "Black mark high on the gill cover",
+      "Silver belly and bluish-green back"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "coastal",
+      "estuary"
+    ],
+    "description": "Inshore waters and lower estuaries over sand and mud.",
+    "diet": "Small invertebrates and fish."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Terengganu",
+        "records": 24
+      },
+      {
+        "state": "Sabah",
+        "records": 17
+      },
+      {
+        "state": "Pahang",
+        "records": 16
+      },
+      {
+        "state": "Johor",
+        "records": 6
+      },
+      {
+        "state": "Sarawak",
+        "records": 5
+      },
+      {
+        "state": "Melaka",
+        "records": 1
+      },
+      {
+        "state": "Perak",
+        "records": 1
+      }
+    ]
+  },
+  "photos": [
+    {
+      "file": "inat-157772022.jpg",
+      "credit": "(c) Bernard DUPONT, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/157772022"
+    },
+    {
+      "file": "inat-515647815.jpg",
+      "credit": "(c) Tim Parker, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/515647815"
+    },
+    {
+      "file": "inat-697384410.jpg",
+      "credit": "(c) Ashwin Srinivasan, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/697384410"
+    }
+  ],
+  "sources": [
+    "https://fishesofaustralia.net.au/home/species/2989",
+    "https://www.lkim.gov.my/wp-content/uploads/2023/01/Buku-Ikan-Ikan-Komersial-Di-Malaysia.pdf",
+    "https://journals.australian.museum/media/Uploads/Journals/17723/92_complete.pdf",
+    "https://www.gbif.org/species/2391226",
+    "https://www.wikidata.org/wiki/Q2571175"
+  ],
+  "lastReviewed": "2026-10-13"
+}

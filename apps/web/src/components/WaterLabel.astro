@@ -1,0 +1,30 @@
+---
+import type { Water } from '../lib/fish-schema';
+import type { IconName } from '../lib/icons';
+import { WATER_LABEL } from '../lib/labels';
+import Icon from './Icon.astro';
+
+interface Props {
+	water: Water;
+	size?: 'sm' | 'md';
+}
+
+const { water, size = 'sm' } = Astro.props;
+const look: Record<Water, { colours: string; icon: IconName }> = {
+	freshwater: { colours: 'bg-fresh-soft text-fresh', icon: 'drop' },
+	brackish: { colours: 'bg-brackish-soft text-brackish', icon: 'brackish' },
+	marine: { colours: 'bg-salt-soft text-salt', icon: 'wave' },
+};
+const { colours, icon } = look[water];
+---
+
+<span
+	class:list={[
+		'inline-flex items-center gap-1 rounded-full font-medium',
+		colours,
+		size === 'sm' ? 'px-2 py-0.5 text-xs' : 'px-2.5 py-0.5 text-[13px]',
+	]}
+	data-water={water}
+>
+	<Icon name={icon} class="size-3" />{WATER_LABEL[water]}
+</span>

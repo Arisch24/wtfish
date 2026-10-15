@@ -1,0 +1,83 @@
+import { describe, expect, it } from 'vitest';
+import { formatDate } from '../../src/lib/format';
+import { builtPage, cardsById, fishFiles, visibleText } from './helpers';
+
+const html = builtPage('index.html');
+const cards = cardsById(html);
+
+describe('home page', () => {
+	it('reads the headline before the hanging sign and the filters', () => {
+		const headline = html.indexOf('<h1');
+		const sign = html.indexOf('data-hanging-sign');
+		expect(headline).toBeGreaterThan(-1);
+		expect(sign).toBeGreaterThan(headline);
+		expect(html.indexOf('id="filters"')).toBeGreaterThan(sign);
+	});
+
+	it("keeps the swimming strip's height when motion is reduced", () => {
+		// The sign's line is pulled up through the strip to reach the header. If the
+		// strip vanished, the line would poke into the header.
+		const strip = html.match(/<div[^>]*data-swim-strip[^>]*>/)?.[0];
+		expect(strip).toBeDefined();
+		expect(strip).not.toContain('motion-reduce:hidden');
+		expect(html).toMatch(/data-swim-strip[^>]*>\s*<div[^>]*motion-reduce:hidden/);
+	});
+
+	it('shows one card per fish, A–Z by English name', () => {
+		const expected = [...fishFiles]
+			.sort((a, b) => a.raw.names.english.localeCompare(b.raw.names.english))
+			.map((fish) => fish.id);
+		expect([...cards.keys()]).toEqual(expected);
+	});
+
+	it('counts the fish on the hanging sign', () => {
+		expect(visibleText(html)).toContain(`${fishFiles.length} fish & counting`);
+	});
+
+	it('shows when the data was last updated', () => {
+		const dates = fishFiles.map((fish) => fish.raw.lastReviewed).filter((date): date is string => Boolean(date));
+		const newest = dates.sort().at(-1)!;
+		expect(visibleText(html)).toContain(`Last updated ${formatDate(newest)}`);
+	});
+
+	it('puts the swimming strip inside the page, in the tiled top band', () => {
+		expect(html.indexOf('data-swim-strip')).toBeGreaterThan(html.indexOf('<main'));
+	});
+
+	it('shows "No photo yet" for a fish without photos', () => {
+		const card = cards.get('giant-featherback')!;
+		expect(card).toContain('data-no-photo');
+		expect(visibleText(card)).toContain('No photo yet');
+	});
+
+	it('draws the cards in the quiet style', () => {
+		for (const [id, card] of cards) {
+			expect(card, id).not.toMatch(/ink-card|border-ink|shadow-hard|font-extrabold/);
+		}
+	});
+
+	it('shows a measuring tape only for fish with a known size', () => {
+		for (const { id, raw } of fishFiles) {
+			expect(cards.get(id)!.includes('data-card-tape'), id).toBe(Boolean(raw.size));
+		}
+	});
+
+	it('shows every water type of a fish that lives in several', () => {
+		const card = cards.get('barramundi')!;
+		for (const water of ['freshwater', 'brackish', 'marine']) expect(card).toContain(`data-water="${water}"`);
+	});
+
+	it('shows what each fish is for on its tag', () => {
+		expect(visibleText(cards.get('striped-snakehead')!)).toContain('Sport · Food');
+	});
+
+	it('uses resized photos, not the originals', () => {
+		expect(html).not.toContain('/photos/');
+		expect(html).toMatch(/<source[^>]+type="image\/avif"/);
+	});
+
+	it('ships the "no fish match" message hidden', () => {
+		expect(html).toMatch(/<div id="empty" hidden/);
+		expect(visibleText(html)).toContain('No fish match that.');
+	});
+});

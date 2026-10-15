@@ -1,0 +1,62 @@
+{
+  "names": {
+    "english": "Rainbow trout",
+    "scientific": "Oncorhynchus mykiss"
+  },
+  "taxonomy": {
+    "family": "Salmonidae",
+    "order": "Salmoniformes",
+    "gbifKey": 5204019,
+    "wikidata": "Q187986"
+  },
+  "water": [
+    "freshwater",
+    "brackish",
+    "marine"
+  ],
+  "uses": [
+    "sport"
+  ],
+  "summary": "Rainbow trout can spend its entire life in freshwater, while the migratory form, steelhead, grows at sea and returns to rivers to spawn. The forms belong to the same species. Unlike Pacific salmon, steelhead can survive to spawn more than once.",
+  "nativeRange": "Pacific-draining waters of western North America.",
+  "size": {
+    "maxCm": 114.3
+  },
+  "identify": {
+    "features": [
+      "Square tail covered in small dark spots arranged in radiating rows.",
+      "White inside the mouth and on the gums.",
+      "Spawning fish show a pink to reddish stripe along the side."
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "lake",
+      "estuary",
+      "coastal"
+    ],
+    "description": "Freshwater rivers and lakes support resident fish and spawning steelhead; migratory fish also use estuaries and the ocean.",
+    "diet": "Aquatic and terrestrial invertebrates, fish eggs, crustaceans and small fish."
+  },
+  "photos": [
+    {
+      "file": "inat-515352531.jpg",
+      "credit": "(c) Mike Heine, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/515352531"
+    },
+    {
+      "file": "inat-515352562.jpg",
+      "credit": "(c) Mike Heine, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/515352562"
+    }
+  ],
+  "sources": [
+    "https://www.fws.gov/species/rainbow-trout-oncorhynchus-mykiss",
+    "https://www.dnr.state.mn.us/fishing/trout/northshore.html",
+    "https://www.gbif.org/species/5204019",
+    "https://www.wikidata.org/wiki/Q187986"
+  ],
+  "lastReviewed": "2026-10-13"
+}

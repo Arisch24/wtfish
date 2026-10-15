@@ -1,0 +1,52 @@
+{
+  "names": {
+    "english": "Giant featherback",
+    "scientific": "Chitala lopis",
+    "malay": "Belida",
+    "other": [
+      "Indonesian featherback"
+    ]
+  },
+  "taxonomy": {
+    "family": "Notopteridae",
+    "order": "Osteoglossiformes",
+    "gbifKey": 2402271,
+    "wikidata": "Q4920467"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "food"
+  ],
+  "summary": "The giant featherback belongs to a group whose Malaysian identifications have changed as researchers resolve old taxonomic confusion. Chitala lopis was rediscovered in Indonesia after an extinct assessment; Malaysian Chitala records need careful species-level checking.",
+  "nativeRange": "Sundaland, including Java, Sumatra and Borneo; recent taxonomic work also includes Malaysian records.",
+  "habitat": {
+    "environments": [
+      "lowland-river",
+      "reservoir"
+    ],
+    "description": "Freshwater river systems; Kenyir specimens have been reported cautiously as Chitala cf. lopis rather than a fully confirmed identification."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Perak",
+        "records": 1
+      }
+    ]
+  },
+  "sources": [
+    "https://doi.org/10.3897/BDJ.11.e100337",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=10125",
+    "https://www.int-res.com/articles/esr2023/52/n052p285.pdf",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC13093427/",
+    "https://www.dof.gov.my/wp-content/uploads/2024/07/SPESIS-TEMPATAN-POSTER-A1.pdf",
+    "https://www.gbif.org/species/2402271",
+    "https://www.wikidata.org/wiki/Q4920467"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "EX",
+  "iucnNote": "IUCN lists this fish as extinct, but it has since been rediscovered in Indonesia."
+}

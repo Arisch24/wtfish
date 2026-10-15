@@ -1,0 +1,18 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<section
+	class="rounded-xl border border-notice-line bg-notice px-4 py-3.5"
+	aria-labelledby="before-you-fish"
+	data-section="before-you-fish"
+>
+	<h2 id="before-you-fish" class="font-marker text-[17px] leading-snug">{title}</h2>
+	<div class="mt-1 text-sm">
+		<slot />
+	</div>
+</section>

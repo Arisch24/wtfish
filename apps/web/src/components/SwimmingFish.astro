@@ -1,0 +1,10 @@
+---
+import Icon from './Icon.astro';
+---
+
+<!-- Only the fish goes under reduced motion. The strip keeps its height for the hanging sign's line. -->
+<div class="pointer-events-none relative h-9 overflow-hidden" aria-hidden="true" data-swim-strip>
+	<div class="absolute top-3 animate-swim motion-reduce:hidden">
+		<div class="animate-bob"><Icon name="fish" class="h-1.5 w-8 -scale-x-100 text-salt opacity-35" /></div>
+	</div>
+</div>

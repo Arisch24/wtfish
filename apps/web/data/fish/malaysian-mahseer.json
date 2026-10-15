@@ -1,0 +1,83 @@
+{
+  "names": {
+    "english": "Malaysian mahseer",
+    "scientific": "Tor tambroides",
+    "malay": "Kelah",
+    "other": [
+      "Malayan mahseer"
+    ],
+    "malayOther": [
+      "Kelah merah",
+      "Empurau"
+    ]
+  },
+  "taxonomy": {
+    "family": "Cyprinidae",
+    "order": "Cypriniformes",
+    "gbifKey": 2364503,
+    "wikidata": "Q3768599"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "sport",
+    "food"
+  ],
+  "summary": "A mahseer associated with clear forest rivers, with different local names in Peninsular Malaysia and Sarawak. Malaysian Tor identification remains under study, so a local name or lip shape alone does not settle the species.",
+  "nativeRange": "Southeast Asia, including Malaysia and Indonesia.",
+  "habitat": {
+    "environments": [
+      "forest-river"
+    ],
+    "description": "Clean, flowing forest rivers; mahseer populations depend on intact upstream catchments.",
+    "diet": "Fruit is part of the diet; captive fish are also fed bran."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Sarawak",
+        "records": 42
+      },
+      {
+        "state": "Pahang",
+        "records": 15
+      },
+      {
+        "state": "Kelantan",
+        "records": 7
+      },
+      {
+        "state": "Terengganu",
+        "records": 6
+      },
+      {
+        "state": "Sabah",
+        "records": 3
+      },
+      {
+        "state": "Perak",
+        "records": 1
+      }
+    ]
+  },
+  "eating": "Valued as a freshwater food fish, including in Sarawak, where it is sold.",
+  "photos": [
+    {
+      "file": "inat-103002889.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/103002889"
+    }
+  ],
+  "sources": [
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=31936",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065745/",
+    "https://www.zookemaman.my/fish/malayan-mahseer/",
+    "https://www.gbif.org/species/2364503",
+    "https://www.wikidata.org/wiki/Q3768599"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "DD"
+}

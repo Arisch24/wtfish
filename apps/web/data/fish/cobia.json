@@ -1,0 +1,83 @@
+{
+  "names": {
+    "english": "Cobia",
+    "scientific": "Rachycentron canadum",
+    "malay": "Aruan tasik",
+    "malayOther": [
+      "Haruan tasik",
+      "Jaman"
+    ]
+  },
+  "taxonomy": {
+    "family": "Rachycentridae",
+    "order": "Perciformes",
+    "gbifKey": 2391729,
+    "wikidata": "Q833940"
+  },
+  "water": [
+    "marine",
+    "brackish"
+  ],
+  "uses": [
+    "sport",
+    "food"
+  ],
+  "summary": "An elongated predator with a broad, flattened head and a projecting lower jaw. Cobia are sometimes seen swimming alongside large sharks and rays but have no sucker disc.",
+  "nativeRange": "Tropical and warm temperate seas.",
+  "iucn": "LC",
+  "size": {
+    "maxCm": 200
+  },
+  "identify": {
+    "features": [
+      "Broad flattened head",
+      "Lower jaw projects beyond the upper jaw",
+      "Separate short spines before the soft dorsal fin"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "reef",
+      "coastal",
+      "estuary"
+    ],
+    "description": "Shallow reefs and rocky shores, occasionally estuaries.",
+    "diet": "Fish, squid and crabs."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Sabah",
+        "records": 5
+      },
+      {
+        "state": "Terengganu",
+        "records": 3
+      },
+      {
+        "state": "Pahang",
+        "records": 1
+      }
+    ]
+  },
+  "eating": "Sold fresh as a food fish and also farmed.",
+  "photos": [
+    {
+      "file": "inat-221764324.jpg",
+      "credit": "(c) toad-wife, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/221764324"
+    }
+  ],
+  "sources": [
+    "https://fishesofaustralia.net.au/home/species/4421",
+    "https://nas.er.usgs.gov/queries/FactSheet.aspx?lang=en&speciesID=2987",
+    "https://www.lkim.gov.my/wp-content/uploads/2023/01/Buku-Ikan-Ikan-Komersial-Di-Malaysia.pdf",
+    "https://www.gbif.org/species/2391729",
+    "https://www.wikidata.org/wiki/Q833940",
+    "https://www.fao.org/4/x2400e/x2400e50.pdf",
+    "https://www.fao.org/fishery/docs/DOCUMENT/aquaculture/CulturedSpecies/file/en/en_cobia.htm"
+  ],
+  "lastReviewed": "2026-10-13"
+}

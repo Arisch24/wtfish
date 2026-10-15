@@ -1,0 +1,83 @@
+{
+  "names": {
+    "english": "Hound needlefish",
+    "scientific": "Tylosurus crocodilus",
+    "malay": "Todak buaya",
+    "other": [
+      "Houndfish"
+    ],
+    "malayOther": [
+      "Todak"
+    ]
+  },
+  "taxonomy": {
+    "family": "Belonidae",
+    "order": "Beloniformes",
+    "gbifKey": 4286150,
+    "wikidata": "Q3278635"
+  },
+  "water": [
+    "marine"
+  ],
+  "uses": [
+    "sport",
+    "food"
+  ],
+  "summary": "A surface-dwelling needlefish with long jaws and large teeth. It hunts small fish near the coast and offshore; large fish can leap clear of the water.",
+  "nativeRange": "Tropical and warm temperate seas.",
+  "iucn": "LC",
+  "size": {
+    "maxCm": 150
+  },
+  "identify": {
+    "features": [
+      "Both jaws form a long toothed beak",
+      "Tail strongly forked with a longer lower lobe",
+      "Blue-green back and silver sides"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "coastal",
+      "offshore"
+    ],
+    "description": "Surface waters along coasts and offshore.",
+    "diet": "Small fish."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Sabah",
+        "records": 11
+      }
+    ]
+  },
+  "photos": [
+    {
+      "file": "inat-621709176.jpg",
+      "credit": "no rights reserved",
+      "license": "CC0",
+      "url": "https://www.inaturalist.org/photos/621709176"
+    },
+    {
+      "file": "inat-366872338.jpg",
+      "credit": "(c) Ditch Townsend, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/366872338"
+    },
+    {
+      "file": "inat-281619778.jpg",
+      "credit": "(c) portioid, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/281619778"
+    }
+  ],
+  "sources": [
+    "https://www.fao.org/4/x2400e/x2400e09.pdf",
+    "https://www.lkim.gov.my/wp-content/uploads/2023/01/Buku-Ikan-Ikan-Komersial-Di-Malaysia.pdf",
+    "https://www.gbif.org/species/4286150",
+    "https://www.wikidata.org/wiki/Q3278635"
+  ],
+  "lastReviewed": "2026-10-13"
+}

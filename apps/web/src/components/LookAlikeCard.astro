@@ -1,0 +1,41 @@
+---
+import { Picture } from 'astro:assets';
+import { getEntry } from 'astro:content';
+import { photoFor } from '../lib/photos';
+import Icon from './Icon.astro';
+
+interface Props {
+	id: string;
+	difference: string;
+}
+
+const { id, difference } = Astro.props;
+const other = await getEntry('fish', id);
+if (!other) throw new Error(`Look-alike "${id}" has no data file`);
+const photo = other.data.photos?.[0];
+---
+
+<li class="flex gap-3 py-2.5">
+	{
+		photo ? (
+			<div class="w-24 shrink-0">
+				<Picture
+					src={photoFor(id, photo.file)}
+					alt=""
+					widths={[160, 320]}
+					sizes="96px"
+					formats={['avif', 'webp']}
+					class="aspect-[4/3] w-24 shrink-0 rounded-md border border-grout object-cover"
+				/>
+			</div>
+		) : (
+			<div class="flex aspect-[4/3] w-24 shrink-0 items-center justify-center rounded-md border border-grout bg-tile">
+				<Icon name="fish" class="w-14 text-grout" />
+			</div>
+		)
+	}
+	<div class="min-w-0">
+		<a href={`/fish/${id}/`} class="font-semibold text-salt underline underline-offset-2">{other.data.names.english}</a>
+		<p class="text-[13px]">{difference}</p>
+	</div>
+</li>

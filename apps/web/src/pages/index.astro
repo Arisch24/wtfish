@@ -1,121 +1,64 @@
 ---
 import { getCollection } from 'astro:content';
+import Bubbles from '../components/Bubbles.astro';
+import ConfusedFish from '../components/ConfusedFish.astro';
+import FishCard from '../components/FishCard.astro';
+import FilterBar from '../components/FilterBar.tsx';
+import HangingSign from '../components/HangingSign.astro';
+import SwimmingFish from '../components/SwimmingFish.astro';
 import Base from '../layouts/Base.astro';
+import { STATES } from '../lib/fish-schema';
+import { formatDate, lastUpdated } from '../lib/format';
 
-const fish = (await getCollection('fish')).sort((a, b) =>
-	a.data.commonName.localeCompare(b.data.commonName),
-);
+const fish = (await getCollection('fish')).sort((a, b) => a.data.names.english.localeCompare(b.data.names.english));
+const recordedStates = STATES.filter((state) => fish.some((f) => f.data.malaysia?.states?.some((s) => s.state === state)));
+const updated = lastUpdated(fish.map((entry) => entry.data));
 ---
 
-<Base title="wtfish: fish directory">
-	<h1>Fish directory</h1>
-	<div class="controls">
-		<input id="search" type="search" placeholder="Search by name…" aria-label="Search fish" />
-		<select id="category" aria-label="Filter by category">
-			<option value="">All fish</option>
-			<option value="aquarium">Aquarium</option>
-			<option value="game">Game</option>
-		</select>
+<Base title="wtfish: what the fish is that?">
+	<div class="tile-surface">
+		<SwimmingFish />
+		<div class="mx-auto max-w-6xl px-4 sm:px-6">
+			<section class="grid gap-x-6 gap-y-4 pb-8 pt-4 md:grid-cols-[1fr_auto]">
+				<div class="relative row-start-2 self-end md:col-start-1 md:row-start-1">
+					<Bubbles />
+					<p class="relative text-xs font-semibold uppercase tracking-[0.06em] text-salt">Fish directory · Malaysia first</p>
+					<h1 class="relative mt-1.5 font-display text-[26px] font-bold leading-[1.15] tracking-[-0.035em] sm:text-[30px]">
+						What the fish is that?
+					</h1>
+					<p class="relative mt-2 max-w-xl text-[15px] text-muted">
+						Names, sizes, habitat and where each fish lives in Malaysia. Every fact links to its source.
+					</p>
+					{updated && <p class="relative mt-2.5 text-xs text-muted">Last updated {formatDate(updated)}</p>}
+				</div>
+				<!-- The line reaches up to the header: 36px fish strip + 16px padding. On phones the sign hangs above the headline. -->
+				<HangingSign
+					text={`${fish.length} fish & counting`}
+					class="row-start-1 -mt-[52px] justify-self-end md:col-start-2"
+				/>
+			</section>
+		</div>
 	</div>
-	<p id="empty" hidden>No fish match your search.</p>
-	<ul class="grid">
-		{
-			fish.map(({ id, data }) => (
-				<li
-					data-name={`${data.commonName} ${data.scientificName}`.toLowerCase()}
-					data-category={data.category}
-				>
-					<a href={`/fish/${id}/`}>
-						<span class="name">{data.commonName}</span>
-						<span class="sci">{data.scientificName}</span>
-						<span class="tags">
-							{data.category} · {data.water}
-						</span>
-					</a>
-				</li>
-			))
-		}
-	</ul>
+	<div id="filters" class="border-y border-grout bg-white">
+		<div class="mx-auto max-w-6xl px-4 py-3 sm:px-6">
+			<FilterBar client:load states={recordedStates} total={fish.length} />
+		</div>
+	</div>
+	<div class="mx-auto max-w-6xl px-4 pt-6 sm:px-6">
+		<ul id="fish-grid" class="grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-4">
+			{fish.map((entry) => <FishCard fish={entry} />)}
+		</ul>
+		<div id="empty" hidden class="flex flex-col items-center gap-2 py-16 text-center">
+			<ConfusedFish class="w-24" />
+			<p class="font-display text-lg font-bold tracking-[-0.02em]">No fish match that.</p>
+			<p class="text-muted">Even the fish is confused. Try fewer filters.</p>
+			<button
+				id="clear-filters"
+				type="button"
+				class="mt-2 rounded-md border border-control bg-white px-3.5 py-1.5 text-[13px] font-medium hover:bg-tile"
+			>
+				Clear filters
+			</button>
+		</div>
+	</div>
 </Base>
-
-<script>
-	const search = document.querySelector<HTMLInputElement>('#search')!;
-	const category = document.querySelector<HTMLSelectElement>('#category')!;
-	const empty = document.querySelector<HTMLParagraphElement>('#empty')!;
-	const items = [...document.querySelectorAll<HTMLLIElement>('.grid li')];
-
-	function filter() {
-		const q = search.value.trim().toLowerCase();
-		const c = category.value;
-		let shown = 0;
-		for (const li of items) {
-			const match = li.dataset.name!.includes(q) && (!c || li.dataset.category === c);
-			li.hidden = !match;
-			if (match) shown++;
-		}
-		empty.hidden = shown > 0;
-	}
-
-	search.addEventListener('input', filter);
-	category.addEventListener('change', filter);
-</script>
-
-<style>
-	.controls {
-		display: flex;
-		gap: 0.5rem;
-		flex-wrap: wrap;
-		margin-bottom: 1rem;
-	}
-	input,
-	select {
-		font: inherit;
-		padding: 0.5rem 0.75rem;
-		border: 1px solid var(--border);
-		border-radius: 0.5rem;
-		background: var(--surface);
-		color: var(--text);
-	}
-	input {
-		flex: 1 1 16rem;
-	}
-	.grid {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
-		gap: 0.75rem;
-	}
-	.grid li[hidden] {
-		display: none;
-	}
-	.grid a {
-		display: flex;
-		flex-direction: column;
-		gap: 0.125rem;
-		height: 100%;
-		padding: 1rem;
-		background: var(--surface);
-		border: 1px solid var(--border);
-		border-radius: 0.75rem;
-		color: var(--text);
-		text-decoration: none;
-	}
-	.grid a:hover {
-		border-color: var(--accent);
-	}
-	.name {
-		font-weight: 600;
-	}
-	.sci {
-		font-style: italic;
-		color: var(--muted);
-	}
-	.tags {
-		margin-top: 0.5rem;
-		font-size: 0.85rem;
-		color: var(--muted);
-		text-transform: capitalize;
-	}
-</style>

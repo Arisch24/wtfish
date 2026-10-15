@@ -23,3 +23,9 @@ build/
 
 # OS
 .DS_Store
+
+# Brainstorm mockups
+.superpowers/
+
+# Implementation plans (kept locally, not committed)
+docs/superpowers/plans/

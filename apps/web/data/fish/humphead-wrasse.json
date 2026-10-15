@@ -1,0 +1,80 @@
+{
+  "names": {
+    "english": "Humphead wrasse",
+    "scientific": "Cheilinus undulatus",
+    "malay": "Mameng"
+  },
+  "taxonomy": {
+    "family": "Labridae",
+    "order": "Perciformes",
+    "gbifKey": 2383313,
+    "wikidata": "Q179377"
+  },
+  "water": [
+    "marine"
+  ],
+  "uses": [
+    "food"
+  ],
+  "summary": "A large coral-reef wrasse whose adults develop a prominent forehead hump. Demand from the reef-fish trade has contributed to overexploitation; international trade is regulated under CITES.",
+  "nativeRange": "Tropical Indo-Pacific.",
+  "iucn": "EN",
+  "size": {
+    "maxCm": 229
+  },
+  "identify": {
+    "features": [
+      "Large forehead hump in adults",
+      "Thick lips",
+      "Two dark lines extending behind the eye",
+      "Blue-green adult head with fine winding lines"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "reef"
+    ],
+    "description": "Indo-Pacific coral reefs, commonly at depths of 5–60 metres.",
+    "diet": "Fish, molluscs and crustaceans."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Sabah",
+        "records": 3
+      }
+    ],
+    "rules": "Listed in CITES Appendix II: international trade is controlled, rather than unrestricted. Malaysian permit requirements must be checked with the Department of Fisheries; this is not a statement that catching or trading the fish is automatically permitted."
+  },
+  "eating": "Traded as a high-value reef fish; market demand has put pressure on wild stocks.",
+  "photos": [
+    {
+      "file": "inat-294332977.jpg",
+      "credit": "(c) Sockrosma, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/294332977"
+    },
+    {
+      "file": "inat-290189240.jpg",
+      "credit": "(c) portioid, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/290189240"
+    },
+    {
+      "file": "inat-512307195.jpg",
+      "credit": "(c) Ro Hill, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/512307195"
+    }
+  ],
+  "sources": [
+    "https://eprints.ums.edu.my/id/eprint/25159/1/Sex%20determination%20and%20gonad%20maturation%20of%20Humphead%20Wrasse%2C%20Cheilinus%20Undulatus%20in%20captivity.pdf",
+    "https://files.wildlife.gov.my/wildlife-wp-media/2026/02/24034548/BMENG-PUA-411_2025_Pindaan-Jadual-Ketiga-686.pdf",
+    "https://www.gbif.org/species/2383313",
+    "https://www.wikidata.org/wiki/Q179377",
+    "https://fishesofaustralia.net.au/home/species/2962",
+    "https://eprints.ums.edu.my/id/eprint/41255/1/24%20PAGES.pdf"
+  ],
+  "lastReviewed": "2026-10-13"
+}

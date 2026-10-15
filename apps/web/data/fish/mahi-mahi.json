@@ -1,0 +1,77 @@
+{
+  "names": {
+    "english": "Mahi-mahi",
+    "scientific": "Coryphaena hippurus"
+  },
+  "taxonomy": {
+    "family": "Coryphaenidae",
+    "order": "Perciformes",
+    "gbifKey": 2381939,
+    "wikidata": "Q14443"
+  },
+  "water": [
+    "marine"
+  ],
+  "uses": [
+    "sport"
+  ],
+  "summary": "Mahi-mahi is a fast-growing ocean fish with green-blue upper sides and golden flanks. Smaller fish often gather near floating objects, including seaweed. It is sought for both sport and food, and Malaysia’s biodiversity records include it off Pahang.",
+  "nativeRange": "Tropical and subtropical ocean waters.",
+  "size": {
+    "maxCm": 213.4,
+    "maxKg": 39.9
+  },
+  "identify": {
+    "features": [
+      "Green-blue back and golden or silvery lower sides",
+      "Dark and light spots along the sides",
+      "Adult males have a steep, squared forehead; females have a rounded profile"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "offshore"
+    ],
+    "description": "Near-surface ocean water, with smaller fish frequently associated with floating seaweed or other objects.",
+    "diet": "Small pelagic fish, young tuna and invertebrates."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Terengganu",
+        "records": 1
+      }
+    ]
+  },
+  "eating": "The flesh is lean and fairly firm, with a mild sweetness and large flakes; grilling and steaming are common preparations.",
+  "photos": [
+    {
+      "file": "inat-178653930.jpg",
+      "credit": "no rights reserved",
+      "license": "CC0",
+      "url": "https://www.inaturalist.org/photos/178653930"
+    },
+    {
+      "file": "inat-532593914.jpg",
+      "credit": "(c) Uma Mezzanotte, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/532593914"
+    },
+    {
+      "file": "inat-505895933.jpg",
+      "credit": "(c) Cricket Raspet, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/505895933"
+    }
+  ],
+  "sources": [
+    "https://www.fisheries.noaa.gov/species/atlantic-mahi-mahi",
+    "https://www.mybis.gov.my/sp/26151",
+    "https://www.mybis.gov.my/one/discover.php?rr=4792",
+    "https://www.gbif.org/species/2381939",
+    "https://www.wikidata.org/wiki/Q14443"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

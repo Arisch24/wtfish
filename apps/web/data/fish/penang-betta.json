@@ -1,0 +1,107 @@
+{
+  "names": {
+    "english": "Penang betta",
+    "scientific": "Betta pugnax"
+  },
+  "taxonomy": {
+    "family": "Osphronemidae",
+    "order": "Perciformes",
+    "gbifKey": 2394033,
+    "wikidata": "Q1091266"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "aquarium"
+  ],
+  "summary": "Penang betta is a wild mouthbrooding fighting fish native to Peninsular Malaysia and neighbouring areas. The male carries developing eggs and fry in its mouth. On Penang it has been collected in clear hill streams, particularly in sheltered margins with roots and leaf litter.",
+  "nativeRange": "Peninsular Malaysia, Singapore and parts of the Riau, Lingga and Anambas islands and Sumatra.",
+  "size": {
+    "maxCm": 12
+  },
+  "identify": {
+    "features": [
+      "Blue to green iridescence on the gill cover and body",
+      "Slender body and broadly pointed tail",
+      "Males may have transverse bars on the tail"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "forest-river"
+    ],
+    "description": "Forest streams with cover from roots, overhanging vegetation and submerged leaf litter."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Johor",
+        "records": 21
+      },
+      {
+        "state": "Pulau Pinang",
+        "records": 12
+      },
+      {
+        "state": "Perak",
+        "records": 6
+      },
+      {
+        "state": "Sarawak",
+        "records": 4
+      },
+      {
+        "state": "Pahang",
+        "records": 2
+      },
+      {
+        "state": "Selangor",
+        "records": 2
+      },
+      {
+        "state": "Melaka",
+        "records": 1
+      },
+      {
+        "state": "Terengganu",
+        "records": 1
+      }
+    ]
+  },
+  "aquarium": {
+    "minTankLitres": 57,
+    "tempC": [
+      20,
+      28
+    ],
+    "ph": [
+      5,
+      7.5
+    ],
+    "temperament": "peaceful"
+  },
+  "photos": [
+    {
+      "file": "inat-481357195.jpg",
+      "credit": "(c) Ooi Qie, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/481357195"
+    },
+    {
+      "file": "inat-125779421.jpg",
+      "credit": "(c) syuhada, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/125779421"
+    }
+  ],
+  "sources": [
+    "https://lkcnhm.nus.edu.sg/wp-content/uploads/sites/10/2021/01/S13_43-99.pdf",
+    "https://www.theaquariumwiki.com/wiki/Betta_pugnax",
+    "https://www.gbif.org/species/2394033",
+    "https://www.wikidata.org/wiki/Q1091266"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

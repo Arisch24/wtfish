@@ -1,0 +1,67 @@
+{
+  "names": {
+    "english": "Common carp",
+    "scientific": "Cyprinus carpio"
+  },
+  "taxonomy": {
+    "family": "Cyprinidae",
+    "order": "Cypriniformes",
+    "gbifKey": 4286975,
+    "wikidata": "Q81110"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "sport"
+  ],
+  "summary": "Common carp is a large Eurasian freshwater fish that has been moved widely for food production and fishing. It searches bottom sediments for food, often clouding the water and disturbing aquatic plants. Its cultivated forms include mirror and leather carp.",
+  "nativeRange": "Eurasia, including the Caspian, Black and Aral Sea basins and the Danube region.",
+  "size": {
+    "maxCm": 122
+  },
+  "identify": {
+    "features": [
+      "Gold to brown body with reddish fins",
+      "Barbels beside the mouth",
+      "Blunt snout and triangular head"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "lake",
+      "reservoir",
+      "lowland-river",
+      "estuary"
+    ],
+    "description": "Lakes, ponds and slow lower river reaches; it also tolerates some brackish water.",
+    "diet": "Bottom-dwelling invertebrates, plant material, detritus and plankton."
+  },
+  "photos": [
+    {
+      "file": "inat-185316379.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/185316379"
+    },
+    {
+      "file": "inat-110834346.jpg",
+      "credit": "(c) Юлия, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/110834346"
+    },
+    {
+      "file": "inat-110834353.jpg",
+      "credit": "(c) Юлия, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/110834353"
+    }
+  ],
+  "sources": [
+    "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=4",
+    "https://www.gbif.org/species/4286975",
+    "https://www.wikidata.org/wiki/Q81110"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

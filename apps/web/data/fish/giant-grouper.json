@@ -1,0 +1,69 @@
+{
+  "names": {
+    "english": "Giant grouper",
+    "scientific": "Epinephelus lanceolatus",
+    "malay": "Kerapu kertang"
+  },
+  "taxonomy": {
+    "family": "Serranidae",
+    "order": "Perciformes",
+    "gbifKey": 2388587,
+    "wikidata": "Q847747"
+  },
+  "water": [
+    "marine",
+    "brackish"
+  ],
+  "uses": [
+    "sport",
+    "food"
+  ],
+  "summary": "One of the largest reef fishes, with a bulky body and rounded tail. Its colouring changes markedly with age: small juveniles have conspicuous yellow and dark patches, while adults are mottled brown or grey.",
+  "nativeRange": "Tropical Indo-Pacific.",
+  "iucn": "DD",
+  "size": {
+    "maxCm": 270
+  },
+  "identify": {
+    "features": [
+      "Very robust body and broad head",
+      "Rounded tail",
+      "Yellow-and-black juveniles become darker mottled adults"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "reef",
+      "estuary",
+      "coastal"
+    ],
+    "description": "Caves, wrecks, estuaries and sheltered reefs; usually solitary.",
+    "diet": "Fish, lobsters and crabs."
+  },
+  "malaysia": {
+    "status": "native"
+  },
+  "eating": "Sold in the live reef-fish trade and also produced through aquaculture.",
+  "photos": [
+    {
+      "file": "inat-38673596.jpg",
+      "credit": "(c) Ewout Knoester, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/38673596"
+    },
+    {
+      "file": "inat-340673409.jpg",
+      "credit": "(c) Ewout Knoester, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/340673409"
+    }
+  ],
+  "sources": [
+    "https://fishesofaustralia.net.au/home/species/4672",
+    "https://www.lkim.gov.my/wp-content/uploads/2023/01/Buku-Ikan-Ikan-Komersial-Di-Malaysia.pdf",
+    "https://www.gbif.org/species/2388587",
+    "https://www.wikidata.org/wiki/Q847747",
+    "https://repository.seafdec.org.my/bitstream/handle/20.500.12561/1010/Valid%20Local%20Name%20of%20Malaysia%20Marine%20Fishes_DOF_2.pdf?isAllowed=y&sequence=1"
+  ],
+  "lastReviewed": "2026-10-13"
+}

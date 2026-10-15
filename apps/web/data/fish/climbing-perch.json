@@ -1,0 +1,108 @@
+{
+  "names": {
+    "english": "Climbing perch",
+    "scientific": "Anabas testudineus",
+    "malay": "Puyu",
+    "other": [
+      "Asian climbing perch"
+    ]
+  },
+  "taxonomy": {
+    "family": "Anabantidae",
+    "order": "Perciformes",
+    "gbifKey": 2391579,
+    "wikidata": "Q10540515"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "food"
+  ],
+  "summary": "The climbing perch is a hardy freshwater fish that can breathe atmospheric air. It inhabits shallow waters and can persist where many other fishes would struggle with low water levels.",
+  "nativeRange": "South and Southeast Asia, including Malaysia and Indonesia.",
+  "size": {
+    "maxCm": 23
+  },
+  "identify": {
+    "features": [
+      "Compact rectangular body with a rounded head",
+      "Olive-grey colour, sometimes with dark bars",
+      "Dark spots on the gill cover and tail region"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "lowland-river",
+      "rice-field"
+    ],
+    "description": "Shallow ponds and streams in rural and forested landscapes.",
+    "diet": "Omnivorous; food includes small fish and insects."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Sabah",
+        "records": 13
+      },
+      {
+        "state": "Sarawak",
+        "records": 8
+      },
+      {
+        "state": "Melaka",
+        "records": 3
+      },
+      {
+        "state": "Pahang",
+        "records": 3
+      },
+      {
+        "state": "Pulau Pinang",
+        "records": 3
+      },
+      {
+        "state": "Perak",
+        "records": 2
+      },
+      {
+        "state": "Selangor",
+        "records": 2
+      },
+      {
+        "state": "Johor",
+        "records": 1
+      }
+    ]
+  },
+  "photos": [
+    {
+      "file": "inat-60123455.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/60123455"
+    },
+    {
+      "file": "inat-60123464.jpg",
+      "credit": "(c) Ong Jyh Seng, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/60123464"
+    },
+    {
+      "file": "inat-250663414.jpg",
+      "credit": "(c) Zakqary Roy, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/250663414"
+    }
+  ],
+  "sources": [
+    "https://www.nparks.gov.sg/florafaunaweb/fauna/9/1/913",
+    "https://www.dof.gov.my/wp-content/uploads/2024/07/SPESIS-TEMPATAN-POSTER-A1.pdf",
+    "https://www.fao.org/4/ak870e/ak870e00.pdf",
+    "https://www.gbif.org/species/2391579",
+    "https://www.wikidata.org/wiki/Q10540515"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

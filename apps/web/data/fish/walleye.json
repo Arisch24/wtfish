@@ -1,0 +1,56 @@
+{
+  "names": {
+    "english": "Walleye",
+    "scientific": "Sander vitreus"
+  },
+  "taxonomy": {
+    "family": "Percidae",
+    "order": "Perciformes",
+    "gbifKey": 2382172,
+    "wikidata": "Q1462862"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "sport"
+  ],
+  "summary": "Walleye is a cool-water freshwater predator of North American lakes, rivers and reservoirs. Its eyesight helps it find prey in turbid water. It has been introduced beyond its native drainage basins to support sport fishing.",
+  "nativeRange": "The Great Lakes and Mississippi River drainage basins of North America.",
+  "size": {
+    "maxCm": 106.7
+  },
+  "identify": {
+    "features": [
+      "Olive or gold body colour",
+      "Large black mark at the rear of the spiny dorsal fin",
+      "White tip on the lower tail lobe"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "lake",
+      "reservoir",
+      "lowland-river"
+    ],
+    "description": "Uses both clear and turbid water, in shallow and deep habitats, but avoids warm water.",
+    "diet": "Young fish begin with small insects; larger walleye mainly eat fish, alongside crayfish, frogs and other animals."
+  },
+  "photos": [
+    {
+      "file": "inat-353607294.jpg",
+      "credit": "(c) Quinn, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/353607294"
+    }
+  ],
+  "sources": [
+    "https://www.fws.gov/species/walleye-sander-vitreus",
+    "https://www.in.gov/dnr/fish-and-wildlife/fishing/walleye-fishing/",
+    "https://www.dnr.state.mn.us/fish/walleye/biology.html",
+    "https://www.gbif.org/species/2382172",
+    "https://www.wikidata.org/wiki/Q1462862"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

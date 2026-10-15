@@ -1,0 +1,70 @@
+{
+  "names": {
+    "english": "Oscar",
+    "scientific": "Astronotus ocellatus"
+  },
+  "taxonomy": {
+    "family": "Cichlidae",
+    "order": "Perciformes",
+    "gbifKey": 2370243,
+    "wikidata": "Q3442"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "aquarium"
+  ],
+  "summary": "A large South American cichlid frequently kept in aquariums. Wild fish have eye-like markings near the tail, while aquarium strains include red, tiger and albino forms; adults defend territories and can eat smaller fish.",
+  "nativeRange": "Amazon basin and other tropical South American drainages.",
+  "size": {
+    "maxCm": 30.5
+  },
+  "identify": {
+    "features": [
+      "Robust cichlid body with a large mouth.",
+      "Wild-type adults have ringed eye spots near the tail and dorsal fin; aquarium colours vary.",
+      "Juveniles show pale and orange wavy bands with spots on the head."
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "lowland-river"
+    ],
+    "description": "Slow whitewater habitats, with shelter beneath submerged branches.",
+    "diet": "Fish, crustaceans, insects and some fruit or other plant material."
+  },
+  "aquarium": {
+    "minTankLitres": 265,
+    "tempC": [
+      22.2,
+      25
+    ],
+    "ph": [
+      6,
+      8
+    ],
+    "temperament": "semi-aggressive"
+  },
+  "photos": [
+    {
+      "file": "inat-53667009.jpg",
+      "credit": "(c) Matt Muir, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/53667009"
+    },
+    {
+      "file": "inat-118574420.jpg",
+      "credit": "(c) Vincent A. Vos, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/118574420"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Oscar_(fish)",
+    "https://www.liveaquaria.com/products/tiger-oscar",
+    "https://www.gbif.org/species/2370243",
+    "https://www.wikidata.org/wiki/Q3442"
+  ],
+  "lastReviewed": "2026-10-13"
+}

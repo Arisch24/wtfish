@@ -1,0 +1,82 @@
+{
+  "names": {
+    "english": "Dwarf rasbora",
+    "scientific": "Boraras maculatus"
+  },
+  "taxonomy": {
+    "family": "Cyprinidae",
+    "order": "Cypriniformes",
+    "gbifKey": 2366590,
+    "wikidata": "Q765708"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "aquarium"
+  ],
+  "summary": "Dwarf rasbora is a miniature reddish freshwater fish marked with dark spots. Malaysian records include peat and acid-water habitats. Genetic research has found substantial differences between regional populations, making protection of several peat-swamp areas important for preserving their diversity.",
+  "nativeRange": "Peninsular Malaysia and neighbouring parts of Southeast Asia.",
+  "size": {
+    "maxCm": 2.5
+  },
+  "identify": {
+    "features": [
+      "Very small reddish body",
+      "Dark spots behind the gill cover and near the anal and tail fins",
+      "Males are generally more brightly coloured than females"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "peat-swamp"
+    ],
+    "description": "Acid-water and peat-swamp habitats in Peninsular Malaysia."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Johor",
+        "records": 2
+      },
+      {
+        "state": "Melaka",
+        "records": 2
+      },
+      {
+        "state": "Selangor",
+        "records": 1
+      }
+    ]
+  },
+  "aquarium": {
+    "minTankLitres": 38,
+    "tempC": [
+      24,
+      26
+    ],
+    "ph": [
+      5,
+      6.5
+    ],
+    "temperament": "peaceful"
+  },
+  "photos": [
+    {
+      "file": "inat-250556110.jpg",
+      "credit": "(c) Zakqary Roy, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/250556110"
+    }
+  ],
+  "sources": [
+    "https://www.mybis.gov.my/sp/23409",
+    "https://hazeportal.asean.org/publications/contrasting-genetic-and-morphological-differentiation-among-geographical-lineages-of-a-stenotopic-miniature-rasborine-boraras-maculatus-in-peninsular-malaysia/",
+    "https://www.theaquariumwiki.com/wiki/Boraras_maculatus",
+    "https://www.gbif.org/species/2366590",
+    "https://www.wikidata.org/wiki/Q765708"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

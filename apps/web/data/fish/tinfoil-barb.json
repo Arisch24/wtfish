@@ -1,0 +1,79 @@
+{
+  "names": {
+    "english": "Tinfoil barb",
+    "scientific": "Barbonymus schwanenfeldii",
+    "malay": "Lampam sungai",
+    "other": [
+      "Goldfoil barb"
+    ]
+  },
+  "taxonomy": {
+    "family": "Cyprinidae",
+    "order": "Cypriniformes",
+    "gbifKey": 2366101
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "food",
+    "aquarium"
+  ],
+  "summary": "The tinfoil barb is a native Malaysian barb that is also traded as an ornamental fish. Field surveys record it in forest rivers entering Kenyir Reservoir.",
+  "nativeRange": "Mainland Southeast Asia, Malaysia, Sumatra and Borneo.",
+  "habitat": {
+    "environments": [
+      "forest-river",
+      "reservoir"
+    ],
+    "description": "Freshwater rivers and reservoirs, including the Lawit, Perepek and Lepar rivers in the Kenyir catchment.",
+    "diet": "Wild Baram River specimens contained insects, plant material and other small organisms."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Sarawak",
+        "records": 19
+      },
+      {
+        "state": "Kelantan",
+        "records": 8
+      },
+      {
+        "state": "Perak",
+        "records": 5
+      },
+      {
+        "state": "Pahang",
+        "records": 3
+      },
+      {
+        "state": "Selangor",
+        "records": 3
+      },
+      {
+        "state": "Terengganu",
+        "records": 1
+      }
+    ]
+  },
+  "eating": "An important freshwater food fish in Malaysia.",
+  "sources": [
+    "https://doi.org/10.3897/BDJ.11.e100337",
+    "https://nas.er.usgs.gov/queries/FactSheet.aspx?SpeciesID=633",
+    "https://www.dof.gov.my/wp-content/uploads/2024/07/SPESIS-TEMPATAN-POSTER-A1.pdf",
+    "https://doi.org/10.46754/jssm.2021.06.007",
+    "https://ir.unimas.my/id/eprint/30467/",
+    "https://www.gbif.org/species/2366101"
+  ],
+  "lastReviewed": "2026-10-13",
+  "photos": [
+    {
+      "file": "commons-tinfoil-barb.jpg",
+      "credit": "Emőke Dénes / Wikimedia Commons (CC BY-SA 4.0)",
+      "license": "CC BY-SA",
+      "url": "https://commons.wikimedia.org/wiki/File:Barbonymus_schwanenfeldii_-_Bristol_Zoo.jpg"
+    }
+  ]
+}

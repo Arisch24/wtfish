@@ -1,0 +1,77 @@
+{
+  "names": {
+    "english": "Clown anemonefish",
+    "scientific": "Amphiprion ocellaris"
+  },
+  "taxonomy": {
+    "family": "Pomacentridae",
+    "order": "Perciformes",
+    "gbifKey": 5212106,
+    "wikidata": "Q1126155"
+  },
+  "water": [
+    "marine"
+  ],
+  "uses": [
+    "aquarium"
+  ],
+  "summary": "A small anemonefish from the eastern Indian Ocean and western Pacific, usually orange with three white bars. Wild groups shelter among sea-anemone tentacles, and the dominant fish is female.",
+  "nativeRange": "Eastern Indian Ocean and western Pacific.",
+  "size": {
+    "maxCm": 11
+  },
+  "identify": {
+    "features": [
+      "Three broad white bars across an orange or reddish-brown body; some populations are black.",
+      "White bars and fins have narrow black edges; typically eleven dorsal spines.",
+      "Stocky, oval body flattened from side to side."
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "reef",
+      "coastal"
+    ],
+    "description": "Sheltered lagoons and reef slopes, where groups occupy host sea anemones."
+  },
+  "aquarium": {
+    "minTankLitres": 76,
+    "tempC": [
+      22.2,
+      25.6
+    ],
+    "ph": [
+      8.1,
+      8.4
+    ],
+    "temperament": "peaceful"
+  },
+  "photos": [
+    {
+      "file": "inat-363228268.jpg",
+      "credit": "(c) Ditch Townsend, some rights reserved (CC BY-SA)",
+      "license": "CC BY-SA",
+      "url": "https://www.inaturalist.org/photos/363228268"
+    },
+    {
+      "file": "inat-265708494.jpg",
+      "credit": "(c) 呂一起(Lyu yi-chi), some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/265708494"
+    },
+    {
+      "file": "inat-265708509.jpg",
+      "credit": "(c) 呂一起(Lyu yi-chi), some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/265708509"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Amphiprion_ocellaris",
+    "https://www.liveaquaria.com/products/ocellaris-clownfish",
+    "https://www.gbif.org/species/5212106",
+    "https://www.wikidata.org/wiki/Q1126155"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

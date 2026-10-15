@@ -1,0 +1,83 @@
+{
+  "names": {
+    "english": "Pirapitinga",
+    "scientific": "Piaractus brachypomus",
+    "malay": "Pacu",
+    "other": [
+      "Red-bellied pacu",
+      "Cachama blanca"
+    ]
+  },
+  "taxonomy": {
+    "family": "Serrasalmidae",
+    "order": "Characiformes",
+    "gbifKey": 2353225,
+    "wikidata": "Q311732"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "food",
+    "sport"
+  ],
+  "summary": "The pirapitinga is a South American fish introduced to Malaysian waters and culture systems. It is often mistaken for a piranha, but its crushing teeth and largely fruit-based diet tell a different story.",
+  "nativeRange": "The Amazon basin of South America.",
+  "identify": {
+    "features": [
+      "Deep body",
+      "Two rows of crushing, molar-like teeth rather than the piranha’s cutting teeth",
+      "Small adipose fin without supporting rays"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "lowland-river",
+      "lake",
+      "reservoir"
+    ],
+    "description": "River floodplains, lagoons and flooded forests; Kenyir records relate to introduced cage culture.",
+    "diet": "Mostly plant food, including fruits and nuts from flooded forest trees."
+  },
+  "malaysia": {
+    "status": "introduced",
+    "states": [
+      {
+        "state": "Johor",
+        "records": 1
+      },
+      {
+        "state": "Selangor",
+        "records": 1
+      }
+    ]
+  },
+  "eating": "A valued food fish in South America.",
+  "photos": [
+    {
+      "file": "inat-605850861.jpg",
+      "credit": "(c) Schrodiskitten, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/605850861"
+    },
+    {
+      "file": "inat-309874192.jpg",
+      "credit": "(c) Jay Pruett, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/309874192"
+    },
+    {
+      "file": "inat-219195891.jpg",
+      "credit": "(c) Paul Hoekman, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/219195891"
+    }
+  ],
+  "sources": [
+    "https://nas.er.usgs.gov/queries/factsheet.aspx?SpeciesID=427&lang=en",
+    "https://doi.org/10.3897/BDJ.11.e100337",
+    "https://www.gbif.org/species/2353225",
+    "https://www.wikidata.org/wiki/Q311732"
+  ],
+  "lastReviewed": "2026-10-13"
+}

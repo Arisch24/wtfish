@@ -1,0 +1,54 @@
+{
+  "names": {
+    "english": "Bluegill",
+    "scientific": "Lepomis macrochirus"
+  },
+  "taxonomy": {
+    "family": "Centrarchidae",
+    "order": "Perciformes",
+    "gbifKey": 2394503,
+    "wikidata": "Q1148148"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "sport"
+  ],
+  "summary": "Bluegill is a small, deep-bodied North American sunfish with a blue cheek and a small mouth. It is frequently stocked in lakes and ponds for recreational fishing. Males build shallow nests and defend the eggs.",
+  "nativeRange": "North America, from Canada south to northern Mexico.",
+  "size": {
+    "maxCm": 41,
+    "commonCm": 19.1,
+    "maxKg": 2.2
+  },
+  "identify": {
+    "features": [
+      "Deep, flattened body",
+      "Small mouth",
+      "Bluish cheek and gill cover"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "lake",
+      "reservoir"
+    ],
+    "description": "Often stocked in freshwater lakes and ponds for sport fishing."
+  },
+  "photos": [
+    {
+      "file": "inat-71305213.jpg",
+      "credit": "no rights reserved",
+      "license": "CC0",
+      "url": "https://www.inaturalist.org/photos/71305213"
+    }
+  ],
+  "sources": [
+    "https://www.fws.gov/species/bluegill-lepomis-macrochirus",
+    "https://www.gbif.org/species/2394503",
+    "https://www.wikidata.org/wiki/Q1148148"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

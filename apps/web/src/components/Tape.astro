@@ -1,0 +1,47 @@
+---
+import type { TapeTick } from '../lib/size';
+
+interface Props {
+	ticks: TapeTick[];
+	/** 0–1: fill the tape this far. Omit for a fully yellow tape. */
+	fill?: number;
+	class?: string;
+}
+
+const { ticks, fill, class: className } = Astro.props;
+const last = ticks.length - 1;
+---
+
+<div class:list={['select-none', className]} aria-hidden="true">
+	<div
+		class:list={[
+			'relative h-1.5 rounded-full',
+			fill === undefined ? 'bg-sign-yellow' : 'bg-tile ring-1 ring-inset ring-grout',
+		]}
+	>
+		{fill !== undefined && <span class="absolute inset-y-0 left-0 rounded-full bg-sign-yellow" style={`width: ${fill * 100}%`} />}
+		{
+			ticks.map((tick, i) => (
+				<span
+					class:list={['absolute top-full mt-0.5 h-1 w-px bg-muted', i === last && '-translate-x-full']}
+					style={`left: ${tick.position * 100}%`}
+				/>
+			))
+		}
+	</div>
+	<div class="relative mt-2 h-4 text-xs text-muted">
+		{
+			ticks.map((tick, i) => (
+				<span
+					class:list={[
+						'absolute top-0 whitespace-nowrap',
+						i === 0 ? '' : i === last ? '-translate-x-full' : '-translate-x-1/2',
+					]}
+					style={`left: ${tick.position * 100}%`}
+				>
+					{tick.label}
+				</span>
+			))
+		}
+	</div>
+</div>

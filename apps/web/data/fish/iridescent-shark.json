@@ -1,0 +1,68 @@
+{
+  "names": {
+    "english": "Iridescent shark",
+    "scientific": "Pangasianodon hypophthalmus",
+    "malay": "Patin sangkar",
+    "other": [
+      "Striped catfish",
+      "Sutchi catfish",
+      "Swai"
+    ]
+  },
+  "taxonomy": {
+    "family": "Pangasiidae",
+    "order": "Siluriformes",
+    "gbifKey": 2340714,
+    "wikidata": "Q312296"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "food",
+    "aquarium"
+  ],
+  "summary": "The iridescent shark is a catfish, despite its aquarium name. Introduced to Malaysia for aquaculture, it is different from the native Pangasius nasutus and is widely raised in freshwater systems.",
+  "nativeRange": "The Mekong, Chao Phraya and Mae Klong river systems.",
+  "identify": {
+    "features": [
+      "Catfish body with a deeply forked tail",
+      "Two pairs of barbels around the mouth"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "lowland-river",
+      "reservoir"
+    ],
+    "description": "Large river channels and seasonal floodplain waters; farmed in freshwater ponds and cages.",
+    "diet": "Omnivorous; eats algae, zooplankton, crustaceans and fish."
+  },
+  "malaysia": {
+    "status": "introduced",
+    "states": [
+      {
+        "state": "Sabah",
+        "records": 1
+      }
+    ]
+  },
+  "eating": "Raised extensively for food; exported fillets are commonly sold as swai.",
+  "photos": [
+    {
+      "file": "inat-259166534.jpg",
+      "credit": "(c) nbasargin, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/259166534"
+    }
+  ],
+  "sources": [
+    "https://www.mdpi.com/2673-9917/2/2/28",
+    "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=2603",
+    "https://doi.org/10.3897/BDJ.11.e100337",
+    "https://www.gbif.org/species/2340714",
+    "https://www.wikidata.org/wiki/Q312296"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "EN"
+}

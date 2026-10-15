@@ -1,0 +1,86 @@
+{
+  "names": {
+    "english": "Harlequin rasbora",
+    "scientific": "Trigonostigma heteromorpha"
+  },
+  "taxonomy": {
+    "family": "Cyprinidae",
+    "order": "Cypriniformes",
+    "gbifKey": 2367610,
+    "wikidata": "Q28599939"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "aquarium"
+  ],
+  "summary": "Harlequin rasbora is a small freshwater fish with a conspicuous black triangular patch on each side. It is a peaceful shoaling aquarium fish. A 2020 taxonomic revision distinguishes it from Trigonostigma truncata, a similar fish from the eastern Malay Peninsula.",
+  "nativeRange": "The Malay Peninsula and parts of Southeast Asia.",
+  "size": {
+    "maxCm": 3.8
+  },
+  "identify": {
+    "features": [
+      "Large black triangular wedge on the rear half of the body",
+      "Reddish-orange colour around the head and fins",
+      "Deeper body than several related Trigonostigma species"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "peat-swamp"
+    ],
+    "description": "Associated with swamp-forest waters of the Malay Peninsula; closely related species can be confused in regional records."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Pahang",
+        "records": 18
+      },
+      {
+        "state": "Johor",
+        "records": 10
+      },
+      {
+        "state": "Sarawak",
+        "records": 2
+      },
+      {
+        "state": "Terengganu",
+        "records": 2
+      }
+    ]
+  },
+  "aquarium": {
+    "minTankLitres": 57,
+    "tempC": [
+      22.8,
+      25.6
+    ],
+    "ph": [
+      6.5,
+      7.2
+    ],
+    "temperament": "peaceful",
+    "groupSize": 6
+  },
+  "photos": [
+    {
+      "file": "inat-251680901.jpg",
+      "credit": "(c) Zakqary Roy, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/251680901"
+    }
+  ],
+  "sources": [
+    "https://lkcnhm.nus.edu.sg/app/uploads/2020/01/RBZ-2020-0058.pdf",
+    "https://www.theaquariumwiki.com/wiki/Trigonostigma_heteromorpha",
+    "https://www.gbif.org/species/2367610",
+    "https://www.wikidata.org/wiki/Q28599939"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

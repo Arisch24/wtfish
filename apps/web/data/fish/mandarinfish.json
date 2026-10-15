@@ -1,0 +1,73 @@
+{
+  "names": {
+    "english": "Mandarinfish",
+    "scientific": "Synchiropus splendidus"
+  },
+  "taxonomy": {
+    "family": "Callionymidae",
+    "order": "Perciformes",
+    "gbifKey": 2386640,
+    "wikidata": "Q77062"
+  },
+  "water": [
+    "marine"
+  ],
+  "uses": [
+    "aquarium"
+  ],
+  "summary": "A small Pacific dragonet with swirling blue, orange and green markings. It forages on tiny bottom-dwelling prey and can be difficult to maintain unless an established aquarium provides a dependable live-food supply.",
+  "nativeRange": "Western Pacific, from the Ryukyu Islands south to Australia.",
+  "size": {
+    "maxCm": 6
+  },
+  "identify": {
+    "features": [
+      "Blue background with winding orange markings and a greenish-blue face.",
+      "Large pelvic fins support movement along the bottom.",
+      "Males have an elongated first dorsal spine."
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "reef",
+      "coastal"
+    ],
+    "description": "Sheltered lagoons and inshore reefs, foraging close to the bottom.",
+    "diet": "Tiny crustaceans and other invertebrates, including copepods and amphipods; some aquarium fish accept only live prey."
+  },
+  "aquarium": {
+    "minTankLitres": 114,
+    "tempC": [
+      22.2,
+      25.6
+    ],
+    "ph": [
+      8.1,
+      8.4
+    ],
+    "temperament": "peaceful"
+  },
+  "photos": [
+    {
+      "file": "inat-718391540.jpg",
+      "credit": "(c) Donald Davesne, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/718391540"
+    },
+    {
+      "file": "inat-718391538.jpg",
+      "credit": "(c) Donald Davesne, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/718391538"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Synchiropus_splendidus",
+    "https://www.qualitymarine.com/quality-marine/fish/dragonets/synchiropus/mandarin-green-18530/",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Synchiropus&tbl=species",
+    "https://www.gbif.org/species/2386640",
+    "https://www.wikidata.org/wiki/Q77062"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "LC"
+}

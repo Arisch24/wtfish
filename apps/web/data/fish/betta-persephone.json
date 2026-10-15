@@ -1,0 +1,59 @@
+{
+  "names": {
+    "english": "Betta persephone",
+    "scientific": "Betta persephone"
+  },
+  "taxonomy": {
+    "family": "Osphronemidae",
+    "order": "Perciformes",
+    "gbifKey": 2394050,
+    "wikidata": "Q4847888"
+  },
+  "water": [
+    "freshwater"
+  ],
+  "uses": [
+    "aquarium"
+  ],
+  "summary": "Betta persephone is a dark-coloured wild fighting fish recorded from shallow peat-swamp pools in Johor. Its Malaysian populations depend on a very restricted habitat. Older accounts describe it as Johor-endemic, but recent genetic research questions the distinction from the Bintan fish Betta miniopinna, so its broader range needs careful interpretation.",
+  "nativeRange": "Johor peat swamps in Peninsular Malaysia; the relationship to Bintan populations remains a taxonomic issue.",
+  "identify": {
+    "features": [
+      "Dark body without a conspicuous lateral blotch",
+      "Pale tips on the slender pelvic fins",
+      "Greenish iridescence on the unpaired fins"
+    ]
+  },
+  "habitat": {
+    "environments": [
+      "peat-swamp"
+    ],
+    "description": "Shallow shaded pools among submerged leaf litter."
+  },
+  "malaysia": {
+    "status": "native",
+    "states": [
+      {
+        "state": "Johor",
+        "records": 1
+      }
+    ]
+  },
+  "photos": [
+    {
+      "file": "inat-251431809.jpg",
+      "credit": "(c) Zakqary Roy, some rights reserved (CC BY)",
+      "license": "CC BY",
+      "url": "https://www.inaturalist.org/photos/251431809"
+    }
+  ],
+  "sources": [
+    "https://lkcnhm.nus.edu.sg/wp-content/uploads/sites/10/2021/01/S13_43-99.pdf",
+    "https://www.pertanika.upm.edu.my/pjtas/browse/regular-issue?article=JTAS-2823-2023",
+    "https://doi.org/10.3897/zookeys.1238.142857",
+    "https://www.gbif.org/species/2394050",
+    "https://www.wikidata.org/wiki/Q4847888"
+  ],
+  "lastReviewed": "2026-10-13",
+  "iucn": "EN"
+}
