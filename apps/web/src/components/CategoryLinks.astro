@@ -18,7 +18,7 @@ const chip = 'inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[13px
 			<li>
 				{path === current ? (
 					<span aria-current="page" class:list={[chip, 'bg-salt-soft text-salt']}>
-						{name}
+						{name}{' '}
 						<span>
 							· {count}
 							<span class="sr-only"> fish</span>
@@ -26,7 +26,7 @@ const chip = 'inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[13px
 					</span>
 				) : (
 					<a href={path} class:list={[chip, 'bg-tile text-ink ring-1 ring-inset ring-grout hover:ring-hover-line']}>
-						{name}
+						{name}{' '}
 						<span class="text-muted">
 							· {count}
 							<span class="sr-only"> fish</span>

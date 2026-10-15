@@ -45,8 +45,6 @@ const iucnTone = !f.iucn
 const badge = 'inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium';
 const softChip = `${badge} bg-tile text-ink ring-1 ring-inset ring-grout`;
 const term = 'text-xs text-muted';
-/** A tag that links to its category page looks the same, and underlines on hover or keyboard focus. */
-const tagLink = 'underline-offset-2 hover:underline focus-visible:underline';
 const statusHref = f.malaysia && statusPath(f.malaysia.status);
 const iucnHref = f.iucn && iucnPath(f.iucn);
 const StatusTag = statusHref ? 'a' : 'span';
@@ -85,7 +83,7 @@ const second = 'border-t border-grout lg:border-l lg:border-t-0 lg:pl-10';
 						f.malaysia && (
 							<StatusTag
 								href={statusHref}
-								class:list={[badge, 'bg-tile text-ink ring-1 ring-inset ring-grout', statusHref && tagLink]}
+								class:list={[badge, 'bg-tile text-ink ring-1 ring-inset ring-grout', statusHref && 'tag-link']}
 							>
 								{STATUS_BADGE[f.malaysia.status]}
 							</StatusTag>
@@ -93,7 +91,7 @@ const second = 'border-t border-grout lg:border-l lg:border-t-0 lg:pl-10';
 					}
 					{
 						f.iucn && (
-							<IucnTag href={iucnHref} class:list={[badge, iucnTone, iucnHref && tagLink]}>
+							<IucnTag href={iucnHref} class:list={[badge, iucnTone, iucnHref && 'tag-link']}>
 								{IUCN_LABEL[f.iucn]} (IUCN)
 							</IucnTag>
 						)
@@ -227,7 +225,7 @@ const second = 'border-t border-grout lg:border-l lg:border-t-0 lg:pl-10';
 									{f.habitat && (
 										<p class="flex flex-wrap gap-1.5">
 											{f.habitat.environments.map((environment) => (
-												<a href={habitatPath(environment)} class:list={[softChip, tagLink]}>
+												<a href={habitatPath(environment)} class:list={[softChip, 'tag-link']}>
 													{ENVIRONMENT_LABEL[environment]}
 												</a>
 											))}

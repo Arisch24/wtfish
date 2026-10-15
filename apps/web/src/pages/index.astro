@@ -31,7 +31,7 @@ const updated = lastUpdated(fish.map((entry) => entry.data));
 					</p>
 					{updated && <p class="relative mt-2.5 text-xs text-muted">Last updated {formatDate(updated)}</p>}
 				</div>
-				<!-- The line reaches up to the header: 36px fish strip + 16px padding. On phones the sign hangs above the headline. -->
+				{/* The line reaches up to the header: 36px fish strip + 16px padding. On phones the sign hangs above the headline. */}
 				<HangingSign
 					text={`${fish.length} fish & counting`}
 					class="row-start-1 -mt-[52px] justify-self-end md:col-start-2"

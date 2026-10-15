@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import CategoryLinks from '../components/CategoryLinks.astro';
 import FishCard from '../components/FishCard.astro';
+import PageBand from '../components/PageBand.astro';
 import Base from '../layouts/Base.astro';
 import { GROUPS, categoriesWithFish, fishIn, groupLinks, type Category } from '../lib/categories';
 
@@ -26,19 +27,15 @@ const group = GROUPS[category.group];
 ---
 
 <Base title={`${category.title} | wtfish`} description={category.description}>
-	<div class="tile-surface border-b border-grout">
-		<div class="mx-auto max-w-6xl px-4 py-8 sm:px-6">
-			<p class="text-xs font-semibold uppercase tracking-[0.06em] text-salt" data-group-label>
-				<a href={`/browse/#${category.group}`} class="underline-offset-2 hover:underline">{group.label}</a>
-			</p>
-			<h1 class="mt-1.5 break-words font-display text-[26px] font-bold leading-[1.15] tracking-[-0.035em] sm:text-[30px]">
-				{category.title}
-			</h1>
-			<p class="mt-2 max-w-xl text-[15px] text-muted">{category.description}</p>
-			{group.note && <p class="mt-2 max-w-xl text-[13px] text-muted">{group.note}</p>}
-			<p class="mt-2.5 text-xs text-muted" data-fish-count>{members.length} fish</p>
-		</div>
-	</div>
+	<PageBand
+		label={group.label}
+		labelHref={`/browse/#${category.group}`}
+		heading={category.title}
+		text={category.description}
+	>
+		{group.note && <p class="mt-2 max-w-xl text-[13px] text-muted">{group.note}</p>}
+		<p class="mt-2.5 text-xs text-muted" data-fish-count>{members.length} fish</p>
+	</PageBand>
 	<div class="mx-auto max-w-6xl px-4 pt-6 sm:px-6">
 		<ul class="grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-4">
 			{members.map((entry) => <FishCard fish={entry} />)}

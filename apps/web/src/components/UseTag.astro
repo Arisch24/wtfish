@@ -26,7 +26,7 @@ const { uses, size = 'card', linked = false, class: className } = Astro.props;
 			? uses.map((use, i) => (
 					<>
 						{i > 0 && ' · '}
-						<a href={usePath(use)} class="underline-offset-2 hover:underline focus-visible:underline">{USE_SHORT_LABEL[use]}</a>
+						<a href={usePath(use)} class="tag-link">{USE_SHORT_LABEL[use]}</a>
 					</>
 				))
 			: useTagText(uses)

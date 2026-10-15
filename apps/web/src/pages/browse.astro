@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import CategoryLinks from '../components/CategoryLinks.astro';
+import PageBand from '../components/PageBand.astro';
 import Section from '../components/Section.astro';
 import Base from '../layouts/Base.astro';
 import { CATEGORY_GROUPS, GROUPS, groupLinks } from '../lib/categories';
@@ -14,15 +15,7 @@ const lead = 'Find fish by water, use, habitat, state or conservation status.';
 ---
 
 <Base title="Browse fish | wtfish" description={lead}>
-	<div class="tile-surface border-b border-grout">
-		<div class="mx-auto max-w-6xl px-4 py-8 sm:px-6">
-			<p class="text-xs font-semibold uppercase tracking-[0.06em] text-salt">Browse</p>
-			<h1 class="mt-1.5 font-display text-[26px] font-bold leading-[1.15] tracking-[-0.035em] sm:text-[30px]">
-				Browse fish
-			</h1>
-			<p class="mt-2 max-w-xl text-[15px] text-muted">{lead}</p>
-		</div>
-	</div>
+	<PageBand label="Browse" heading="Browse fish" text={lead} />
 	<div class="mx-auto max-w-6xl divide-y divide-grout px-4 sm:px-6">
 		{
 			groups.map(({ group, links }) => (

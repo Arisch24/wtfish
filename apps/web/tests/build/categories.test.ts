@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { CATEGORIES, GROUPS, categoriesWithFish, fishIn, groupLinks } from '../../src/lib/categories';
+import type { Fish } from '../../src/lib/fish-schema';
 import { builtPage, cardsById, fishFiles, isBuilt, visibleText } from './helpers';
 
 const entries = fishFiles.map(({ id, raw }) => ({ id, data: raw }));
@@ -21,13 +22,13 @@ describe('category pages', () => {
 		expect(textOf(html, /<title>([\s\S]*?)<\/title>/)).toBe(`${category.title} | wtfish`);
 		expect(textOf(html, /<meta name="description" content="([^"]*)"/)).toBe(category.description);
 		expect(textOf(html, /<h1[^>]*>([\s\S]*?)<\/h1>/)).toBe(category.title);
-		expect(textOf(html, /<p[^>]*data-group-label[^>]*>([\s\S]*?)<\/p>/)).toBe(GROUPS[category.group].label);
+		expect(textOf(html, /<p[^>]*data-band-label[^>]*>([\s\S]*?)<\/p>/)).toBe(GROUPS[category.group].label);
 		expect(visibleText(html)).toContain(category.description);
 	});
 
 	it.each(pages)('$path links its group label to its section on the Browse page', (category) => {
 		expect(page(category.path)).toMatch(
-			new RegExp(`data-group-label[^>]*>\\s*<a href="/browse/#${category.group}"[^>]*>\\s*${GROUPS[category.group].label}\\s*</a>`),
+			new RegExp(`data-band-label[^>]*>\\s*<a href="/browse/#${category.group}"[^>]*>\\s*${GROUPS[category.group].label}\\s*</a>`),
 		);
 	});
 
@@ -62,9 +63,21 @@ describe('category pages', () => {
 		}
 	});
 
-	it('draws a page with one fish, such as Kuala Lumpur', () => {
-		const html = page('/malaysia/kuala-lumpur/');
-		expect([...cardsById(html).keys()]).toEqual(['striped-snakehead']);
-		expect(visibleText(html)).toContain('1 fish');
+	it('shows the same fish as a recount from the data files', () => {
+		// Counted here without categories.ts, so a wrong rule there can't pass by agreeing with itself.
+		const recount = (keep: (fish: Fish) => boolean) =>
+			fishFiles
+				.filter(({ raw }) => keep(raw))
+				.map(({ id }) => id)
+				.sort();
+		const shown = (path: string) => [...cardsById(page(path)).keys()].sort();
+		expect(shown('/water/brackish/')).toEqual(recount((fish) => fish.water.includes('brackish')));
+		expect(shown('/use/sport/')).toEqual(recount((fish) => fish.uses.includes('sport')));
+		expect(shown('/habitat/mangroves/')).toEqual(recount((fish) => fish.habitat?.environments.includes('mangrove') ?? false));
+		expect(shown('/malaysia/sabah/')).toEqual(recount((fish) => fish.malaysia?.states?.some(({ state }) => state === 'Sabah') ?? false));
+		expect(shown('/threatened/')).toEqual(recount((fish) => ['VU', 'EN', 'CR'].includes(fish.iucn ?? '')));
+		expect(shown('/malaysia/invasive/')).toEqual(
+			recount((fish) => ['introduced', 'invasive'].includes(fish.malaysia?.status ?? '')),
+		);
 	});
 });

@@ -132,3 +132,14 @@
 		linear-gradient(90deg, var(--color-grout) 1px, transparent 1px);
 	background-size: 30px 30px;
 }
+
+/* A link that looks like the tag or text it sits in, and underlines on hover or keyboard focus. */
+@utility tag-link {
+	text-underline-offset: 2px;
+	@variant hover {
+		text-decoration-line: underline;
+	}
+	@variant focus-visible {
+		text-decoration-line: underline;
+	}
+}

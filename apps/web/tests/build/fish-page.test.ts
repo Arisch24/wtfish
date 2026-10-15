@@ -11,6 +11,7 @@ import {
 	waterPath,
 } from '../../src/lib/categories';
 import { formatDate, listOf } from '../../src/lib/format';
+import { ENVIRONMENT_LABEL, USE_SHORT_LABEL, WATER_LABEL } from '../../src/lib/labels';
 
 const page = (id: string) => builtPage(`fish/${id}/index.html`);
 
@@ -167,15 +168,24 @@ describe('fish pages', () => {
 		}
 	});
 
-	it.each(fishFiles)('$id links each water, use, habitat and state to its page', ({ id, raw }) => {
+	it.each(fishFiles)('$id links each water, use, habitat and state to its own page', ({ id, raw }) => {
 		const html = page(id);
-		const hrefs = [
-			...raw.water.map(waterPath),
-			...raw.uses.map(usePath),
-			...(raw.habitat?.environments ?? []).map(habitatPath),
-			...(raw.malaysia?.states ?? []).map(({ state }) => statePath(state)),
+		const links: [href: string, text: string][] = [
+			...raw.water.map((water): [string, string] => [waterPath(water), WATER_LABEL[water]]),
+			...raw.uses.map((use): [string, string] => [usePath(use), USE_SHORT_LABEL[use]]),
+			...(raw.habitat?.environments ?? []).map((environment): [string, string] => [
+				habitatPath(environment),
+				ENVIRONMENT_LABEL[environment],
+			]),
+			...(raw.malaysia?.states ?? []).map(({ state }): [string, string] => [statePath(state), state]),
 		];
-		for (const href of hrefs) expect(html, href).toContain(`href="${href}"`);
+		for (const [href, text] of links) {
+			// The link's own text must name the page it leads to, so a tag can't point at the wrong page.
+			const texts = [...html.matchAll(new RegExp(`<a href="${href}"[^>]*>([\\s\\S]*?)</a>`, 'g'))].map((match) =>
+				visibleText(match[1]),
+			);
+			expect(texts, href).toContain(text);
+		}
 	});
 
 	it.each(fishFiles)('$id links its status and IUCN badges only when they have a page', ({ id, raw }) => {
@@ -184,7 +194,7 @@ describe('fish pages', () => {
 		expect(html.includes(`href="${THREATENED_PATH}"`)).toBe(Boolean(raw.iucn && iucnPath(raw.iucn)));
 	});
 
-	it('keeps the tags looking the same, as links', () => {
+	it('turns tags with a page into links, and leaves the rest as plain text', () => {
 		const html = page('barramundi');
 		expect(html).toMatch(/<a href="\/water\/saltwater\/"[^>]*data-water="marine"/);
 		expect(html).toMatch(/<a href="\/habitat\/mangroves\/"[^>]*>\s*Mangroves\s*<\/a>/);
