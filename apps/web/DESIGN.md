@@ -233,6 +233,7 @@ Flat. Cards, panels and the header have no shadow.
 - **Stats strip.** A small uppercase label, a value and an optional note, with no boxes. Used for the quick stats and for aquarium care.
 - **Sections.** A Bricolage heading, an optional note on the right and an optional one-line description, with no box.
 - **Category chips.** Rounded tile chips with a grout ring that darkens on hover, each with a page's name and count, such as "Reefs · 12". The current page's chip is salt on salt-soft and isn't a link.
+- **Tag links.** On fish pages, the water, use and habitat tags, the state names under the map, and the introduced/invasive and threatened badges link to their category pages. They look the same, and underline on hover or keyboard focus. Tags with no page, such as "Native to Malaysia", stay plain text. Tags inside cards never link, since the card is already one link.
 - **Measurement and map.**
   - "How big?" draws the slim fish and a person (170 cm) or hand (18 cm) to scale, over faint dashed tick lines, with a thin yellow tape. The chart is never wider than 532 px, its width in a pair, so it doesn't grow when it has a row to itself.
   - The map has 16 tiles. Recorded states are filled salt, and pins are yellow.

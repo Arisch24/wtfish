@@ -7,6 +7,17 @@ export function listOf(items: string[]): string {
 	return list.format(items);
 }
 
+export type ListPart<T extends string> = { type: 'element'; value: T } | { type: 'literal'; value: string };
+
+/** listOf's text in parts: each item, and the commas and "and" between them, so an item can be a link. */
+export function listParts<T extends string>(items: readonly T[]): ListPart<T>[] {
+	return list
+		.formatToParts(items)
+		.map((part): ListPart<T> =>
+			part.type === 'element' ? { type: 'element', value: part.value as T } : { type: 'literal', value: part.value },
+		);
+}
+
 export function formatSize(size: { maxCm: number; commonCm?: number; maxKg?: number }): string {
 	const max = size.maxKg ? `${size.maxCm} cm and ${size.maxKg} kg` : `${size.maxCm} cm`;
 	return size.commonCm ? `Usually ${size.commonCm} cm; up to ${max}` : `Up to ${max}`;

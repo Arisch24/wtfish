@@ -1,14 +1,17 @@
 ---
+import { usePath } from '../lib/categories';
 import type { Use } from '../lib/fish-schema';
-import { useTagText } from '../lib/labels';
+import { USE_SHORT_LABEL, useTagText } from '../lib/labels';
 
 interface Props {
 	uses: readonly Use[];
 	size?: 'card' | 'page';
+	/** Makes each use a link to its page. Never inside a card, which is already one link. */
+	linked?: boolean;
 	class?: string;
 }
 
-const { uses, size = 'card', class: className } = Astro.props;
+const { uses, size = 'card', linked = false, class: className } = Astro.props;
 ---
 
 <span
@@ -18,5 +21,14 @@ const { uses, size = 'card', class: className } = Astro.props;
 		className,
 	]}
 >
-	{useTagText(uses)}
+	{
+		linked
+			? uses.map((use, i) => (
+					<>
+						{i > 0 && ' · '}
+						<a href={usePath(use)} class="underline-offset-2 hover:underline focus-visible:underline">{USE_SHORT_LABEL[use]}</a>
+					</>
+				))
+			: useTagText(uses)
+	}
 </span>
