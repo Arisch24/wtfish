@@ -201,6 +201,8 @@ Scientific names use Inter's true italic. No functional text is smaller than 11 
   - the home page's cards, A–Z, with no filters;
   - under a thin line, the group's heading and a row of chips linking to the other pages in the group.
 
+- **Browse page.** A tiled top band, then one section per group (Water types, Uses, Habitats, States in Malaysia, Conservation), split by thin lines, each with its category chips.
+
 ## Elevation & Depth
 
 Flat. Cards, panels and the header have no shadow.

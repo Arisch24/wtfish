@@ -6,6 +6,7 @@ const pages = [
 	'identify/index.html',
 	'about/index.html',
 	'404.html',
+	'browse/index.html',
 	'habitat/mangroves/index.html',
 	'malaysia/sabah/index.html',
 	'threatened/index.html',
