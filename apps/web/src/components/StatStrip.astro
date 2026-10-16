@@ -8,10 +8,10 @@ interface Props {
 const { tiles } = Astro.props;
 ---
 
-<!--
+{/*
 	Two items per row below 1024px, one row from 1024px. A wide item takes a row of its own below 1024px.
 	An item is never narrower than its longest word, so values never break mid-word.
--->
+*/}
 <dl class="flex flex-wrap gap-x-6 gap-y-4" data-stat-tiles>
 	{
 		tiles.map((tile) => (

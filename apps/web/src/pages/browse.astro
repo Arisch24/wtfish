@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import CategoryLinks from '../components/CategoryLinks.astro';
+import PageBand from '../components/PageBand.astro';
+import Section from '../components/Section.astro';
+import Base from '../layouts/Base.astro';
+import { CATEGORY_GROUPS, GROUPS, groupLinks } from '../lib/categories';
+
+const fish = await getCollection('fish');
+// A group with no pages yet is left out. Every group has pages today.
+const groups = CATEGORY_GROUPS.map((group) => ({ group, links: groupLinks(group, fish) })).filter(
+	({ links }) => links.length > 0,
+);
+const lead = 'Find fish by water, use, habitat, state or conservation status.';
+---
+
+<Base title="Browse fish | wtfish" description={lead}>
+	<PageBand label="Browse" heading="Browse fish" text={lead} />
+	<div class="mx-auto max-w-6xl divide-y divide-grout px-4 sm:px-6">
+		{
+			groups.map(({ group, links }) => (
+				<Section title={GROUPS[group].heading} id={group}>
+					<CategoryLinks links={links} />
+				</Section>
+			))
+		}
+	</div>
+</Base>

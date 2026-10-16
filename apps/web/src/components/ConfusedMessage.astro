@@ -1,5 +1,6 @@
 ---
 import ConfusedFish from './ConfusedFish.astro';
+import PageBand from './PageBand.astro';
 
 interface Props {
 	/** Small uppercase label above the heading, e.g. "Coming soon". */
@@ -11,13 +12,7 @@ interface Props {
 const { label, heading, text } = Astro.props;
 ---
 
-<div class="tile-surface border-b border-grout">
-	<div class="mx-auto max-w-6xl px-4 py-8 sm:px-6">
-		<p class="text-xs font-semibold uppercase tracking-[0.06em] text-salt">{label}</p>
-		<h1 class="mt-1.5 font-display text-[26px] font-bold leading-[1.15] tracking-[-0.035em] sm:text-[30px]">{heading}</h1>
-		<p class="mt-2 max-w-xl text-[15px] text-muted">{text}</p>
-	</div>
-</div>
+<PageBand label={label} heading={heading} text={text} />
 <div class="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-12 sm:px-6">
 	<ConfusedFish class="w-[120px]" />
 	<slot />

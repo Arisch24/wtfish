@@ -1,6 +1,17 @@
 import { describe, expect, it } from 'vitest';
 import { builtPage, fishFiles, visibleText } from './helpers';
-import { formatDate } from '../../src/lib/format';
+import {
+	INTRODUCED_PATH,
+	THREATENED_PATH,
+	habitatPath,
+	iucnPath,
+	statePath,
+	statusPath,
+	usePath,
+	waterPath,
+} from '../../src/lib/categories';
+import { formatDate, listOf } from '../../src/lib/format';
+import { ENVIRONMENT_LABEL, USE_SHORT_LABEL, WATER_LABEL } from '../../src/lib/labels';
 
 const page = (id: string) => builtPage(`fish/${id}/index.html`);
 
@@ -155,5 +166,56 @@ describe('fish pages', () => {
 		for (const oldClass of ['class="pairs', 'class="chips', 'class="summary', 'class="badge']) {
 			expect(html).not.toContain(oldClass);
 		}
+	});
+
+	it.each(fishFiles)('$id links each water, use, habitat and state to its own page', ({ id, raw }) => {
+		const html = page(id);
+		const links: [href: string, text: string][] = [
+			...raw.water.map((water): [string, string] => [waterPath(water), WATER_LABEL[water]]),
+			...raw.uses.map((use): [string, string] => [usePath(use), USE_SHORT_LABEL[use]]),
+			...(raw.habitat?.environments ?? []).map((environment): [string, string] => [
+				habitatPath(environment),
+				ENVIRONMENT_LABEL[environment],
+			]),
+			...(raw.malaysia?.states ?? []).map(({ state }): [string, string] => [statePath(state), state]),
+		];
+		for (const [href, text] of links) {
+			// The link's own text must name the page it leads to, so a tag can't point at the wrong page.
+			const texts = [...html.matchAll(new RegExp(`<a href="${href}"[^>]*>([\\s\\S]*?)</a>`, 'g'))].map((match) =>
+				visibleText(match[1]),
+			);
+			expect(texts, href).toContain(text);
+		}
+	});
+
+	it.each(fishFiles)('$id links its status and IUCN badges only when they have a page', ({ id, raw }) => {
+		const html = page(id);
+		expect(html.includes(`href="${INTRODUCED_PATH}"`)).toBe(Boolean(raw.malaysia && statusPath(raw.malaysia.status)));
+		expect(html.includes(`href="${THREATENED_PATH}"`)).toBe(Boolean(raw.iucn && iucnPath(raw.iucn)));
+	});
+
+	it('turns tags with a page into links, and leaves the rest as plain text', () => {
+		const html = page('barramundi');
+		expect(html).toMatch(/<a href="\/water\/saltwater\/"[^>]*data-water="marine"/);
+		expect(html).toMatch(/<a href="\/habitat\/mangroves\/"[^>]*>\s*Mangroves\s*<\/a>/);
+		expect(visibleText(html)).toContain('Sport · Food');
+		// "Native to Malaysia" and "Least Concern" have no page, so they stay plain text.
+		expect(html).toMatch(/<span[^>]*>\s*Native to Malaysia\s*<\/span>/);
+		expect(html).toMatch(/<span[^>]*>\s*Least Concern \(IUCN\)\s*<\/span>/);
+	});
+
+	it('links the threatened and invasive badges', () => {
+		expect(page('asian-arowana')).toMatch(/<a href="\/threatened\/"[^>]*>\s*Endangered \(IUCN\)\s*<\/a>/);
+		expect(page('butterfly-peacock-bass')).toMatch(/<a href="\/malaysia\/invasive\/"[^>]*>\s*Invasive in Malaysia\s*<\/a>/);
+	});
+
+	it('links each state name in "Recorded in", keeping the sentence', () => {
+		const pomfret = fishFiles.find((fish) => fish.id === 'black-pomfret')!.raw;
+		const states = pomfret.malaysia!.states!.map((record) => record.state);
+		const sentence = page('black-pomfret').match(/Recorded in[\s\S]*?\. Based on/)![0];
+		for (const state of states) {
+			expect(sentence).toMatch(new RegExp(`<a href="${statePath(state)}"[^>]*>${state}</a>`));
+		}
+		expect(sentence.replace(/<[^>]+>/g, '')).toBe(`Recorded in ${listOf(states)}. Based on`);
 	});
 });

@@ -7,24 +7,29 @@ import Icon from './Icon.astro';
 interface Props {
 	water: Water;
 	size?: 'sm' | 'md';
+	/** Makes the chip a link. Never inside a card, which is already one link. */
+	href?: string;
 }
 
-const { water, size = 'sm' } = Astro.props;
+const { water, size = 'sm', href } = Astro.props;
 const look: Record<Water, { colours: string; icon: IconName }> = {
 	freshwater: { colours: 'bg-fresh-soft text-fresh', icon: 'drop' },
 	brackish: { colours: 'bg-brackish-soft text-brackish', icon: 'brackish' },
 	marine: { colours: 'bg-salt-soft text-salt', icon: 'wave' },
 };
 const { colours, icon } = look[water];
+const Tag = href ? 'a' : 'span';
 ---
 
-<span
+<Tag
+	href={href}
 	class:list={[
 		'inline-flex items-center gap-1 rounded-full font-medium',
 		colours,
 		size === 'sm' ? 'px-2 py-0.5 text-xs' : 'px-2.5 py-0.5 text-[13px]',
+		href && 'tag-link',
 	]}
 	data-water={water}
 >
 	<Icon name={icon} class="size-3" />{WATER_LABEL[water]}
-</span>
+</Tag>

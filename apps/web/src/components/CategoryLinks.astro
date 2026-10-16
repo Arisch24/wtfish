@@ -1,0 +1,39 @@
+---
+import type { CategoryLink } from '../lib/categories';
+
+interface Props {
+	links: CategoryLink[];
+	/** The address of the page being shown. Its chip is marked instead of linked. */
+	current?: string;
+	class?: string;
+}
+
+const { links, current, class: className } = Astro.props;
+const chip = 'inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[13px] font-medium';
+---
+
+<ul class:list={['flex flex-wrap gap-1.5', className]}>
+	{
+		links.map(({ path, name, count }) => (
+			<li>
+				{path === current ? (
+					<span aria-current="page" class:list={[chip, 'bg-salt-soft text-salt']}>
+						{name}{' '}
+						<span>
+							· {count}
+							<span class="sr-only"> fish</span>
+						</span>
+					</span>
+				) : (
+					<a href={path} class:list={[chip, 'bg-tile text-ink ring-1 ring-inset ring-grout hover:ring-hover-line']}>
+						{name}{' '}
+						<span class="text-muted">
+							· {count}
+							<span class="sr-only"> fish</span>
+						</span>
+					</a>
+				)}
+			</li>
+		))
+	}
+</ul>

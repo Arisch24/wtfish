@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { formatDate, formatRange, formatSize, lastUpdated, licenseUrl, listOf } from '../src/lib/format';
+import { formatDate, formatRange, formatSize, lastUpdated, licenseUrl, listOf, listParts } from '../src/lib/format';
 
 describe('listOf', () => {
 	it('returns a single item unchanged', () => {
@@ -12,6 +12,24 @@ describe('listOf', () => {
 
 	it('joins three items with commas and "and"', () => {
 		expect(listOf(['Freshwater', 'Brackish', 'Saltwater'])).toBe('Freshwater, Brackish, and Saltwater');
+	});
+});
+
+describe('listParts', () => {
+	it('splits a list into its items and the words between them', () => {
+		expect(listParts(['Perak', 'Sabah', 'Johor'])).toEqual([
+			{ type: 'element', value: 'Perak' },
+			{ type: 'literal', value: ', ' },
+			{ type: 'element', value: 'Sabah' },
+			{ type: 'literal', value: ', and ' },
+			{ type: 'element', value: 'Johor' },
+		]);
+	});
+
+	it('joins back into the same text as listOf', () => {
+		for (const items of [['Perak'], ['Perak', 'Sabah'], ['Perak', 'Sabah', 'Johor', 'Kedah']]) {
+			expect(listParts(items).map((part) => part.value).join(''), items.join()).toBe(listOf(items));
+		}
 	});
 });
 
